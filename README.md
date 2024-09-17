@@ -5,13 +5,11 @@
 This repository contains the code base for the article “LLM-Driven FPGA Code Generation of Neural Networks: From Python to HLS”. The paper explores the use of Large Language Models (LLMs) to generate hardware designs for neural networks (NNs) on Field-Programmable Gate Arrays (FPGAs). It addresses the unique challenges and opportunities presented by LLMs in this context and demonstrates how they can be leveraged to optimize hardware design.
 
 
-- Vivado HLS Synthesis Error Messages:
-  
-  The first warning occurs due to unrolling the ReuseLoop in the specified function, which may lead to excessive runtime and memory usage from increased code size. To resolve this, avoid unrolling the loop or create sub-functions within the loop body to manage code size.
-
-The second error highlights the same issue with unrolling the ReuseLoop, and recommends similar corrective actions.
-
-The third error is related to llvm-link, potentially caused by issues in the linking process during High-Level Synthesis, such as incompatible data types or design hierarchy problems.
+## Vivado HLS Synthesis Error Messages:
+  Following are the error generated during high-level synthesis:
+  - The first warning occurs due to unrolling the ReuseLoop in the specified function, which may lead to excessive runtime and memory usage from increased code size. To resolve this, avoid unrolling the loop or create sub-functions within the loop body to manage code size.
+  - The second error highlights the same issue with unrolling the ReuseLoop, and recommends similar corrective actions.
+  - The third error is related to llvm-link, potentially caused by issues in the linking process during High-Level Synthesis, such as incompatible data types or design hierarchy problems.
 
 1.
 INFO: [HLS 200-1995] There were 4,087 instructions in the design after the 'Compile/Link' phase of compilation.
