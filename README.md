@@ -12,10 +12,10 @@ This repository contains the code base for the article “LLM-Driven FPGA Code G
      - In `Python to C Verification/rapidgpt_Optimization_prompt_log`, the prompt and the outcome of `RapidGPT` is shown while making the optimized HLS code generation. 
 
 - Dependency:
-      - Python version 3 (Jupyter notebook preferable)
-      - Premium subscriptions of `OpenAI`, `Microsoft Co-pilot`, and `RapidGPT`
-      - Vivado HLS
-      - GCC compiler
+   - Python version 3 (Jupyter notebook preferable)
+   - Premium subscriptions of `OpenAI`, `Microsoft Co-pilot`, and `RapidGPT`
+   - Vivado HLS
+   - GCC compiler
 
 - Experimentation Steps:
   - Run the code in the `Python to C verification` folder.
