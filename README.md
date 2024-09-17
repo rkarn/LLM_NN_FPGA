@@ -10,7 +10,21 @@ This repository contains the code base for the article “LLM-Driven FPGA Code G
      - The HLS implementations for other applications are in the `other_application` folder.
      - The training of each FCNN model and its conversion to C is shown in `Python to C verification` folder. It also contains the accuracy calculation for the trained model in `Python` and `C`.
 
+- Dependency:
+      - Python version 3 (Jupyter notebook preferable)
+      - Premium subscriptions of `OpenAI`, `Microsoft Co-pilot`, and `RapidGPT`
+      - Vivado HLS
+      - GCC compiler
 
+- Experimentation Steps:
+  - Run the code in the `Python to C verification` folder.
+    - Launch each jupyter notebook and execute in sequence.
+  - Use LLM to convert the `C` code to `HLS C/C++`. An example for MNIST FCNN is shown in `Python to C Verification/Hardware_accel_LiteratureSearch_FCNN.ipynb` where OpenAI is used in the feedback loop containing translator and evaluator LLM. It also contains the APIs to feed the literature search to simulate RAG and ReAct mechanism.
+  - Put the `HLS C/C++` code in the HLS folder (e.g. LLM_NN_FPGA/Baseline Implementation/FCNN_Iris/) and run the following script:
+      `vivado_hls run_hls.tcl`
+  - After the synthesis, the FPGA resource utilization metrics are in `<project_name>/solution/syn/report/csynth.rpt`
+
+  
 ## Vivado HLS Synthesis Error Messages:
   Following are the error generated during high-level synthesis:
   - The first warning occurs due to unrolling the ReuseLoop in the specified function, which may lead to excessive runtime and memory usage from increased code size. To resolve this, avoid unrolling the loop or create sub-functions within the loop body to manage code size.
