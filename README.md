@@ -1,5 +1,11 @@
-Vivado HLS Synthesis Error Messages
-The first warning occurs due to unrolling the ReuseLoop in the specified function, which may lead to excessive runtime and memory usage from increased code size. To resolve this, avoid unrolling the loop or create sub-functions within the loop body to manage code size.
+## LLM-Driven FPGA Code Generation of Neural Networks: From Python to HLS
+
+- Overview
+This repository contains the code base for the article “LLM-Driven FPGA Code Generation of Neural Networks: From Python to HLS”. The paper explores the use of Large Language Models (LLMs) to generate hardware designs for neural networks (NNs) on Field-Programmable Gate Arrays (FPGAs). It addresses the unique challenges and opportunities presented by LLMs in this context and demonstrates how they can be leveraged to optimize hardware design.
+
+
+- Vivado HLS Synthesis Error Messages
+  The first warning occurs due to unrolling the ReuseLoop in the specified function, which may lead to excessive runtime and memory usage from increased code size. To resolve this, avoid unrolling the loop or create sub-functions within the loop body to manage code size.
 
 The second error highlights the same issue with unrolling the ReuseLoop, and recommends similar corrective actions.
 
