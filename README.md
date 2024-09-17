@@ -26,11 +26,8 @@ This repository contains the code base for the article “LLM-Driven FPGA Code G
 
   
 ## Vivado HLS Synthesis Error Messages:
-  Following are the error generated during high-level synthesis:
-  - The first warning occurs due to unrolling the ReuseLoop in the specified function, which may lead to excessive runtime and memory usage from increased code size. To resolve this, avoid unrolling the loop or create sub-functions within the loop body to manage code size.
-  - The second error highlights the same issue with unrolling the ReuseLoop, and recommends similar corrective actions.
-  - The third error is related to llvm-link, potentially caused by issues in the linking process during High-Level Synthesis, such as incompatible data types or design hierarchy problems.
-
+  During the HLS synthesis in Vivado and the C simulation for accuracy verification of FCNN, GNN, and CNN, the following errors were encountered:
+  
 1.
 INFO: [HLS 200-1995] There were 4,087 instructions in the design after the 'Compile/Link' phase of compilation.
 WARNING: [HLS 200-1995] There were 166,825 instructions in the design after the 'Unroll/Inline' phase of compilation.
@@ -50,3 +47,8 @@ Error in llvm-link
     (procedure "hls_proc" line 16)
     invoked from within
 "hls_proc [info nameofexecutable] $argv"
+
+- The first warning occurs due to unrolling the ReuseLoop in the specified function, which may lead to excessive runtime and memory usage from increased code size. To resolve this, avoid unrolling the loop or create sub-functions within the loop body to manage code size.
+  - The second error highlights the same issue with unrolling the ReuseLoop, and recommends similar corrective actions.
+  - The third error is related to llvm-link, potentially caused by issues in the linking process during High-Level Synthesis, such as incompatible data types or design hierarchy problems.
+
