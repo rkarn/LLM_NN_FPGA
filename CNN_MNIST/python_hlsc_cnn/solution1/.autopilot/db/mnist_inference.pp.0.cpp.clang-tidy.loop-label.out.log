@@ -1,0 +1,25 @@
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_inference.pp.0.cpp:8211:7: warning: Added loop label VITIS_LOOP_1213_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1213_1: 
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_inference.pp.0.cpp:8211:7: note: FIX-IT applied suggested code changes
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_inference.pp.0.cpp:9185:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_inference.pp.0.cpp:9185:5: note: FIX-IT applied suggested code changes
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_inference.pp.0.cpp:9199:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_inference.pp.0.cpp:9199:5: note: FIX-IT applied suggested code changes
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_inference.pp.0.cpp:9213:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_inference.pp.0.cpp:9213:5: note: FIX-IT applied suggested code changes
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_inference.pp.0.cpp:10812:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_inference.pp.0.cpp:10812:7: note: FIX-IT applied suggested code changes

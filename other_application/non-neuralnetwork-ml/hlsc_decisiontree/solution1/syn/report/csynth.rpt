@@ -1,0 +1,107 @@
+
+
+================================================================
+== Synthesis Summary Report of 'iris_decision_tree_inference'
+================================================================
++ General Information: 
+    * Date:           Fri Sep 13 04:13:21 2024
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        hlsc_decisiontree
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a35t-cpg236-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+----------+-----+
+    |             Modules            | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |           |          |     |
+    |             & Loops            | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT   | URAM|
+    +--------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+----------+-----+
+    |+ iris_decision_tree_inference  |     -|  0.79|        5|  50.000|         -|        6|     -|        no|     -|   -|  247 (~0%)|  438 (2%)|    -|
+    +--------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+
+| Interface     | Data Width | Address Width |
++---------------+------------+---------------+
+| s_axi_control | 32         | 4             |
++---------------+------------+---------------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++------------+-----------+---------------+-------+--------+--------+
+| Interface  | Direction | Register Mode | TDATA | TREADY | TVALID |
++------------+-----------+---------------+-------+--------+--------+
+| in_stream  | in        | both          | 128   | 1      | 1      |
+| out_stream | out       | both          | 8     | 1      | 1      |
++------------+-----------+---------------+-------+--------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+--------------------------+
+| Argument   | Direction | Datatype                 |
++------------+-----------+--------------------------+
+| in_stream  | in        | stream<IrisFeatures, 0>& |
+| out_stream | out       | stream<ap_uint<2>, 0>&   |
++------------+-----------+--------------------------+
+
+* SW-to-HW Mapping
++------------+--------------+-----------+
+| Argument   | HW Interface | HW Type   |
++------------+--------------+-----------+
+| in_stream  | in_stream    | interface |
+| out_stream | out_stream   | interface |
++------------+--------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
+  No bind op info in design
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-----------------------+-----------------------------------------------------------------+
+| Type      | Options               | Location                                                        |
++-----------+-----------------------+-----------------------------------------------------------------+
+| interface | axis port=in_stream   | decisiontree.cpp:44 in iris_decision_tree_inference, in_stream  |
+| interface | axis port=out_stream  | decisiontree.cpp:45 in iris_decision_tree_inference, out_stream |
+| interface | s_axilite port=return | decisiontree.cpp:46 in iris_decision_tree_inference, return     |
++-----------+-----------------------+-----------------------------------------------------------------+
+
+

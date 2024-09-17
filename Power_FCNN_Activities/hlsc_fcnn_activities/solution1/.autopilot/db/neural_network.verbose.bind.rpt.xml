@@ -1,0 +1,50 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'neural_network'" level="0">
+<item name = "Date">Sun Sep 15 03:41:16 2024
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">hlsc_fcnn_activities</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a35t-cpg236-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.201 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">167, 167, 1.670 us, 1.670 us, 168, 168, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_56_1_fu_545">neural_network_Pipeline_VITIS_LOOP_56_1, 42, 42, 0.420 us, 0.420 us, 42, 42, no</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_68_3_fu_607">neural_network_Pipeline_VITIS_LOOP_68_3, 28, 28, 0.280 us, 0.280 us, 28, 28, no</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_22_1_fu_676">neural_network_Pipeline_VITIS_LOOP_22_1, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_28_2_fu_683">neural_network_Pipeline_VITIS_LOOP_28_2, 13, 13, 0.130 us, 0.130 us, 13, 13, no</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_35_3_fu_698">neural_network_Pipeline_VITIS_LOOP_35_3, 39, 39, 0.390 us, 0.390 us, 39, 39, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

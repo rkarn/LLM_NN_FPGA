@@ -1,0 +1,597 @@
+
+
+================================================================
+== Vitis HLS Report for 'neural_network'
+================================================================
+* Date:           Sun Sep 15 03:41:16 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        hlsc_fcnn_activities
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.201 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      167|      167|  1.670 us|  1.670 us|  168|  168|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 40
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.15>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%sum_4_loc = alloca i64 1"   --->   Operation 41 'alloca' 'sum_4_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%max_val_1_loc = alloca i64 1"   --->   Operation 42 'alloca' 'max_val_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%layer1_output = alloca i64 1" [nn.cpp:52]   --->   Operation 43 'alloca' 'layer1_output' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%layer2_output = alloca i64 1" [nn.cpp:53]   --->   Operation 44 'alloca' 'layer2_output' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%input_r_addr = getelementptr i16 %input_r, i64 0, i64 0"   --->   Operation 45 'getelementptr' 'input_r_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [2/2] (2.15ns)   --->   "%input_r_load = load i5 %input_r_addr"   --->   Operation 46 'load' 'input_r_load' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+
+State 2 <SV = 1> <Delay = 2.15>
+ST_2 : Operation 47 [1/2] (2.15ns)   --->   "%input_r_load = load i5 %input_r_addr"   --->   Operation 47 'load' 'input_r_load' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%input_r_addr_1 = getelementptr i16 %input_r, i64 0, i64 1"   --->   Operation 48 'getelementptr' 'input_r_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [2/2] (2.15ns)   --->   "%input_r_load_1 = load i5 %input_r_addr_1"   --->   Operation 49 'load' 'input_r_load_1' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+
+State 3 <SV = 2> <Delay = 2.15>
+ST_3 : Operation 50 [1/2] (2.15ns)   --->   "%input_r_load_1 = load i5 %input_r_addr_1"   --->   Operation 50 'load' 'input_r_load_1' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%input_r_addr_2 = getelementptr i16 %input_r, i64 0, i64 2"   --->   Operation 51 'getelementptr' 'input_r_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 52 [2/2] (2.15ns)   --->   "%input_r_load_2 = load i5 %input_r_addr_2"   --->   Operation 52 'load' 'input_r_load_2' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+
+State 4 <SV = 3> <Delay = 2.15>
+ST_4 : Operation 53 [1/2] (2.15ns)   --->   "%input_r_load_2 = load i5 %input_r_addr_2"   --->   Operation 53 'load' 'input_r_load_2' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%input_r_addr_3 = getelementptr i16 %input_r, i64 0, i64 3"   --->   Operation 54 'getelementptr' 'input_r_addr_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 55 [2/2] (2.15ns)   --->   "%input_r_load_3 = load i5 %input_r_addr_3"   --->   Operation 55 'load' 'input_r_load_3' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+
+State 5 <SV = 4> <Delay = 2.15>
+ST_5 : Operation 56 [1/2] (2.15ns)   --->   "%input_r_load_3 = load i5 %input_r_addr_3"   --->   Operation 56 'load' 'input_r_load_3' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%input_r_addr_4 = getelementptr i16 %input_r, i64 0, i64 4"   --->   Operation 57 'getelementptr' 'input_r_addr_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 58 [2/2] (2.15ns)   --->   "%input_r_load_4 = load i5 %input_r_addr_4"   --->   Operation 58 'load' 'input_r_load_4' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+
+State 6 <SV = 5> <Delay = 2.15>
+ST_6 : Operation 59 [1/2] (2.15ns)   --->   "%input_r_load_4 = load i5 %input_r_addr_4"   --->   Operation 59 'load' 'input_r_load_4' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+ST_6 : Operation 60 [1/1] (0.00ns)   --->   "%input_r_addr_5 = getelementptr i16 %input_r, i64 0, i64 5"   --->   Operation 60 'getelementptr' 'input_r_addr_5' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 61 [2/2] (2.15ns)   --->   "%input_r_load_5 = load i5 %input_r_addr_5"   --->   Operation 61 'load' 'input_r_load_5' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+
+State 7 <SV = 6> <Delay = 2.15>
+ST_7 : Operation 62 [1/2] (2.15ns)   --->   "%input_r_load_5 = load i5 %input_r_addr_5"   --->   Operation 62 'load' 'input_r_load_5' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+ST_7 : Operation 63 [1/1] (0.00ns)   --->   "%input_r_addr_6 = getelementptr i16 %input_r, i64 0, i64 6"   --->   Operation 63 'getelementptr' 'input_r_addr_6' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 64 [2/2] (2.15ns)   --->   "%input_r_load_6 = load i5 %input_r_addr_6"   --->   Operation 64 'load' 'input_r_load_6' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+
+State 8 <SV = 7> <Delay = 2.15>
+ST_8 : Operation 65 [1/2] (2.15ns)   --->   "%input_r_load_6 = load i5 %input_r_addr_6"   --->   Operation 65 'load' 'input_r_load_6' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+ST_8 : Operation 66 [1/1] (0.00ns)   --->   "%input_r_addr_7 = getelementptr i16 %input_r, i64 0, i64 7"   --->   Operation 66 'getelementptr' 'input_r_addr_7' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 67 [2/2] (2.15ns)   --->   "%input_r_load_7 = load i5 %input_r_addr_7"   --->   Operation 67 'load' 'input_r_load_7' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+
+State 9 <SV = 8> <Delay = 2.15>
+ST_9 : Operation 68 [1/2] (2.15ns)   --->   "%input_r_load_7 = load i5 %input_r_addr_7"   --->   Operation 68 'load' 'input_r_load_7' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+ST_9 : Operation 69 [1/1] (0.00ns)   --->   "%input_r_addr_8 = getelementptr i16 %input_r, i64 0, i64 8"   --->   Operation 69 'getelementptr' 'input_r_addr_8' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 70 [2/2] (2.15ns)   --->   "%input_r_load_8 = load i5 %input_r_addr_8"   --->   Operation 70 'load' 'input_r_load_8' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+
+State 10 <SV = 9> <Delay = 2.15>
+ST_10 : Operation 71 [1/2] (2.15ns)   --->   "%input_r_load_8 = load i5 %input_r_addr_8"   --->   Operation 71 'load' 'input_r_load_8' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+ST_10 : Operation 72 [1/1] (0.00ns)   --->   "%input_r_addr_9 = getelementptr i16 %input_r, i64 0, i64 9"   --->   Operation 72 'getelementptr' 'input_r_addr_9' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 73 [2/2] (2.15ns)   --->   "%input_r_load_9 = load i5 %input_r_addr_9"   --->   Operation 73 'load' 'input_r_load_9' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+
+State 11 <SV = 10> <Delay = 2.15>
+ST_11 : Operation 74 [1/2] (2.15ns)   --->   "%input_r_load_9 = load i5 %input_r_addr_9"   --->   Operation 74 'load' 'input_r_load_9' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+ST_11 : Operation 75 [1/1] (0.00ns)   --->   "%input_r_addr_10 = getelementptr i16 %input_r, i64 0, i64 10"   --->   Operation 75 'getelementptr' 'input_r_addr_10' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 76 [2/2] (2.15ns)   --->   "%input_r_load_10 = load i5 %input_r_addr_10"   --->   Operation 76 'load' 'input_r_load_10' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+
+State 12 <SV = 11> <Delay = 2.15>
+ST_12 : Operation 77 [1/2] (2.15ns)   --->   "%input_r_load_10 = load i5 %input_r_addr_10"   --->   Operation 77 'load' 'input_r_load_10' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+ST_12 : Operation 78 [1/1] (0.00ns)   --->   "%input_r_addr_11 = getelementptr i16 %input_r, i64 0, i64 11"   --->   Operation 78 'getelementptr' 'input_r_addr_11' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 79 [2/2] (2.15ns)   --->   "%input_r_load_11 = load i5 %input_r_addr_11"   --->   Operation 79 'load' 'input_r_load_11' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+
+State 13 <SV = 12> <Delay = 2.15>
+ST_13 : Operation 80 [1/2] (2.15ns)   --->   "%input_r_load_11 = load i5 %input_r_addr_11"   --->   Operation 80 'load' 'input_r_load_11' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+ST_13 : Operation 81 [1/1] (0.00ns)   --->   "%input_r_addr_12 = getelementptr i16 %input_r, i64 0, i64 12"   --->   Operation 81 'getelementptr' 'input_r_addr_12' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 82 [2/2] (2.15ns)   --->   "%input_r_load_12 = load i5 %input_r_addr_12"   --->   Operation 82 'load' 'input_r_load_12' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+
+State 14 <SV = 13> <Delay = 2.15>
+ST_14 : Operation 83 [1/2] (2.15ns)   --->   "%input_r_load_12 = load i5 %input_r_addr_12"   --->   Operation 83 'load' 'input_r_load_12' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+ST_14 : Operation 84 [1/1] (0.00ns)   --->   "%input_r_addr_13 = getelementptr i16 %input_r, i64 0, i64 13"   --->   Operation 84 'getelementptr' 'input_r_addr_13' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 85 [2/2] (2.15ns)   --->   "%input_r_load_13 = load i5 %input_r_addr_13"   --->   Operation 85 'load' 'input_r_load_13' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+
+State 15 <SV = 14> <Delay = 2.15>
+ST_15 : Operation 86 [1/2] (2.15ns)   --->   "%input_r_load_13 = load i5 %input_r_addr_13"   --->   Operation 86 'load' 'input_r_load_13' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+ST_15 : Operation 87 [1/1] (0.00ns)   --->   "%input_r_addr_14 = getelementptr i16 %input_r, i64 0, i64 14"   --->   Operation 87 'getelementptr' 'input_r_addr_14' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 88 [2/2] (2.15ns)   --->   "%input_r_load_14 = load i5 %input_r_addr_14"   --->   Operation 88 'load' 'input_r_load_14' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+
+State 16 <SV = 15> <Delay = 2.15>
+ST_16 : Operation 89 [1/2] (2.15ns)   --->   "%input_r_load_14 = load i5 %input_r_addr_14"   --->   Operation 89 'load' 'input_r_load_14' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+ST_16 : Operation 90 [1/1] (0.00ns)   --->   "%input_r_addr_15 = getelementptr i16 %input_r, i64 0, i64 15"   --->   Operation 90 'getelementptr' 'input_r_addr_15' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 91 [2/2] (2.15ns)   --->   "%input_r_load_15 = load i5 %input_r_addr_15"   --->   Operation 91 'load' 'input_r_load_15' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+
+State 17 <SV = 16> <Delay = 2.15>
+ST_17 : Operation 92 [1/2] (2.15ns)   --->   "%input_r_load_15 = load i5 %input_r_addr_15"   --->   Operation 92 'load' 'input_r_load_15' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+ST_17 : Operation 93 [1/1] (0.00ns)   --->   "%input_r_addr_16 = getelementptr i16 %input_r, i64 0, i64 16"   --->   Operation 93 'getelementptr' 'input_r_addr_16' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 94 [2/2] (2.15ns)   --->   "%input_r_load_16 = load i5 %input_r_addr_16"   --->   Operation 94 'load' 'input_r_load_16' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+
+State 18 <SV = 17> <Delay = 2.15>
+ST_18 : Operation 95 [1/2] (2.15ns)   --->   "%input_r_load_16 = load i5 %input_r_addr_16"   --->   Operation 95 'load' 'input_r_load_16' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+ST_18 : Operation 96 [1/1] (0.00ns)   --->   "%input_r_addr_17 = getelementptr i16 %input_r, i64 0, i64 17"   --->   Operation 96 'getelementptr' 'input_r_addr_17' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 97 [2/2] (2.15ns)   --->   "%input_r_load_17 = load i5 %input_r_addr_17"   --->   Operation 97 'load' 'input_r_load_17' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+
+State 19 <SV = 18> <Delay = 2.15>
+ST_19 : Operation 98 [1/2] (2.15ns)   --->   "%input_r_load_17 = load i5 %input_r_addr_17"   --->   Operation 98 'load' 'input_r_load_17' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 18> <RAM>
+ST_19 : Operation 99 [2/2] (0.00ns)   --->   "%call_ln0 = call void @neural_network_Pipeline_VITIS_LOOP_56_1, i16 %input_r_load, i16 %input_r_load_1, i16 %input_r_load_2, i16 %input_r_load_3, i16 %input_r_load_4, i16 %input_r_load_5, i16 %input_r_load_6, i16 %input_r_load_7, i16 %input_r_load_8, i16 %input_r_load_9, i16 %input_r_load_10, i16 %input_r_load_11, i16 %input_r_load_12, i16 %input_r_load_13, i16 %input_r_load_14, i16 %input_r_load_15, i16 %input_r_load_16, i16 %input_r_load_17, i15 %layer1_output, i10 %layer1_weights_0, i9 %layer1_weights_1, i10 %layer1_weights_2, i9 %layer1_weights_3, i10 %layer1_weights_4, i9 %layer1_weights_5, i10 %layer1_weights_6, i11 %layer1_weights_7, i10 %layer1_weights_8, i9 %layer1_weights_9, i11 %layer1_weights_10, i11 %layer1_weights_11, i11 %layer1_weights_12, i12 %layer1_weights_13, i11 %layer1_weights_14, i10 %layer1_weights_15, i10 %layer1_weights_16, i10 %layer1_weights_17, i10 %layer1_bias"   --->   Operation 99 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 0.00>
+ST_20 : Operation 100 [1/2] (0.00ns)   --->   "%call_ln0 = call void @neural_network_Pipeline_VITIS_LOOP_56_1, i16 %input_r_load, i16 %input_r_load_1, i16 %input_r_load_2, i16 %input_r_load_3, i16 %input_r_load_4, i16 %input_r_load_5, i16 %input_r_load_6, i16 %input_r_load_7, i16 %input_r_load_8, i16 %input_r_load_9, i16 %input_r_load_10, i16 %input_r_load_11, i16 %input_r_load_12, i16 %input_r_load_13, i16 %input_r_load_14, i16 %input_r_load_15, i16 %input_r_load_16, i16 %input_r_load_17, i15 %layer1_output, i10 %layer1_weights_0, i9 %layer1_weights_1, i10 %layer1_weights_2, i9 %layer1_weights_3, i10 %layer1_weights_4, i9 %layer1_weights_5, i10 %layer1_weights_6, i11 %layer1_weights_7, i10 %layer1_weights_8, i9 %layer1_weights_9, i11 %layer1_weights_10, i11 %layer1_weights_11, i11 %layer1_weights_12, i12 %layer1_weights_13, i11 %layer1_weights_14, i10 %layer1_weights_15, i10 %layer1_weights_16, i10 %layer1_weights_17, i10 %layer1_bias"   --->   Operation 100 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 21 <SV = 20> <Delay = 2.15>
+ST_21 : Operation 101 [1/1] (0.00ns)   --->   "%layer1_output_addr = getelementptr i15 %layer1_output, i64 0, i64 0"   --->   Operation 101 'getelementptr' 'layer1_output_addr' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 102 [2/2] (2.15ns)   --->   "%layer1_output_load = load i5 %layer1_output_addr"   --->   Operation 102 'load' 'layer1_output_load' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_21 : Operation 103 [1/1] (0.00ns)   --->   "%layer1_output_addr_1 = getelementptr i15 %layer1_output, i64 0, i64 1"   --->   Operation 103 'getelementptr' 'layer1_output_addr_1' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 104 [2/2] (2.15ns)   --->   "%layer1_output_load_1 = load i5 %layer1_output_addr_1"   --->   Operation 104 'load' 'layer1_output_load_1' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+
+State 22 <SV = 21> <Delay = 2.15>
+ST_22 : Operation 105 [1/2] (2.15ns)   --->   "%layer1_output_load = load i5 %layer1_output_addr"   --->   Operation 105 'load' 'layer1_output_load' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_22 : Operation 106 [1/2] (2.15ns)   --->   "%layer1_output_load_1 = load i5 %layer1_output_addr_1"   --->   Operation 106 'load' 'layer1_output_load_1' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_22 : Operation 107 [1/1] (0.00ns)   --->   "%layer1_output_addr_2 = getelementptr i15 %layer1_output, i64 0, i64 2"   --->   Operation 107 'getelementptr' 'layer1_output_addr_2' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 108 [2/2] (2.15ns)   --->   "%layer1_output_load_2 = load i5 %layer1_output_addr_2"   --->   Operation 108 'load' 'layer1_output_load_2' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_22 : Operation 109 [1/1] (0.00ns)   --->   "%layer1_output_addr_3 = getelementptr i15 %layer1_output, i64 0, i64 3"   --->   Operation 109 'getelementptr' 'layer1_output_addr_3' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 110 [2/2] (2.15ns)   --->   "%layer1_output_load_3 = load i5 %layer1_output_addr_3"   --->   Operation 110 'load' 'layer1_output_load_3' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+
+State 23 <SV = 22> <Delay = 2.15>
+ST_23 : Operation 111 [1/2] (2.15ns)   --->   "%layer1_output_load_2 = load i5 %layer1_output_addr_2"   --->   Operation 111 'load' 'layer1_output_load_2' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_23 : Operation 112 [1/2] (2.15ns)   --->   "%layer1_output_load_3 = load i5 %layer1_output_addr_3"   --->   Operation 112 'load' 'layer1_output_load_3' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_23 : Operation 113 [1/1] (0.00ns)   --->   "%layer1_output_addr_4 = getelementptr i15 %layer1_output, i64 0, i64 4"   --->   Operation 113 'getelementptr' 'layer1_output_addr_4' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 114 [2/2] (2.15ns)   --->   "%layer1_output_load_4 = load i5 %layer1_output_addr_4"   --->   Operation 114 'load' 'layer1_output_load_4' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_23 : Operation 115 [1/1] (0.00ns)   --->   "%layer1_output_addr_5 = getelementptr i15 %layer1_output, i64 0, i64 5"   --->   Operation 115 'getelementptr' 'layer1_output_addr_5' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 116 [2/2] (2.15ns)   --->   "%layer1_output_load_5 = load i5 %layer1_output_addr_5"   --->   Operation 116 'load' 'layer1_output_load_5' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+
+State 24 <SV = 23> <Delay = 2.15>
+ST_24 : Operation 117 [1/2] (2.15ns)   --->   "%layer1_output_load_4 = load i5 %layer1_output_addr_4"   --->   Operation 117 'load' 'layer1_output_load_4' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_24 : Operation 118 [1/2] (2.15ns)   --->   "%layer1_output_load_5 = load i5 %layer1_output_addr_5"   --->   Operation 118 'load' 'layer1_output_load_5' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_24 : Operation 119 [1/1] (0.00ns)   --->   "%layer1_output_addr_6 = getelementptr i15 %layer1_output, i64 0, i64 6"   --->   Operation 119 'getelementptr' 'layer1_output_addr_6' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 120 [2/2] (2.15ns)   --->   "%layer1_output_load_6 = load i5 %layer1_output_addr_6"   --->   Operation 120 'load' 'layer1_output_load_6' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_24 : Operation 121 [1/1] (0.00ns)   --->   "%layer1_output_addr_7 = getelementptr i15 %layer1_output, i64 0, i64 7"   --->   Operation 121 'getelementptr' 'layer1_output_addr_7' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 122 [2/2] (2.15ns)   --->   "%layer1_output_load_7 = load i5 %layer1_output_addr_7"   --->   Operation 122 'load' 'layer1_output_load_7' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+
+State 25 <SV = 24> <Delay = 2.15>
+ST_25 : Operation 123 [1/2] (2.15ns)   --->   "%layer1_output_load_6 = load i5 %layer1_output_addr_6"   --->   Operation 123 'load' 'layer1_output_load_6' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_25 : Operation 124 [1/2] (2.15ns)   --->   "%layer1_output_load_7 = load i5 %layer1_output_addr_7"   --->   Operation 124 'load' 'layer1_output_load_7' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_25 : Operation 125 [1/1] (0.00ns)   --->   "%layer1_output_addr_8 = getelementptr i15 %layer1_output, i64 0, i64 8"   --->   Operation 125 'getelementptr' 'layer1_output_addr_8' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 126 [2/2] (2.15ns)   --->   "%layer1_output_load_8 = load i5 %layer1_output_addr_8"   --->   Operation 126 'load' 'layer1_output_load_8' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_25 : Operation 127 [1/1] (0.00ns)   --->   "%layer1_output_addr_9 = getelementptr i15 %layer1_output, i64 0, i64 9"   --->   Operation 127 'getelementptr' 'layer1_output_addr_9' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 128 [2/2] (2.15ns)   --->   "%layer1_output_load_9 = load i5 %layer1_output_addr_9"   --->   Operation 128 'load' 'layer1_output_load_9' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+
+State 26 <SV = 25> <Delay = 2.15>
+ST_26 : Operation 129 [1/2] (2.15ns)   --->   "%layer1_output_load_8 = load i5 %layer1_output_addr_8"   --->   Operation 129 'load' 'layer1_output_load_8' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_26 : Operation 130 [1/2] (2.15ns)   --->   "%layer1_output_load_9 = load i5 %layer1_output_addr_9"   --->   Operation 130 'load' 'layer1_output_load_9' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_26 : Operation 131 [1/1] (0.00ns)   --->   "%layer1_output_addr_10 = getelementptr i15 %layer1_output, i64 0, i64 10"   --->   Operation 131 'getelementptr' 'layer1_output_addr_10' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 132 [2/2] (2.15ns)   --->   "%layer1_output_load_10 = load i5 %layer1_output_addr_10"   --->   Operation 132 'load' 'layer1_output_load_10' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_26 : Operation 133 [1/1] (0.00ns)   --->   "%layer1_output_addr_11 = getelementptr i15 %layer1_output, i64 0, i64 11"   --->   Operation 133 'getelementptr' 'layer1_output_addr_11' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 134 [2/2] (2.15ns)   --->   "%layer1_output_load_11 = load i5 %layer1_output_addr_11"   --->   Operation 134 'load' 'layer1_output_load_11' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+
+State 27 <SV = 26> <Delay = 2.15>
+ST_27 : Operation 135 [1/2] (2.15ns)   --->   "%layer1_output_load_10 = load i5 %layer1_output_addr_10"   --->   Operation 135 'load' 'layer1_output_load_10' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_27 : Operation 136 [1/2] (2.15ns)   --->   "%layer1_output_load_11 = load i5 %layer1_output_addr_11"   --->   Operation 136 'load' 'layer1_output_load_11' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_27 : Operation 137 [1/1] (0.00ns)   --->   "%layer1_output_addr_12 = getelementptr i15 %layer1_output, i64 0, i64 12"   --->   Operation 137 'getelementptr' 'layer1_output_addr_12' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 138 [2/2] (2.15ns)   --->   "%layer1_output_load_12 = load i5 %layer1_output_addr_12"   --->   Operation 138 'load' 'layer1_output_load_12' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_27 : Operation 139 [1/1] (0.00ns)   --->   "%layer1_output_addr_13 = getelementptr i15 %layer1_output, i64 0, i64 13"   --->   Operation 139 'getelementptr' 'layer1_output_addr_13' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 140 [2/2] (2.15ns)   --->   "%layer1_output_load_13 = load i5 %layer1_output_addr_13"   --->   Operation 140 'load' 'layer1_output_load_13' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+
+State 28 <SV = 27> <Delay = 2.15>
+ST_28 : Operation 141 [1/2] (2.15ns)   --->   "%layer1_output_load_12 = load i5 %layer1_output_addr_12"   --->   Operation 141 'load' 'layer1_output_load_12' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_28 : Operation 142 [1/2] (2.15ns)   --->   "%layer1_output_load_13 = load i5 %layer1_output_addr_13"   --->   Operation 142 'load' 'layer1_output_load_13' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_28 : Operation 143 [1/1] (0.00ns)   --->   "%layer1_output_addr_14 = getelementptr i15 %layer1_output, i64 0, i64 14"   --->   Operation 143 'getelementptr' 'layer1_output_addr_14' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 144 [2/2] (2.15ns)   --->   "%layer1_output_load_14 = load i5 %layer1_output_addr_14"   --->   Operation 144 'load' 'layer1_output_load_14' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_28 : Operation 145 [1/1] (0.00ns)   --->   "%layer1_output_addr_15 = getelementptr i15 %layer1_output, i64 0, i64 15"   --->   Operation 145 'getelementptr' 'layer1_output_addr_15' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 146 [2/2] (2.15ns)   --->   "%layer1_output_load_15 = load i5 %layer1_output_addr_15"   --->   Operation 146 'load' 'layer1_output_load_15' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+
+State 29 <SV = 28> <Delay = 2.15>
+ST_29 : Operation 147 [1/2] (2.15ns)   --->   "%layer1_output_load_14 = load i5 %layer1_output_addr_14"   --->   Operation 147 'load' 'layer1_output_load_14' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_29 : Operation 148 [1/2] (2.15ns)   --->   "%layer1_output_load_15 = load i5 %layer1_output_addr_15"   --->   Operation 148 'load' 'layer1_output_load_15' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_29 : Operation 149 [1/1] (0.00ns)   --->   "%layer1_output_addr_16 = getelementptr i15 %layer1_output, i64 0, i64 16"   --->   Operation 149 'getelementptr' 'layer1_output_addr_16' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 150 [2/2] (2.15ns)   --->   "%layer1_output_load_16 = load i5 %layer1_output_addr_16"   --->   Operation 150 'load' 'layer1_output_load_16' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_29 : Operation 151 [1/1] (0.00ns)   --->   "%layer1_output_addr_17 = getelementptr i15 %layer1_output, i64 0, i64 17"   --->   Operation 151 'getelementptr' 'layer1_output_addr_17' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 152 [2/2] (2.15ns)   --->   "%layer1_output_load_17 = load i5 %layer1_output_addr_17"   --->   Operation 152 'load' 'layer1_output_load_17' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+
+State 30 <SV = 29> <Delay = 2.15>
+ST_30 : Operation 153 [1/2] (2.15ns)   --->   "%layer1_output_load_16 = load i5 %layer1_output_addr_16"   --->   Operation 153 'load' 'layer1_output_load_16' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_30 : Operation 154 [1/2] (2.15ns)   --->   "%layer1_output_load_17 = load i5 %layer1_output_addr_17"   --->   Operation 154 'load' 'layer1_output_load_17' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_30 : Operation 155 [1/1] (0.00ns)   --->   "%layer1_output_addr_18 = getelementptr i15 %layer1_output, i64 0, i64 18"   --->   Operation 155 'getelementptr' 'layer1_output_addr_18' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 156 [2/2] (2.15ns)   --->   "%layer1_output_load_18 = load i5 %layer1_output_addr_18"   --->   Operation 156 'load' 'layer1_output_load_18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_30 : Operation 157 [1/1] (0.00ns)   --->   "%layer1_output_addr_19 = getelementptr i15 %layer1_output, i64 0, i64 19"   --->   Operation 157 'getelementptr' 'layer1_output_addr_19' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 158 [2/2] (2.15ns)   --->   "%layer1_output_load_19 = load i5 %layer1_output_addr_19"   --->   Operation 158 'load' 'layer1_output_load_19' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+
+State 31 <SV = 30> <Delay = 2.15>
+ST_31 : Operation 159 [1/2] (2.15ns)   --->   "%layer1_output_load_18 = load i5 %layer1_output_addr_18"   --->   Operation 159 'load' 'layer1_output_load_18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_31 : Operation 160 [1/2] (2.15ns)   --->   "%layer1_output_load_19 = load i5 %layer1_output_addr_19"   --->   Operation 160 'load' 'layer1_output_load_19' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 20> <RAM>
+ST_31 : Operation 161 [2/2] (0.00ns)   --->   "%call_ln0 = call void @neural_network_Pipeline_VITIS_LOOP_68_3, i15 %layer1_output_load, i15 %layer1_output_load_1, i15 %layer1_output_load_2, i15 %layer1_output_load_3, i15 %layer1_output_load_4, i15 %layer1_output_load_5, i15 %layer1_output_load_6, i15 %layer1_output_load_7, i15 %layer1_output_load_8, i15 %layer1_output_load_9, i15 %layer1_output_load_10, i15 %layer1_output_load_11, i15 %layer1_output_load_12, i15 %layer1_output_load_13, i15 %layer1_output_load_14, i15 %layer1_output_load_15, i15 %layer1_output_load_16, i15 %layer1_output_load_17, i15 %layer1_output_load_18, i15 %layer1_output_load_19, i16 %layer2_output, i11 %layer2_weights_0, i11 %layer2_weights_1, i11 %layer2_weights_2, i11 %layer2_weights_3, i10 %layer2_weights_4, i10 %layer2_weights_5, i10 %layer2_weights_6, i10 %layer2_weights_7, i11 %layer2_weights_8, i11 %layer2_weights_9, i11 %layer2_weights_10, i10 %layer2_weights_11, i12 %layer2_weights_12, i11 %layer2_weights_13, i11 %layer2_weights_14, i10 %layer2_weights_15, i11 %layer2_weights_16, i11 %layer2_weights_17, i11 %layer2_weights_18, i11 %layer2_weights_19, i9 %layer2_bias"   --->   Operation 161 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 32 <SV = 31> <Delay = 0.00>
+ST_32 : Operation 162 [1/2] (0.00ns)   --->   "%call_ln0 = call void @neural_network_Pipeline_VITIS_LOOP_68_3, i15 %layer1_output_load, i15 %layer1_output_load_1, i15 %layer1_output_load_2, i15 %layer1_output_load_3, i15 %layer1_output_load_4, i15 %layer1_output_load_5, i15 %layer1_output_load_6, i15 %layer1_output_load_7, i15 %layer1_output_load_8, i15 %layer1_output_load_9, i15 %layer1_output_load_10, i15 %layer1_output_load_11, i15 %layer1_output_load_12, i15 %layer1_output_load_13, i15 %layer1_output_load_14, i15 %layer1_output_load_15, i15 %layer1_output_load_16, i15 %layer1_output_load_17, i15 %layer1_output_load_18, i15 %layer1_output_load_19, i16 %layer2_output, i11 %layer2_weights_0, i11 %layer2_weights_1, i11 %layer2_weights_2, i11 %layer2_weights_3, i10 %layer2_weights_4, i10 %layer2_weights_5, i10 %layer2_weights_6, i10 %layer2_weights_7, i11 %layer2_weights_8, i11 %layer2_weights_9, i11 %layer2_weights_10, i10 %layer2_weights_11, i12 %layer2_weights_12, i11 %layer2_weights_13, i11 %layer2_weights_14, i10 %layer2_weights_15, i11 %layer2_weights_16, i11 %layer2_weights_17, i11 %layer2_weights_18, i11 %layer2_weights_19, i9 %layer2_bias"   --->   Operation 162 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 33 <SV = 32> <Delay = 2.15>
+ST_33 : Operation 163 [1/1] (0.00ns)   --->   "%input = getelementptr i16 %layer2_output, i64 0, i64 0" [nn.cpp:80]   --->   Operation 163 'getelementptr' 'input' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 164 [2/2] (2.15ns)   --->   "%max_val = load i3 %input" [nn.cpp:18->nn.cpp:80]   --->   Operation 164 'load' 'max_val' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+
+State 34 <SV = 33> <Delay = 2.15>
+ST_34 : Operation 165 [1/2] (2.15ns)   --->   "%max_val = load i3 %input" [nn.cpp:18->nn.cpp:80]   --->   Operation 165 'load' 'max_val' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 5> <RAM>
+
+State 35 <SV = 34> <Delay = 1.61>
+ST_35 : Operation 166 [2/2] (1.61ns)   --->   "%call_ln18 = call void @neural_network_Pipeline_VITIS_LOOP_22_1, i16 %max_val, i16 %layer2_output, i16 %max_val_1_loc" [nn.cpp:18->nn.cpp:80]   --->   Operation 166 'call' 'call_ln18' <Predicate = true> <Delay = 1.61> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 36 <SV = 35> <Delay = 3.29>
+ST_36 : Operation 167 [1/2] (3.29ns)   --->   "%call_ln18 = call void @neural_network_Pipeline_VITIS_LOOP_22_1, i16 %max_val, i16 %layer2_output, i16 %max_val_1_loc" [nn.cpp:18->nn.cpp:80]   --->   Operation 167 'call' 'call_ln18' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 37 <SV = 36> <Delay = 0.00>
+ST_37 : Operation 168 [1/1] (0.00ns)   --->   "%max_val_1_loc_load = load i16 %max_val_1_loc"   --->   Operation 168 'load' 'max_val_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 169 [2/2] (0.00ns)   --->   "%call_ln0 = call void @neural_network_Pipeline_VITIS_LOOP_28_2, i16 %layer2_output, i16 %max_val_1_loc_load, i16 %output_r, i16 %sum_4_loc, i11 %f_x_lsb_table, i25 %exp_x_msb_2_m_1_table, i25 %exp_x_msb_1_table"   --->   Operation 169 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 38 <SV = 37> <Delay = 0.00>
+ST_38 : Operation 170 [1/2] (0.00ns)   --->   "%call_ln0 = call void @neural_network_Pipeline_VITIS_LOOP_28_2, i16 %layer2_output, i16 %max_val_1_loc_load, i16 %output_r, i16 %sum_4_loc, i11 %f_x_lsb_table, i25 %exp_x_msb_2_m_1_table, i25 %exp_x_msb_1_table"   --->   Operation 170 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 39 <SV = 38> <Delay = 0.00>
+ST_39 : Operation 171 [1/1] (0.00ns)   --->   "%sum_4_loc_load = load i16 %sum_4_loc"   --->   Operation 171 'load' 'sum_4_loc_load' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 172 [2/2] (0.00ns)   --->   "%call_ln0 = call void @neural_network_Pipeline_VITIS_LOOP_35_3, i16 %output_r, i16 %sum_4_loc_load"   --->   Operation 172 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 40 <SV = 39> <Delay = 0.00>
+ST_40 : Operation 173 [1/1] (0.00ns)   --->   "%spectopmodule_ln41 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [nn.cpp:41]   --->   Operation 173 'spectopmodule' 'spectopmodule_ln41' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 174 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_r, void @empty_8, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_10, void @empty_9, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_11, i32 4294967295, i32 0"   --->   Operation 174 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 175 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_r, void @empty_5, i32 0, i32 0, void @empty_11, i32 1, i32 0, void @empty_11, void @empty_11, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_11, i32 4294967295, i32 0"   --->   Operation 175 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 176 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %input_r, i64 666, i64 207, i64 1"   --->   Operation 176 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 177 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_r"   --->   Operation 177 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 178 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %output_r, void @empty_8, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_7, void @empty_1, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_11, i32 4294967295, i32 0"   --->   Operation 178 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 179 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %output_r, void @empty_5, i32 0, i32 0, void @empty_11, i32 1, i32 0, void @empty_11, void @empty_11, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_11, i32 4294967295, i32 0"   --->   Operation 179 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 180 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %output_r, i64 666, i64 207, i64 1"   --->   Operation 180 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 181 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %output_r"   --->   Operation 181 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 182 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_8, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_6, void @empty_11, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_11, i32 4294967295, i32 0"   --->   Operation 182 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 183 [1/1] (0.00ns)   --->   "%specmemcore_ln47 = specmemcore void @_ssdm_op_SpecMemCore, i10 %layer1_weights_17, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:47]   --->   Operation 183 'specmemcore' 'specmemcore_ln47' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 184 [1/1] (0.00ns)   --->   "%specmemcore_ln47 = specmemcore void @_ssdm_op_SpecMemCore, i10 %layer1_weights_16, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:47]   --->   Operation 184 'specmemcore' 'specmemcore_ln47' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 185 [1/1] (0.00ns)   --->   "%specmemcore_ln47 = specmemcore void @_ssdm_op_SpecMemCore, i10 %layer1_weights_15, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:47]   --->   Operation 185 'specmemcore' 'specmemcore_ln47' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 186 [1/1] (0.00ns)   --->   "%specmemcore_ln47 = specmemcore void @_ssdm_op_SpecMemCore, i11 %layer1_weights_14, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:47]   --->   Operation 186 'specmemcore' 'specmemcore_ln47' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 187 [1/1] (0.00ns)   --->   "%specmemcore_ln47 = specmemcore void @_ssdm_op_SpecMemCore, i12 %layer1_weights_13, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:47]   --->   Operation 187 'specmemcore' 'specmemcore_ln47' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 188 [1/1] (0.00ns)   --->   "%specmemcore_ln47 = specmemcore void @_ssdm_op_SpecMemCore, i11 %layer1_weights_12, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:47]   --->   Operation 188 'specmemcore' 'specmemcore_ln47' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 189 [1/1] (0.00ns)   --->   "%specmemcore_ln47 = specmemcore void @_ssdm_op_SpecMemCore, i11 %layer1_weights_11, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:47]   --->   Operation 189 'specmemcore' 'specmemcore_ln47' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 190 [1/1] (0.00ns)   --->   "%specmemcore_ln47 = specmemcore void @_ssdm_op_SpecMemCore, i11 %layer1_weights_10, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:47]   --->   Operation 190 'specmemcore' 'specmemcore_ln47' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 191 [1/1] (0.00ns)   --->   "%specmemcore_ln47 = specmemcore void @_ssdm_op_SpecMemCore, i9 %layer1_weights_9, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:47]   --->   Operation 191 'specmemcore' 'specmemcore_ln47' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 192 [1/1] (0.00ns)   --->   "%specmemcore_ln47 = specmemcore void @_ssdm_op_SpecMemCore, i10 %layer1_weights_8, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:47]   --->   Operation 192 'specmemcore' 'specmemcore_ln47' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 193 [1/1] (0.00ns)   --->   "%specmemcore_ln47 = specmemcore void @_ssdm_op_SpecMemCore, i11 %layer1_weights_7, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:47]   --->   Operation 193 'specmemcore' 'specmemcore_ln47' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 194 [1/1] (0.00ns)   --->   "%specmemcore_ln47 = specmemcore void @_ssdm_op_SpecMemCore, i10 %layer1_weights_6, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:47]   --->   Operation 194 'specmemcore' 'specmemcore_ln47' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 195 [1/1] (0.00ns)   --->   "%specmemcore_ln47 = specmemcore void @_ssdm_op_SpecMemCore, i9 %layer1_weights_5, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:47]   --->   Operation 195 'specmemcore' 'specmemcore_ln47' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 196 [1/1] (0.00ns)   --->   "%specmemcore_ln47 = specmemcore void @_ssdm_op_SpecMemCore, i10 %layer1_weights_4, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:47]   --->   Operation 196 'specmemcore' 'specmemcore_ln47' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 197 [1/1] (0.00ns)   --->   "%specmemcore_ln47 = specmemcore void @_ssdm_op_SpecMemCore, i9 %layer1_weights_3, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:47]   --->   Operation 197 'specmemcore' 'specmemcore_ln47' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 198 [1/1] (0.00ns)   --->   "%specmemcore_ln47 = specmemcore void @_ssdm_op_SpecMemCore, i10 %layer1_weights_2, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:47]   --->   Operation 198 'specmemcore' 'specmemcore_ln47' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 199 [1/1] (0.00ns)   --->   "%specmemcore_ln47 = specmemcore void @_ssdm_op_SpecMemCore, i9 %layer1_weights_1, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:47]   --->   Operation 199 'specmemcore' 'specmemcore_ln47' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 200 [1/1] (0.00ns)   --->   "%specmemcore_ln47 = specmemcore void @_ssdm_op_SpecMemCore, i10 %layer1_weights_0, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:47]   --->   Operation 200 'specmemcore' 'specmemcore_ln47' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 201 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i11 %layer2_weights_19, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 201 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 202 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i11 %layer2_weights_18, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 202 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 203 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i11 %layer2_weights_17, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 203 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 204 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i11 %layer2_weights_16, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 204 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 205 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i10 %layer2_weights_15, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 205 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 206 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i11 %layer2_weights_14, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 206 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 207 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i11 %layer2_weights_13, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 207 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 208 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i12 %layer2_weights_12, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 208 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 209 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i10 %layer2_weights_11, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 209 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 210 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i11 %layer2_weights_10, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 210 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 211 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i11 %layer2_weights_9, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 211 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 212 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i11 %layer2_weights_8, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 212 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 213 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i10 %layer2_weights_7, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 213 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 214 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i10 %layer2_weights_6, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 214 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 215 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i10 %layer2_weights_5, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 215 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 216 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i10 %layer2_weights_4, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 216 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 217 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i11 %layer2_weights_3, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 217 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 218 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i11 %layer2_weights_2, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 218 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 219 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i11 %layer2_weights_1, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 219 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 220 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i11 %layer2_weights_0, i64 666, i64 22, i64 18446744073709551615" [nn.cpp:48]   --->   Operation 220 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 221 [1/1] (0.00ns)   --->   "%specmemcore_ln49 = specmemcore void @_ssdm_op_SpecMemCore, i10 %layer1_bias, i64 666, i64 18, i64 18446744073709551615" [nn.cpp:49]   --->   Operation 221 'specmemcore' 'specmemcore_ln49' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 222 [1/1] (0.00ns)   --->   "%specmemcore_ln50 = specmemcore void @_ssdm_op_SpecMemCore, i9 %layer2_bias, i64 666, i64 18, i64 18446744073709551615" [nn.cpp:50]   --->   Operation 222 'specmemcore' 'specmemcore_ln50' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 223 [1/2] (0.00ns)   --->   "%call_ln0 = call void @neural_network_Pipeline_VITIS_LOOP_35_3, i16 %output_r, i16 %sum_4_loc_load"   --->   Operation 223 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_40 : Operation 224 [1/1] (0.00ns)   --->   "%ret_ln81 = ret" [nn.cpp:81]   --->   Operation 224 'ret' 'ret_ln81' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 2.152ns
+The critical path consists of the following:
+	'getelementptr' operation ('input_r_addr') [100]  (0.000 ns)
+	'load' operation ('input_r_load') on array 'input_r' [101]  (2.152 ns)
+
+ <State 2>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('input_r_load') on array 'input_r' [101]  (2.152 ns)
+
+ <State 3>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('input_r_load_1') on array 'input_r' [103]  (2.152 ns)
+
+ <State 4>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('input_r_load_2') on array 'input_r' [105]  (2.152 ns)
+
+ <State 5>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('input_r_load_3') on array 'input_r' [107]  (2.152 ns)
+
+ <State 6>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('input_r_load_4') on array 'input_r' [109]  (2.152 ns)
+
+ <State 7>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('input_r_load_5') on array 'input_r' [111]  (2.152 ns)
+
+ <State 8>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('input_r_load_6') on array 'input_r' [113]  (2.152 ns)
+
+ <State 9>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('input_r_load_7') on array 'input_r' [115]  (2.152 ns)
+
+ <State 10>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('input_r_load_8') on array 'input_r' [117]  (2.152 ns)
+
+ <State 11>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('input_r_load_9') on array 'input_r' [119]  (2.152 ns)
+
+ <State 12>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('input_r_load_10') on array 'input_r' [121]  (2.152 ns)
+
+ <State 13>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('input_r_load_11') on array 'input_r' [123]  (2.152 ns)
+
+ <State 14>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('input_r_load_12') on array 'input_r' [125]  (2.152 ns)
+
+ <State 15>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('input_r_load_13') on array 'input_r' [127]  (2.152 ns)
+
+ <State 16>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('input_r_load_14') on array 'input_r' [129]  (2.152 ns)
+
+ <State 17>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('input_r_load_15') on array 'input_r' [131]  (2.152 ns)
+
+ <State 18>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('input_r_load_16') on array 'input_r' [133]  (2.152 ns)
+
+ <State 19>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('input_r_load_17') on array 'input_r' [135]  (2.152 ns)
+
+ <State 20>: 0.000ns
+The critical path consists of the following:
+
+ <State 21>: 2.152ns
+The critical path consists of the following:
+	'getelementptr' operation ('layer1_output_addr') [137]  (0.000 ns)
+	'load' operation ('layer1_output_load') on array 'layer1_output', nn.cpp:52 [138]  (2.152 ns)
+
+ <State 22>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('layer1_output_load') on array 'layer1_output', nn.cpp:52 [138]  (2.152 ns)
+
+ <State 23>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('layer1_output_load_2') on array 'layer1_output', nn.cpp:52 [142]  (2.152 ns)
+
+ <State 24>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('layer1_output_load_4') on array 'layer1_output', nn.cpp:52 [146]  (2.152 ns)
+
+ <State 25>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('layer1_output_load_6') on array 'layer1_output', nn.cpp:52 [150]  (2.152 ns)
+
+ <State 26>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('layer1_output_load_8') on array 'layer1_output', nn.cpp:52 [154]  (2.152 ns)
+
+ <State 27>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('layer1_output_load_10') on array 'layer1_output', nn.cpp:52 [158]  (2.152 ns)
+
+ <State 28>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('layer1_output_load_12') on array 'layer1_output', nn.cpp:52 [162]  (2.152 ns)
+
+ <State 29>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('layer1_output_load_14') on array 'layer1_output', nn.cpp:52 [166]  (2.152 ns)
+
+ <State 30>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('layer1_output_load_16') on array 'layer1_output', nn.cpp:52 [170]  (2.152 ns)
+
+ <State 31>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('layer1_output_load_18') on array 'layer1_output', nn.cpp:52 [174]  (2.152 ns)
+
+ <State 32>: 0.000ns
+The critical path consists of the following:
+
+ <State 33>: 2.152ns
+The critical path consists of the following:
+	'getelementptr' operation ('input', nn.cpp:80) [178]  (0.000 ns)
+	'load' operation ('max_val', nn.cpp:18->nn.cpp:80) on array 'layer2_output', nn.cpp:53 [179]  (2.152 ns)
+
+ <State 34>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('max_val', nn.cpp:18->nn.cpp:80) on array 'layer2_output', nn.cpp:53 [179]  (2.152 ns)
+
+ <State 35>: 1.610ns
+The critical path consists of the following:
+	'call' operation ('call_ln18', nn.cpp:18->nn.cpp:80) to 'neural_network_Pipeline_VITIS_LOOP_22_1' [180]  (1.610 ns)
+
+ <State 36>: 3.290ns
+The critical path consists of the following:
+	'call' operation ('call_ln18', nn.cpp:18->nn.cpp:80) to 'neural_network_Pipeline_VITIS_LOOP_22_1' [180]  (3.290 ns)
+
+ <State 37>: 0.000ns
+The critical path consists of the following:
+
+ <State 38>: 0.000ns
+The critical path consists of the following:
+
+ <State 39>: 0.000ns
+The critical path consists of the following:
+
+ <State 40>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

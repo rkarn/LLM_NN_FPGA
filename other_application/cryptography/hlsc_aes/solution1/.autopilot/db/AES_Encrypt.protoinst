@@ -1,0 +1,69 @@
+{
+	"version": "1.0",
+	"modules": {
+		"AES_Encrypt": {
+			"proto_instances": {
+				"/AESL_inst_AES_Encrypt_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_AES_Encrypt_Pipeline_VITIS_LOOP_101_2_VITIS_LOOP_102_3_fu_200/grp_AES_Encrypt_Pipeline_VITIS_LOOP_101_2_VITIS_LOOP_102_3_fu_200_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_AES_Encrypt_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2_fu_189/grp_AES_Encrypt_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2_fu_189_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_AES_Encrypt_Pipeline_VITIS_LOOP_75_11_fu_194/grp_AES_Encrypt_Pipeline_VITIS_LOOP_75_11_fu_194_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_AES_Encrypt_Pipeline_VITIS_LOOP_75_1_fu_175/grp_AES_Encrypt_Pipeline_VITIS_LOOP_75_1_fu_175_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_AES_Encrypt_Pipeline_VITIS_LOOP_90_1_fu_183/grp_AES_Encrypt_Pipeline_VITIS_LOOP_90_1_fu_183_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				}
+			}
+		}
+	}
+}

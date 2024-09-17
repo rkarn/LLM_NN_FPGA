@@ -1,0 +1,148 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: fcnn.cpp, Line: 45, Column: 19 }
+Function:        _Z15mnist_inferencePfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_45_7
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: fcnn.cpp, Line: 12, Column: 0 }
+Function:        _Z15mnist_inferencePfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_53_8
+  - String:          ''' ('
+  - LoopLoc:         'fcnn.cpp:53:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          mnist_inference
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: fcnn.cpp, Line: 12, Column: 0 }
+Function:        _Z15mnist_inferencePfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_21_1
+  - String:          ''' ('
+  - LoopLoc:         'fcnn.cpp:21:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          mnist_inference
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: fcnn.cpp, Line: 29, Column: 26 }
+Function:        _Z15mnist_inferencePfS_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_29_3
+  - String:          ' '
+  - LoopLoc:         'fcnn.cpp:29:26'
+  - String:          ' '
+  - Function:        'mnist_inference(float*, float*)'
+    DebugLoc:        { File: fcnn.cpp, Line: 12, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: fcnn.cpp, Line: 36, Column: 30 }
+Function:        _Z15mnist_inferencePfS_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_36_5
+  - String:          ' '
+  - LoopLoc:         'fcnn.cpp:36:30'
+  - String:          ' '
+  - Function:        'mnist_inference(float*, float*)'
+    DebugLoc:        { File: fcnn.cpp, Line: 12, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: fcnn.cpp, Line: 45, Column: 19 }
+Function:        _Z15mnist_inferencePfS_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_45_7
+  - String:          ' '
+  - LoopLoc:         'fcnn.cpp:45:19'
+  - String:          ' '
+  - Function:        'mnist_inference(float*, float*)'
+    DebugLoc:        { File: fcnn.cpp, Line: 12, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: fcnn.cpp, Line: 45, Column: 19 }
+Function:        _Z15mnist_inferencePfS_
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_45_7
+  - String:          '''('
+  - LoopLoc:         'fcnn.cpp:45:19'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: fcnn.cpp, Line: 45, Column: 19 }
+Function:        _Z15mnist_inferencePfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_45_7
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Failure
+Pass:            reflow-interface-check
+Name:            UnspportedNonScalarType
+DebugLoc:        { File: fcnn.cpp, Line: 12, Column: 0 }
+Function:        _Z15mnist_inferencePfS_
+Args:            
+  - String:          'Cannot apply interface mode '''
+  - String:          ap_none
+  - String:          ''' '
+  - String:          'on function argument '''
+  - Name:            input
+  - String:          ''' since this interface mode only supports scalar types'
+...
+--- !Failure
+Pass:            reflow-interface-check
+Name:            UnspportedNonScalarType
+DebugLoc:        { File: fcnn.cpp, Line: 12, Column: 0 }
+Function:        _Z15mnist_inferencePfS_
+Args:            
+  - String:          'Cannot apply interface mode '''
+  - String:          ap_none
+  - String:          ''' '
+  - String:          'on function argument '''
+  - Name:            output
+  - String:          ''' since this interface mode only supports scalar types'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: fcnn.cpp, Line: 45, Column: 19 }
+Function:        _Z15mnist_inferencePfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_45_7
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...

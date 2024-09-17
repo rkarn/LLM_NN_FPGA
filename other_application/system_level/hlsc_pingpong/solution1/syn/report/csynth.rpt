@@ -1,0 +1,111 @@
+
+
+================================================================
+== Synthesis Summary Report of 'pingpong_game'
+================================================================
++ General Information: 
+    * Date:           Fri Sep 13 03:36:26 2024
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        hlsc_pingpong
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a35t-cpg236-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |       Modules      | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |           |           |     |
+    |       & Loops      | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +--------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ pingpong_game     |     -|  0.54|        -|       -|         -|        -|     -|        no|     -|   -|  374 (~0%)|  1244 (5%)|    -|
+    | o VITIS_LOOP_72_1  |    II|  7.30|        -|       -|         5|        2|     -|       yes|     -|   -|          -|          -|    -|
+    +--------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++-----------+-----------+---------------+-------+--------+--------+
+| Interface | Direction | Register Mode | TDATA | TREADY | TVALID |
++-----------+-----------+---------------+-------+--------+--------+
+| input1    | in        | both          | 32    | 1      | 1      |
+| input2    | in        | both          | 32    | 1      | 1      |
+| output_r  | out       | both          | 256   | 1      | 1      |
++-----------+-----------+---------------+-------+--------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+-----------------------+
+| Argument | Direction | Datatype              |
++----------+-----------+-----------------------+
+| input1   | in        | stream<int, 0>&       |
+| input2   | in        | stream<int, 0>&       |
+| output   | out       | stream<GameState, 0>& |
++----------+-----------+-----------------------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| input1   | input1       | interface |
+| input2   | input2       | interface |
+| output   | output_r     | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------+-----+--------+----------------+-----+--------+---------+
+| Name                       | DSP | Pragma | Variable       | Op  | Impl   | Latency |
++----------------------------+-----+--------+----------------+-----+--------+---------+
+| + pingpong_game            | 0   |        |                |     |        |         |
+|   add_ln21_fu_195_p2       | -   |        | add_ln21       | add | fabric | 0       |
+|   add_ln22_fu_201_p2       | -   |        | add_ln22       | add | fabric | 0       |
+|   add_ln21_1_fu_241_p2     | -   |        | add_ln21_1     | add | fabric | 0       |
+|   add_ln22_1_fu_247_p2     | -   |        | add_ln22_1     | add | fabric | 0       |
+|   state_ball_x_4_fu_316_p2 | -   |        | state_ball_x_4 | add | fabric | 0       |
+|   state_ball_y_4_fu_322_p2 | -   |        | state_ball_y_4 | add | fabric | 0       |
+|   sub_ln32_fu_502_p2       | -   |        | sub_ln32       | sub | fabric | 0       |
+|   add_ln36_fu_356_p2       | -   |        | add_ln36       | add | fabric | 0       |
+|   add_ln38_fu_402_p2       | -   |        | add_ln38       | add | fabric | 0       |
+|   add_ln49_fu_528_p2       | -   |        | add_ln49       | add | fabric | 0       |
+|   add_ln62_fu_446_p2       | -   |        | add_ln62       | add | fabric | 0       |
+|   state_score2_1_fu_455_p2 | -   |        | state_score2_1 | add | fabric | 0       |
++----------------------------+-----+--------+----------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+--------------------------+------------------------------------------+
+| Type      | Options                  | Location                                 |
++-----------+--------------------------+------------------------------------------+
+| interface | axis port=input1         | pingpong.cpp:57 in pingpong_game, input1 |
+| interface | axis port=input2         | pingpong.cpp:58 in pingpong_game, input2 |
+| interface | axis port=output         | pingpong.cpp:59 in pingpong_game, output |
+| interface | ap_ctrl_none port=return | pingpong.cpp:60 in pingpong_game, return |
++-----------+--------------------------+------------------------------------------+
+
+

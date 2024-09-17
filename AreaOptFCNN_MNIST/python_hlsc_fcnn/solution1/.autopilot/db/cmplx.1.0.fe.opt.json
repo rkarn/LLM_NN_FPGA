@@ -1,0 +1,47 @@
+{
+  "0": {
+    "basicblocks": 43,
+    "calls": "",
+    "file": "fcnn.cpp",
+    "fileloc": 16,
+    "instructions": 156,
+    "loads": {
+      "G": 3,
+      "L": 4
+    },
+    "name": "mnist_inference",
+    "stores": {
+      "G": 2,
+      "L": 2,
+      "T": 1
+    },
+    "total_instructions": 1511
+  },
+  "1": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "fcnn.cpp",
+    "fileloc": 13,
+    "instructions": 16,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 23
+  },
+  "2": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "fcnn.cpp",
+    "fileloc": 14,
+    "instructions": 9,
+    "name": "__cxx_global_var_init.1",
+    "total_instructions": 16
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "1 2",
+    "file": "fcnn.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 3,
+    "name": "",
+    "total_instructions": 42
+  }
+}

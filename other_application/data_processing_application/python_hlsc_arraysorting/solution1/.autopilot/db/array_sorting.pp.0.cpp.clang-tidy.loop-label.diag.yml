@@ -1,0 +1,85 @@
+---
+MainSourceFile:  /home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1213_1:  '
+    FileOffset:      1213
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_base.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp
+        Offset:          55292
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1213_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp
+        Offset:          282644
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp
+        Offset:          283108
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp
+        Offset:          283573
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp
+        Offset:          566285
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_20_1:  '
+    FileOffset:      20
+    FilePath:        array_sorting.cpp
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp
+        Offset:          938209
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_20_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_22_2:  '
+    FileOffset:      22
+    FilePath:        array_sorting.cpp
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp
+        Offset:          938252
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_22_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_26_3:  '
+    FileOffset:      26
+    FilePath:        array_sorting.cpp
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp
+        Offset:          938331
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_26_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_45_1:  '
+    FileOffset:      45
+    FilePath:        array_sorting.cpp
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp
+        Offset:          938688
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_45_1: '
+...

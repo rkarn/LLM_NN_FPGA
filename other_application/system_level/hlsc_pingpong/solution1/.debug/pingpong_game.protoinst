@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"pingpong_game": {
+			"proto_instances": {
+			}
+		}
+	}
+}

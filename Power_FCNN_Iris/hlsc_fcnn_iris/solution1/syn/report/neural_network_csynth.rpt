@@ -1,0 +1,218 @@
+
+
+================================================================
+== Vitis HLS Report for 'neural_network'
+================================================================
+* Date:           Sun Sep 15 03:13:55 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        hlsc_fcnn_iris
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.893 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       96|       96|  0.960 us|  0.960 us|   97|   97|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------------------+-----------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                                                    |                                         |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |                      Instance                      |                  Module                 |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +----------------------------------------------------+-----------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |grp_neural_network_Pipeline_VITIS_LOOP_56_1_fu_246  |neural_network_Pipeline_VITIS_LOOP_56_1  |       16|       16|   0.160 us|   0.160 us|   16|   16|       no|
+        |grp_neural_network_Pipeline_VITIS_LOOP_68_3_fu_266  |neural_network_Pipeline_VITIS_LOOP_68_3  |       14|       14|   0.140 us|   0.140 us|   14|   14|       no|
+        |grp_neural_network_Pipeline_VITIS_LOOP_22_1_fu_302  |neural_network_Pipeline_VITIS_LOOP_22_1  |        4|        4|  40.000 ns|  40.000 ns|    4|    4|       no|
+        |grp_neural_network_Pipeline_VITIS_LOOP_28_2_fu_310  |neural_network_Pipeline_VITIS_LOOP_28_2  |       10|       10|   0.100 us|   0.100 us|   10|   10|       no|
+        |grp_neural_network_Pipeline_VITIS_LOOP_35_3_fu_327  |neural_network_Pipeline_VITIS_LOOP_35_3  |       35|       35|   0.350 us|   0.350 us|   35|   35|       no|
+        +----------------------------------------------------+-----------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      -|      -|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |       14|  15|   3132|   2567|    -|
+|Memory           |        0|   -|     30|      2|    0|
+|Multiplexer      |        -|   -|      -|    234|    -|
+|Register         |        -|   -|    207|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |       14|  15|   3369|   2803|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      100|  90|  41600|  20800|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |       14|  16|      8|     13|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------------------+-----------------------------------------+---------+----+------+------+-----+
+    |                      Instance                      |                  Module                 | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +----------------------------------------------------+-----------------------------------------+---------+----+------+------+-----+
+    |CONTROL_s_axi_U                                     |CONTROL_s_axi                            |        0|   0|    36|    40|    0|
+    |INPUT_s_axi_U                                       |INPUT_s_axi                              |        0|   0|   110|   111|    0|
+    |OUTPUT_s_axi_U                                      |OUTPUT_s_axi                             |        0|   0|   110|   111|    0|
+    |grp_neural_network_Pipeline_VITIS_LOOP_22_1_fu_302  |neural_network_Pipeline_VITIS_LOOP_22_1  |        0|   0|    22|   132|    0|
+    |grp_neural_network_Pipeline_VITIS_LOOP_28_2_fu_310  |neural_network_Pipeline_VITIS_LOOP_28_2  |        0|   3|   634|   613|    0|
+    |grp_neural_network_Pipeline_VITIS_LOOP_35_3_fu_327  |neural_network_Pipeline_VITIS_LOOP_35_3  |        0|   0|  1551|  1192|    0|
+    |grp_neural_network_Pipeline_VITIS_LOOP_56_1_fu_246  |neural_network_Pipeline_VITIS_LOOP_56_1  |        5|   4|   239|   185|    0|
+    |grp_neural_network_Pipeline_VITIS_LOOP_68_3_fu_266  |neural_network_Pipeline_VITIS_LOOP_68_3  |        9|   8|   430|   183|    0|
+    +----------------------------------------------------+-----------------------------------------+---------+----+------+------+-----+
+    |Total                                               |                                         |       14|  15|  3132|  2567|    0|
+    +----------------------------------------------------+-----------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-----------------+-----------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |      Memory     |            Module           | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-----------------+-----------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |layer1_output_U  |layer1_output_RAM_AUTO_1R1W  |        0|  30|   2|    0|     8|   15|     1|          120|
+    +-----------------+-----------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total            |                             |        0|  30|   2|    0|     8|   15|     1|          120|
+    +-----------------+-----------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +------------------------+----+-----------+-----+-----------+
+    |          Name          | LUT| Input Size| Bits| Total Bits|
+    +------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm               |  93|         19|    1|         19|
+    |input_r_address0        |  21|          5|    2|         10|
+    |layer1_output_address0  |  25|          6|    3|         18|
+    |layer1_output_address1  |  21|          5|    3|         15|
+    |layer1_output_ce0       |  13|          3|    1|          3|
+    |layer1_output_we0       |   9|          2|    1|          2|
+    |output_r_address0       |  13|          3|    2|          6|
+    |output_r_ce0            |  13|          3|    1|          3|
+    |output_r_d0             |  13|          3|   16|         48|
+    |output_r_we0            |  13|          3|    1|          3|
+    +------------------------+----+-----------+-----+-----------+
+    |Total                   | 234|         52|   31|        127|
+    +------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+    |                               Name                              | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                        |  18|   0|   18|          0|
+    |grp_neural_network_Pipeline_VITIS_LOOP_22_1_fu_302_ap_start_reg  |   1|   0|    1|          0|
+    |grp_neural_network_Pipeline_VITIS_LOOP_28_2_fu_310_ap_start_reg  |   1|   0|    1|          0|
+    |grp_neural_network_Pipeline_VITIS_LOOP_35_3_fu_327_ap_start_reg  |   1|   0|    1|          0|
+    |grp_neural_network_Pipeline_VITIS_LOOP_56_1_fu_246_ap_start_reg  |   1|   0|    1|          0|
+    |grp_neural_network_Pipeline_VITIS_LOOP_68_3_fu_266_ap_start_reg  |   1|   0|    1|          0|
+    |input_r_load_1_reg_409                                           |  16|   0|   16|          0|
+    |input_r_load_2_reg_419                                           |  16|   0|   16|          0|
+    |input_r_load_3_reg_429                                           |  16|   0|   16|          0|
+    |input_r_load_reg_399                                             |  16|   0|   16|          0|
+    |layer1_output_load_1_reg_449                                     |  15|   0|   15|          0|
+    |layer1_output_load_2_reg_464                                     |  15|   0|   15|          0|
+    |layer1_output_load_3_reg_469                                     |  15|   0|   15|          0|
+    |layer1_output_load_4_reg_484                                     |  15|   0|   15|          0|
+    |layer1_output_load_5_reg_489                                     |  15|   0|   15|          0|
+    |layer1_output_load_6_reg_504                                     |  15|   0|   15|          0|
+    |layer1_output_load_7_reg_509                                     |  15|   0|   15|          0|
+    |layer1_output_load_reg_444                                       |  15|   0|   15|          0|
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                            | 207|   0|  207|          0|
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+----------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++-----------------------+-----+-----+------------+----------------+--------------+
+|s_axi_CONTROL_AWVALID  |   in|    1|       s_axi|         CONTROL|   return void|
+|s_axi_CONTROL_AWREADY  |  out|    1|       s_axi|         CONTROL|   return void|
+|s_axi_CONTROL_AWADDR   |   in|    4|       s_axi|         CONTROL|   return void|
+|s_axi_CONTROL_WVALID   |   in|    1|       s_axi|         CONTROL|   return void|
+|s_axi_CONTROL_WREADY   |  out|    1|       s_axi|         CONTROL|   return void|
+|s_axi_CONTROL_WDATA    |   in|   32|       s_axi|         CONTROL|   return void|
+|s_axi_CONTROL_WSTRB    |   in|    4|       s_axi|         CONTROL|   return void|
+|s_axi_CONTROL_ARVALID  |   in|    1|       s_axi|         CONTROL|   return void|
+|s_axi_CONTROL_ARREADY  |  out|    1|       s_axi|         CONTROL|   return void|
+|s_axi_CONTROL_ARADDR   |   in|    4|       s_axi|         CONTROL|   return void|
+|s_axi_CONTROL_RVALID   |  out|    1|       s_axi|         CONTROL|   return void|
+|s_axi_CONTROL_RREADY   |   in|    1|       s_axi|         CONTROL|   return void|
+|s_axi_CONTROL_RDATA    |  out|   32|       s_axi|         CONTROL|   return void|
+|s_axi_CONTROL_RRESP    |  out|    2|       s_axi|         CONTROL|   return void|
+|s_axi_CONTROL_BVALID   |  out|    1|       s_axi|         CONTROL|   return void|
+|s_axi_CONTROL_BREADY   |   in|    1|       s_axi|         CONTROL|   return void|
+|s_axi_CONTROL_BRESP    |  out|    2|       s_axi|         CONTROL|   return void|
+|s_axi_INPUT_AWVALID    |   in|    1|       s_axi|           INPUT|         array|
+|s_axi_INPUT_AWREADY    |  out|    1|       s_axi|           INPUT|         array|
+|s_axi_INPUT_AWADDR     |   in|    5|       s_axi|           INPUT|         array|
+|s_axi_INPUT_WVALID     |   in|    1|       s_axi|           INPUT|         array|
+|s_axi_INPUT_WREADY     |  out|    1|       s_axi|           INPUT|         array|
+|s_axi_INPUT_WDATA      |   in|   32|       s_axi|           INPUT|         array|
+|s_axi_INPUT_WSTRB      |   in|    4|       s_axi|           INPUT|         array|
+|s_axi_INPUT_ARVALID    |   in|    1|       s_axi|           INPUT|         array|
+|s_axi_INPUT_ARREADY    |  out|    1|       s_axi|           INPUT|         array|
+|s_axi_INPUT_ARADDR     |   in|    5|       s_axi|           INPUT|         array|
+|s_axi_INPUT_RVALID     |  out|    1|       s_axi|           INPUT|         array|
+|s_axi_INPUT_RREADY     |   in|    1|       s_axi|           INPUT|         array|
+|s_axi_INPUT_RDATA      |  out|   32|       s_axi|           INPUT|         array|
+|s_axi_INPUT_RRESP      |  out|    2|       s_axi|           INPUT|         array|
+|s_axi_INPUT_BVALID     |  out|    1|       s_axi|           INPUT|         array|
+|s_axi_INPUT_BREADY     |   in|    1|       s_axi|           INPUT|         array|
+|s_axi_INPUT_BRESP      |  out|    2|       s_axi|           INPUT|         array|
+|s_axi_OUTPUT_AWVALID   |   in|    1|       s_axi|          OUTPUT|         array|
+|s_axi_OUTPUT_AWREADY   |  out|    1|       s_axi|          OUTPUT|         array|
+|s_axi_OUTPUT_AWADDR    |   in|    5|       s_axi|          OUTPUT|         array|
+|s_axi_OUTPUT_WVALID    |   in|    1|       s_axi|          OUTPUT|         array|
+|s_axi_OUTPUT_WREADY    |  out|    1|       s_axi|          OUTPUT|         array|
+|s_axi_OUTPUT_WDATA     |   in|   32|       s_axi|          OUTPUT|         array|
+|s_axi_OUTPUT_WSTRB     |   in|    4|       s_axi|          OUTPUT|         array|
+|s_axi_OUTPUT_ARVALID   |   in|    1|       s_axi|          OUTPUT|         array|
+|s_axi_OUTPUT_ARREADY   |  out|    1|       s_axi|          OUTPUT|         array|
+|s_axi_OUTPUT_ARADDR    |   in|    5|       s_axi|          OUTPUT|         array|
+|s_axi_OUTPUT_RVALID    |  out|    1|       s_axi|          OUTPUT|         array|
+|s_axi_OUTPUT_RREADY    |   in|    1|       s_axi|          OUTPUT|         array|
+|s_axi_OUTPUT_RDATA     |  out|   32|       s_axi|          OUTPUT|         array|
+|s_axi_OUTPUT_RRESP     |  out|    2|       s_axi|          OUTPUT|         array|
+|s_axi_OUTPUT_BVALID    |  out|    1|       s_axi|          OUTPUT|         array|
+|s_axi_OUTPUT_BREADY    |   in|    1|       s_axi|          OUTPUT|         array|
+|s_axi_OUTPUT_BRESP     |  out|    2|       s_axi|          OUTPUT|         array|
+|ap_clk                 |   in|    1|  ap_ctrl_hs|  neural_network|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_hs|  neural_network|  return value|
+|interrupt              |  out|    1|  ap_ctrl_hs|  neural_network|  return value|
++-----------------------+-----+-----+------------+----------------+--------------+
+

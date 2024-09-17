@@ -1,0 +1,175 @@
+
+
+================================================================
+== Vitis HLS Report for 'neural_network_Pipeline_VITIS_LOOP_32_3'
+================================================================
+* Date:           Sun Sep 15 03:31:50 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        hlsc_fcnn_activities
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.391 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      152|      152|  1.520 us|  1.520 us|  152|  152|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_32_3  |      150|      150|        31|         30|          1|     5|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      0|     62|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        -|   -|   1508|   1161|    -|
+|Memory           |        -|   -|      -|      -|    -|
+|Multiplexer      |        -|   -|      -|    264|    -|
+|Register         |        -|   -|     81|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        0|   0|   1589|   1487|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      100|  90|  41600|  20800|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        0|   0|      3|      7|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------+----------------------+---------+----+------+------+-----+
+    |          Instance         |        Module        | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +---------------------------+----------------------+---------+----+------+------+-----+
+    |mux_5_3_16_1_1_U140        |mux_5_3_16_1_1        |        0|   0|     0|    21|    0|
+    |sdiv_25s_16s_25_29_1_U141  |sdiv_25s_16s_25_29_1  |        0|   0|  1508|  1140|    0|
+    +---------------------------+----------------------+---------+----+------+------+-----+
+    |Total                      |                      |        0|   0|  1508|  1161|    0|
+    +---------------------------+----------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln32_fu_152_p2   |         +|   0|  0|  11|           3|           1|
+    |ap_condition_180     |       and|   0|  0|   2|           1|           1|
+    |ap_condition_221     |       and|   0|  0|   2|           1|           1|
+    |ap_condition_448     |       and|   0|  0|   2|           1|           1|
+    |icmp_ln32_fu_146_p2  |      icmp|   0|  0|  11|           3|           3|
+    |icmp_ln34_fu_195_p2  |      icmp|   0|  0|  32|          25|           1|
+    |ap_enable_pp0        |       xor|   0|  0|   2|           1|           2|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  62|          35|          10|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+-----+-----------+-----+-----------+
+    |             Name            | LUT | Input Size| Bits| Total Bits|
+    +-----------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                    |  145|         31|    1|         31|
+    |ap_done_int                  |    9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0      |    9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0_reg  |    9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1      |    9|          2|    1|          2|
+    |ap_sig_allocacmp_i_2         |    9|          2|    3|          6|
+    |i_fu_54                      |    9|          2|    3|          6|
+    |output_0_o                   |   13|          3|   16|         48|
+    |output_1_o                   |   13|          3|   16|         48|
+    |output_2_o                   |   13|          3|   16|         48|
+    |output_3_o                   |   13|          3|   16|         48|
+    |output_4_o                   |   13|          3|   16|         48|
+    +-----------------------------+-----+-----------+-----+-----------+
+    |Total                        |  264|         58|   91|        291|
+    +-----------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |  30|   0|   30|          0|
+    |ap_done_reg                  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |i_2_reg_217                  |   3|   0|    3|          0|
+    |i_fu_54                      |   3|   0|    3|          0|
+    |icmp_ln32_reg_222            |   1|   0|    1|          0|
+    |sext_ln34_1_cast_reg_212     |  25|   0|   25|          0|
+    |trunc_ln34_reg_234           |  16|   0|   16|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        |  81|   0|   81|          0|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+-----------------------------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |              Source Object              |    C Type    |
++-------------------+-----+-----+------------+-----------------------------------------+--------------+
+|ap_clk             |   in|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_32_3|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_32_3|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_32_3|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_32_3|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_32_3|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_32_3|  return value|
+|output_0_i         |   in|   16|     ap_ovld|                                 output_0|       pointer|
+|output_0_o         |  out|   16|     ap_ovld|                                 output_0|       pointer|
+|output_0_o_ap_vld  |  out|    1|     ap_ovld|                                 output_0|       pointer|
+|output_4_i         |   in|   16|     ap_ovld|                                 output_4|       pointer|
+|output_4_o         |  out|   16|     ap_ovld|                                 output_4|       pointer|
+|output_4_o_ap_vld  |  out|    1|     ap_ovld|                                 output_4|       pointer|
+|output_3_i         |   in|   16|     ap_ovld|                                 output_3|       pointer|
+|output_3_o         |  out|   16|     ap_ovld|                                 output_3|       pointer|
+|output_3_o_ap_vld  |  out|    1|     ap_ovld|                                 output_3|       pointer|
+|output_2_i         |   in|   16|     ap_ovld|                                 output_2|       pointer|
+|output_2_o         |  out|   16|     ap_ovld|                                 output_2|       pointer|
+|output_2_o_ap_vld  |  out|    1|     ap_ovld|                                 output_2|       pointer|
+|output_1_i         |   in|   16|     ap_ovld|                                 output_1|       pointer|
+|output_1_o         |  out|   16|     ap_ovld|                                 output_1|       pointer|
+|output_1_o_ap_vld  |  out|    1|     ap_ovld|                                 output_1|       pointer|
+|sext_ln34_1        |   in|   16|     ap_none|                              sext_ln34_1|        scalar|
++-------------------+-----+-----+------------+-----------------------------------------+--------------+
+

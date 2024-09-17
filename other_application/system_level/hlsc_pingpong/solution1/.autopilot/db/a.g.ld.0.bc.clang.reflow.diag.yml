@@ -1,0 +1,40 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: pingpong.cpp, Line: 56, Column: 0 }
+Function:        _Z13pingpong_gameRN3hls6streamIiLi0EEES2_RNS0_I9GameStateLi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'update_paddle(int&, int, int)'
+    DebugLoc:        { File: pingpong.cpp, Line: 20, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'pingpong_game(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<GameState, 0>&)'
+    DebugLoc:        { File: pingpong.cpp, Line: 56, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: pingpong.cpp, Line: 56, Column: 0 }
+Function:        _Z13pingpong_gameRN3hls6streamIiLi0EEES2_RNS0_I9GameStateLi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'update_ball(GameState&)'
+    DebugLoc:        { File: pingpong.cpp, Line: 26, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'pingpong_game(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<GameState, 0>&)'
+    DebugLoc:        { File: pingpong.cpp, Line: 56, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: pingpong.cpp, Line: 72, Column: 22 }
+Function:        _Z13pingpong_gameRN3hls6streamIiLi0EEES2_RNS0_I9GameStateLi0EEE
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_72_1
+  - String:          '''('
+  - LoopLoc:         'pingpong.cpp:72:22'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...

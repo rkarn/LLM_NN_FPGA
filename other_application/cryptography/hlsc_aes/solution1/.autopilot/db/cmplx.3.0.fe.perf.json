@@ -1,0 +1,18 @@
+{
+  "0": {
+    "basicblocks": 29,
+    "calls": "",
+    "file": "aes.cpp",
+    "fileloc": 82,
+    "instructions": 289,
+    "loads": {
+      "L": 35
+    },
+    "name": "AES_Encrypt",
+    "stores": {
+      "L": 33,
+      "T": 1
+    },
+    "total_instructions": 289
+  }
+}

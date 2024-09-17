@@ -1,0 +1,4 @@
+hls_quickSort_mux_9_4_32_1_1
+hls_quickSort_stack_RAM_AUTO_1R1W
+hls_quickSort_CONTROL_BUS_s_axi
+hls_quickSort

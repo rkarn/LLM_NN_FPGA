@@ -1,0 +1,257 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'neural_network_Pipeline_VITIS_LOOP_92_9'" level="0">
+<item name = "Date">Sun Sep 15 03:58:26 2024
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">hlsc_fcnn_unsw</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a35t-cpg236-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 5.262 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">45, 45, 0.450 us, 0.450 us, 45, 45, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_92_9">43, 43, 8, 4, 1, 10, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, 4, -, -, -</column>
+<column name="Expression">-, -, 0, 369, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 0, 41, -</column>
+<column name="Memory">0, -, 11, 2, -</column>
+<column name="Multiplexer">-, -, -, 255, -</column>
+<column name="Register">-, -, 275, -, -</column>
+<specialColumn name="Available">100, 90, 41600, 20800, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 4, ~0, 3, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mux_10_4_16_1_1_U191">mux_10_4_16_1_1, 0, 0, 0, 41, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+<column name="mac_muladd_13s_15ns_24ns_24_4_1_U192">mac_muladd_13s_15ns_24ns_24_4_1, i0 + i1 * i2</column>
+<column name="mac_muladd_13s_15ns_24ns_24_4_1_U193">mac_muladd_13s_15ns_24ns_24_4_1, i0 + i1 * i2</column>
+<column name="mac_muladd_13s_15ns_24ns_24_4_1_U194">mac_muladd_13s_15ns_24ns_24_4_1, i0 + i1 * i2</column>
+<column name="mac_muladd_13s_15ns_24ns_24_4_1_U195">mac_muladd_13s_15ns_24ns_24_4_1, i0 + i1 * i2</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="layer2_bias_U">neural_network_Pipeline_VITIS_LOOP_92_9_layer2_bias_ROM_AUTO_1R, 0, 11, 2, 0, 10, 11, 1, 110</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln92_fu_251_p2">+, 0, 0, 13, 4, 1</column>
+<column name="icmp_ln92_fu_245_p2">icmp, 0, 0, 13, 4, 4</column>
+<column name="icmp_ln98_1_fu_473_p2">icmp, 0, 0, 13, 4, 1</column>
+<column name="icmp_ln98_2_fu_478_p2">icmp, 0, 0, 13, 4, 2</column>
+<column name="icmp_ln98_3_fu_483_p2">icmp, 0, 0, 13, 4, 2</column>
+<column name="icmp_ln98_4_fu_488_p2">icmp, 0, 0, 13, 4, 3</column>
+<column name="icmp_ln98_5_fu_493_p2">icmp, 0, 0, 13, 4, 3</column>
+<column name="icmp_ln98_6_fu_498_p2">icmp, 0, 0, 13, 4, 3</column>
+<column name="icmp_ln98_7_fu_503_p2">icmp, 0, 0, 13, 4, 3</column>
+<column name="icmp_ln98_8_fu_508_p2">icmp, 0, 0, 13, 4, 5</column>
+<column name="icmp_ln98_fu_468_p2">icmp, 0, 0, 13, 4, 1</column>
+<column name="or_ln98_1_fu_519_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln98_2_fu_525_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln98_3_fu_531_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln98_4_fu_537_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln98_5_fu_543_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln98_6_fu_549_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln98_7_fu_555_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln98_fu_513_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_fu_371_p3">select, 0, 0, 16, 1, 16</column>
+<column name="layer2_output_10_fu_624_p3">select, 0, 0, 16, 1, 16</column>
+<column name="layer2_output_1_fu_453_p3">select, 0, 0, 16, 1, 16</column>
+<column name="layer2_output_2_fu_568_p3">select, 0, 0, 16, 1, 16</column>
+<column name="layer2_output_3_fu_575_p3">select, 0, 0, 16, 1, 16</column>
+<column name="layer2_output_4_fu_582_p3">select, 0, 0, 16, 1, 16</column>
+<column name="layer2_output_5_fu_589_p3">select, 0, 0, 16, 1, 16</column>
+<column name="layer2_output_6_fu_596_p3">select, 0, 0, 16, 1, 16</column>
+<column name="layer2_output_7_fu_603_p3">select, 0, 0, 16, 1, 16</column>
+<column name="layer2_output_8_fu_610_p3">select, 0, 0, 16, 1, 16</column>
+<column name="layer2_output_9_fu_617_p3">select, 0, 0, 16, 1, 16</column>
+<column name="layer2_output_fu_561_p3">select, 0, 0, 16, 1, 16</column>
+<column name="max_val_fu_631_p3">select, 0, 0, 16, 1, 16</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">21, 5, 1, 5</column>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter0">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_conv_i_i_le16_out_load">9, 2, 16, 32</column>
+<column name="ap_sig_allocacmp_conv_i_i_le18_out_load">9, 2, 16, 32</column>
+<column name="ap_sig_allocacmp_conv_i_i_le20_out_load">9, 2, 16, 32</column>
+<column name="ap_sig_allocacmp_conv_i_i_le22_out_load">9, 2, 16, 32</column>
+<column name="ap_sig_allocacmp_conv_i_i_le24_out_load">9, 2, 16, 32</column>
+<column name="ap_sig_allocacmp_conv_i_i_le26_out_load">9, 2, 16, 32</column>
+<column name="ap_sig_allocacmp_conv_i_i_le28_out_load">9, 2, 16, 32</column>
+<column name="ap_sig_allocacmp_conv_i_i_le30_out_load">9, 2, 16, 32</column>
+<column name="ap_sig_allocacmp_conv_i_i_le32_out_load">9, 2, 16, 32</column>
+<column name="ap_sig_allocacmp_conv_i_i_le34_out_load">9, 2, 16, 32</column>
+<column name="ap_sig_allocacmp_i_1">9, 2, 4, 8</column>
+<column name="conv_i_i_le16_out_o">9, 2, 16, 32</column>
+<column name="conv_i_i_le18_out_o">9, 2, 16, 32</column>
+<column name="conv_i_i_le20_out_o">9, 2, 16, 32</column>
+<column name="conv_i_i_le22_out_o">9, 2, 16, 32</column>
+<column name="conv_i_i_le24_out_o">9, 2, 16, 32</column>
+<column name="conv_i_i_le26_out_o">9, 2, 16, 32</column>
+<column name="conv_i_i_le28_out_o">9, 2, 16, 32</column>
+<column name="conv_i_i_le30_out_o">9, 2, 16, 32</column>
+<column name="conv_i_i_le32_out_o">9, 2, 16, 32</column>
+<column name="conv_i_i_le34_out_o">9, 2, 16, 32</column>
+<column name="i_fu_104">9, 2, 4, 8</column>
+<column name="p_0_0_0114_i3_out_o">9, 2, 16, 32</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">4, 0, 4, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter0_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="conv_i_i_le16_out_load_reg_872">16, 0, 16, 0</column>
+<column name="conv_i_i_le18_out_load_reg_878">16, 0, 16, 0</column>
+<column name="conv_i_i_le20_out_load_reg_883">16, 0, 16, 0</column>
+<column name="conv_i_i_le22_out_load_reg_888">16, 0, 16, 0</column>
+<column name="conv_i_i_le24_out_load_reg_893">16, 0, 16, 0</column>
+<column name="conv_i_i_le26_out_load_reg_898">16, 0, 16, 0</column>
+<column name="conv_i_i_le28_out_load_reg_903">16, 0, 16, 0</column>
+<column name="conv_i_i_le30_out_load_reg_908">16, 0, 16, 0</column>
+<column name="conv_i_i_le32_out_load_reg_913">16, 0, 16, 0</column>
+<column name="conv_i_i_le34_out_load_reg_918">16, 0, 16, 0</column>
+<column name="i_1_reg_754">4, 0, 4, 0</column>
+<column name="i_1_reg_754_pp0_iter1_reg">4, 0, 4, 0</column>
+<column name="i_fu_104">4, 0, 4, 0</column>
+<column name="icmp_ln92_reg_768">1, 0, 1, 0</column>
+<column name="layer1_output_1_load_reg_837">15, 0, 15, 0</column>
+<column name="layer1_output_2_load_reg_842">15, 0, 15, 0</column>
+<column name="layer1_output_3_load_reg_847">15, 0, 15, 0</column>
+<column name="layer2_bias_load_reg_817">11, 0, 11, 0</column>
+<column name="layer2_weight_tile_1_load_reg_822">13, 0, 13, 0</column>
+<column name="layer2_weight_tile_2_load_reg_827">13, 0, 13, 0</column>
+<column name="layer2_weight_tile_3_load_reg_832">13, 0, 13, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, neural_network_Pipeline_VITIS_LOOP_92_9, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, neural_network_Pipeline_VITIS_LOOP_92_9, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, neural_network_Pipeline_VITIS_LOOP_92_9, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, neural_network_Pipeline_VITIS_LOOP_92_9, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, neural_network_Pipeline_VITIS_LOOP_92_9, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, neural_network_Pipeline_VITIS_LOOP_92_9, return value</column>
+<column name="cmp131">in, 1, ap_none, cmp131, scalar</column>
+<column name="layer2_weight_tile_address0">out, 4, ap_memory, layer2_weight_tile, array</column>
+<column name="layer2_weight_tile_ce0">out, 1, ap_memory, layer2_weight_tile, array</column>
+<column name="layer2_weight_tile_q0">in, 13, ap_memory, layer2_weight_tile, array</column>
+<column name="layer2_weight_tile_1_address0">out, 4, ap_memory, layer2_weight_tile_1, array</column>
+<column name="layer2_weight_tile_1_ce0">out, 1, ap_memory, layer2_weight_tile_1, array</column>
+<column name="layer2_weight_tile_1_q0">in, 13, ap_memory, layer2_weight_tile_1, array</column>
+<column name="layer2_weight_tile_2_address0">out, 4, ap_memory, layer2_weight_tile_2, array</column>
+<column name="layer2_weight_tile_2_ce0">out, 1, ap_memory, layer2_weight_tile_2, array</column>
+<column name="layer2_weight_tile_2_q0">in, 13, ap_memory, layer2_weight_tile_2, array</column>
+<column name="layer2_weight_tile_3_address0">out, 4, ap_memory, layer2_weight_tile_3, array</column>
+<column name="layer2_weight_tile_3_ce0">out, 1, ap_memory, layer2_weight_tile_3, array</column>
+<column name="layer2_weight_tile_3_q0">in, 13, ap_memory, layer2_weight_tile_3, array</column>
+<column name="tile_1">in, 6, ap_none, tile_1, scalar</column>
+<column name="layer1_output_address0">out, 4, ap_memory, layer1_output, array</column>
+<column name="layer1_output_ce0">out, 1, ap_memory, layer1_output, array</column>
+<column name="layer1_output_q0">in, 15, ap_memory, layer1_output, array</column>
+<column name="layer1_output_1_address0">out, 4, ap_memory, layer1_output_1, array</column>
+<column name="layer1_output_1_ce0">out, 1, ap_memory, layer1_output_1, array</column>
+<column name="layer1_output_1_q0">in, 15, ap_memory, layer1_output_1, array</column>
+<column name="layer1_output_2_address0">out, 4, ap_memory, layer1_output_2, array</column>
+<column name="layer1_output_2_ce0">out, 1, ap_memory, layer1_output_2, array</column>
+<column name="layer1_output_2_q0">in, 15, ap_memory, layer1_output_2, array</column>
+<column name="layer1_output_3_address0">out, 4, ap_memory, layer1_output_3, array</column>
+<column name="layer1_output_3_ce0">out, 1, ap_memory, layer1_output_3, array</column>
+<column name="layer1_output_3_q0">in, 15, ap_memory, layer1_output_3, array</column>
+<column name="conv_i_i_le34_out_i">in, 16, ap_ovld, conv_i_i_le34_out, pointer</column>
+<column name="conv_i_i_le34_out_o">out, 16, ap_ovld, conv_i_i_le34_out, pointer</column>
+<column name="conv_i_i_le34_out_o_ap_vld">out, 1, ap_ovld, conv_i_i_le34_out, pointer</column>
+<column name="conv_i_i_le32_out_i">in, 16, ap_ovld, conv_i_i_le32_out, pointer</column>
+<column name="conv_i_i_le32_out_o">out, 16, ap_ovld, conv_i_i_le32_out, pointer</column>
+<column name="conv_i_i_le32_out_o_ap_vld">out, 1, ap_ovld, conv_i_i_le32_out, pointer</column>
+<column name="conv_i_i_le30_out_i">in, 16, ap_ovld, conv_i_i_le30_out, pointer</column>
+<column name="conv_i_i_le30_out_o">out, 16, ap_ovld, conv_i_i_le30_out, pointer</column>
+<column name="conv_i_i_le30_out_o_ap_vld">out, 1, ap_ovld, conv_i_i_le30_out, pointer</column>
+<column name="conv_i_i_le28_out_i">in, 16, ap_ovld, conv_i_i_le28_out, pointer</column>
+<column name="conv_i_i_le28_out_o">out, 16, ap_ovld, conv_i_i_le28_out, pointer</column>
+<column name="conv_i_i_le28_out_o_ap_vld">out, 1, ap_ovld, conv_i_i_le28_out, pointer</column>
+<column name="conv_i_i_le26_out_i">in, 16, ap_ovld, conv_i_i_le26_out, pointer</column>
+<column name="conv_i_i_le26_out_o">out, 16, ap_ovld, conv_i_i_le26_out, pointer</column>
+<column name="conv_i_i_le26_out_o_ap_vld">out, 1, ap_ovld, conv_i_i_le26_out, pointer</column>
+<column name="conv_i_i_le24_out_i">in, 16, ap_ovld, conv_i_i_le24_out, pointer</column>
+<column name="conv_i_i_le24_out_o">out, 16, ap_ovld, conv_i_i_le24_out, pointer</column>
+<column name="conv_i_i_le24_out_o_ap_vld">out, 1, ap_ovld, conv_i_i_le24_out, pointer</column>
+<column name="conv_i_i_le22_out_i">in, 16, ap_ovld, conv_i_i_le22_out, pointer</column>
+<column name="conv_i_i_le22_out_o">out, 16, ap_ovld, conv_i_i_le22_out, pointer</column>
+<column name="conv_i_i_le22_out_o_ap_vld">out, 1, ap_ovld, conv_i_i_le22_out, pointer</column>
+<column name="conv_i_i_le20_out_i">in, 16, ap_ovld, conv_i_i_le20_out, pointer</column>
+<column name="conv_i_i_le20_out_o">out, 16, ap_ovld, conv_i_i_le20_out, pointer</column>
+<column name="conv_i_i_le20_out_o_ap_vld">out, 1, ap_ovld, conv_i_i_le20_out, pointer</column>
+<column name="conv_i_i_le18_out_i">in, 16, ap_ovld, conv_i_i_le18_out, pointer</column>
+<column name="conv_i_i_le18_out_o">out, 16, ap_ovld, conv_i_i_le18_out, pointer</column>
+<column name="conv_i_i_le18_out_o_ap_vld">out, 1, ap_ovld, conv_i_i_le18_out, pointer</column>
+<column name="conv_i_i_le16_out_i">in, 16, ap_ovld, conv_i_i_le16_out, pointer</column>
+<column name="conv_i_i_le16_out_o">out, 16, ap_ovld, conv_i_i_le16_out, pointer</column>
+<column name="conv_i_i_le16_out_o_ap_vld">out, 1, ap_ovld, conv_i_i_le16_out, pointer</column>
+<column name="p_0_0_0114_i3_out_i">in, 16, ap_ovld, p_0_0_0114_i3_out, pointer</column>
+<column name="p_0_0_0114_i3_out_o">out, 16, ap_ovld, p_0_0_0114_i3_out, pointer</column>
+<column name="p_0_0_0114_i3_out_o_ap_vld">out, 1, ap_ovld, p_0_0_0114_i3_out, pointer</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,4 @@
+aes.cpp:117:25: warning: format specifies type 'unsigned int' but the argument has type 'byte' (aka 'ap_uint<8>') [-Wformat]
+        printf("%02x ", output[i]);
+                ~~~~    ^~~~~~~~~
+1 warning generated.

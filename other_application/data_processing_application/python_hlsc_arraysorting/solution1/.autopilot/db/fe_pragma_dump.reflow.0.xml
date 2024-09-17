@@ -1,0 +1,10 @@
+<pragmas>
+<pragma file="array_sorting.cpp" line="15" pragmaType="inline" parentfunction="partition" off="0" region="0" recursive="0"/>
+<pragma file="array_sorting.cpp" line="21" pragmaType="pipeline" parentfunction="partition" off="0" ii="1" rewind="0" style=""/>
+<pragma file="array_sorting.cpp" line="38" pragmaType="inline" parentfunction="quickSort" off="0" region="0" recursive="0"/>
+<pragma file="array_sorting.cpp" line="46" pragmaType="pipeline" parentfunction="quickSort" off="0" ii="1" rewind="0" style=""/>
+<pragma file="array_sorting.cpp" line="65" pragmaType="interface" parentfunction="hls_quickSort" mode="s_axilite" port="" bundle="CONTROL_BUS" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="array_sorting.cpp" line="66" pragmaType="interface" parentfunction="hls_quickSort" mode="s_axilite" port="arr" bundle="CONTROL_BUS" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="array_sorting.cpp" line="67" pragmaType="array_partition" parentfunction="hls_quickSort" dim="1" factor="0" mode="complete" dynamic="0" variable="arr"/>
+<pragma file="array_sorting.cpp" line="8" pragmaType="inline" parentfunction="swap" off="0" region="0" recursive="0"/>
+</pragmas>

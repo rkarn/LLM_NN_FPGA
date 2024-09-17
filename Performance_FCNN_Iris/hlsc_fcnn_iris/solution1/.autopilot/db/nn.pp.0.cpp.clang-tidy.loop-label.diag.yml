@@ -1,0 +1,1367 @@
+---
+MainSourceFile:  /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1213_1:  '
+    FileOffset:      1213
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_base.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          55525
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1213_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          282877
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          283341
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          283806
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          566117
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      117
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      118
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      119
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      120
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      121
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      151
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      152
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      153
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      154
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      155
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      156
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      157
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      158
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      159
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      160
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      210
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      211
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      212
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      239
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      240
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      241
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      242
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      243
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      244
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      280
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      281
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_87_1:  '
+    FileOffset:      87
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1202903
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_87_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_143_1:  '
+    FileOffset:      143
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1203719
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_143_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_315_1:  '
+    FileOffset:      315
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1206368
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_315_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_475_1:  '
+    FileOffset:      475
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1209093
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_475_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_655_1:  '
+    FileOffset:      655
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1212254
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_655_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_659_2:  '
+    FileOffset:      659
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1212335
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_659_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_769_1:  '
+    FileOffset:      769
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1214644
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_769_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_866_1:  '
+    FileOffset:      866
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1216140
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_866_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_885_2:  '
+    FileOffset:      885
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1216370
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_885_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1199_1:  '
+    FileOffset:      1199
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1222556
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1199_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1282_1:  '
+    FileOffset:      1282
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1224159
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1282_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_94_1:  '
+    FileOffset:      94
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1232012
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_94_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_100_2:  '
+    FileOffset:      100
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1232162
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_100_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_104_3:  '
+    FileOffset:      104
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1232259
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_104_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_171_4:  '
+    FileOffset:      171
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1234121
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_171_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_177_5:  '
+    FileOffset:      177
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1234271
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_177_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_181_6:  '
+    FileOffset:      181
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1234368
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_181_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_196_7:  '
+    FileOffset:      196
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1234749
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_196_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_204_8:  '
+    FileOffset:      204
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1234980
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_204_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_269_9:  '
+    FileOffset:      269
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1238427
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_269_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_275_10:  '
+    FileOffset:      275
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1238579
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_275_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_279_11:  '
+    FileOffset:      279
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1238679
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_279_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_294_12:  '
+    FileOffset:      294
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1239061
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_294_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_302_13:  '
+    FileOffset:      302
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1239299
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_302_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_531_14:  '
+    FileOffset:      531
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1254854
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_531_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_537_15:  '
+    FileOffset:      537
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1255006
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_537_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_541_16:  '
+    FileOffset:      541
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1255105
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_541_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_551_17:  '
+    FileOffset:      551
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1255282
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_551_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_555_18:  '
+    FileOffset:      555
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1255380
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_555_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_565_19:  '
+    FileOffset:      565
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1255665
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_565_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_573_20:  '
+    FileOffset:      573
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1255920
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_573_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_934_21:  '
+    FileOffset:      934
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1288159
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_934_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_940_22:  '
+    FileOffset:      940
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1288311
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_940_22: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_944_23:  '
+    FileOffset:      944
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1288411
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_944_23: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1060_1:  '
+    FileOffset:      1060
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1291087
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1060_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1066_2:  '
+    FileOffset:      1066
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1291237
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1066_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1070_3:  '
+    FileOffset:      1070
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1291335
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1070_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1157_4:  '
+    FileOffset:      1157
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1294805
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1157_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1163_5:  '
+    FileOffset:      1163
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1294956
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1163_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1167_6:  '
+    FileOffset:      1167
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1295055
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1167_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1186_7:  '
+    FileOffset:      1186
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1295535
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1186_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1193_8:  '
+    FileOffset:      1193
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1295777
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1193_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1309_9:  '
+    FileOffset:      1309
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1301349
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1309_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1315_10:  '
+    FileOffset:      1315
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1301501
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1315_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1319_11:  '
+    FileOffset:      1319
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1301600
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1319_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1339_12:  '
+    FileOffset:      1339
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1302109
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1339_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1346_13:  '
+    FileOffset:      1346
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1302358
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1346_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1608_14:  '
+    FileOffset:      1608
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1319715
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1608_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1614_15:  '
+    FileOffset:      1614
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1319867
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1614_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1618_16:  '
+    FileOffset:      1618
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1319967
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1618_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1642_17:  '
+    FileOffset:      1642
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1320441
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1642_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1649_18:  '
+    FileOffset:      1649
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1320708
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1649_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2079_19:  '
+    FileOffset:      2079
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1359279
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2079_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2085_20:  '
+    FileOffset:      2085
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1359431
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2085_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2089_21:  '
+    FileOffset:      2089
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1359531
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2089_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2219_1:  '
+    FileOffset:      2219
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1362151
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2219_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2226_2:  '
+    FileOffset:      2226
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1362314
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2226_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2230_3:  '
+    FileOffset:      2230
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1362406
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2230_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2277_4:  '
+    FileOffset:      2277
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1364015
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2277_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2284_5:  '
+    FileOffset:      2284
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1364177
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2284_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2288_6:  '
+    FileOffset:      2288
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1364269
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2288_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2306_7:  '
+    FileOffset:      2306
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1364642
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2306_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2361_8:  '
+    FileOffset:      2361
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1367108
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2361_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2368_9:  '
+    FileOffset:      2368
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1367275
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2368_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2372_10:  '
+    FileOffset:      2372
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1367368
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2372_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2390_11:  '
+    FileOffset:      2390
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1367749
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2390_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2479_12:  '
+    FileOffset:      2479
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1373190
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2479_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2486_13:  '
+    FileOffset:      2486
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1373358
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2486_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2490_14:  '
+    FileOffset:      2490
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1373452
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2490_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2500_15:  '
+    FileOffset:      2500
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1373623
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2500_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2504_16:  '
+    FileOffset:      2504
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1373714
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2504_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2515_17:  '
+    FileOffset:      2515
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1373996
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2515_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2523_18:  '
+    FileOffset:      2523
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1374183
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2523_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2848_19:  '
+    FileOffset:      2848
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1408653
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2848_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2855_20:  '
+    FileOffset:      2855
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1408821
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2855_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2859_21:  '
+    FileOffset:      2859
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1408915
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2859_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2947_1:  '
+    FileOffset:      2947
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1410717
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2947_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2954_2:  '
+    FileOffset:      2954
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1410825
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2954_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2958_3:  '
+    FileOffset:      2958
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1410896
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2958_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2973_4:  '
+    FileOffset:      2973
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1411184
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2973_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3005_5:  '
+    FileOffset:      3005
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1412398
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3005_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3012_6:  '
+    FileOffset:      3012
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1412509
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3012_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3016_7:  '
+    FileOffset:      3016
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1412582
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3016_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3031_8:  '
+    FileOffset:      3031
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1412877
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3031_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3081_9:  '
+    FileOffset:      3081
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1416210
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3081_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3088_10:  '
+    FileOffset:      3088
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1416321
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3088_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3092_11:  '
+    FileOffset:      3092
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1416394
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3092_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3107_12:  '
+    FileOffset:      3107
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1416690
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3107_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3244_13:  '
+    FileOffset:      3244
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1436002
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3244_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3251_14:  '
+    FileOffset:      3251
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1436116
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3251_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3255_15:  '
+    FileOffset:      3255
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1436191
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3255_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3270_16:  '
+    FileOffset:      3270
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1436478
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3270_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3430_17:  '
+    FileOffset:      3430
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1462088
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3430_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3437_18:  '
+    FileOffset:      3437
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1462202
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3437_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3441_19:  '
+    FileOffset:      3441
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1462279
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3441_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_729_1:  '
+    FileOffset:      729
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1496354
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_729_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_947_1:  '
+    FileOffset:      947
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1504743
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_947_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1371_1:  '
+    FileOffset:      1371
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_log_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1523719
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1371_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_266_1:  '
+    FileOffset:      266
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1538664
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_266_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_294_2:  '
+    FileOffset:      294
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1539185
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_294_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_74_1:  '
+    FileOffset:      74
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1555203
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_74_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_135_2:  '
+    FileOffset:      135
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1556355
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_135_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_149_3:  '
+    FileOffset:      149
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1556664
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_149_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_179_4:  '
+    FileOffset:      179
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1557174
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_179_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_307_1:  '
+    FileOffset:      307
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1559092
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_307_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_327_2:  '
+    FileOffset:      327
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1559457
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_327_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_341_3:  '
+    FileOffset:      341
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1559765
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_341_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_459_1:  '
+    FileOffset:      459
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1561595
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_459_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_473_2:  '
+    FileOffset:      473
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1561920
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_473_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_59_1:  '
+    FileOffset:      59
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_diff_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1564660
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_59_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_209_1:  '
+    FileOffset:      209
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_diff_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1567559
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_209_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_274_1:  '
+    FileOffset:      274
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_diff_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1568848
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_274_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_42_1:  '
+    FileOffset:      42
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1579941
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_42_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_53_1:  '
+    FileOffset:      53
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1580116
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_53_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_64_1:  '
+    FileOffset:      64
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1580277
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_64_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_75_1:  '
+    FileOffset:      75
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1580439
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_75_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_86_1:  '
+    FileOffset:      86
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1580613
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_86_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_97_1:  '
+    FileOffset:      97
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1580788
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_97_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_108_1:  '
+    FileOffset:      108
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1580949
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_108_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_119_1:  '
+    FileOffset:      119
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1581111
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_119_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_23_1:  '
+    FileOffset:      23
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_mad_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1652210
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_23_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_66_1:  '
+    FileOffset:      66
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cbrt_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1653959
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_66_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_75_1:  '
+    FileOffset:      75
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hypot_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1658480
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_75_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_107_2:  '
+    FileOffset:      107
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hypot_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1659214
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_107_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_195_3:  '
+    FileOffset:      195
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_hypot_apfixed.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1660901
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_195_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_24_1:  '
+    FileOffset:      24
+    FilePath:        nn.cpp
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1713885
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_24_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_31_2:  '
+    FileOffset:      31
+    FilePath:        nn.cpp
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1714029
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_31_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_39_3:  '
+    FileOffset:      39
+    FilePath:        nn.cpp
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1714197
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_39_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_67_1:  '
+    FileOffset:      67
+    FilePath:        nn.cpp
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1715342
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_67_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_70_2:  '
+    FileOffset:      70
+    FilePath:        nn.cpp
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1715429
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_70_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_80_3:  '
+    FileOffset:      80
+    FilePath:        nn.cpp
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1715628
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_80_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_83_4:  '
+    FileOffset:      83
+    FilePath:        nn.cpp
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/Performance_FCNN_Iris/hlsc_fcnn_iris/solution1/.autopilot/db/nn.pp.0.cpp
+        Offset:          1715715
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_83_4: '
+...

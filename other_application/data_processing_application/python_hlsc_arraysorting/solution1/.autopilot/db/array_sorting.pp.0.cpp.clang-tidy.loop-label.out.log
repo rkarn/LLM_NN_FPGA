@@ -1,0 +1,45 @@
+/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp:1320:7: warning: Added loop label VITIS_LOOP_1213_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1213_1: 
+/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp:1320:7: note: FIX-IT applied suggested code changes
+/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp:2294:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp:2294:5: note: FIX-IT applied suggested code changes
+/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp:2308:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp:2308:5: note: FIX-IT applied suggested code changes
+/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp:2322:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp:2322:5: note: FIX-IT applied suggested code changes
+/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp:3933:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp:3933:7: note: FIX-IT applied suggested code changes
+/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp:5857:5: warning: Added loop label VITIS_LOOP_20_1:   [xilinx-label-all-loops]
+    while (i < j) {
+    ^~~~~
+    VITIS_LOOP_20_1: 
+/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp:5857:5: note: FIX-IT applied suggested code changes
+/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp:5859:2: warning: Added loop label VITIS_LOOP_22_2:   [xilinx-label-all-loops]
+ while (arr[i] <= pivot && i <= high - 1) {
+ ^~~~~
+ VITIS_LOOP_22_2: 
+/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp:5859:2: note: FIX-IT applied suggested code changes
+/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp:5863:9: warning: Added loop label VITIS_LOOP_26_3:   [xilinx-label-all-loops]
+        while (arr[j] > pivot && j >= low + 1) {
+        ^~~~~
+        VITIS_LOOP_26_3: 
+/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp:5863:9: note: FIX-IT applied suggested code changes
+/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp:5882:5: warning: Added loop label VITIS_LOOP_45_1:   [xilinx-label-all-loops]
+    while (top >= 0) {
+    ^~~~~
+    VITIS_LOOP_45_1: 
+/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/python_hlsc_arraysorting/solution1/.autopilot/db/array_sorting.pp.0.cpp:5882:5: note: FIX-IT applied suggested code changes

@@ -1,0 +1,70 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: aes.cpp, Line: 54, Column: 0 }
+Function:        _Z10MixColumnsPA4_7ap_uintILi8EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xtime(ap_uint<8>)'
+    DebugLoc:        { File: aes.cpp, Line: 50, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MixColumns(ap_uint<8> (*) [4])'
+    DebugLoc:        { File: aes.cpp, Line: 54, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: aes.cpp, Line: 82, Column: 0 }
+Function:        _Z11AES_EncryptP7ap_uintILi8EES1_PS_ILi32EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'AddRoundKey(ap_uint<8> (*) [4], ap_uint<32>*, int)'
+    DebugLoc:        { File: aes.cpp, Line: 74, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'AES_Encrypt(ap_uint<8>*, ap_uint<8>*, ap_uint<32>*)'
+    DebugLoc:        { File: aes.cpp, Line: 82, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: aes.cpp, Line: 82, Column: 0 }
+Function:        _Z11AES_EncryptP7ap_uintILi8EES1_PS_ILi32EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'SubBytes(ap_uint<8> (*) [4])'
+    DebugLoc:        { File: aes.cpp, Line: 16, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'AES_Encrypt(ap_uint<8>*, ap_uint<8>*, ap_uint<32>*)'
+    DebugLoc:        { File: aes.cpp, Line: 82, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: aes.cpp, Line: 82, Column: 0 }
+Function:        _Z11AES_EncryptP7ap_uintILi8EES1_PS_ILi32EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ShiftRows(ap_uint<8> (*) [4])'
+    DebugLoc:        { File: aes.cpp, Line: 24, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'AES_Encrypt(ap_uint<8>*, ap_uint<8>*, ap_uint<32>*)'
+    DebugLoc:        { File: aes.cpp, Line: 82, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: aes.cpp, Line: 82, Column: 0 }
+Function:        _Z11AES_EncryptP7ap_uintILi8EES1_PS_ILi32EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'MixColumns(ap_uint<8> (*) [4])'
+    DebugLoc:        { File: aes.cpp, Line: 54, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'AES_Encrypt(ap_uint<8>*, ap_uint<8>*, ap_uint<32>*)'
+    DebugLoc:        { File: aes.cpp, Line: 82, Column: 0 }
+  - String:          ''''
+...

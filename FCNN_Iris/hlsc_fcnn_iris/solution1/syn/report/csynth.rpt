@@ -1,0 +1,177 @@
+
+
+================================================================
+== Synthesis Summary Report of 'neural_network'
+================================================================
++ General Information: 
+    * Date:           Fri Sep 13 07:20:35 2024
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        hlsc_fcnn_iris
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a35t-cpg236-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+----------+-----------+------------+-----+
+    |                   Modules                  | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |          |           |            |     |
+    |                   & Loops                  | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |    DSP   |     FF    |     LUT    | URAM|
+    +--------------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+----------+-----------+------------+-----+
+    |+ neural_network                            |     -|  0.08|       96|  960.000|         -|       97|     -|        no|     -|  15 (16%)|  3330 (8%)|  2899 (13%)|    -|
+    | + neural_network_Pipeline_VITIS_LOOP_42_1  |     -|  0.86|       16|  160.000|         -|       16|     -|        no|     -|    4 (4%)|  267 (~0%)|   194 (~0%)|    -|
+    |  o VITIS_LOOP_42_1                         |     -|  7.30|       14|  140.000|         8|        1|     8|       yes|     -|         -|          -|           -|    -|
+    | + neural_network_Pipeline_VITIS_LOOP_52_3  |     -|  0.08|       13|  130.000|         -|       13|     -|        no|     -|    8 (8%)|  337 (~0%)|    268 (1%)|    -|
+    |  o VITIS_LOOP_52_3                         |     -|  7.30|       11|  110.000|        10|        1|     3|       yes|     -|         -|          -|           -|    -|
+    | + neural_network_Pipeline_VITIS_LOOP_19_1  |     -|  0.96|        4|   40.000|         -|        4|     -|        no|     -|         -|   22 (~0%)|   132 (~0%)|    -|
+    |  o VITIS_LOOP_19_1                         |     -|  7.30|        2|   20.000|         2|        1|     2|       yes|     -|         -|          -|           -|    -|
+    | + neural_network_Pipeline_VITIS_LOOP_23_2  |     -|  0.41|       11|  110.000|         -|       11|     -|        no|     -|    3 (3%)|   660 (1%)|    615 (2%)|    -|
+    |  o VITIS_LOOP_23_2                         |     -|  7.30|        9|   90.000|         8|        1|     3|       yes|     -|         -|          -|           -|    -|
+    |   + exp_17_9_s                             |    II|  0.53|        5|   50.000|         -|        1|     -|       yes|     -|    3 (3%)|   462 (1%)|    424 (2%)|    -|
+    | + neural_network_Pipeline_VITIS_LOOP_28_3  |     -|  1.24|       35|  350.000|         -|       35|     -|        no|     -|         -|  1551 (3%)|   1192 (5%)|    -|
+    |  o VITIS_LOOP_28_3                         |    II|  7.30|       33|  330.000|        30|        2|     3|       yes|     -|         -|          -|           -|    -|
+    +--------------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+----------+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_CONTROL | 32         | 4             |        |          |
+| s_axi_INPUT   | 32         | 5             | 16     | 0        |
+| s_axi_OUTPUT  | 32         | 5             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_CONTROL | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_CONTROL | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_CONTROL | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_CONTROL | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------------------------------+
+| Argument | Direction | Datatype                             |
++----------+-----------+--------------------------------------+
+| input    | in        | ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>* |
+| output   | inout     | ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>* |
++----------+-----------+--------------------------------------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| input    | s_axi_INPUT  | interface |
+| output   | s_axi_OUTPUT | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------------+-----+--------+---------------------+-----+--------+---------+
+| Name                                       | DSP | Pragma | Variable            | Op  | Impl   | Latency |
++--------------------------------------------+-----+--------+---------------------+-----+--------+---------+
+| + neural_network                           | 15  |        |                     |     |        |         |
+|  + neural_network_Pipeline_VITIS_LOOP_42_1 | 4   |        |                     |     |        |         |
+|    add_ln42_fu_202_p2                      | -   |        | add_ln42            | add | fabric | 0       |
+|    mul_9s_16s_24_1_1_U1                    | 1   |        | mul_ln45            | mul | auto   | 0       |
+|    mac_muladd_9s_16s_24ns_24_4_1_U2        | 1   |        | mul_ln45_1          | mul | dsp48  | 3       |
+|    mac_muladd_9s_16s_24ns_24_4_1_U2        | 1   |        | add_ln45            | add | dsp48  | 3       |
+|    mac_muladd_9s_16s_24ns_24_4_1_U3        | 1   |        | mul_ln45_2          | mul | dsp48  | 3       |
+|    mac_muladd_9s_16s_24ns_24_4_1_U3        | 1   |        | add_ln45_1          | add | dsp48  | 3       |
+|    mac_muladd_9s_16s_24ns_24_4_1_U4        | 1   |        | mul_ln45_3          | mul | dsp48  | 3       |
+|    mac_muladd_9s_16s_24ns_24_4_1_U4        | 1   |        | add_ln45_2          | add | dsp48  | 3       |
+|    sum_fu_316_p2                           | -   |        | sum                 | add | fabric | 0       |
+|    add_ln43_fu_322_p2                      | -   |        | add_ln43            | add | fabric | 0       |
+|  + neural_network_Pipeline_VITIS_LOOP_52_3 | 8   |        |                     |     |        |         |
+|    add_ln52_fu_264_p2                      | -   |        | add_ln52            | add | fabric | 0       |
+|    mul_10s_15ns_24_1_1_U19                 | 1   |        | mul_ln55            | mul | auto   | 0       |
+|    mac_muladd_9s_15ns_24ns_24_4_1_U27      | 1   |        | mul_ln55_1          | mul | dsp48  | 3       |
+|    mac_muladd_9s_15ns_24ns_24_4_1_U27      | 1   |        | add_ln55            | add | dsp48  | 3       |
+|    mac_muladd_9s_15ns_24ns_24_4_1_U28      | 1   |        | mul_ln55_2          | mul | dsp48  | 3       |
+|    mac_muladd_9s_15ns_24ns_24_4_1_U28      | 1   |        | add_ln55_1          | add | dsp48  | 3       |
+|    mac_muladd_9s_15ns_24ns_24_4_1_U29      | 1   |        | mul_ln55_3          | mul | dsp48  | 3       |
+|    mac_muladd_9s_15ns_24ns_24_4_1_U29      | 1   |        | add_ln55_2          | add | dsp48  | 3       |
+|    mac_muladd_9s_15ns_24ns_24_4_1_U30      | 1   |        | mul_ln55_4          | mul | dsp48  | 3       |
+|    mac_muladd_9s_15ns_24ns_24_4_1_U30      | 1   |        | add_ln55_3          | add | dsp48  | 3       |
+|    mac_muladd_9s_15ns_24ns_24_4_1_U31      | 1   |        | mul_ln55_5          | mul | dsp48  | 3       |
+|    mac_muladd_9s_15ns_24ns_24_4_1_U31      | 1   |        | add_ln55_4          | add | dsp48  | 3       |
+|    mac_muladd_9s_15ns_24ns_24_4_1_U32      | 1   |        | mul_ln55_6          | mul | dsp48  | 3       |
+|    mac_muladd_9s_15ns_24ns_24_4_1_U32      | 1   |        | add_ln55_5          | add | dsp48  | 3       |
+|    mac_muladd_10s_15ns_24ns_24_4_1_U33     | 1   |        | mul_ln55_7          | mul | dsp48  | 3       |
+|    mac_muladd_10s_15ns_24ns_24_4_1_U33     | 1   |        | add_ln55_6          | add | dsp48  | 3       |
+|    layer2_output_1_4_fu_544_p2             | -   |        | layer2_output_1_4   | add | fabric | 0       |
+|  + neural_network_Pipeline_VITIS_LOOP_19_1 | 0   |        |                     |     |        |         |
+|    add_ln19_fu_92_p2                       | -   |        | add_ln19            | add | fabric | 0       |
+|  + neural_network_Pipeline_VITIS_LOOP_23_2 | 3   |        |                     |     |        |         |
+|    add_ln23_fu_154_p2                      | -   |        | add_ln23            | add | fabric | 0       |
+|    grp_exp_17_9_s_fu_120_x_val             | -   |        | x                   | sub | fabric | 0       |
+|    sum_fu_190_p2                           | -   |        | sum                 | add | fabric | 0       |
+|   + exp_17_9_s                             | 3   |        |                     |     |        |         |
+|     mul_25ns_18ns_43_1_1_U61               | 1   |        | f_x_msb_2_lsb       | mul | auto   | 0       |
+|     add_ln249_fu_406_p2                    | -   |        | add_ln249           | add | fabric | 0       |
+|     exp_x_msb_2_lsb_m_1_fu_416_p2          | -   |        | exp_x_msb_2_lsb_m_1 | add | fabric | 0       |
+|     mul_25ns_25ns_50_1_1_U60               | 2   |        | y_lo                | mul | auto   | 0       |
+|     y_l_fu_452_p2                          | -   |        | y_l                 | add | fabric | 0       |
+|  + neural_network_Pipeline_VITIS_LOOP_28_3 | 0   |        |                     |     |        |         |
+|    add_ln28_fu_91_p2                       | -   |        | add_ln28            | add | fabric | 0       |
++--------------------------------------------+-----+--------+---------------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++--------------------------------------------+------+------+--------+-----------------------+---------+------+---------+
+| Name                                       | BRAM | URAM | Pragma | Variable              | Storage | Impl | Latency |
++--------------------------------------------+------+------+--------+-----------------------+---------+------+---------+
+| + neural_network                           | 0    | 0    |        |                       |         |      |         |
+|   layer1_output_U                          | -    | -    |        | layer1_output         | ram_s2p | auto | 1       |
+|  + neural_network_Pipeline_VITIS_LOOP_42_1 | 0    | 0    |        |                       |         |      |         |
+|    layer1_weights_0_U                      | -    | -    |        | layer1_weights_0      | rom_1p  | auto | 1       |
+|    layer1_weights_1_U                      | -    | -    |        | layer1_weights_1      | rom_1p  | auto | 1       |
+|    layer1_weights_2_U                      | -    | -    |        | layer1_weights_2      | rom_1p  | auto | 1       |
+|    layer1_weights_3_U                      | -    | -    |        | layer1_weights_3      | rom_1p  | auto | 1       |
+|    layer1_bias_U                           | -    | -    |        | layer1_bias           | rom_1p  | auto | 1       |
+|  + neural_network_Pipeline_VITIS_LOOP_23_2 | 0    | 0    |        |                       |         |      |         |
+|   + exp_17_9_s                             | 0    | 0    |        |                       |         |      |         |
+|     f_x_lsb_table_U                        | -    | -    |        | f_x_lsb_table         | rom_1p  | auto | 1       |
+|     exp_x_msb_2_m_1_table_U                | -    | -    |        | exp_x_msb_2_m_1_table | rom_1p  | auto | 1       |
+|     exp_x_msb_1_table_U                    | -    | -    |        | exp_x_msb_1_table     | rom_1p  | auto | 1       |
++--------------------------------------------+------+------+--------+-----------------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+--------------------------------------+-------------------------------------+
+| Type      | Options                              | Location                            |
++-----------+--------------------------------------+-------------------------------------+
+| interface | s_axilite port=input bundle=INPUT    | nn.cpp:34 in neural_network, input  |
+| interface | s_axilite port=output bundle=OUTPUT  | nn.cpp:35 in neural_network, output |
+| interface | s_axilite port=return bundle=CONTROL | nn.cpp:36 in neural_network, return |
++-----------+--------------------------------------+-------------------------------------+
+
+

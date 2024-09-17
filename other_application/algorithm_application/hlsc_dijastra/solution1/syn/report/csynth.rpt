@@ -1,0 +1,136 @@
+
+
+================================================================
+== Synthesis Summary Report of 'hls_dijkstra'
+================================================================
++ General Information: 
+    * Date:           Fri Sep 13 03:24:45 2024
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        hlsc_dijastra
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a35t-cpg236-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+----+-----------+------------+-----+
+    |                  Modules                 | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |        |    |           |            |     |
+    |                  & Loops                 | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM  | DSP|     FF    |     LUT    | URAM|
+    +------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+----+-----------+------------+-----+
+    |+ hls_dijkstra                            |     -|  0.03|      321|  3.210e+03|         -|      322|     -|        no|  2 (2%)|   -|  1210 (2%)|  2700 (12%)|    -|
+    | + hls_dijkstra_Pipeline_VITIS_LOOP_24_2  |     -|  0.03|      309|  3.090e+03|         -|      309|     -|        no|       -|   -|   962 (2%)|  2302 (11%)|    -|
+    |  o VITIS_LOOP_24_2                       |    II|  7.30|      307|  3.070e+03|        42|       37|     8|       yes|       -|   -|          -|           -|    -|
+    +------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+----+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++-------------------+------------+---------------+--------+----------+-------------------+
+| Interface         | Data Width | Address Width | Offset | Register | Resource Estimate |
++-------------------+------------+---------------+--------+----------+-------------------+
+| s_axi_CONTROL_BUS | 32         | 10            | 512    | 0        | BRAM=2            |
++-------------------+------------+---------------+--------+----------+-------------------+
+
+* S_AXILITE Registers
++-------------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface         | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++-------------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_CONTROL_BUS | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_CONTROL_BUS | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_CONTROL_BUS | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_CONTROL_BUS | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_CONTROL_BUS | src      | 0x10   | 32    | W      | Data signal of src               |                                                                      |
++-------------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| graph    | in        | int*     |
+| src      | in        | int      |
+| dist     | inout     | int*     |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+-------------------+----------+---------------------------------+
+| Argument | HW Interface      | HW Type  | HW Info                         |
++----------+-------------------+----------+---------------------------------+
+| graph    | s_axi_CONTROL_BUS | memory   | name=graph offset=512 range=512 |
+| src      | s_axi_CONTROL_BUS | register | name=src offset=0x10 range=32   |
+| dist     | s_axi_CONTROL_BUS | memory   | name=dist offset=64 range=64    |
++----------+-------------------+----------+---------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                                     | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| + hls_dijkstra                           | 0   |        |             |     |        |         |
+|  + hls_dijkstra_Pipeline_VITIS_LOOP_24_2 | 0   |        |             |     |        |         |
+|    count_2_fu_447_p2                     | -   |        | count_2     | add | fabric | 0       |
+|    add_ln39_9_fu_796_p2                  | -   |        | add_ln39_9  | add | fabric | 0       |
+|    add_ln39_10_fu_823_p2                 | -   |        | add_ln39_10 | add | fabric | 0       |
+|    add_ln39_11_fu_844_p2                 | -   |        | add_ln39_11 | add | fabric | 0       |
+|    add_ln39_12_fu_865_p2                 | -   |        | add_ln39_12 | add | fabric | 0       |
+|    add_ln39_13_fu_891_p2                 | -   |        | add_ln39_13 | add | fabric | 0       |
+|    add_ln39_14_fu_912_p2                 | -   |        | add_ln39_14 | add | fabric | 0       |
+|    add_ln39_15_fu_933_p2                 | -   |        | add_ln39_15 | add | fabric | 0       |
+|    add_ln39_16_fu_959_p2                 | -   |        | add_ln39_16 | add | fabric | 0       |
+|    add_ln39_17_fu_969_p2                 | -   |        | add_ln39_17 | add | fabric | 0       |
+|    grp_fu_411_p2                         | -   |        | add_ln39    | add | fabric | 0       |
+|    grp_fu_411_p2                         | -   |        | add_ln39_1  | add | fabric | 0       |
+|    grp_fu_417_p2                         | -   |        | add_ln39_2  | add | fabric | 0       |
+|    add_ln39_3_fu_1040_p2                 | -   |        | add_ln39_3  | add | fabric | 0       |
+|    grp_fu_411_p2                         | -   |        | add_ln39_4  | add | fabric | 0       |
+|    add_ln39_5_fu_1054_p2                 | -   |        | add_ln39_5  | add | fabric | 0       |
+|    add_ln39_6_fu_1063_p2                 | -   |        | add_ln39_6  | add | fabric | 0       |
+|    grp_fu_417_p2                         | -   |        | add_ln39_7  | add | fabric | 0       |
+|    add_ln39_8_fu_1078_p2                 | -   |        | add_ln39_8  | add | fabric | 0       |
++------------------------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+-----------------------------------------------+----------------------------------------------+
+| Type            | Options                                       | Location                                     |
++-----------------+-----------------------------------------------+----------------------------------------------+
+| interface       | mode=s_axilite port=return bundle=CONTROL_BUS | dijastra_algo.cpp:8 in dijkstra, return      |
+| interface       | mode=s_axilite port=graph bundle=CONTROL_BUS  | dijastra_algo.cpp:9 in dijkstra, graph       |
+| interface       | mode=s_axilite port=src bundle=CONTROL_BUS    | dijastra_algo.cpp:10 in dijkstra, src        |
+| interface       | mode=s_axilite port=dist bundle=CONTROL_BUS   | dijastra_algo.cpp:11 in dijkstra, dist       |
+| array_partition | variable=sptSet complete dim=1                | dijastra_algo.cpp:14 in dijkstra, sptSet     |
+| unroll          |                                               | dijastra_algo.cpp:17 in dijkstra             |
+| interface       | mode=s_axilite port=return bundle=CONTROL_BUS | dijastra_algo.cpp:47 in hls_dijkstra, return |
+| interface       | mode=s_axilite port=graph bundle=CONTROL_BUS  | dijastra_algo.cpp:48 in hls_dijkstra, graph  |
+| interface       | mode=s_axilite port=src bundle=CONTROL_BUS    | dijastra_algo.cpp:49 in hls_dijkstra, src    |
+| interface       | mode=s_axilite port=dist bundle=CONTROL_BUS   | dijastra_algo.cpp:50 in hls_dijkstra, dist   |
++-----------------+-----------------------------------------------+----------------------------------------------+
+
+

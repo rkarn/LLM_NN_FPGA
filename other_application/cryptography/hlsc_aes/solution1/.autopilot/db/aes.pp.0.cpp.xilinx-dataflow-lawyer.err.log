@@ -1,0 +1,2 @@
+format specifies type 'unsigned int' but the argument has type 'byte' (aka 'ap_uint<8>')
+1 warning generated.

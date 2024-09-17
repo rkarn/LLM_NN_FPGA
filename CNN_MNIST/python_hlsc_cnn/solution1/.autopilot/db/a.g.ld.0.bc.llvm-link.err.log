@@ -1,0 +1,1 @@
+ERROR: Linking globals named '_Z15mnist_inferencePA28_fPf': symbol multiply defined!

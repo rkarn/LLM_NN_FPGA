@@ -1,0 +1,108 @@
+{
+    "1": {
+        "name": "neural_network_Pipeline_VITIS_LOOP_68_3",
+        "file": "nn.cpp",
+        "fileloc": "0",
+        "instructions": "606",
+        "total_instructions": "606",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "58",
+            "L": "1"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "neural_network_Pipeline_VITIS_LOOP_35_3",
+        "file": "nn.cpp",
+        "fileloc": "0",
+        "instructions": "24",
+        "total_instructions": "24",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "neural_network",
+        "file": "nn.cpp",
+        "fileloc": "41",
+        "instructions": "333",
+        "total_instructions": "1535",
+        "calls": "5 1 4 3 2",
+        "basicblocks": "1",
+        "loads": {
+            "L": "60",
+            "T": "43"
+        }
+    },
+    "3": {
+        "name": "neural_network_Pipeline_VITIS_LOOP_28_2",
+        "file": "nn.cpp",
+        "fileloc": "0",
+        "instructions": "93",
+        "total_instructions": "93",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "3",
+            "L": "4"
+        },
+        "stores": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "neural_network_Pipeline_VITIS_LOOP_22_1",
+        "file": "nn.cpp",
+        "fileloc": "0",
+        "instructions": "25",
+        "total_instructions": "25",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "neural_network_Pipeline_VITIS_LOOP_56_1",
+        "file": "nn.cpp",
+        "fileloc": "0",
+        "instructions": "454",
+        "total_instructions": "454",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "44",
+            "L": "1"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

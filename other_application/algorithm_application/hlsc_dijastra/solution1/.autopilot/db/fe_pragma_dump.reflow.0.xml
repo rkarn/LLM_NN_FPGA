@@ -1,0 +1,8 @@
+<pragmas>
+<pragma file="dijastra_algo.cpp" line="47" pragmaType="interface" parentfunction="hls_dijkstra" mode="s_axilite" port="" bundle="CONTROL_BUS" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="dijastra_algo.cpp" line="48" pragmaType="interface" parentfunction="hls_dijkstra" mode="s_axilite" port="graph" bundle="CONTROL_BUS" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="dijastra_algo.cpp" line="49" pragmaType="interface" parentfunction="hls_dijkstra" mode="s_axilite" port="src" bundle="CONTROL_BUS" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="dijastra_algo.cpp" line="50" pragmaType="interface" parentfunction="hls_dijkstra" mode="s_axilite" port="dist" bundle="CONTROL_BUS" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="dijastra_algo.cpp" line="17" pragmaType="unroll" parentfunction="dijkstra" factor="-1" skip_exit_check="0"/>
+<pragma file="dijastra_algo.cpp" line="14" pragmaType="array_partition" parentfunction="dijkstra" dim="1" factor="0" mode="complete" dynamic="0" variable="sptSet"/>
+</pragmas>

@@ -1,0 +1,242 @@
+
+
+================================================================
+== Vitis HLS Report for 'neural_network_Pipeline_VITIS_LOOP_92_9'
+================================================================
+* Date:           Sun Sep 15 03:31:50 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        hlsc_fcnn_activities
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.100 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       25|       25|  0.250 us|  0.250 us|   25|   25|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_92_9  |       23|       23|         8|          4|          1|     5|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   4|      -|      -|    -|
+|Expression       |        -|   -|      0|    202|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        -|   -|      0|     21|    -|
+|Memory           |        0|   -|      9|      1|    -|
+|Multiplexer      |        -|   -|      -|    165|    -|
+|Register         |        -|   -|    187|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        0|   4|    196|    389|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      100|  90|  41600|  20800|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        0|   4|     ~0|      1|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------+----------------+---------+----+---+----+-----+
+    |      Instance      |     Module     | BRAM_18K| DSP| FF| LUT| URAM|
+    +--------------------+----------------+---------+----+---+----+-----+
+    |mux_5_3_16_1_1_U89  |mux_5_3_16_1_1  |        0|   0|  0|  21|    0|
+    +--------------------+----------------+---------+----+---+----+-----+
+    |Total               |                |        0|   0|  0|  21|    0|
+    +--------------------+----------------+---------+----+---+----+-----+
+
+    * DSP: 
+    +-------------------------------------+---------------------------------+--------------+
+    |               Instance              |              Module             |  Expression  |
+    +-------------------------------------+---------------------------------+--------------+
+    |mac_muladd_12s_15ns_24ns_24_4_1_U90  |mac_muladd_12s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_12s_15ns_24ns_24_4_1_U91  |mac_muladd_12s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_12s_15ns_24ns_24_4_1_U92  |mac_muladd_12s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_12s_15ns_24ns_24_4_1_U93  |mac_muladd_12s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    +-------------------------------------+---------------------------------+--------------+
+
+    * Memory: 
+    +---------------+-----------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |     Memory    |                              Module                             | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +---------------+-----------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |layer2_bias_U  |neural_network_Pipeline_VITIS_LOOP_92_9_layer2_bias_ROM_AUTO_1R  |        0|  9|   1|    0|     5|    9|     1|           45|
+    +---------------+-----------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total          |                                                                 |        0|  9|   1|    0|     5|    9|     1|           45|
+    +---------------+-----------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |add_ln92_fu_231_p2         |         +|   0|  0|  11|           3|           1|
+    |icmp_ln92_fu_225_p2        |      icmp|   0|  0|  11|           3|           3|
+    |icmp_ln98_1_fu_423_p2      |      icmp|   0|  0|  11|           3|           1|
+    |icmp_ln98_2_fu_428_p2      |      icmp|   0|  0|  11|           3|           2|
+    |icmp_ln98_3_fu_433_p2      |      icmp|   0|  0|  11|           3|           2|
+    |icmp_ln98_fu_418_p2        |      icmp|   0|  0|  11|           3|           1|
+    |or_ln98_1_fu_444_p2        |        or|   0|  0|   2|           1|           1|
+    |or_ln98_2_fu_450_p2        |        or|   0|  0|   2|           1|           1|
+    |or_ln98_fu_438_p2          |        or|   0|  0|   2|           1|           1|
+    |empty_fu_321_p3            |    select|   0|  0|  16|           1|          16|
+    |layer2_output_1_fu_403_p3  |    select|   0|  0|  16|           1|          16|
+    |layer2_output_2_fu_463_p3  |    select|   0|  0|  16|           1|          16|
+    |layer2_output_3_fu_470_p3  |    select|   0|  0|  16|           1|          16|
+    |layer2_output_4_fu_477_p3  |    select|   0|  0|  16|           1|          16|
+    |layer2_output_5_fu_484_p3  |    select|   0|  0|  16|           1|          16|
+    |layer2_output_fu_456_p3    |    select|   0|  0|  16|           1|          16|
+    |max_val_fu_491_p3          |    select|   0|  0|  16|           1|          16|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0| 202|          30|         143|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |                   Name                  | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                |  21|          5|    1|          5|
+    |ap_done_int                              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_conv_i_i_le11_out_load  |   9|          2|   16|         32|
+    |ap_sig_allocacmp_conv_i_i_le13_out_load  |   9|          2|   16|         32|
+    |ap_sig_allocacmp_conv_i_i_le15_out_load  |   9|          2|   16|         32|
+    |ap_sig_allocacmp_conv_i_i_le17_out_load  |   9|          2|   16|         32|
+    |ap_sig_allocacmp_conv_i_i_le19_out_load  |   9|          2|   16|         32|
+    |ap_sig_allocacmp_i_1                     |   9|          2|    3|          6|
+    |conv_i_i_le11_out_o                      |   9|          2|   16|         32|
+    |conv_i_i_le13_out_o                      |   9|          2|   16|         32|
+    |conv_i_i_le15_out_o                      |   9|          2|   16|         32|
+    |conv_i_i_le17_out_o                      |   9|          2|   16|         32|
+    |conv_i_i_le19_out_o                      |   9|          2|   16|         32|
+    |i_fu_84                                  |   9|          2|    3|          6|
+    |p_0_0_0114_i3_out_o                      |   9|          2|   16|         32|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |Total                                    | 165|         37|  186|        375|
+    +-----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------+----+----+-----+-----------+
+    |                Name               | FF | LUT| Bits| Const Bits|
+    +-----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                          |   4|   0|    4|          0|
+    |ap_done_reg                        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1            |   1|   0|    1|          0|
+    |conv_i_i_le11_out_load_reg_697     |  16|   0|   16|          0|
+    |conv_i_i_le13_out_load_reg_703     |  16|   0|   16|          0|
+    |conv_i_i_le15_out_load_reg_708     |  16|   0|   16|          0|
+    |conv_i_i_le17_out_load_reg_713     |  16|   0|   16|          0|
+    |conv_i_i_le19_out_load_reg_718     |  16|   0|   16|          0|
+    |i_1_reg_584                        |   3|   0|    3|          0|
+    |i_1_reg_584_pp0_iter1_reg          |   3|   0|    3|          0|
+    |i_fu_84                            |   3|   0|    3|          0|
+    |icmp_ln92_reg_593                  |   1|   0|    1|          0|
+    |layer1_output_1_load_reg_662       |  15|   0|   15|          0|
+    |layer1_output_2_load_reg_667       |  15|   0|   15|          0|
+    |layer1_output_3_load_reg_672       |  15|   0|   15|          0|
+    |layer2_bias_load_reg_642           |   9|   0|    9|          0|
+    |layer2_weight_tile_1_load_reg_647  |  12|   0|   12|          0|
+    |layer2_weight_tile_2_load_reg_652  |  12|   0|   12|          0|
+    |layer2_weight_tile_3_load_reg_657  |  12|   0|   12|          0|
+    +-----------------------------------+----+----+-----+-----------+
+    |Total                              | 187|   0|  187|          0|
+    +-----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |              Source Object              |    C Type    |
++-------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+|ap_clk                         |   in|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_92_9|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_92_9|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_92_9|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_92_9|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_92_9|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_92_9|  return value|
+|cmp131                         |   in|    1|     ap_none|                                   cmp131|        scalar|
+|layer2_weight_tile_address0    |  out|    3|   ap_memory|                       layer2_weight_tile|         array|
+|layer2_weight_tile_ce0         |  out|    1|   ap_memory|                       layer2_weight_tile|         array|
+|layer2_weight_tile_q0          |   in|   12|   ap_memory|                       layer2_weight_tile|         array|
+|layer2_weight_tile_1_address0  |  out|    3|   ap_memory|                     layer2_weight_tile_1|         array|
+|layer2_weight_tile_1_ce0       |  out|    1|   ap_memory|                     layer2_weight_tile_1|         array|
+|layer2_weight_tile_1_q0        |   in|   12|   ap_memory|                     layer2_weight_tile_1|         array|
+|layer2_weight_tile_2_address0  |  out|    3|   ap_memory|                     layer2_weight_tile_2|         array|
+|layer2_weight_tile_2_ce0       |  out|    1|   ap_memory|                     layer2_weight_tile_2|         array|
+|layer2_weight_tile_2_q0        |   in|   12|   ap_memory|                     layer2_weight_tile_2|         array|
+|layer2_weight_tile_3_address0  |  out|    3|   ap_memory|                     layer2_weight_tile_3|         array|
+|layer2_weight_tile_3_ce0       |  out|    1|   ap_memory|                     layer2_weight_tile_3|         array|
+|layer2_weight_tile_3_q0        |   in|   12|   ap_memory|                     layer2_weight_tile_3|         array|
+|tile_1                         |   in|    5|     ap_none|                                   tile_1|        scalar|
+|layer1_output_address0         |  out|    3|   ap_memory|                            layer1_output|         array|
+|layer1_output_ce0              |  out|    1|   ap_memory|                            layer1_output|         array|
+|layer1_output_q0               |   in|   15|   ap_memory|                            layer1_output|         array|
+|layer1_output_1_address0       |  out|    3|   ap_memory|                          layer1_output_1|         array|
+|layer1_output_1_ce0            |  out|    1|   ap_memory|                          layer1_output_1|         array|
+|layer1_output_1_q0             |   in|   15|   ap_memory|                          layer1_output_1|         array|
+|layer1_output_2_address0       |  out|    3|   ap_memory|                          layer1_output_2|         array|
+|layer1_output_2_ce0            |  out|    1|   ap_memory|                          layer1_output_2|         array|
+|layer1_output_2_q0             |   in|   15|   ap_memory|                          layer1_output_2|         array|
+|layer1_output_3_address0       |  out|    3|   ap_memory|                          layer1_output_3|         array|
+|layer1_output_3_ce0            |  out|    1|   ap_memory|                          layer1_output_3|         array|
+|layer1_output_3_q0             |   in|   15|   ap_memory|                          layer1_output_3|         array|
+|conv_i_i_le19_out_i            |   in|   16|     ap_ovld|                        conv_i_i_le19_out|       pointer|
+|conv_i_i_le19_out_o            |  out|   16|     ap_ovld|                        conv_i_i_le19_out|       pointer|
+|conv_i_i_le19_out_o_ap_vld     |  out|    1|     ap_ovld|                        conv_i_i_le19_out|       pointer|
+|conv_i_i_le17_out_i            |   in|   16|     ap_ovld|                        conv_i_i_le17_out|       pointer|
+|conv_i_i_le17_out_o            |  out|   16|     ap_ovld|                        conv_i_i_le17_out|       pointer|
+|conv_i_i_le17_out_o_ap_vld     |  out|    1|     ap_ovld|                        conv_i_i_le17_out|       pointer|
+|conv_i_i_le15_out_i            |   in|   16|     ap_ovld|                        conv_i_i_le15_out|       pointer|
+|conv_i_i_le15_out_o            |  out|   16|     ap_ovld|                        conv_i_i_le15_out|       pointer|
+|conv_i_i_le15_out_o_ap_vld     |  out|    1|     ap_ovld|                        conv_i_i_le15_out|       pointer|
+|conv_i_i_le13_out_i            |   in|   16|     ap_ovld|                        conv_i_i_le13_out|       pointer|
+|conv_i_i_le13_out_o            |  out|   16|     ap_ovld|                        conv_i_i_le13_out|       pointer|
+|conv_i_i_le13_out_o_ap_vld     |  out|    1|     ap_ovld|                        conv_i_i_le13_out|       pointer|
+|conv_i_i_le11_out_i            |   in|   16|     ap_ovld|                        conv_i_i_le11_out|       pointer|
+|conv_i_i_le11_out_o            |  out|   16|     ap_ovld|                        conv_i_i_le11_out|       pointer|
+|conv_i_i_le11_out_o_ap_vld     |  out|    1|     ap_ovld|                        conv_i_i_le11_out|       pointer|
+|p_0_0_0114_i3_out_i            |   in|   16|     ap_ovld|                        p_0_0_0114_i3_out|       pointer|
+|p_0_0_0114_i3_out_o            |  out|   16|     ap_ovld|                        p_0_0_0114_i3_out|       pointer|
+|p_0_0_0114_i3_out_o_ap_vld     |  out|    1|     ap_ovld|                        p_0_0_0114_i3_out|       pointer|
++-------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+

@@ -1,0 +1,38 @@
+{
+    "1": {
+        "name": "mnist_inference_Pipeline_VITIS_LOOP_41_4",
+        "file": "fcnn.cpp",
+        "fileloc": "0",
+        "instructions": "7857",
+        "total_instructions": "7857",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "784",
+            "L": "2"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "mnist_inference",
+        "file": "fcnn.cpp",
+        "fileloc": "16",
+        "instructions": "2480",
+        "total_instructions": "10337",
+        "calls": "1",
+        "basicblocks": "1",
+        "loads": {
+            "L": "10",
+            "T": "784"
+        },
+        "stores": {
+            "L": "10",
+            "T": "10"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+  "0": {
+    "basicblocks": 9050,
+    "calls": "",
+    "file": "nn.cpp",
+    "fileloc": 46,
+    "instructions": 18374,
+    "loads": {
+      "L": 139,
+      "T": 390
+    },
+    "name": "neural_network",
+    "stores": {
+      "L": 30,
+      "T": 15
+    },
+    "total_instructions": 20294
+  },
+  "1": {
+    "basicblocks": 168,
+    "calls": "",
+    "file": "hls_exp_apfixed.h",
+    "fileloc": 39,
+    "instructions": 379,
+    "loads": {
+      "G": 6,
+      "L": 3
+    },
+    "name": "exp<17, 9>",
+    "stores": {
+      "G": 3,
+      "L": 1
+    },
+    "total_instructions": 379
+  }
+}

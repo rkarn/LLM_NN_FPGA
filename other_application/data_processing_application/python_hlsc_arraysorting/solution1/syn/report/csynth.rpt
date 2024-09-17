@@ -1,0 +1,168 @@
+
+
+================================================================
+== Synthesis Summary Report of 'hls_quickSort'
+================================================================
++ General Information: 
+    * Date:           Fri Sep 13 03:08:56 2024
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        python_hlsc_arraysorting
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a35t-cpg236-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------+------+------+---------+--------+----------+---------+------+----------+--------+----+-----------+------------+-----+
+    |        Modules       | Issue|      | Latency | Latency| Iteration|         | Trip |          |        |    |           |            |     |
+    |        & Loops       | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM  | DSP|     FF    |     LUT    | URAM|
+    +----------------------+------+------+---------+--------+----------+---------+------+----------+--------+----+-----------+------------+-----+
+    |+ hls_quickSort       |     -|  0.29|        -|       -|         -|        -|     -|        no|  2 (2%)|   -|  3490 (8%)|  3236 (15%)|    -|
+    | o VITIS_LOOP_45_1    |     -|  7.30|        -|       -|         -|        -|     -|        no|       -|   -|          -|           -|    -|
+    |  o VITIS_LOOP_20_1   |     -|  7.30|        -|       -|         -|        -|     -|        no|       -|   -|          -|           -|    -|
+    |   o VITIS_LOOP_22_2  |     -|  7.30|        -|       -|         1|        -|     -|        no|       -|   -|          -|           -|    -|
+    |   o VITIS_LOOP_26_3  |     -|  7.30|        -|       -|         1|        -|     -|        no|       -|   -|          -|           -|    -|
+    +----------------------+------+------+---------+--------+----------+---------+------+----------+--------+----+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++-------------------+------------+---------------+--------+----------+
+| Interface         | Data Width | Address Width | Offset | Register |
++-------------------+------------+---------------+--------+----------+
+| s_axi_CONTROL_BUS | 32         | 8             | 16     | 0        |
++-------------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++-------------------+--------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface         | Register     | Offset | Width | Access | Description                      | Bit Fields                                                           |
++-------------------+--------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_CONTROL_BUS | CTRL         | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_CONTROL_BUS | GIER         | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_CONTROL_BUS | IP_IER       | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_CONTROL_BUS | IP_ISR       | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_CONTROL_BUS | arr_0_i      | 0x10   | 32    | W      | Data signal of arr_0_i           |                                                                      |
+| s_axi_CONTROL_BUS | arr_0_o      | 0x18   | 32    | R      | Data signal of arr_0_o           |                                                                      |
+| s_axi_CONTROL_BUS | arr_0_o_ctrl | 0x1c   | 32    | R      | Control signal of arr_0_o        | 0=arr_0_o_ap_vld                                                     |
+| s_axi_CONTROL_BUS | arr_1_i      | 0x20   | 32    | W      | Data signal of arr_1_i           |                                                                      |
+| s_axi_CONTROL_BUS | arr_1_o      | 0x28   | 32    | R      | Data signal of arr_1_o           |                                                                      |
+| s_axi_CONTROL_BUS | arr_1_o_ctrl | 0x2c   | 32    | R      | Control signal of arr_1_o        | 0=arr_1_o_ap_vld                                                     |
+| s_axi_CONTROL_BUS | arr_2_i      | 0x30   | 32    | W      | Data signal of arr_2_i           |                                                                      |
+| s_axi_CONTROL_BUS | arr_2_o      | 0x38   | 32    | R      | Data signal of arr_2_o           |                                                                      |
+| s_axi_CONTROL_BUS | arr_2_o_ctrl | 0x3c   | 32    | R      | Control signal of arr_2_o        | 0=arr_2_o_ap_vld                                                     |
+| s_axi_CONTROL_BUS | arr_3_i      | 0x40   | 32    | W      | Data signal of arr_3_i           |                                                                      |
+| s_axi_CONTROL_BUS | arr_3_o      | 0x48   | 32    | R      | Data signal of arr_3_o           |                                                                      |
+| s_axi_CONTROL_BUS | arr_3_o_ctrl | 0x4c   | 32    | R      | Control signal of arr_3_o        | 0=arr_3_o_ap_vld                                                     |
+| s_axi_CONTROL_BUS | arr_4_i      | 0x50   | 32    | W      | Data signal of arr_4_i           |                                                                      |
+| s_axi_CONTROL_BUS | arr_4_o      | 0x58   | 32    | R      | Data signal of arr_4_o           |                                                                      |
+| s_axi_CONTROL_BUS | arr_4_o_ctrl | 0x5c   | 32    | R      | Control signal of arr_4_o        | 0=arr_4_o_ap_vld                                                     |
+| s_axi_CONTROL_BUS | arr_5_i      | 0x60   | 32    | W      | Data signal of arr_5_i           |                                                                      |
+| s_axi_CONTROL_BUS | arr_5_o      | 0x68   | 32    | R      | Data signal of arr_5_o           |                                                                      |
+| s_axi_CONTROL_BUS | arr_5_o_ctrl | 0x6c   | 32    | R      | Control signal of arr_5_o        | 0=arr_5_o_ap_vld                                                     |
+| s_axi_CONTROL_BUS | arr_6_i      | 0x70   | 32    | W      | Data signal of arr_6_i           |                                                                      |
+| s_axi_CONTROL_BUS | arr_6_o      | 0x78   | 32    | R      | Data signal of arr_6_o           |                                                                      |
+| s_axi_CONTROL_BUS | arr_6_o_ctrl | 0x7c   | 32    | R      | Control signal of arr_6_o        | 0=arr_6_o_ap_vld                                                     |
+| s_axi_CONTROL_BUS | arr_7_i      | 0x80   | 32    | W      | Data signal of arr_7_i           |                                                                      |
+| s_axi_CONTROL_BUS | arr_7_o      | 0x88   | 32    | R      | Data signal of arr_7_o           |                                                                      |
+| s_axi_CONTROL_BUS | arr_7_o_ctrl | 0x8c   | 32    | R      | Control signal of arr_7_o        | 0=arr_7_o_ap_vld                                                     |
+| s_axi_CONTROL_BUS | arr_8_i      | 0x90   | 32    | W      | Data signal of arr_8_i           |                                                                      |
+| s_axi_CONTROL_BUS | arr_8_o      | 0x98   | 32    | R      | Data signal of arr_8_o           |                                                                      |
+| s_axi_CONTROL_BUS | arr_8_o_ctrl | 0x9c   | 32    | R      | Control signal of arr_8_o        | 0=arr_8_o_ap_vld                                                     |
++-------------------+--------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| arr      | inout     | int*     |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+-------------------+-----------+
+| Argument | HW Interface      | HW Type   |
++----------+-------------------+-----------+
+| arr      | s_axi_CONTROL_BUS | interface |
+| arr      | s_axi_CONTROL_BUS | interface |
+| arr      | s_axi_CONTROL_BUS | interface |
+| arr      | s_axi_CONTROL_BUS | interface |
+| arr      | s_axi_CONTROL_BUS | interface |
+| arr      | s_axi_CONTROL_BUS | interface |
+| arr      | s_axi_CONTROL_BUS | interface |
+| arr      | s_axi_CONTROL_BUS | interface |
+| arr      | s_axi_CONTROL_BUS | interface |
++----------+-------------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------+-----+--------+----------+-----+--------+---------+
+| Name                  | DSP | Pragma | Variable | Op  | Impl   | Latency |
++-----------------------+-----+--------+----------+-----+--------+---------+
+| + hls_quickSort       | 0   |        |          |     |        |         |
+|   top_8_fu_1880_p2    | -   |        | top_8    | add | fabric | 0       |
+|   top_9_fu_1900_p2    | -   |        | top_9    | add | fabric | 0       |
+|   sub_i_i_fu_1928_p2  | -   |        | sub_i_i  | add | fabric | 0       |
+|   add_i_i_fu_1933_p2  | -   |        | add_i_i  | add | fabric | 0       |
+|   add_ln23_fu_2010_p2 | -   |        | add_ln23 | add | fabric | 0       |
+|   add_ln27_fu_2079_p2 | -   |        | add_ln27 | add | fabric | 0       |
+|   add_ln52_fu_2159_p2 | -   |        | add_ln52 | add | fabric | 0       |
+|   add_ln57_fu_2174_p2 | -   |        | add_ln57 | add | fabric | 0       |
+|   top_10_fu_2185_p2   | -   |        | top_10   | add | fabric | 0       |
+|   top_11_fu_2195_p2   | -   |        | top_11   | add | fabric | 0       |
++-----------------------+-----+--------+----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-----------------+------+------+--------+----------+---------+------+---------+
+| Name            | BRAM | URAM | Pragma | Variable | Storage | Impl | Latency |
++-----------------+------+------+--------+----------+---------+------+---------+
+| + hls_quickSort | 2    | 0    |        |          |         |      |         |
+|   stack_U       | 2    | -    |        | stack    | ram_t2p | auto | 1       |
++-----------------+------+------+--------+----------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+-----------------------------------------------+-----------------------------------------------+
+| Type            | Options                                       | Location                                      |
++-----------------+-----------------------------------------------+-----------------------------------------------+
+| inline          |                                               | array_sorting.cpp:8 in swap                   |
+| inline          |                                               | array_sorting.cpp:15 in partition             |
+| pipeline        | II=1                                          | array_sorting.cpp:21 in partition             |
+| inline          |                                               | array_sorting.cpp:38 in quicksort             |
+| pipeline        | II=1                                          | array_sorting.cpp:46 in quicksort             |
+| interface       | mode=s_axilite port=return bundle=CONTROL_BUS | array_sorting.cpp:65 in hls_quicksort, return |
+| interface       | mode=s_axilite port=arr bundle=CONTROL_BUS    | array_sorting.cpp:66 in hls_quicksort, arr    |
+| array_partition | variable=arr complete dim=1                   | array_sorting.cpp:67 in hls_quicksort, arr    |
++-----------------+-----------------------------------------------+-----------------------------------------------+
+
+

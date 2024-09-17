@@ -1,0 +1,20 @@
+{
+  "0": {
+    "basicblocks": 224,
+    "calls": "",
+    "file": "fcnn.cpp",
+    "fileloc": 12,
+    "instructions": 1034,
+    "loads": {
+      "G": 1,
+      "L": 57,
+      "T": 1
+    },
+    "name": "mnist_inference",
+    "stores": {
+      "L": 14,
+      "T": 10
+    },
+    "total_instructions": 1934
+  }
+}

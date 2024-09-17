@@ -1,0 +1,470 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'neural_network'" level="0">
+<item name = "Date">Sun Sep 15 03:58:27 2024
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">hlsc_fcnn_unsw</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a35t-cpg236-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.120 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">8946, 8946, 89.460 us, 89.460 us, 8947, 8947, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3_fu_790">neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3, 349, 349, 3.490 us, 3.490 us, 349, 349, no</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_70_4_fu_840">neural_network_Pipeline_VITIS_LOOP_70_4, 54, 54, 0.540 us, 0.540 us, 54, 54, no</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_84_7_VITIS_LOOP_85_8_fu_937">neural_network_Pipeline_VITIS_LOOP_84_7_VITIS_LOOP_85_8, 82, 82, 0.820 us, 0.820 us, 82, 82, no</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_21_1_fu_948">neural_network_Pipeline_VITIS_LOOP_21_1, 11, 11, 0.110 us, 0.110 us, 11, 11, no</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_92_9_fu_963">neural_network_Pipeline_VITIS_LOOP_92_9, 45, 45, 0.450 us, 0.450 us, 45, 45, no</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_26_2_fu_990">neural_network_Pipeline_VITIS_LOOP_26_2, 17, 17, 0.170 us, 0.170 us, 17, 17, no</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_32_3_fu_1032">neural_network_Pipeline_VITIS_LOOP_32_3, 303, 303, 3.030 us, 3.030 us, 303, 303, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_60_1">6512, 6512, 407, -, -, 16, no</column>
+<column name="- VITIS_LOOP_82_6">2096, 2096, 131, -, -, 16, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 42, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">5, 51, 6212, 6407, -</column>
+<column name="Memory">0, -, 757, 71, 0</column>
+<column name="Multiplexer">-, -, -, 2124, -</column>
+<column name="Register">-, -, 912, -, -</column>
+<specialColumn name="Available">100, 90, 41600, 20800, 0</specialColumn>
+<specialColumn name="Utilization (%)">5, 56, 18, 41, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="CONTROL_s_axi_U">CONTROL_s_axi, 0, 0, 36, 40, 0</column>
+<column name="INPUT_s_axi_U">INPUT_s_axi, 0, 0, 976, 1416, 0</column>
+<column name="OUTPUT_s_axi_U">OUTPUT_s_axi, 0, 0, 470, 680, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_21_1_fu_948">neural_network_Pipeline_VITIS_LOOP_21_1, 0, 0, 22, 151, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_26_2_fu_990">neural_network_Pipeline_VITIS_LOOP_26_2, 0, 3, 638, 647, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_32_3_fu_1032">neural_network_Pipeline_VITIS_LOOP_32_3, 0, 0, 1591, 1574, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3_fu_790">neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3, 4, 1, 301, 359, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_70_4_fu_840">neural_network_Pipeline_VITIS_LOOP_70_4, 0, 43, 1726, 533, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_84_7_VITIS_LOOP_85_8_fu_937">neural_network_Pipeline_VITIS_LOOP_84_7_VITIS_LOOP_85_8, 1, 0, 166, 340, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_92_9_fu_963">neural_network_Pipeline_VITIS_LOOP_92_9, 0, 4, 286, 667, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="layer1_output_U">layer1_output_RAM_AUTO_1R1W, 0, 15, 4, 0, 16, 15, 1, 240</column>
+<column name="layer1_output_1_U">layer1_output_RAM_AUTO_1R1W, 0, 15, 4, 0, 16, 15, 1, 240</column>
+<column name="layer1_output_2_U">layer1_output_RAM_AUTO_1R1W, 0, 15, 4, 0, 16, 15, 1, 240</column>
+<column name="layer1_output_3_U">layer1_output_RAM_AUTO_1R1W, 0, 15, 4, 0, 16, 15, 1, 240</column>
+<column name="layer1_weight_tile_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_1_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_2_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_3_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_4_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_5_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_6_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_7_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_8_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_9_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_10_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_11_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_12_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_13_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_14_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_15_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_16_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_17_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_18_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_19_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_20_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_21_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_22_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_23_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_24_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_25_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_26_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_27_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_28_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_29_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_30_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_31_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_32_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_33_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_34_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_35_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_36_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_37_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_38_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_39_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_40_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_41_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer1_weight_tile_42_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 15, 1, 0, 4, 15, 1, 60</column>
+<column name="layer2_weight_tile_U">layer2_weight_tile_RAM_AUTO_1R1W, 0, 13, 3, 0, 10, 13, 1, 130</column>
+<column name="layer2_weight_tile_1_U">layer2_weight_tile_RAM_AUTO_1R1W, 0, 13, 3, 0, 10, 13, 1, 130</column>
+<column name="layer2_weight_tile_2_U">layer2_weight_tile_RAM_AUTO_1R1W, 0, 13, 3, 0, 10, 13, 1, 130</column>
+<column name="layer2_weight_tile_3_U">layer2_weight_tile_RAM_AUTO_1R1W, 0, 13, 3, 0, 10, 13, 1, 130</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln60_fu_1078_p2">+, 0, 0, 14, 7, 3</column>
+<column name="add_ln82_fu_1116_p2">+, 0, 0, 14, 7, 3</column>
+<column name="cmp131_fu_1110_p2">icmp, 0, 0, 14, 7, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">61, 15, 1, 15</column>
+<column name="layer1_output_1_address0">13, 3, 4, 12</column>
+<column name="layer1_output_1_ce0">13, 3, 1, 3</column>
+<column name="layer1_output_1_we0">9, 2, 1, 2</column>
+<column name="layer1_output_2_address0">13, 3, 4, 12</column>
+<column name="layer1_output_2_ce0">13, 3, 1, 3</column>
+<column name="layer1_output_2_we0">9, 2, 1, 2</column>
+<column name="layer1_output_3_address0">13, 3, 4, 12</column>
+<column name="layer1_output_3_ce0">13, 3, 1, 3</column>
+<column name="layer1_output_3_we0">9, 2, 1, 2</column>
+<column name="layer1_output_address0">13, 3, 4, 12</column>
+<column name="layer1_output_ce0">13, 3, 1, 3</column>
+<column name="layer1_output_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_10_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_10_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_10_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_11_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_11_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_11_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_12_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_12_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_12_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_13_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_13_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_13_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_14_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_14_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_14_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_15_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_15_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_15_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_16_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_16_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_16_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_17_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_17_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_17_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_18_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_18_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_18_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_19_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_19_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_19_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_1_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_1_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_1_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_20_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_20_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_20_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_21_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_21_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_21_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_22_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_22_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_22_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_23_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_23_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_23_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_24_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_24_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_24_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_25_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_25_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_25_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_26_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_26_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_26_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_27_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_27_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_27_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_28_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_28_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_28_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_29_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_29_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_29_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_2_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_2_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_2_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_30_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_30_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_30_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_31_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_31_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_31_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_32_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_32_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_32_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_33_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_33_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_33_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_34_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_34_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_34_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_35_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_35_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_35_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_36_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_36_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_36_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_37_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_37_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_37_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_38_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_38_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_38_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_39_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_39_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_39_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_3_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_3_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_3_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_40_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_40_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_40_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_41_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_41_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_41_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_42_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_42_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_42_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_4_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_4_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_4_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_5_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_5_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_5_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_6_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_6_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_6_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_7_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_7_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_7_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_8_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_8_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_8_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_9_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_9_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_9_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_we0">9, 2, 1, 2</column>
+<column name="layer2_weight_tile_1_address0">13, 3, 4, 12</column>
+<column name="layer2_weight_tile_1_ce0">13, 3, 1, 3</column>
+<column name="layer2_weight_tile_1_we0">9, 2, 1, 2</column>
+<column name="layer2_weight_tile_2_address0">13, 3, 4, 12</column>
+<column name="layer2_weight_tile_2_ce0">13, 3, 1, 3</column>
+<column name="layer2_weight_tile_2_we0">9, 2, 1, 2</column>
+<column name="layer2_weight_tile_3_address0">13, 3, 4, 12</column>
+<column name="layer2_weight_tile_3_ce0">13, 3, 1, 3</column>
+<column name="layer2_weight_tile_3_we0">9, 2, 1, 2</column>
+<column name="layer2_weight_tile_address0">13, 3, 4, 12</column>
+<column name="layer2_weight_tile_ce0">13, 3, 1, 3</column>
+<column name="layer2_weight_tile_we0">9, 2, 1, 2</column>
+<column name="output_0_o">13, 3, 16, 48</column>
+<column name="output_0_o_ap_vld">13, 3, 1, 3</column>
+<column name="output_1_o">13, 3, 16, 48</column>
+<column name="output_1_o_ap_vld">13, 3, 1, 3</column>
+<column name="output_2_o">13, 3, 16, 48</column>
+<column name="output_2_o_ap_vld">13, 3, 1, 3</column>
+<column name="output_3_o">13, 3, 16, 48</column>
+<column name="output_3_o_ap_vld">13, 3, 1, 3</column>
+<column name="output_4_o">13, 3, 16, 48</column>
+<column name="output_4_o_ap_vld">13, 3, 1, 3</column>
+<column name="output_5_o">13, 3, 16, 48</column>
+<column name="output_5_o_ap_vld">13, 3, 1, 3</column>
+<column name="output_6_o">13, 3, 16, 48</column>
+<column name="output_6_o_ap_vld">13, 3, 1, 3</column>
+<column name="output_7_o">13, 3, 16, 48</column>
+<column name="output_7_o_ap_vld">13, 3, 1, 3</column>
+<column name="output_8_o">13, 3, 16, 48</column>
+<column name="output_8_o_ap_vld">13, 3, 1, 3</column>
+<column name="output_9_o">13, 3, 16, 48</column>
+<column name="output_9_o_ap_vld">13, 3, 1, 3</column>
+<column name="tile_1_fu_484">9, 2, 7, 14</column>
+<column name="tile_fu_268">9, 2, 7, 14</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">14, 0, 14, 0</column>
+<column name="cmp131_reg_1504">1, 0, 1, 0</column>
+<column name="conv_i_i_le15_lcssa36_fu_492">16, 0, 16, 0</column>
+<column name="conv_i_i_le17_lcssa38_fu_496">16, 0, 16, 0</column>
+<column name="conv_i_i_le19_lcssa40_fu_500">16, 0, 16, 0</column>
+<column name="conv_i_i_le21_lcssa42_fu_504">16, 0, 16, 0</column>
+<column name="conv_i_i_le23_lcssa44_fu_508">16, 0, 16, 0</column>
+<column name="conv_i_i_le25_lcssa46_fu_512">16, 0, 16, 0</column>
+<column name="conv_i_i_le27_lcssa48_fu_516">16, 0, 16, 0</column>
+<column name="conv_i_i_le29_lcssa50_fu_520">16, 0, 16, 0</column>
+<column name="conv_i_i_le31_lcssa52_fu_524">16, 0, 16, 0</column>
+<column name="conv_i_i_le33_lcssa54_fu_528">16, 0, 16, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_21_1_fu_948_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_26_2_fu_990_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_32_3_fu_1032_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3_fu_790_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_70_4_fu_840_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_84_7_VITIS_LOOP_85_8_fu_937_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_92_9_fu_963_ap_start_reg">1, 0, 1, 0</column>
+<column name="input_0_read_reg_1198">16, 0, 16, 0</column>
+<column name="input_10_read_reg_1248">16, 0, 16, 0</column>
+<column name="input_11_read_reg_1253">16, 0, 16, 0</column>
+<column name="input_12_read_reg_1258">16, 0, 16, 0</column>
+<column name="input_13_read_reg_1263">16, 0, 16, 0</column>
+<column name="input_14_read_reg_1268">16, 0, 16, 0</column>
+<column name="input_15_read_reg_1273">16, 0, 16, 0</column>
+<column name="input_16_read_reg_1278">16, 0, 16, 0</column>
+<column name="input_17_read_reg_1283">16, 0, 16, 0</column>
+<column name="input_18_read_reg_1288">16, 0, 16, 0</column>
+<column name="input_19_read_reg_1293">16, 0, 16, 0</column>
+<column name="input_1_read_reg_1203">16, 0, 16, 0</column>
+<column name="input_20_read_reg_1298">16, 0, 16, 0</column>
+<column name="input_21_read_reg_1303">16, 0, 16, 0</column>
+<column name="input_22_read_reg_1308">16, 0, 16, 0</column>
+<column name="input_23_read_reg_1313">16, 0, 16, 0</column>
+<column name="input_24_read_reg_1318">16, 0, 16, 0</column>
+<column name="input_25_read_reg_1323">16, 0, 16, 0</column>
+<column name="input_26_read_reg_1328">16, 0, 16, 0</column>
+<column name="input_27_read_reg_1333">16, 0, 16, 0</column>
+<column name="input_28_read_reg_1338">16, 0, 16, 0</column>
+<column name="input_29_read_reg_1343">16, 0, 16, 0</column>
+<column name="input_2_read_reg_1208">16, 0, 16, 0</column>
+<column name="input_30_read_reg_1348">16, 0, 16, 0</column>
+<column name="input_31_read_reg_1353">16, 0, 16, 0</column>
+<column name="input_32_read_reg_1358">16, 0, 16, 0</column>
+<column name="input_33_read_reg_1363">16, 0, 16, 0</column>
+<column name="input_34_read_reg_1368">16, 0, 16, 0</column>
+<column name="input_35_read_reg_1373">16, 0, 16, 0</column>
+<column name="input_36_read_reg_1378">16, 0, 16, 0</column>
+<column name="input_37_read_reg_1383">16, 0, 16, 0</column>
+<column name="input_38_read_reg_1388">16, 0, 16, 0</column>
+<column name="input_39_read_reg_1393">16, 0, 16, 0</column>
+<column name="input_3_read_reg_1213">16, 0, 16, 0</column>
+<column name="input_40_read_reg_1398">16, 0, 16, 0</column>
+<column name="input_41_read_reg_1403">16, 0, 16, 0</column>
+<column name="input_42_read_reg_1408">16, 0, 16, 0</column>
+<column name="input_4_read_reg_1218">16, 0, 16, 0</column>
+<column name="input_5_read_reg_1223">16, 0, 16, 0</column>
+<column name="input_6_read_reg_1228">16, 0, 16, 0</column>
+<column name="input_7_read_reg_1233">16, 0, 16, 0</column>
+<column name="input_8_read_reg_1238">16, 0, 16, 0</column>
+<column name="input_9_read_reg_1243">16, 0, 16, 0</column>
+<column name="p_0_0_0114_i1_fu_488">16, 0, 16, 0</column>
+<column name="tile_1_fu_484">7, 0, 7, 0</column>
+<column name="tile_fu_268">7, 0, 7, 0</column>
+<column name="trunc_ln60_reg_1416">6, 0, 6, 0</column>
+<column name="trunc_ln82_reg_1495">6, 0, 6, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_CONTROL_AWVALID">in, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_AWREADY">out, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_AWADDR">in, 4, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_WVALID">in, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_WREADY">out, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_WDATA">in, 32, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_WSTRB">in, 4, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_ARVALID">in, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_ARREADY">out, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_ARADDR">in, 4, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_RVALID">out, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_RREADY">in, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_RDATA">out, 32, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_RRESP">out, 2, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_BVALID">out, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_BREADY">in, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_BRESP">out, 2, s_axi, CONTROL, return void</column>
+<column name="s_axi_INPUT_AWVALID">in, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_AWREADY">out, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_AWADDR">in, 9, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_WVALID">in, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_WREADY">out, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_WDATA">in, 32, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_WSTRB">in, 4, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_ARVALID">in, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_ARREADY">out, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_ARADDR">in, 9, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_RVALID">out, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_RREADY">in, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_RDATA">out, 32, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_RRESP">out, 2, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_BVALID">out, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_BREADY">in, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_BRESP">out, 2, s_axi, INPUT, pointer</column>
+<column name="s_axi_OUTPUT_AWVALID">in, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_AWREADY">out, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_AWADDR">in, 8, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_WVALID">in, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_WREADY">out, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_WDATA">in, 32, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_WSTRB">in, 4, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_ARVALID">in, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_ARREADY">out, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_ARADDR">in, 8, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_RVALID">out, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_RREADY">in, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_RDATA">out, 32, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_RRESP">out, 2, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_BVALID">out, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_BREADY">in, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_BRESP">out, 2, s_axi, OUTPUT, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, neural_network, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, neural_network, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, neural_network, return value</column>
+</table>
+</item>
+</section>
+</profile>

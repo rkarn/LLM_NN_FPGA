@@ -1,0 +1,280 @@
+
+
+================================================================
+== Vitis HLS Report for 'neural_network_Pipeline_VITIS_LOOP_52_3'
+================================================================
+* Date:           Fri Sep 13 08:29:35 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        hlsc_fcnn_activities
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.450 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       28|       28|  0.280 us|  0.280 us|   28|   28|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_52_3  |       26|       26|        23|          1|          1|     5|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|  19|      -|      -|    -|
+|Expression       |        -|   -|      0|     47|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        -|   1|      0|      6|    -|
+|Memory           |        0|   -|    224|     21|    -|
+|Multiplexer      |        -|   -|      -|     36|    -|
+|Register         |        -|   -|    442|     32|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        0|  20|    666|    142|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      100|  90|  41600|  20800|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        0|  22|      1|     ~0|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+---------------------+---------+----+---+----+-----+
+    |         Instance        |        Module       | BRAM_18K| DSP| FF| LUT| URAM|
+    +-------------------------+---------------------+---------+----+---+----+-----+
+    |mul_11s_15ns_24_1_1_U62  |mul_11s_15ns_24_1_1  |        0|   1|  0|   6|    0|
+    +-------------------------+---------------------+---------+----+---+----+-----+
+    |Total                    |                     |        0|   1|  0|   6|    0|
+    +-------------------------+---------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    +-------------------------------------+---------------------------------+--------------+
+    |               Instance              |              Module             |  Expression  |
+    +-------------------------------------+---------------------------------+--------------+
+    |mac_muladd_10s_15ns_24ns_24_4_1_U66  |mac_muladd_10s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_10s_15ns_24ns_24_4_1_U67  |mac_muladd_10s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_10s_15ns_24ns_24_4_1_U68  |mac_muladd_10s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_10s_15ns_24ns_24_4_1_U69  |mac_muladd_10s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_10s_15ns_24ns_24_4_1_U73  |mac_muladd_10s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_10s_15ns_24ns_24_4_1_U77  |mac_muladd_10s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_11s_15ns_24ns_24_4_1_U63  |mac_muladd_11s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_11s_15ns_24ns_24_4_1_U64  |mac_muladd_11s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_11s_15ns_24ns_24_4_1_U65  |mac_muladd_11s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_11s_15ns_24ns_24_4_1_U70  |mac_muladd_11s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_11s_15ns_24ns_24_4_1_U71  |mac_muladd_11s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_11s_15ns_24ns_24_4_1_U72  |mac_muladd_11s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_11s_15ns_24ns_24_4_1_U75  |mac_muladd_11s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_11s_15ns_24ns_24_4_1_U76  |mac_muladd_11s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_11s_15ns_24ns_24_4_1_U78  |mac_muladd_11s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_11s_15ns_24ns_24_4_1_U79  |mac_muladd_11s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_11s_15ns_24ns_24_4_1_U80  |mac_muladd_11s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_11s_15ns_24ns_24_4_1_U81  |mac_muladd_11s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_12s_15ns_24ns_24_4_1_U74  |mac_muladd_12s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    +-------------------------------------+---------------------------------+--------------+
+
+    * Memory: 
+    +---------------------+-----------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |        Memory       |                                 Module                                | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +---------------------+-----------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |layer2_bias_U        |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_bias_ROM_AUTO_1R        |        0|   9|   1|    0|     5|    9|     1|           45|
+    |layer2_weights_0_U   |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_0_ROM_AUTO_1R   |        0|  11|   1|    0|     5|   11|     1|           55|
+    |layer2_weights_10_U  |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_10_ROM_AUTO_1R  |        0|  11|   1|    0|     5|   11|     1|           55|
+    |layer2_weights_11_U  |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_11_ROM_AUTO_1R  |        0|  10|   1|    0|     5|   10|     1|           50|
+    |layer2_weights_12_U  |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_12_ROM_AUTO_1R  |        0|  12|   1|    0|     5|   12|     1|           60|
+    |layer2_weights_13_U  |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_13_ROM_AUTO_1R  |        0|  11|   1|    0|     5|   11|     1|           55|
+    |layer2_weights_14_U  |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_14_ROM_AUTO_1R  |        0|  11|   1|    0|     5|   11|     1|           55|
+    |layer2_weights_15_U  |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_15_ROM_AUTO_1R  |        0|  10|   1|    0|     5|   10|     1|           50|
+    |layer2_weights_16_U  |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_16_ROM_AUTO_1R  |        0|  11|   1|    0|     5|   11|     1|           55|
+    |layer2_weights_17_U  |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_17_ROM_AUTO_1R  |        0|  11|   1|    0|     5|   11|     1|           55|
+    |layer2_weights_18_U  |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_18_ROM_AUTO_1R  |        0|  11|   1|    0|     5|   11|     1|           55|
+    |layer2_weights_19_U  |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_19_ROM_AUTO_1R  |        0|  11|   1|    0|     5|   11|     1|           55|
+    |layer2_weights_1_U   |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_1_ROM_AUTO_1R   |        0|  11|   1|    0|     5|   11|     1|           55|
+    |layer2_weights_2_U   |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_2_ROM_AUTO_1R   |        0|  11|   1|    0|     5|   11|     1|           55|
+    |layer2_weights_3_U   |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_3_ROM_AUTO_1R   |        0|  11|   1|    0|     5|   11|     1|           55|
+    |layer2_weights_4_U   |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_4_ROM_AUTO_1R   |        0|  10|   1|    0|     5|   10|     1|           50|
+    |layer2_weights_5_U   |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_5_ROM_AUTO_1R   |        0|  10|   1|    0|     5|   10|     1|           50|
+    |layer2_weights_6_U   |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_6_ROM_AUTO_1R   |        0|  10|   1|    0|     5|   10|     1|           50|
+    |layer2_weights_7_U   |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_7_ROM_AUTO_1R   |        0|  10|   1|    0|     5|   10|     1|           50|
+    |layer2_weights_8_U   |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_8_ROM_AUTO_1R   |        0|  11|   1|    0|     5|   11|     1|           55|
+    |layer2_weights_9_U   |neural_network_Pipeline_VITIS_LOOP_52_3_layer2_weights_9_ROM_AUTO_1R   |        0|  11|   1|    0|     5|   11|     1|           55|
+    +---------------------+-----------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total                |                                                                       |        0| 224|  21|    0|   105|  224|    21|         1120|
+    +---------------------+-----------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln52_fu_626_p2   |         +|   0|  0|  11|           3|           1|
+    |layer2_output_d0     |         +|   0|  0|  23|          16|          16|
+    |icmp_ln52_fu_620_p2  |      icmp|   0|  0|  11|           3|           3|
+    |ap_enable_pp0        |       xor|   0|  0|   2|           1|           2|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  47|          23|          22|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_1     |   9|          2|    3|          6|
+    |i_fu_122                 |   9|          2|    3|          6|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  36|          8|    8|         16|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------+----+----+-----+-----------+
+    |                Name               | FF | LUT| Bits| Const Bits|
+    +-----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                          |   1|   0|    1|          0|
+    |ap_done_reg                        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter10           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter11           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter12           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter13           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter14           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter15           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter16           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter17           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter18           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter19           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter20           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter21           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter22           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter8            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter9            |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter10_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter11_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter12_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter13_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter14_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter15_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter16_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter17_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter18_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter19_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter20_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter21_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter4_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter5_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter6_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter7_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter8_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter9_reg   |   1|   0|    1|          0|
+    |i_1_cast_reg_1333                  |   3|   0|   64|         61|
+    |i_fu_122                           |   3|   0|    3|          0|
+    |layer2_weights_0_load_reg_1367     |  11|   0|   11|          0|
+    |tmp_s_reg_1382                     |  16|   0|   16|          0|
+    |zext_ln55_10_cast_reg_1274         |  15|   0|   24|          9|
+    |zext_ln55_11_cast_reg_1269         |  15|   0|   24|          9|
+    |zext_ln55_12_cast_reg_1264         |  15|   0|   24|          9|
+    |zext_ln55_13_cast_reg_1259         |  15|   0|   24|          9|
+    |zext_ln55_14_cast_reg_1254         |  15|   0|   24|          9|
+    |zext_ln55_15_cast_reg_1249         |  15|   0|   24|          9|
+    |zext_ln55_16_cast_reg_1244         |  15|   0|   24|          9|
+    |zext_ln55_17_cast_reg_1239         |  15|   0|   24|          9|
+    |zext_ln55_18_cast_reg_1234         |  15|   0|   24|          9|
+    |zext_ln55_19_cast_reg_1229         |  15|   0|   24|          9|
+    |zext_ln55_1_cast_reg_1319          |  15|   0|   24|          9|
+    |zext_ln55_2_cast_reg_1314          |  15|   0|   24|          9|
+    |zext_ln55_3_cast_reg_1309          |  15|   0|   24|          9|
+    |zext_ln55_4_cast_reg_1304          |  15|   0|   24|          9|
+    |zext_ln55_5_cast_reg_1299          |  15|   0|   24|          9|
+    |zext_ln55_6_cast_reg_1294          |  15|   0|   24|          9|
+    |zext_ln55_7_cast_reg_1289          |  15|   0|   24|          9|
+    |zext_ln55_8_cast_reg_1284          |  15|   0|   24|          9|
+    |zext_ln55_9_cast_reg_1279          |  15|   0|   24|          9|
+    |zext_ln55_cast_reg_1324            |  15|   0|   24|          9|
+    |i_1_cast_reg_1333                  |  64|  32|   64|         61|
+    +-----------------------------------+----+----+-----+-----------+
+    |Total                              | 442|  32|  683|        302|
+    +-----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+-----------------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |              Source Object              |    C Type    |
++------------------------+-----+-----+------------+-----------------------------------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_52_3|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_52_3|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_52_3|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_52_3|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_52_3|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_52_3|  return value|
+|zext_ln55               |   in|   15|     ap_none|                                zext_ln55|        scalar|
+|zext_ln55_1             |   in|   15|     ap_none|                              zext_ln55_1|        scalar|
+|zext_ln55_2             |   in|   15|     ap_none|                              zext_ln55_2|        scalar|
+|zext_ln55_3             |   in|   15|     ap_none|                              zext_ln55_3|        scalar|
+|zext_ln55_4             |   in|   15|     ap_none|                              zext_ln55_4|        scalar|
+|zext_ln55_5             |   in|   15|     ap_none|                              zext_ln55_5|        scalar|
+|zext_ln55_6             |   in|   15|     ap_none|                              zext_ln55_6|        scalar|
+|zext_ln55_7             |   in|   15|     ap_none|                              zext_ln55_7|        scalar|
+|zext_ln55_8             |   in|   15|     ap_none|                              zext_ln55_8|        scalar|
+|zext_ln55_9             |   in|   15|     ap_none|                              zext_ln55_9|        scalar|
+|zext_ln55_10            |   in|   15|     ap_none|                             zext_ln55_10|        scalar|
+|zext_ln55_11            |   in|   15|     ap_none|                             zext_ln55_11|        scalar|
+|zext_ln55_12            |   in|   15|     ap_none|                             zext_ln55_12|        scalar|
+|zext_ln55_13            |   in|   15|     ap_none|                             zext_ln55_13|        scalar|
+|zext_ln55_14            |   in|   15|     ap_none|                             zext_ln55_14|        scalar|
+|zext_ln55_15            |   in|   15|     ap_none|                             zext_ln55_15|        scalar|
+|zext_ln55_16            |   in|   15|     ap_none|                             zext_ln55_16|        scalar|
+|zext_ln55_17            |   in|   15|     ap_none|                             zext_ln55_17|        scalar|
+|zext_ln55_18            |   in|   15|     ap_none|                             zext_ln55_18|        scalar|
+|zext_ln55_19            |   in|   15|     ap_none|                             zext_ln55_19|        scalar|
+|layer2_output_address0  |  out|    3|   ap_memory|                            layer2_output|         array|
+|layer2_output_ce0       |  out|    1|   ap_memory|                            layer2_output|         array|
+|layer2_output_we0       |  out|    1|   ap_memory|                            layer2_output|         array|
+|layer2_output_d0        |  out|   16|   ap_memory|                            layer2_output|         array|
++------------------------+-----+-----+------------+-----------------------------------------+--------------+
+

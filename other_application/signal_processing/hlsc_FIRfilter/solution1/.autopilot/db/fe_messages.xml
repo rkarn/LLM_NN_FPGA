@@ -1,0 +1,45 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rrk307/home_hls/python_c_hlsc/other_application/signal_processing/run_hls.tcl:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="fir_filter" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=fir_filter" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir_filter.cpp:12:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fir_filter" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=input" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir_filter.cpp:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fir_filter" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=output" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir_filter.cpp:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fir_filter" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=coeffs bundle=CONTROL_BUS" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir_filter.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fir_filter" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=CONTROL_BUS" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir_filter.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fir_filter" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=shift_reg complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir_filter.cpp:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fir_filter" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir_filter.cpp:29:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fir_filter" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir_filter.cpp:36:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fir_filter" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="fir_filter.cpp:28:9" msg_body="Loop 'shift_loop' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="shift_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="fir_filter.cpp:35:9" msg_body="Loop 'mac_loop' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="mac_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="fir_filter.cpp:11:0" msg_body="Unrolling loop 'shift_loop' (fir_filter.cpp:28:9) in function 'fir_filter' completely with a factor of 9">
+        <args Factor="9" LoopLoc="fir_filter.cpp:28:9" LoopName="shift_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="fir_filter.cpp:11:0" msg_body="Unrolling loop 'mac_loop' (fir_filter.cpp:35:9) in function 'fir_filter' completely with a factor of 10">
+        <args Factor="10" LoopLoc="fir_filter.cpp:35:9" LoopName="mac_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="fir_filter.cpp:17:0" msg_body="Applying array_partition to '_ZZ10fir_filterRN3hls6streamIiLi0EEES2_PiE9shift_reg': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZZ10fir_filterRN3hls6streamIiLi0EEES2_PiE9shift_reg"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

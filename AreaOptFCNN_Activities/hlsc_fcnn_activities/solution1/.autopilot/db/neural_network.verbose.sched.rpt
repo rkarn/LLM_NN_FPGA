@@ -1,0 +1,330 @@
+
+
+================================================================
+== Vitis HLS Report for 'neural_network'
+================================================================
+* Date:           Sun Sep 15 03:27:00 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        hlsc_fcnn_activities
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.958 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      249|      249|  2.490 us|  2.490 us|  250|  250|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%sum_4_loc = alloca i64 1"   --->   Operation 11 'alloca' 'sum_4_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%max_val_loc = alloca i64 1"   --->   Operation 12 'alloca' 'max_val_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%layer2_output_loc = alloca i64 1"   --->   Operation 13 'alloca' 'layer2_output_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%layer2_output_1_loc = alloca i64 1"   --->   Operation 14 'alloca' 'layer2_output_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%layer2_output_2_loc = alloca i64 1"   --->   Operation 15 'alloca' 'layer2_output_2_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%layer2_output_3_loc = alloca i64 1"   --->   Operation 16 'alloca' 'layer2_output_3_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%layer2_output_4_loc = alloca i64 1"   --->   Operation 17 'alloca' 'layer2_output_4_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%layer1_output_loc = alloca i64 1"   --->   Operation 18 'alloca' 'layer1_output_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%layer1_output_1_loc = alloca i64 1"   --->   Operation 19 'alloca' 'layer1_output_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%layer1_output_2_loc = alloca i64 1"   --->   Operation 20 'alloca' 'layer1_output_2_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%layer1_output_3_loc = alloca i64 1"   --->   Operation 21 'alloca' 'layer1_output_3_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%layer1_output_4_loc = alloca i64 1"   --->   Operation 22 'alloca' 'layer1_output_4_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%layer1_output_5_loc = alloca i64 1"   --->   Operation 23 'alloca' 'layer1_output_5_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%layer1_output_6_loc = alloca i64 1"   --->   Operation 24 'alloca' 'layer1_output_6_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%layer1_output_7_loc = alloca i64 1"   --->   Operation 25 'alloca' 'layer1_output_7_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%layer1_output_8_loc = alloca i64 1"   --->   Operation 26 'alloca' 'layer1_output_8_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%layer1_output_9_loc = alloca i64 1"   --->   Operation 27 'alloca' 'layer1_output_9_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%layer1_output_10_loc = alloca i64 1"   --->   Operation 28 'alloca' 'layer1_output_10_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%layer1_output_11_loc = alloca i64 1"   --->   Operation 29 'alloca' 'layer1_output_11_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%layer1_output_12_loc = alloca i64 1"   --->   Operation 30 'alloca' 'layer1_output_12_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%layer1_output_13_loc = alloca i64 1"   --->   Operation 31 'alloca' 'layer1_output_13_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%layer1_output_14_loc = alloca i64 1"   --->   Operation 32 'alloca' 'layer1_output_14_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%layer1_output_15_loc = alloca i64 1"   --->   Operation 33 'alloca' 'layer1_output_15_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%layer1_output_16_loc = alloca i64 1"   --->   Operation 34 'alloca' 'layer1_output_16_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%layer1_output_17_loc = alloca i64 1"   --->   Operation 35 'alloca' 'layer1_output_17_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%layer1_output_18_loc = alloca i64 1"   --->   Operation 36 'alloca' 'layer1_output_18_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%layer1_output_19_loc = alloca i64 1"   --->   Operation 37 'alloca' 'layer1_output_19_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (1.00ns)   --->   "%input_0_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %input_0"   --->   Operation 38 'read' 'input_0_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 39 [1/1] (1.00ns)   --->   "%input_1_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %input_1"   --->   Operation 39 'read' 'input_1_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 40 [1/1] (1.00ns)   --->   "%input_2_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %input_2"   --->   Operation 40 'read' 'input_2_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 41 [1/1] (1.00ns)   --->   "%input_3_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %input_3"   --->   Operation 41 'read' 'input_3_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 42 [1/1] (1.00ns)   --->   "%input_4_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %input_4"   --->   Operation 42 'read' 'input_4_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 43 [1/1] (1.00ns)   --->   "%input_5_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %input_5"   --->   Operation 43 'read' 'input_5_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 44 [1/1] (1.00ns)   --->   "%input_6_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %input_6"   --->   Operation 44 'read' 'input_6_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 45 [1/1] (1.00ns)   --->   "%input_7_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %input_7"   --->   Operation 45 'read' 'input_7_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 46 [1/1] (1.00ns)   --->   "%input_8_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %input_8"   --->   Operation 46 'read' 'input_8_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 47 [1/1] (1.00ns)   --->   "%input_9_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %input_9"   --->   Operation 47 'read' 'input_9_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 48 [1/1] (1.00ns)   --->   "%input_10_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %input_10"   --->   Operation 48 'read' 'input_10_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 49 [1/1] (1.00ns)   --->   "%input_11_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %input_11"   --->   Operation 49 'read' 'input_11_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 50 [1/1] (1.00ns)   --->   "%input_12_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %input_12"   --->   Operation 50 'read' 'input_12_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 51 [1/1] (1.00ns)   --->   "%input_13_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %input_13"   --->   Operation 51 'read' 'input_13_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 52 [1/1] (1.00ns)   --->   "%input_14_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %input_14"   --->   Operation 52 'read' 'input_14_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 53 [1/1] (1.00ns)   --->   "%input_15_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %input_15"   --->   Operation 53 'read' 'input_15_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 54 [1/1] (1.00ns)   --->   "%input_16_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %input_16"   --->   Operation 54 'read' 'input_16_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 55 [1/1] (1.00ns)   --->   "%input_17_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %input_17"   --->   Operation 55 'read' 'input_17_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 56 [2/2] (0.00ns)   --->   "%call_ln0 = call void @neural_network_Pipeline_VITIS_LOOP_58_1, i16 %input_0_read, i16 %input_1_read, i16 %input_2_read, i16 %input_3_read, i16 %input_4_read, i16 %input_5_read, i16 %input_6_read, i16 %input_7_read, i16 %input_8_read, i16 %input_9_read, i16 %input_10_read, i16 %input_11_read, i16 %input_12_read, i16 %input_13_read, i16 %input_14_read, i16 %input_15_read, i16 %input_16_read, i16 %input_17_read, i16 %layer1_output_19_loc, i16 %layer1_output_18_loc, i16 %layer1_output_17_loc, i16 %layer1_output_16_loc, i16 %layer1_output_15_loc, i16 %layer1_output_14_loc, i16 %layer1_output_13_loc, i16 %layer1_output_12_loc, i16 %layer1_output_11_loc, i16 %layer1_output_10_loc, i16 %layer1_output_9_loc, i16 %layer1_output_8_loc, i16 %layer1_output_7_loc, i16 %layer1_output_6_loc, i16 %layer1_output_5_loc, i16 %layer1_output_4_loc, i16 %layer1_output_3_loc, i16 %layer1_output_2_loc, i16 %layer1_output_1_loc, i16 %layer1_output_loc, i10 %layer1_weights_0, i9 %layer1_weights_1, i10 %layer1_weights_2, i9 %layer1_weights_3, i10 %layer1_weights_4, i9 %layer1_weights_5, i10 %layer1_weights_6, i11 %layer1_weights_7, i10 %layer1_weights_8, i9 %layer1_weights_9, i11 %layer1_weights_10, i11 %layer1_weights_11, i11 %layer1_weights_12, i12 %layer1_weights_13, i11 %layer1_weights_14, i10 %layer1_weights_15, i10 %layer1_weights_16, i10 %layer1_weights_17, i10 %layer1_bias"   --->   Operation 56 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 57 [1/2] (0.00ns)   --->   "%call_ln0 = call void @neural_network_Pipeline_VITIS_LOOP_58_1, i16 %input_0_read, i16 %input_1_read, i16 %input_2_read, i16 %input_3_read, i16 %input_4_read, i16 %input_5_read, i16 %input_6_read, i16 %input_7_read, i16 %input_8_read, i16 %input_9_read, i16 %input_10_read, i16 %input_11_read, i16 %input_12_read, i16 %input_13_read, i16 %input_14_read, i16 %input_15_read, i16 %input_16_read, i16 %input_17_read, i16 %layer1_output_19_loc, i16 %layer1_output_18_loc, i16 %layer1_output_17_loc, i16 %layer1_output_16_loc, i16 %layer1_output_15_loc, i16 %layer1_output_14_loc, i16 %layer1_output_13_loc, i16 %layer1_output_12_loc, i16 %layer1_output_11_loc, i16 %layer1_output_10_loc, i16 %layer1_output_9_loc, i16 %layer1_output_8_loc, i16 %layer1_output_7_loc, i16 %layer1_output_6_loc, i16 %layer1_output_5_loc, i16 %layer1_output_4_loc, i16 %layer1_output_3_loc, i16 %layer1_output_2_loc, i16 %layer1_output_1_loc, i16 %layer1_output_loc, i10 %layer1_weights_0, i9 %layer1_weights_1, i10 %layer1_weights_2, i9 %layer1_weights_3, i10 %layer1_weights_4, i9 %layer1_weights_5, i10 %layer1_weights_6, i11 %layer1_weights_7, i10 %layer1_weights_8, i9 %layer1_weights_9, i11 %layer1_weights_10, i11 %layer1_weights_11, i11 %layer1_weights_12, i12 %layer1_weights_13, i11 %layer1_weights_14, i10 %layer1_weights_15, i10 %layer1_weights_16, i10 %layer1_weights_17, i10 %layer1_bias"   --->   Operation 57 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%layer1_output_19_loc_load = load i16 %layer1_output_19_loc"   --->   Operation 58 'load' 'layer1_output_19_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%layer1_output_18_loc_load = load i16 %layer1_output_18_loc"   --->   Operation 59 'load' 'layer1_output_18_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%layer1_output_17_loc_load = load i16 %layer1_output_17_loc"   --->   Operation 60 'load' 'layer1_output_17_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%layer1_output_16_loc_load = load i16 %layer1_output_16_loc"   --->   Operation 61 'load' 'layer1_output_16_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%layer1_output_15_loc_load = load i16 %layer1_output_15_loc"   --->   Operation 62 'load' 'layer1_output_15_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%layer1_output_14_loc_load = load i16 %layer1_output_14_loc"   --->   Operation 63 'load' 'layer1_output_14_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%layer1_output_13_loc_load = load i16 %layer1_output_13_loc"   --->   Operation 64 'load' 'layer1_output_13_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%layer1_output_12_loc_load = load i16 %layer1_output_12_loc"   --->   Operation 65 'load' 'layer1_output_12_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%layer1_output_11_loc_load = load i16 %layer1_output_11_loc"   --->   Operation 66 'load' 'layer1_output_11_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%layer1_output_10_loc_load = load i16 %layer1_output_10_loc"   --->   Operation 67 'load' 'layer1_output_10_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%layer1_output_9_loc_load = load i16 %layer1_output_9_loc"   --->   Operation 68 'load' 'layer1_output_9_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%layer1_output_8_loc_load = load i16 %layer1_output_8_loc"   --->   Operation 69 'load' 'layer1_output_8_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%layer1_output_7_loc_load = load i16 %layer1_output_7_loc"   --->   Operation 70 'load' 'layer1_output_7_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%layer1_output_6_loc_load = load i16 %layer1_output_6_loc"   --->   Operation 71 'load' 'layer1_output_6_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%layer1_output_5_loc_load = load i16 %layer1_output_5_loc"   --->   Operation 72 'load' 'layer1_output_5_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%layer1_output_4_loc_load = load i16 %layer1_output_4_loc"   --->   Operation 73 'load' 'layer1_output_4_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%layer1_output_3_loc_load = load i16 %layer1_output_3_loc"   --->   Operation 74 'load' 'layer1_output_3_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%layer1_output_2_loc_load = load i16 %layer1_output_2_loc"   --->   Operation 75 'load' 'layer1_output_2_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%layer1_output_1_loc_load = load i16 %layer1_output_1_loc"   --->   Operation 76 'load' 'layer1_output_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 77 [1/1] (0.00ns)   --->   "%layer1_output_loc_load = load i16 %layer1_output_loc"   --->   Operation 77 'load' 'layer1_output_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 78 [2/2] (0.00ns)   --->   "%call_ln0 = call void @neural_network_Pipeline_VITIS_LOOP_70_3, i16 %layer1_output_loc_load, i16 %layer1_output_1_loc_load, i16 %layer1_output_2_loc_load, i16 %layer1_output_3_loc_load, i16 %layer1_output_4_loc_load, i16 %layer1_output_5_loc_load, i16 %layer1_output_6_loc_load, i16 %layer1_output_7_loc_load, i16 %layer1_output_8_loc_load, i16 %layer1_output_9_loc_load, i16 %layer1_output_10_loc_load, i16 %layer1_output_11_loc_load, i16 %layer1_output_12_loc_load, i16 %layer1_output_13_loc_load, i16 %layer1_output_14_loc_load, i16 %layer1_output_15_loc_load, i16 %layer1_output_16_loc_load, i16 %layer1_output_17_loc_load, i16 %layer1_output_18_loc_load, i16 %layer1_output_19_loc_load, i16 %layer2_output_4_loc, i16 %layer2_output_3_loc, i16 %layer2_output_2_loc, i16 %layer2_output_1_loc, i16 %layer2_output_loc, i11 %layer2_weights_0, i11 %layer2_weights_1, i11 %layer2_weights_2, i11 %layer2_weights_3, i10 %layer2_weights_4, i10 %layer2_weights_5, i10 %layer2_weights_6, i10 %layer2_weights_7, i11 %layer2_weights_8, i11 %layer2_weights_9, i11 %layer2_weights_10, i10 %layer2_weights_11, i12 %layer2_weights_12, i11 %layer2_weights_13, i11 %layer2_weights_14, i10 %layer2_weights_15, i11 %layer2_weights_16, i11 %layer2_weights_17, i11 %layer2_weights_18, i11 %layer2_weights_19, i9 %layer2_bias"   --->   Operation 78 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 79 [1/2] (0.00ns)   --->   "%call_ln0 = call void @neural_network_Pipeline_VITIS_LOOP_70_3, i16 %layer1_output_loc_load, i16 %layer1_output_1_loc_load, i16 %layer1_output_2_loc_load, i16 %layer1_output_3_loc_load, i16 %layer1_output_4_loc_load, i16 %layer1_output_5_loc_load, i16 %layer1_output_6_loc_load, i16 %layer1_output_7_loc_load, i16 %layer1_output_8_loc_load, i16 %layer1_output_9_loc_load, i16 %layer1_output_10_loc_load, i16 %layer1_output_11_loc_load, i16 %layer1_output_12_loc_load, i16 %layer1_output_13_loc_load, i16 %layer1_output_14_loc_load, i16 %layer1_output_15_loc_load, i16 %layer1_output_16_loc_load, i16 %layer1_output_17_loc_load, i16 %layer1_output_18_loc_load, i16 %layer1_output_19_loc_load, i16 %layer2_output_4_loc, i16 %layer2_output_3_loc, i16 %layer2_output_2_loc, i16 %layer2_output_1_loc, i16 %layer2_output_loc, i11 %layer2_weights_0, i11 %layer2_weights_1, i11 %layer2_weights_2, i11 %layer2_weights_3, i10 %layer2_weights_4, i10 %layer2_weights_5, i10 %layer2_weights_6, i10 %layer2_weights_7, i11 %layer2_weights_8, i11 %layer2_weights_9, i11 %layer2_weights_10, i10 %layer2_weights_11, i12 %layer2_weights_12, i11 %layer2_weights_13, i11 %layer2_weights_14, i10 %layer2_weights_15, i11 %layer2_weights_16, i11 %layer2_weights_17, i11 %layer2_weights_18, i11 %layer2_weights_19, i9 %layer2_bias"   --->   Operation 79 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 6.75>
+ST_5 : Operation 80 [1/1] (0.00ns)   --->   "%layer2_output_4_loc_load = load i16 %layer2_output_4_loc"   --->   Operation 80 'load' 'layer2_output_4_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 81 [1/1] (0.00ns)   --->   "%layer2_output_3_loc_load = load i16 %layer2_output_3_loc"   --->   Operation 81 'load' 'layer2_output_3_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 82 [1/1] (0.00ns)   --->   "%layer2_output_2_loc_load = load i16 %layer2_output_2_loc"   --->   Operation 82 'load' 'layer2_output_2_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 83 [1/1] (0.00ns)   --->   "%layer2_output_1_loc_load = load i16 %layer2_output_1_loc"   --->   Operation 83 'load' 'layer2_output_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 84 [1/1] (0.00ns)   --->   "%layer2_output_loc_load = load i16 %layer2_output_loc"   --->   Operation 84 'load' 'layer2_output_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 85 [2/2] (6.75ns)   --->   "%call_ln0 = call void @neural_network_Pipeline_VITIS_LOOP_23_1, i16 %layer2_output_loc_load, i16 %layer2_output_1_loc_load, i16 %layer2_output_2_loc_load, i16 %layer2_output_3_loc_load, i16 %layer2_output_4_loc_load, i16 %max_val_loc"   --->   Operation 85 'call' 'call_ln0' <Predicate = true> <Delay = 6.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 3.29>
+ST_6 : Operation 86 [1/2] (3.29ns)   --->   "%call_ln0 = call void @neural_network_Pipeline_VITIS_LOOP_23_1, i16 %layer2_output_loc_load, i16 %layer2_output_1_loc_load, i16 %layer2_output_2_loc_load, i16 %layer2_output_3_loc_load, i16 %layer2_output_4_loc_load, i16 %max_val_loc"   --->   Operation 86 'call' 'call_ln0' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 6.95>
+ST_7 : Operation 87 [1/1] (0.00ns)   --->   "%max_val_loc_load = load i16 %max_val_loc"   --->   Operation 87 'load' 'max_val_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 88 [2/2] (6.95ns)   --->   "%call_ln0 = call void @neural_network_Pipeline_VITIS_LOOP_29_2, i16 %output_0, i16 %output_4, i16 %output_3, i16 %output_2, i16 %output_1, i16 %layer2_output_loc_load, i16 %layer2_output_1_loc_load, i16 %layer2_output_2_loc_load, i16 %layer2_output_3_loc_load, i16 %layer2_output_4_loc_load, i16 %max_val_loc_load, i16 %sum_4_loc, i11 %f_x_lsb_table, i25 %exp_x_msb_2_m_1_table, i25 %exp_x_msb_1_table"   --->   Operation 88 'call' 'call_ln0' <Predicate = true> <Delay = 6.95> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 6.45>
+ST_8 : Operation 89 [1/2] (6.45ns)   --->   "%call_ln0 = call void @neural_network_Pipeline_VITIS_LOOP_29_2, i16 %output_0, i16 %output_4, i16 %output_3, i16 %output_2, i16 %output_1, i16 %layer2_output_loc_load, i16 %layer2_output_1_loc_load, i16 %layer2_output_2_loc_load, i16 %layer2_output_3_loc_load, i16 %layer2_output_4_loc_load, i16 %max_val_loc_load, i16 %sum_4_loc, i11 %f_x_lsb_table, i25 %exp_x_msb_2_m_1_table, i25 %exp_x_msb_1_table"   --->   Operation 89 'call' 'call_ln0' <Predicate = true> <Delay = 6.45> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 5.63>
+ST_9 : Operation 90 [1/1] (0.00ns)   --->   "%sum_4_loc_load = load i16 %sum_4_loc"   --->   Operation 90 'load' 'sum_4_loc_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 91 [2/2] (5.63ns)   --->   "%call_ln0 = call void @neural_network_Pipeline_VITIS_LOOP_36_3, i16 %output_0, i16 %output_4, i16 %output_3, i16 %output_2, i16 %output_1, i16 %sum_4_loc_load"   --->   Operation 91 'call' 'call_ln0' <Predicate = true> <Delay = 5.63> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 6.39>
+ST_10 : Operation 92 [1/1] (0.00ns)   --->   "%spectopmodule_ln42 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_23" [nn.cpp:42]   --->   Operation 92 'spectopmodule' 'spectopmodule_ln42' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 93 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_0"   --->   Operation 93 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 94 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_0, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty, void @empty_9, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 94 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 95 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_0, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 95 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 96 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_1"   --->   Operation 96 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 97 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_1, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty, void @empty_7, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 97 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 98 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_1, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 98 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 99 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_2"   --->   Operation 99 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 100 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_2, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty, void @empty_6, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 100 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 101 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_2, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 101 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 102 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_3"   --->   Operation 102 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 103 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_3, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty, void @empty_5, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 103 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 104 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_3, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 104 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 105 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_4"   --->   Operation 105 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 106 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_4, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty, void @empty_4, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 106 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 107 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_4, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 107 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 108 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_5"   --->   Operation 108 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 109 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_5, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty, void @empty_3, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 109 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 110 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_5, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 110 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 111 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_6"   --->   Operation 111 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 112 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_6, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty, void @empty_2, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 112 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 113 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_6, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 113 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 114 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_7"   --->   Operation 114 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 115 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_7, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty, void @empty_1, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 115 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 116 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_7, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 116 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 117 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_8"   --->   Operation 117 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 118 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_8, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty, void @empty_0, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 118 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 119 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_8, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 119 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 120 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_9"   --->   Operation 120 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 121 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_9, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty, void @empty_11, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 121 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 122 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_9, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 122 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 123 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_10"   --->   Operation 123 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 124 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_10, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty, void @empty_12, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 124 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 125 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_10, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 125 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 126 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_11"   --->   Operation 126 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 127 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_11, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty, void @empty_27, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 127 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 128 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_11, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 128 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 129 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_12"   --->   Operation 129 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 130 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_12, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty, void @empty_16, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 130 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 131 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_12, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 131 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 132 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_13"   --->   Operation 132 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 133 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_13, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty, void @empty_28, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 133 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 134 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_13, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 134 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 135 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_14"   --->   Operation 135 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 136 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_14, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty, void @empty_17, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 136 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 137 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_14, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 137 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 138 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_15"   --->   Operation 138 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 139 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_15, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty, void @empty_14, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 139 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 140 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_15, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 140 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 141 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_16"   --->   Operation 141 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 142 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_16, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty, void @empty_15, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 142 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 143 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_16, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 143 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 144 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_17"   --->   Operation 144 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 145 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_17, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty, void @empty_26, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 145 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 146 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_17, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 146 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 147 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %output_0"   --->   Operation 147 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 148 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %output_0, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_25, void @empty_9, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 148 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 149 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %output_0, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 149 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 150 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %output_1"   --->   Operation 150 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 151 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %output_1, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_25, void @empty_6, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 151 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 152 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %output_1, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 152 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 153 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %output_2"   --->   Operation 153 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 154 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %output_2, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_25, void @empty_4, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 154 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 155 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %output_2, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 155 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 156 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %output_3"   --->   Operation 156 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 157 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %output_3, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_25, void @empty_2, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 157 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 158 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %output_3, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 158 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 159 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %output_4"   --->   Operation 159 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 160 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %output_4, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_25, void @empty_0, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 160 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 161 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %output_4, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 161 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 162 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_24, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 162 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 163 [1/2] (6.39ns)   --->   "%call_ln0 = call void @neural_network_Pipeline_VITIS_LOOP_36_3, i16 %output_0, i16 %output_4, i16 %output_3, i16 %output_2, i16 %output_1, i16 %sum_4_loc_load"   --->   Operation 163 'call' 'call_ln0' <Predicate = true> <Delay = 6.39> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 164 [1/1] (0.00ns)   --->   "%ret_ln83 = ret" [nn.cpp:83]   --->   Operation 164 'ret' 'ret_ln83' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.000ns
+The critical path consists of the following:
+	s_axi read operation ('input_0_read') on port 'input_0' [165]  (1.000 ns)
+
+ <State 2>: 0.000ns
+The critical path consists of the following:
+
+ <State 3>: 0.000ns
+The critical path consists of the following:
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+ <State 5>: 6.756ns
+The critical path consists of the following:
+	'load' operation ('layer2_output_4_loc_load') on local variable 'layer2_output_4_loc' [205]  (0.000 ns)
+	'call' operation ('call_ln0') to 'neural_network_Pipeline_VITIS_LOOP_23_1' [210]  (6.756 ns)
+
+ <State 6>: 3.290ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'neural_network_Pipeline_VITIS_LOOP_23_1' [210]  (3.290 ns)
+
+ <State 7>: 6.958ns
+The critical path consists of the following:
+	'load' operation ('max_val_loc_load') on local variable 'max_val_loc' [211]  (0.000 ns)
+	'call' operation ('call_ln0') to 'neural_network_Pipeline_VITIS_LOOP_29_2' [212]  (6.958 ns)
+
+ <State 8>: 6.452ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'neural_network_Pipeline_VITIS_LOOP_29_2' [212]  (6.452 ns)
+
+ <State 9>: 5.639ns
+The critical path consists of the following:
+	'load' operation ('sum_4_loc_load') on local variable 'sum_4_loc' [213]  (0.000 ns)
+	'call' operation ('call_ln0') to 'neural_network_Pipeline_VITIS_LOOP_36_3' [214]  (5.639 ns)
+
+ <State 10>: 6.391ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'neural_network_Pipeline_VITIS_LOOP_36_3' [214]  (6.391 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

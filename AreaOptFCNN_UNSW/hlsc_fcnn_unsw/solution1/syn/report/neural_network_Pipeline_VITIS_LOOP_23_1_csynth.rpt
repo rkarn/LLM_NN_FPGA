@@ -1,0 +1,155 @@
+
+
+================================================================
+== Vitis HLS Report for 'neural_network_Pipeline_VITIS_LOOP_23_1'
+================================================================
+* Date:           Sun Sep 15 03:51:54 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        hlsc_fcnn_unsw
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.918 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       11|       11|  0.110 us|  0.110 us|   11|   11|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_23_1  |        9|        9|         1|          1|          1|     9|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      0|     65|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        -|   -|      0|     41|    -|
+|Memory           |        -|   -|      -|      -|    -|
+|Multiplexer      |        -|   -|      -|     45|    -|
+|Register         |        -|   -|     22|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        0|   0|     22|    151|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      100|  90|  41600|  20800|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        0|   0|     ~0|     ~0|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------+-----------------+---------+----+---+----+-----+
+    |       Instance       |      Module     | BRAM_18K| DSP| FF| LUT| URAM|
+    +----------------------+-----------------+---------+----+---+----+-----+
+    |mux_10_4_16_1_1_U387  |mux_10_4_16_1_1  |        0|   0|  0|  41|    0|
+    +----------------------+-----------------+---------+----+---+----+-----+
+    |Total                 |                 |        0|   0|  0|  41|    0|
+    +----------------------+-----------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln23_fu_187_p2   |         +|   0|  0|  13|           4|           1|
+    |icmp_ln23_fu_138_p2  |      icmp|   0|  0|  13|           4|           4|
+    |icmp_ln25_fu_173_p2  |      icmp|   0|  0|  23|          16|          16|
+    |max_val_1_fu_179_p3  |    select|   0|  0|  16|           1|          16|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  65|          25|          37|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------+----+-----------+-----+-----------+
+    |               Name              | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                      |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i               |   9|          2|    4|          8|
+    |ap_sig_allocacmp_max_val_load_1  |   9|          2|   16|         32|
+    |i_2_fu_54                        |   9|          2|    4|          8|
+    |max_val_fu_50                    |   9|          2|   16|         32|
+    +---------------------------------+----+-----------+-----+-----------+
+    |Total                            |  45|         10|   41|         82|
+    +---------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------+----+----+-----+-----------+
+    |      Name     | FF | LUT| Bits| Const Bits|
+    +---------------+----+----+-----+-----------+
+    |ap_CS_fsm      |   1|   0|    1|          0|
+    |ap_done_reg    |   1|   0|    1|          0|
+    |i_2_fu_54      |   4|   0|    4|          0|
+    |max_val_fu_50  |  16|   0|   16|          0|
+    +---------------+----+----+-----+-----------+
+    |Total          |  22|   0|   22|          0|
+    +---------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+-----------------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |              Source Object              |    C Type    |
++------------------------+-----+-----+------------+-----------------------------------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_23_1|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_23_1|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_23_1|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_23_1|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_23_1|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_23_1|  return value|
+|layer2_output_reload    |   in|   16|     ap_none|                     layer2_output_reload|        scalar|
+|layer2_output_1_reload  |   in|   16|     ap_none|                   layer2_output_1_reload|        scalar|
+|layer2_output_2_reload  |   in|   16|     ap_none|                   layer2_output_2_reload|        scalar|
+|layer2_output_3_reload  |   in|   16|     ap_none|                   layer2_output_3_reload|        scalar|
+|layer2_output_4_reload  |   in|   16|     ap_none|                   layer2_output_4_reload|        scalar|
+|layer2_output_5_reload  |   in|   16|     ap_none|                   layer2_output_5_reload|        scalar|
+|layer2_output_6_reload  |   in|   16|     ap_none|                   layer2_output_6_reload|        scalar|
+|layer2_output_7_reload  |   in|   16|     ap_none|                   layer2_output_7_reload|        scalar|
+|layer2_output_8_reload  |   in|   16|     ap_none|                   layer2_output_8_reload|        scalar|
+|layer2_output_9_reload  |   in|   16|     ap_none|                   layer2_output_9_reload|        scalar|
+|max_val_out             |  out|   16|      ap_vld|                              max_val_out|       pointer|
+|max_val_out_ap_vld      |  out|    1|      ap_vld|                              max_val_out|       pointer|
++------------------------+-----+-----+------------+-----------------------------------------+--------------+
+

@@ -1,0 +1,21 @@
+{
+    "0": {
+        "name": "hls_quickSort",
+        "file": "array_sorting.cpp",
+        "fileloc": "64",
+        "instructions": "270",
+        "total_instructions": "270",
+        "calls": "",
+        "basicblocks": "57",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1",
+            "N": "3"
+        }
+    }
+}

@@ -1,0 +1,1 @@
+Total synthesis time: 41325 milliseconds

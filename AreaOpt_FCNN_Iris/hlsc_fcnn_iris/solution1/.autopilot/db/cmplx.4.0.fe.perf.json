@@ -1,0 +1,19 @@
+{
+  "0": {
+    "basicblocks": 59,
+    "calls": "",
+    "file": "nn.cpp",
+    "fileloc": 42,
+    "instructions": 487,
+    "loads": {
+      "G": 20,
+      "T": 7
+    },
+    "name": "neural_network",
+    "stores": {
+      "G": 3,
+      "T": 9
+    },
+    "total_instructions": 487
+  }
+}

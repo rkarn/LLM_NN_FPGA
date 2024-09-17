@@ -1,0 +1,33 @@
+<design_size title="Design Size Report">
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="6" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Performance/Pipeline" col5="Optimizations"/>
+            <rows>
+                <row id="0" col0="neural_network" col1="nn.cpp:46" col2="54733" col3="110367" col3_note="*" col4="7482" col5="7609">
+                    <row id="6" col0="relu" col1="nn.cpp:12" col2="140" col3="" col4="" col5=""/>
+                    <row id="7" col0="softmax" col1="nn.cpp:18" col2="53126" col3="" col4="" col5=""/>
+                    <row id="4" col0="exp&lt;17, 9&gt;" col1="hls_exp_apfixed.h:39" col2="" col3="" col4="1380" col4_disp="1,380 (10 calls)" col5="1420" col5_disp="1,420 (10 calls)"/>
+                </row>
+            </rows>
+            <notes>
+                <note name="*" desc="Exceeded design size warning message threshold"/>
+            </notes>
+        </hiertable>
+    </item>
+    <item name="Description of Compilation Phases">
+        <table>
+            <keys size="2">Compilation Phase, Description</keys>
+            <column name="Compile/Link">All functions are compiled and linked into a single design</column>
+            <column name="Unroll/Inline">After user unroll and inline pragmas are applied</column>
+            <column name="Performance/Pipeline">After performance and pipeline pragmas are applied</column>
+            <column name="Optimizations">After high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

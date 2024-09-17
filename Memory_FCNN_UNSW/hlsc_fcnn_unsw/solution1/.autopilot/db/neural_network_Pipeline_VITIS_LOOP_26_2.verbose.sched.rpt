@@ -1,0 +1,297 @@
+
+
+================================================================
+== Vitis HLS Report for 'neural_network_Pipeline_VITIS_LOOP_26_2'
+================================================================
+* Date:           Sun Sep 15 03:58:23 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        hlsc_fcnn_unsw
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.120 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       17|       17|  0.170 us|  0.170 us|   17|   17|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_26_2  |       15|       15|         7|          1|          1|    10|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 7
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 7, States = { 1 2 3 4 5 6 7 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 7.12>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%sum_2 = alloca i32 1"   --->   Operation 10 'alloca' 'sum_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 11 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%conv_i_i13_i_i10_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i13_i_i10"   --->   Operation 12 'read' 'conv_i_i13_i_i10_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%conv_i_i_le33_lcssa54_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_le33_lcssa54"   --->   Operation 13 'read' 'conv_i_i_le33_lcssa54_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%conv_i_i_le31_lcssa52_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_le31_lcssa52"   --->   Operation 14 'read' 'conv_i_i_le31_lcssa52_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%conv_i_i_le29_lcssa50_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_le29_lcssa50"   --->   Operation 15 'read' 'conv_i_i_le29_lcssa50_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%conv_i_i_le27_lcssa48_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_le27_lcssa48"   --->   Operation 16 'read' 'conv_i_i_le27_lcssa48_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%conv_i_i_le25_lcssa46_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_le25_lcssa46"   --->   Operation 17 'read' 'conv_i_i_le25_lcssa46_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%conv_i_i_le23_lcssa44_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_le23_lcssa44"   --->   Operation 18 'read' 'conv_i_i_le23_lcssa44_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%conv_i_i_le21_lcssa42_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_le21_lcssa42"   --->   Operation 19 'read' 'conv_i_i_le21_lcssa42_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%conv_i_i_le19_lcssa40_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_le19_lcssa40"   --->   Operation 20 'read' 'conv_i_i_le19_lcssa40_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%conv_i_i_le17_lcssa38_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_le17_lcssa38"   --->   Operation 21 'read' 'conv_i_i_le17_lcssa38_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%conv_i_i_le15_lcssa36_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %conv_i_i_le15_lcssa36"   --->   Operation 22 'read' 'conv_i_i_le15_lcssa36_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%conv_i_i13_i_i10_cast = sext i16 %conv_i_i13_i_i10_read"   --->   Operation 23 'sext' 'conv_i_i13_i_i10_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (1.61ns)   --->   "%store_ln0 = store i4 0, i4 %i"   --->   Operation 24 'store' 'store_ln0' <Predicate = true> <Delay = 1.61>
+ST_1 : Operation 25 [1/1] (1.61ns)   --->   "%store_ln0 = store i16 0, i16 %sum_2"   --->   Operation 25 'store' 'store_ln0' <Predicate = true> <Delay = 1.61>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body8.i"   --->   Operation 26 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%i_3 = load i4 %i" [nn.cpp:26->nn.cpp:103]   --->   Operation 27 'load' 'i_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (1.77ns)   --->   "%icmp_ln26 = icmp_eq  i4 %i_3, i4 10" [nn.cpp:26->nn.cpp:103]   --->   Operation 28 'icmp' 'icmp_ln26' <Predicate = true> <Delay = 1.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (1.77ns)   --->   "%add_ln26 = add i4 %i_3, i4 1" [nn.cpp:26->nn.cpp:103]   --->   Operation 29 'add' 'add_ln26' <Predicate = true> <Delay = 1.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln26 = br i1 %icmp_ln26, void %for.body8.i.split_ifconv, void %for.body24.i.preheader.exitStub" [nn.cpp:26->nn.cpp:103]   --->   Operation 30 'br' 'br_ln26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (1.86ns)   --->   "%tmp_1 = mux i16 @_ssdm_op_Mux.ap_auto.10i16.i4, i16 %conv_i_i_le15_lcssa36_read, i16 %conv_i_i_le17_lcssa38_read, i16 %conv_i_i_le19_lcssa40_read, i16 %conv_i_i_le21_lcssa42_read, i16 %conv_i_i_le23_lcssa44_read, i16 %conv_i_i_le25_lcssa46_read, i16 %conv_i_i_le27_lcssa48_read, i16 %conv_i_i_le29_lcssa50_read, i16 %conv_i_i_le31_lcssa52_read, i16 %conv_i_i_le33_lcssa54_read, i4 %i_3" [nn.cpp:28->nn.cpp:103]   --->   Operation 31 'mux' 'tmp_1' <Predicate = (!icmp_ln26)> <Delay = 1.86> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%sext_ln28 = sext i16 %tmp_1" [nn.cpp:28->nn.cpp:103]   --->   Operation 32 'sext' 'sext_ln28' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (2.14ns)   --->   "%x = sub i17 %sext_ln28, i17 %conv_i_i13_i_i10_cast" [nn.cpp:28->nn.cpp:103]   --->   Operation 33 'sub' 'x' <Predicate = (!icmp_ln26)> <Delay = 2.14> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%x_l_int = partselect i4 @_ssdm_op_PartSelect.i4.i17.i32.i32, i17 %x, i32 8, i32 11" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:192->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 34 'partselect' 'x_l_int' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%trunc_ln194 = trunc i17 %x" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:194->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 35 'trunc' 'trunc_ln194' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%x_l_fract = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i8.i3, i8 %trunc_ln194, i3 0" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:194->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 36 'bitconcatenate' 'x_l_fract' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %x, i32 16" [nn.cpp:28->nn.cpp:103]   --->   Operation 37 'bitselect' 'tmp' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns) (grouped into LUT with out node or_ln202)   --->   "%tmp_2 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %x, i32 11" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:198->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 38 'bitselect' 'tmp_2' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns) (grouped into LUT with out node or_ln202)   --->   "%overf = xor i1 %tmp, i1 %tmp_2" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:198->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 39 'xor' 'overf' <Predicate = (!icmp_ln26)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 40 [1/1] (0.00ns) (grouped into LUT with out node or_ln202)   --->   "%tmp_3 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %x, i32 12" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:198->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 40 'bitselect' 'tmp_3' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns) (grouped into LUT with out node or_ln202)   --->   "%xor_ln198 = xor i1 %tmp, i1 %tmp_3" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:198->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 41 'xor' 'xor_ln198' <Predicate = (!icmp_ln26)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node or_ln202_2)   --->   "%tmp_4 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %x, i32 13" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:198->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 42 'bitselect' 'tmp_4' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node or_ln202_2)   --->   "%xor_ln198_1 = xor i1 %tmp, i1 %tmp_4" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:198->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 43 'xor' 'xor_ln198_1' <Predicate = (!icmp_ln26)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 44 [1/1] (0.00ns) (grouped into LUT with out node or_ln202_2)   --->   "%tmp_5 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %x, i32 14" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:198->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 44 'bitselect' 'tmp_5' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node or_ln202_2)   --->   "%xor_ln198_2 = xor i1 %tmp, i1 %tmp_5" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:198->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 45 'xor' 'xor_ln198_2' <Predicate = (!icmp_ln26)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 46 [1/1] (0.00ns) (grouped into LUT with out node or_ln202_4)   --->   "%tmp_7 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %x, i32 15" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:198->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 46 'bitselect' 'tmp_7' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns) (grouped into LUT with out node or_ln202_4)   --->   "%xor_ln198_3 = xor i1 %tmp, i1 %tmp_7" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:198->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 47 'xor' 'xor_ln198_3' <Predicate = (!icmp_ln26)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 48 [1/1] (1.77ns)   --->   "%icmp_ln202 = icmp_eq  i4 %x_l_int, i4 7" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:202->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 48 'icmp' 'icmp_ln202' <Predicate = (!icmp_ln26)> <Delay = 1.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (2.12ns)   --->   "%icmp_ln202_1 = icmp_ugt  i11 %x_l_fract, i11 1280" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:202->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 49 'icmp' 'icmp_ln202_1' <Predicate = (!icmp_ln26)> <Delay = 2.12> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 50 [1/1] (0.00ns) (grouped into LUT with out node or_ln202_4)   --->   "%and_ln202 = and i1 %icmp_ln202, i1 %icmp_ln202_1" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:202->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 50 'and' 'and_ln202' <Predicate = (!icmp_ln26)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%tmp_6 = partselect i4 @_ssdm_op_PartSelect.i4.i17.i32.i32, i17 %x, i32 7, i32 10" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:212->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 51 'partselect' 'tmp_6' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%x_msb_ind_2 = partselect i5 @_ssdm_op_PartSelect.i5.i17.i32.i32, i17 %x, i32 2, i32 6" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:214->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 52 'partselect' 'x_msb_ind_2' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%trunc_ln217 = trunc i17 %x" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:217->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 53 'trunc' 'trunc_ln217' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%x_lsb_ind = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i2.i3, i2 %trunc_ln217, i3 0" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:217->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 54 'bitconcatenate' 'x_lsb_ind' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%zext_ln230 = zext i5 %x_lsb_ind" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:230->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 55 'zext' 'zext_ln230' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%f_x_lsb_table_addr = getelementptr i11 %f_x_lsb_table, i64 0, i64 %zext_ln230" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:230->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 56 'getelementptr' 'f_x_lsb_table_addr' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 57 [2/2] (2.15ns)   --->   "%f_x_lsb = load i5 %f_x_lsb_table_addr" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:230->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 57 'load' 'f_x_lsb' <Predicate = (!icmp_ln26)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 11> <Depth = 32> <ROM>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%zext_ln245 = zext i5 %x_msb_ind_2" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:245->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 58 'zext' 'zext_ln245' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%exp_x_msb_2_m_1_table_addr = getelementptr i25 %exp_x_msb_2_m_1_table, i64 0, i64 %zext_ln245" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:245->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 59 'getelementptr' 'exp_x_msb_2_m_1_table_addr' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 60 [2/2] (2.15ns)   --->   "%exp_x_msb_2_m_1 = load i5 %exp_x_msb_2_m_1_table_addr" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:245->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 60 'load' 'exp_x_msb_2_m_1' <Predicate = (!icmp_ln26)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 25> <Depth = 32> <ROM>
+ST_1 : Operation 61 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln202 = or i1 %xor_ln198, i1 %overf" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:202->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 61 'or' 'or_ln202' <Predicate = (!icmp_ln26)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 62 [1/1] (0.00ns) (grouped into LUT with out node or_ln202_2)   --->   "%or_ln202_1 = or i1 %xor_ln198_1, i1 %xor_ln198_2" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:202->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 62 'or' 'or_ln202_1' <Predicate = (!icmp_ln26)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 63 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln202_2 = or i1 %or_ln202_1, i1 %or_ln202" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:202->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 63 'or' 'or_ln202_2' <Predicate = (!icmp_ln26)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 64 [1/1] (0.00ns) (grouped into LUT with out node or_ln202_4)   --->   "%or_ln202_3 = or i1 %and_ln202, i1 %xor_ln198_3" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:202->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 64 'or' 'or_ln202_3' <Predicate = (!icmp_ln26)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 65 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln202_4 = or i1 %or_ln202_3, i1 %or_ln202_2" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:202->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 65 'or' 'or_ln202_4' <Predicate = (!icmp_ln26)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 66 [1/1] (1.86ns)   --->   "%switch_ln28 = switch i4 %i_3, void %arrayidx13.i53.case.9, i4 0, void %arrayidx13.i53.case.0, i4 1, void %arrayidx13.i53.case.1, i4 2, void %arrayidx13.i53.case.2, i4 3, void %arrayidx13.i53.case.3, i4 4, void %arrayidx13.i53.case.4, i4 5, void %arrayidx13.i53.case.5, i4 6, void %arrayidx13.i53.case.6, i4 7, void %arrayidx13.i53.case.7, i4 8, void %arrayidx13.i53.case.8" [nn.cpp:28->nn.cpp:103]   --->   Operation 66 'switch' 'switch_ln28' <Predicate = (!icmp_ln26)> <Delay = 1.86>
+ST_1 : Operation 67 [1/1] (1.61ns)   --->   "%store_ln26 = store i4 %add_ln26, i4 %i" [nn.cpp:26->nn.cpp:103]   --->   Operation 67 'store' 'store_ln26' <Predicate = (!icmp_ln26)> <Delay = 1.61>
+
+State 2 <SV = 1> <Delay = 2.15>
+ST_2 : Operation 68 [1/2] (2.15ns)   --->   "%f_x_lsb = load i5 %f_x_lsb_table_addr" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:230->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 68 'load' 'f_x_lsb' <Predicate = true> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 11> <Depth = 32> <ROM>
+ST_2 : Operation 69 [1/2] (2.15ns)   --->   "%exp_x_msb_2_m_1 = load i5 %exp_x_msb_2_m_1_table_addr" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:245->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 69 'load' 'exp_x_msb_2_m_1' <Predicate = true> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 25> <Depth = 32> <ROM>
+
+State 3 <SV = 2> <Delay = 6.77>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%x_msb_ind_1 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i1.i4, i1 %tmp, i4 %tmp_6" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:212->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 70 'bitconcatenate' 'x_msb_ind_1' <Predicate = (!or_ln202_4)> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%exp_x_lsb_m_1 = bitconcatenate i18 @_ssdm_op_BitConcatenate.i18.i2.i5.i11, i2 %trunc_ln217, i5 0, i11 %f_x_lsb" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:233->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 71 'bitconcatenate' 'exp_x_lsb_m_1' <Predicate = (!or_ln202_4)> <Delay = 0.00>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%zext_ln247 = zext i25 %exp_x_msb_2_m_1" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:247->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 72 'zext' 'zext_ln247' <Predicate = (!or_ln202_4)> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%zext_ln247_1 = zext i18 %exp_x_lsb_m_1" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:247->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 73 'zext' 'zext_ln247_1' <Predicate = (!or_ln202_4)> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (6.77ns)   --->   "%f_x_msb_2_lsb = mul i43 %zext_ln247, i43 %zext_ln247_1" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:247->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 74 'mul' 'f_x_msb_2_lsb' <Predicate = (!or_ln202_4)> <Delay = 6.77> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 6.77> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%trunc_ln5 = partselect i19 @_ssdm_op_PartSelect.i19.i43.i32.i32, i43 %f_x_msb_2_lsb, i32 24, i32 42" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:249->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 75 'partselect' 'trunc_ln5' <Predicate = (!or_ln202_4)> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%zext_ln261 = zext i5 %x_msb_ind_1" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:261->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 76 'zext' 'zext_ln261' <Predicate = (!or_ln202_4)> <Delay = 0.00>
+ST_3 : Operation 77 [1/1] (0.00ns)   --->   "%exp_x_msb_1_table_addr = getelementptr i25 %exp_x_msb_1_table, i64 0, i64 %zext_ln261" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:261->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 77 'getelementptr' 'exp_x_msb_1_table_addr' <Predicate = (!or_ln202_4)> <Delay = 0.00>
+ST_3 : Operation 78 [2/2] (2.15ns)   --->   "%exp_x_msb_1 = load i5 %exp_x_msb_1_table_addr" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:261->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 78 'load' 'exp_x_msb_1' <Predicate = (!or_ln202_4)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 25> <Depth = 32> <ROM>
+
+State 4 <SV = 3> <Delay = 4.70>
+ST_4 : Operation 79 [1/1] (0.00ns)   --->   "%zext_ln249 = zext i19 %trunc_ln5" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:249->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 79 'zext' 'zext_ln249' <Predicate = (!or_ln202_4)> <Delay = 0.00>
+ST_4 : Operation 80 [1/1] (0.00ns)   --->   "%shl_ln2 = bitconcatenate i19 @_ssdm_op_BitConcatenate.i19.i2.i5.i11.i1, i2 %trunc_ln217, i5 0, i11 %f_x_lsb, i1 0" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:249->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 80 'bitconcatenate' 'shl_ln2' <Predicate = (!or_ln202_4)> <Delay = 0.00>
+ST_4 : Operation 81 [1/1] (0.00ns)   --->   "%zext_ln249_1 = zext i19 %shl_ln2" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:249->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 81 'zext' 'zext_ln249_1' <Predicate = (!or_ln202_4)> <Delay = 0.00>
+ST_4 : Operation 82 [1/1] (2.25ns)   --->   "%add_ln249 = add i20 %zext_ln249_1, i20 %zext_ln249" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:249->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 82 'add' 'add_ln249' <Predicate = (!or_ln202_4)> <Delay = 2.25> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 83 [1/1] (0.00ns)   --->   "%zext_ln249_2 = zext i20 %add_ln249" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:249->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 83 'zext' 'zext_ln249_2' <Predicate = (!or_ln202_4)> <Delay = 0.00>
+ST_4 : Operation 84 [1/1] (2.45ns)   --->   "%exp_x_msb_2_lsb_m_1 = add i25 %exp_x_msb_2_m_1, i25 %zext_ln249_2" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:249->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 84 'add' 'exp_x_msb_2_lsb_m_1' <Predicate = (!or_ln202_4)> <Delay = 2.45> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.45> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 85 [1/2] (2.15ns)   --->   "%exp_x_msb_1 = load i5 %exp_x_msb_1_table_addr" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:261->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 85 'load' 'exp_x_msb_1' <Predicate = (!or_ln202_4)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 25> <Depth = 32> <ROM>
+
+State 5 <SV = 4> <Delay = 6.77>
+ST_5 : Operation 86 [1/1] (0.00ns)   --->   "%zext_ln262 = zext i25 %exp_x_msb_1" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:262->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 86 'zext' 'zext_ln262' <Predicate = (!or_ln202_4)> <Delay = 0.00>
+ST_5 : Operation 87 [1/1] (0.00ns)   --->   "%zext_ln262_1 = zext i25 %exp_x_msb_2_lsb_m_1" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:262->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 87 'zext' 'zext_ln262_1' <Predicate = (!or_ln202_4)> <Delay = 0.00>
+ST_5 : Operation 88 [1/1] (6.77ns)   --->   "%y_lo = mul i50 %zext_ln262_1, i50 %zext_ln262" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:262->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 88 'mul' 'y_lo' <Predicate = (!or_ln202_4)> <Delay = 6.77> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 6.77> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 89 [1/1] (0.00ns)   --->   "%y_lo_s = partselect i25 @_ssdm_op_PartSelect.i25.i50.i32.i32, i50 %y_lo, i32 25, i32 49" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:263->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 89 'partselect' 'y_lo_s' <Predicate = (!or_ln202_4)> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 6.45>
+ST_6 : Operation 90 [1/1] (0.00ns)   --->   "%specpipeline_ln27 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_10" [nn.cpp:27->nn.cpp:103]   --->   Operation 90 'specpipeline' 'specpipeline_ln27' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 91 [1/1] (0.00ns)   --->   "%speclooptripcount_ln28 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 10, i64 10, i64 10" [nn.cpp:28->nn.cpp:103]   --->   Operation 91 'speclooptripcount' 'speclooptripcount_ln28' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 92 [1/1] (0.00ns)   --->   "%specloopname_ln26 = specloopname void @_ssdm_op_SpecLoopName, void @empty_45" [nn.cpp:26->nn.cpp:103]   --->   Operation 92 'specloopname' 'specloopname_ln26' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 93 [1/1] (0.00ns) (grouped into LUT with out node y_2)   --->   "%y = xor i1 %tmp, i1 1" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:203->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 93 'xor' 'y' <Predicate = (or_ln202_4)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 94 [1/1] (0.00ns) (grouped into LUT with out node y_2)   --->   "%select_ln190 = select i1 %y, i22 4194303, i22 0" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:190->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 94 'select' 'select_ln190' <Predicate = (or_ln202_4)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 95 [1/1] (2.45ns)   --->   "%y_l = add i25 %exp_x_msb_1, i25 %y_lo_s" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:264->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 95 'add' 'y_l' <Predicate = (!or_ln202_4)> <Delay = 2.45> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.45> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 96 [1/1] (0.00ns) (grouped into LUT with out node y_2)   --->   "%y_1 = partselect i22 @_ssdm_op_PartSelect.i22.i25.i32.i32, i25 %y_l, i32 3, i32 24" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:265->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 96 'partselect' 'y_1' <Predicate = (!or_ln202_4)> <Delay = 0.00>
+ST_6 : Operation 97 [1/1] (1.11ns) (out node of the LUT)   --->   "%y_2 = select i1 %or_ln202_4, i22 %select_ln190, i22 %y_1" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:202->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 97 'select' 'y_2' <Predicate = true> <Delay = 1.11> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 98 [1/1] (0.00ns)   --->   "%tmp_8 = partselect i2 @_ssdm_op_PartSelect.i2.i22.i32.i32, i22 %y_2, i32 20, i32 21" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:271->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 98 'partselect' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 99 [1/1] (1.58ns)   --->   "%overf_1 = icmp_ne  i2 %tmp_8, i2 0" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:271->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 99 'icmp' 'overf_1' <Predicate = true> <Delay = 1.58> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 100 [1/1] (0.00ns) (grouped into LUT with out node select_ln274)   --->   "%tmp_9 = bitselect i1 @_ssdm_op_BitSelect.i1.i22.i32, i22 %y_2, i32 19" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:271->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 100 'bitselect' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 101 [1/1] (0.00ns) (grouped into LUT with out node select_ln274)   --->   "%overf_2 = or i1 %tmp_9, i1 %overf_1" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:271->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 101 'or' 'overf_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 102 [1/1] (0.00ns) (grouped into LUT with out node select_ln274)   --->   "%tmp_s = partselect i16 @_ssdm_op_PartSelect.i16.i22.i32.i32, i22 %y_2, i32 3, i32 18" [nn.cpp:28->nn.cpp:103]   --->   Operation 102 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 103 [1/1] (1.29ns) (out node of the LUT)   --->   "%select_ln274 = select i1 %overf_2, i16 65535, i16 %tmp_s" [/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:274->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103]   --->   Operation 103 'select' 'select_ln274' <Predicate = true> <Delay = 1.29> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 104 [1/1] (0.00ns)   --->   "%write_ln28 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %output_8, i16 %select_ln274" [nn.cpp:28->nn.cpp:103]   --->   Operation 104 'write' 'write_ln28' <Predicate = (i_3 == 8)> <Delay = 0.00>
+ST_6 : Operation 105 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx13.i53.exit" [nn.cpp:28->nn.cpp:103]   --->   Operation 105 'br' 'br_ln28' <Predicate = (i_3 == 8)> <Delay = 0.00>
+ST_6 : Operation 106 [1/1] (0.00ns)   --->   "%write_ln28 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %output_7, i16 %select_ln274" [nn.cpp:28->nn.cpp:103]   --->   Operation 106 'write' 'write_ln28' <Predicate = (i_3 == 7)> <Delay = 0.00>
+ST_6 : Operation 107 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx13.i53.exit" [nn.cpp:28->nn.cpp:103]   --->   Operation 107 'br' 'br_ln28' <Predicate = (i_3 == 7)> <Delay = 0.00>
+ST_6 : Operation 108 [1/1] (0.00ns)   --->   "%write_ln28 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %output_6, i16 %select_ln274" [nn.cpp:28->nn.cpp:103]   --->   Operation 108 'write' 'write_ln28' <Predicate = (i_3 == 6)> <Delay = 0.00>
+ST_6 : Operation 109 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx13.i53.exit" [nn.cpp:28->nn.cpp:103]   --->   Operation 109 'br' 'br_ln28' <Predicate = (i_3 == 6)> <Delay = 0.00>
+ST_6 : Operation 110 [1/1] (0.00ns)   --->   "%write_ln28 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %output_5, i16 %select_ln274" [nn.cpp:28->nn.cpp:103]   --->   Operation 110 'write' 'write_ln28' <Predicate = (i_3 == 5)> <Delay = 0.00>
+ST_6 : Operation 111 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx13.i53.exit" [nn.cpp:28->nn.cpp:103]   --->   Operation 111 'br' 'br_ln28' <Predicate = (i_3 == 5)> <Delay = 0.00>
+ST_6 : Operation 112 [1/1] (0.00ns)   --->   "%write_ln28 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %output_4, i16 %select_ln274" [nn.cpp:28->nn.cpp:103]   --->   Operation 112 'write' 'write_ln28' <Predicate = (i_3 == 4)> <Delay = 0.00>
+ST_6 : Operation 113 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx13.i53.exit" [nn.cpp:28->nn.cpp:103]   --->   Operation 113 'br' 'br_ln28' <Predicate = (i_3 == 4)> <Delay = 0.00>
+ST_6 : Operation 114 [1/1] (0.00ns)   --->   "%write_ln28 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %output_3, i16 %select_ln274" [nn.cpp:28->nn.cpp:103]   --->   Operation 114 'write' 'write_ln28' <Predicate = (i_3 == 3)> <Delay = 0.00>
+ST_6 : Operation 115 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx13.i53.exit" [nn.cpp:28->nn.cpp:103]   --->   Operation 115 'br' 'br_ln28' <Predicate = (i_3 == 3)> <Delay = 0.00>
+ST_6 : Operation 116 [1/1] (0.00ns)   --->   "%write_ln28 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %output_2, i16 %select_ln274" [nn.cpp:28->nn.cpp:103]   --->   Operation 116 'write' 'write_ln28' <Predicate = (i_3 == 2)> <Delay = 0.00>
+ST_6 : Operation 117 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx13.i53.exit" [nn.cpp:28->nn.cpp:103]   --->   Operation 117 'br' 'br_ln28' <Predicate = (i_3 == 2)> <Delay = 0.00>
+ST_6 : Operation 118 [1/1] (0.00ns)   --->   "%write_ln28 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %output_1, i16 %select_ln274" [nn.cpp:28->nn.cpp:103]   --->   Operation 118 'write' 'write_ln28' <Predicate = (i_3 == 1)> <Delay = 0.00>
+ST_6 : Operation 119 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx13.i53.exit" [nn.cpp:28->nn.cpp:103]   --->   Operation 119 'br' 'br_ln28' <Predicate = (i_3 == 1)> <Delay = 0.00>
+ST_6 : Operation 120 [1/1] (0.00ns)   --->   "%write_ln28 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %output_0, i16 %select_ln274" [nn.cpp:28->nn.cpp:103]   --->   Operation 120 'write' 'write_ln28' <Predicate = (i_3 == 0)> <Delay = 0.00>
+ST_6 : Operation 121 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx13.i53.exit" [nn.cpp:28->nn.cpp:103]   --->   Operation 121 'br' 'br_ln28' <Predicate = (i_3 == 0)> <Delay = 0.00>
+ST_6 : Operation 122 [1/1] (0.00ns)   --->   "%write_ln28 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %output_9, i16 %select_ln274" [nn.cpp:28->nn.cpp:103]   --->   Operation 122 'write' 'write_ln28' <Predicate = (i_3 == 15) | (i_3 == 14) | (i_3 == 13) | (i_3 == 12) | (i_3 == 11) | (i_3 == 10) | (i_3 == 9)> <Delay = 0.00>
+ST_6 : Operation 123 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx13.i53.exit" [nn.cpp:28->nn.cpp:103]   --->   Operation 123 'br' 'br_ln28' <Predicate = (i_3 == 15) | (i_3 == 14) | (i_3 == 13) | (i_3 == 12) | (i_3 == 11) | (i_3 == 10) | (i_3 == 9)> <Delay = 0.00>
+ST_6 : Operation 128 [1/1] (0.00ns)   --->   "%sum_2_load_1 = load i16 %sum_2"   --->   Operation 128 'load' 'sum_2_load_1' <Predicate = (icmp_ln26)> <Delay = 0.00>
+ST_6 : Operation 129 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %sum_2_out, i16 %sum_2_load_1"   --->   Operation 129 'write' 'write_ln0' <Predicate = (icmp_ln26)> <Delay = 0.00>
+ST_6 : Operation 130 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 130 'ret' 'ret_ln0' <Predicate = (icmp_ln26)> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 3.75>
+ST_7 : Operation 124 [1/1] (0.00ns)   --->   "%sum_2_load = load i16 %sum_2" [nn.cpp:29->nn.cpp:103]   --->   Operation 124 'load' 'sum_2_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 125 [1/1] (2.14ns)   --->   "%sum = add i16 %select_ln274, i16 %sum_2_load" [nn.cpp:29->nn.cpp:103]   --->   Operation 125 'add' 'sum' <Predicate = true> <Delay = 2.14> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 126 [1/1] (1.61ns)   --->   "%store_ln26 = store i16 %sum, i16 %sum_2" [nn.cpp:26->nn.cpp:103]   --->   Operation 126 'store' 'store_ln26' <Predicate = true> <Delay = 1.61>
+ST_7 : Operation 127 [1/1] (0.00ns)   --->   "%br_ln26 = br void %for.body8.i" [nn.cpp:26->nn.cpp:103]   --->   Operation 127 'br' 'br_ln26' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 7.120ns
+The critical path consists of the following:
+	'alloca' operation ('i') [27]  (0.000 ns)
+	'load' operation ('i', nn.cpp:26->nn.cpp:103) on local variable 'i' [44]  (0.000 ns)
+	'mux' operation ('tmp_1', nn.cpp:28->nn.cpp:103) [52]  (1.869 ns)
+	'sub' operation ('x', nn.cpp:28->nn.cpp:103) [54]  (2.146 ns)
+	'icmp' operation ('icmp_ln202_1', /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:202->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103) [70]  (2.127 ns)
+	'and' operation ('and_ln202', /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:202->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103) [71]  (0.000 ns)
+	'or' operation ('or_ln202_3', /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:202->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103) [108]  (0.000 ns)
+	'or' operation ('or_ln202_4', /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:202->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103) [109]  (0.978 ns)
+
+ <State 2>: 2.152ns
+The critical path consists of the following:
+	'load' operation ('f_x_lsb', /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:230->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103) on array 'f_x_lsb_table' [81]  (2.152 ns)
+
+ <State 3>: 6.770ns
+The critical path consists of the following:
+	'mul' operation ('f_x_msb_2_lsb', /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:247->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103) [88]  (6.770 ns)
+
+ <State 4>: 4.709ns
+The critical path consists of the following:
+	'add' operation ('add_ln249', /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:249->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103) [93]  (2.250 ns)
+	'add' operation ('exp_x_msb_2_lsb_m_1', /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:249->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103) [95]  (2.459 ns)
+
+ <State 5>: 6.770ns
+The critical path consists of the following:
+	'mul' operation ('y_lo', /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:262->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103) [101]  (6.770 ns)
+
+ <State 6>: 6.452ns
+The critical path consists of the following:
+	'add' operation ('y_l', /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:264->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103) [103]  (2.459 ns)
+	'select' operation ('y', /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:202->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103) [110]  (1.117 ns)
+	'icmp' operation ('overf', /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:271->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103) [112]  (1.584 ns)
+	'or' operation ('overf', /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:271->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103) [114]  (0.000 ns)
+	'select' operation ('select_ln274', /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:274->/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190->nn.cpp:28->nn.cpp:103) [116]  (1.293 ns)
+	wire write operation ('write_ln28', nn.cpp:28->nn.cpp:103) on port 'output_8' (nn.cpp:28->nn.cpp:103) [119]  (0.000 ns)
+
+ <State 7>: 3.756ns
+The critical path consists of the following:
+	'load' operation ('sum_2_load', nn.cpp:29->nn.cpp:103) on local variable 'sum' [149]  (0.000 ns)
+	'add' operation ('sum', nn.cpp:29->nn.cpp:103) [150]  (2.146 ns)
+	'store' operation ('store_ln26', nn.cpp:26->nn.cpp:103) of variable 'sum', nn.cpp:29->nn.cpp:103 on local variable 'sum' [152]  (1.610 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

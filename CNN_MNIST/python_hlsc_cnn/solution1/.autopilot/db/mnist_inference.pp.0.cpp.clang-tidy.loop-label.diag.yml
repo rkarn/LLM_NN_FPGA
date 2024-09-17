@@ -1,0 +1,49 @@
+---
+MainSourceFile:  /home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_inference.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1213_1:  '
+    FileOffset:      1213
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_base.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_inference.pp.0.cpp
+        Offset:          231321
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1213_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_inference.pp.0.cpp
+        Offset:          458673
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_inference.pp.0.cpp
+        Offset:          459137
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_inference.pp.0.cpp
+        Offset:          459602
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_inference.pp.0.cpp
+        Offset:          741913
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+...

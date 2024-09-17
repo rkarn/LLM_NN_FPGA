@@ -1,0 +1,23 @@
+{
+    "1": {
+        "name": "exp<17, 9>",
+        "file": "nn.cpp",
+        "fileloc": "0",
+        "instructions": "65",
+        "total_instructions": "65",
+        "calls": "",
+        "basicblocks": "1",
+        "loads": {
+            "G": "3"
+        }
+    },
+    "0": {
+        "name": "neural_network",
+        "file": "nn.cpp",
+        "fileloc": "46",
+        "instructions": "398",
+        "total_instructions": "593",
+        "calls": "1 1 1",
+        "basicblocks": "1"
+    }
+}

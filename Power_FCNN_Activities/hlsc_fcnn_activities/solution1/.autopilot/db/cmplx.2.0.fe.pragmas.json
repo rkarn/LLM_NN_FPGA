@@ -1,0 +1,51 @@
+{
+  "0": {
+    "basicblocks": 738,
+    "calls": "2",
+    "file": "nn.cpp",
+    "fileloc": 41,
+    "instructions": 1638,
+    "loads": {
+      "G": 44,
+      "L": 20,
+      "T": 18
+    },
+    "name": "neural_network",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 2184
+  },
+  "1": {
+    "basicblocks": 168,
+    "calls": "",
+    "file": "hls_exp_apfixed.h",
+    "fileloc": 39,
+    "instructions": 379,
+    "loads": {
+      "G": 6,
+      "L": 3
+    },
+    "name": "exp<17, 9>",
+    "stores": {
+      "G": 3,
+      "L": 1
+    },
+    "total_instructions": 379
+  },
+  "2": {
+    "basicblocks": 54,
+    "calls": "",
+    "file": "nn.cpp",
+    "fileloc": 17,
+    "instructions": 162,
+    "loads": {
+      "L": 15
+    },
+    "name": "softmax",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 546
+  }
+}

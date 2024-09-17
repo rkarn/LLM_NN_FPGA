@@ -1,0 +1,9 @@
+<pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="pingpong.cpp" line="57" pragmaType="interface" parentfunction="pingpong_game" mode="axis" port="input1" register="0" register_mode="both" name="" depth="-1"/>
+<pragma file="pingpong.cpp" line="58" pragmaType="interface" parentfunction="pingpong_game" mode="axis" port="input2" register="0" register_mode="both" name="" depth="-1"/>
+<pragma file="pingpong.cpp" line="59" pragmaType="interface" parentfunction="pingpong_game" mode="axis" port="output" register="0" register_mode="both" name="" depth="-1"/>
+<pragma file="pingpong.cpp" line="60" pragmaType="interface" parentfunction="pingpong_game" mode="ap_ctrl_none" port="return" name=""/>
+</pragmas>

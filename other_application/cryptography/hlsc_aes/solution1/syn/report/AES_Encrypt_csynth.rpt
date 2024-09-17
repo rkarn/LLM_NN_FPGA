@@ -1,0 +1,190 @@
+
+
+================================================================
+== Vitis HLS Report for 'AES_Encrypt'
+================================================================
+* Date:           Fri Sep 13 04:05:11 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        hlsc_aes
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.590 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      173|      173|  1.730 us|  1.730 us|  174|  174|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------------------------+--------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                                   |                                                        |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                              Instance                             |                         Module                         |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-------------------------------------------------------------------+--------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_AES_Encrypt_Pipeline_VITIS_LOOP_75_1_fu_175                    |AES_Encrypt_Pipeline_VITIS_LOOP_75_1                    |       18|       18|  0.180 us|  0.180 us|   18|   18|       no|
+        |grp_AES_Encrypt_Pipeline_VITIS_LOOP_90_1_fu_183                    |AES_Encrypt_Pipeline_VITIS_LOOP_90_1                    |       81|       81|  0.810 us|  0.810 us|   81|   81|       no|
+        |grp_AES_Encrypt_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2_fu_189    |AES_Encrypt_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2    |       18|       18|  0.180 us|  0.180 us|   18|   18|       no|
+        |grp_AES_Encrypt_Pipeline_VITIS_LOOP_75_11_fu_194                   |AES_Encrypt_Pipeline_VITIS_LOOP_75_11                   |       18|       18|  0.180 us|  0.180 us|   18|   18|       no|
+        |grp_AES_Encrypt_Pipeline_VITIS_LOOP_101_2_VITIS_LOOP_102_3_fu_200  |AES_Encrypt_Pipeline_VITIS_LOOP_101_2_VITIS_LOOP_102_3  |       18|       18|  0.180 us|  0.180 us|   18|   18|       no|
+        +-------------------------------------------------------------------+--------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      -|      -|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        -|   -|    309|    962|    -|
+|Memory           |        1|   -|     16|      2|    0|
+|Multiplexer      |        -|   -|      -|    472|    -|
+|Register         |        -|   -|     90|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        1|   0|    415|   1436|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      100|  90|  41600|  20800|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        1|   0|     ~0|      6|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------------------------+--------------------------------------------------------+---------+----+-----+-----+-----+
+    |                              Instance                             |                         Module                         | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-------------------------------------------------------------------+--------------------------------------------------------+---------+----+-----+-----+-----+
+    |grp_AES_Encrypt_Pipeline_VITIS_LOOP_101_2_VITIS_LOOP_102_3_fu_200  |AES_Encrypt_Pipeline_VITIS_LOOP_101_2_VITIS_LOOP_102_3  |        0|   0|   18|  168|    0|
+    |grp_AES_Encrypt_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2_fu_189    |AES_Encrypt_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2    |        0|   0|   13|  144|    0|
+    |grp_AES_Encrypt_Pipeline_VITIS_LOOP_75_1_fu_175                    |AES_Encrypt_Pipeline_VITIS_LOOP_75_1                    |        0|   0|   75|  176|    0|
+    |grp_AES_Encrypt_Pipeline_VITIS_LOOP_75_11_fu_194                   |AES_Encrypt_Pipeline_VITIS_LOOP_75_11                   |        0|   0|   75|  176|    0|
+    |grp_AES_Encrypt_Pipeline_VITIS_LOOP_90_1_fu_183                    |AES_Encrypt_Pipeline_VITIS_LOOP_90_1                    |        0|   0|  128|  298|    0|
+    +-------------------------------------------------------------------+--------------------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                              |                                                        |        0|   0|  309|  962|    0|
+    +-------------------------------------------------------------------+--------------------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +---------+----------------------+---------+----+----+-----+------+-----+------+-------------+
+    |  Memory |        Module        | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +---------+----------------------+---------+----+----+-----+------+-----+------+-------------+
+    |state_U  |state_RAM_AUTO_1R1W   |        0|  16|   2|    0|    16|    8|     1|          128|
+    |w_U      |w_RAM_1WNR_AUTO_1R1W  |        1|   0|   0|    0|    44|   32|     1|         1408|
+    +---------+----------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total    |                      |        1|  16|   2|    0|    60|   40|     2|         1536|
+    +---------+----------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +----------------+-----+-----------+-----+-----------+
+    |      Name      | LUT | Input Size| Bits| Total Bits|
+    +----------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm       |  113|         22|    1|         22|
+    |state_address0  |   81|         17|    4|         68|
+    |state_address1  |   61|         15|    4|         60|
+    |state_ce0       |   29|          7|    1|          7|
+    |state_ce1       |   21|          5|    1|          5|
+    |state_d0        |   41|         10|    8|         80|
+    |state_d1        |   37|          9|    8|         72|
+    |state_we0       |   25|          6|    1|          6|
+    |state_we1       |   21|          5|    1|          5|
+    |w_address0      |   17|          4|    6|         24|
+    |w_ce0           |   17|          4|    1|          4|
+    |w_ce1           |    9|          2|    1|          2|
+    +----------------+-----+-----------+-----+-----------+
+    |Total           |  472|        106|   37|        355|
+    +----------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                      Name                                      | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                       |  21|   0|   21|          0|
+    |grp_AES_Encrypt_Pipeline_VITIS_LOOP_101_2_VITIS_LOOP_102_3_fu_200_ap_start_reg  |   1|   0|    1|          0|
+    |grp_AES_Encrypt_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2_fu_189_ap_start_reg    |   1|   0|    1|          0|
+    |grp_AES_Encrypt_Pipeline_VITIS_LOOP_75_11_fu_194_ap_start_reg                   |   1|   0|    1|          0|
+    |grp_AES_Encrypt_Pipeline_VITIS_LOOP_75_1_fu_175_ap_start_reg                    |   1|   0|    1|          0|
+    |grp_AES_Encrypt_Pipeline_VITIS_LOOP_90_1_fu_183_ap_start_reg                    |   1|   0|    1|          0|
+    |reg_207                                                                         |   8|   0|    8|          0|
+    |reg_212                                                                         |   8|   0|    8|          0|
+    |state_load_4_reg_247                                                            |   8|   0|    8|          0|
+    |state_load_5_reg_262                                                            |   8|   0|    8|          0|
+    |state_load_6_reg_267                                                            |   8|   0|    8|          0|
+    |state_load_7_reg_287                                                            |   8|   0|    8|          0|
+    |state_load_9_reg_302                                                            |   8|   0|    8|          0|
+    |state_load_reg_282                                                              |   8|   0|    8|          0|
+    +--------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                           |  90|   0|   90|          0|
+    +--------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-------------------+-----+-----+------------+--------------+--------------+
+|ap_clk             |   in|    1|  ap_ctrl_hs|   AES_Encrypt|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|   AES_Encrypt|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|   AES_Encrypt|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|   AES_Encrypt|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|   AES_Encrypt|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|   AES_Encrypt|  return value|
+|input_r_address0   |  out|    4|   ap_memory|       input_r|         array|
+|input_r_ce0        |  out|    1|   ap_memory|       input_r|         array|
+|input_r_we0        |  out|    1|   ap_memory|       input_r|         array|
+|input_r_d0         |  out|    8|   ap_memory|       input_r|         array|
+|input_r_q0         |   in|    8|   ap_memory|       input_r|         array|
+|input_r_address1   |  out|    4|   ap_memory|       input_r|         array|
+|input_r_ce1        |  out|    1|   ap_memory|       input_r|         array|
+|input_r_we1        |  out|    1|   ap_memory|       input_r|         array|
+|input_r_d1         |  out|    8|   ap_memory|       input_r|         array|
+|input_r_q1         |   in|    8|   ap_memory|       input_r|         array|
+|output_r_address0  |  out|    4|   ap_memory|      output_r|         array|
+|output_r_ce0       |  out|    1|   ap_memory|      output_r|         array|
+|output_r_we0       |  out|    1|   ap_memory|      output_r|         array|
+|output_r_d0        |  out|    8|   ap_memory|      output_r|         array|
+|key_address0       |  out|    2|   ap_memory|           key|         array|
+|key_ce0            |  out|    1|   ap_memory|           key|         array|
+|key_we0            |  out|    1|   ap_memory|           key|         array|
+|key_d0             |  out|   32|   ap_memory|           key|         array|
+|key_q0             |   in|   32|   ap_memory|           key|         array|
+|key_address1       |  out|    2|   ap_memory|           key|         array|
+|key_ce1            |  out|    1|   ap_memory|           key|         array|
+|key_we1            |  out|    1|   ap_memory|           key|         array|
+|key_d1             |  out|   32|   ap_memory|           key|         array|
+|key_q1             |   in|   32|   ap_memory|           key|         array|
++-------------------+-----+-----+------------+--------------+--------------+
+

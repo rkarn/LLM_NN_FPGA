@@ -1,0 +1,167 @@
+
+
+================================================================
+== Vitis HLS Report for 'AES_Encrypt_Pipeline_VITIS_LOOP_75_1'
+================================================================
+* Date:           Fri Sep 13 04:05:10 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        hlsc_aes
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.232 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       18|       18|  0.180 us|  0.180 us|   18|   18|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_75_1  |       16|       16|         4|          4|          1|     4|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      0|     60|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        -|   -|      -|      -|    -|
+|Memory           |        -|   -|      -|      -|    -|
+|Multiplexer      |        -|   -|      -|    116|    -|
+|Register         |        -|   -|     75|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        0|   0|     75|    176|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      100|  90|  41600|  20800|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        0|   0|     ~0|     ~0|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln75_fu_120_p2    |         +|   0|  0|  11|           3|           1|
+    |icmp_ln75_fu_114_p2   |      icmp|   0|  0|  13|           3|           4|
+    |xor_ln77_1_fu_194_p2  |       xor|   0|  0|   8|           8|           8|
+    |xor_ln77_2_fu_214_p2  |       xor|   0|  0|   8|           8|           8|
+    |xor_ln77_3_fu_219_p2  |       xor|   0|  0|   8|           8|           8|
+    |xor_ln77_5_fu_132_p2  |       xor|   0|  0|   4|           3|           4|
+    |xor_ln77_fu_178_p2    |       xor|   0|  0|   8|           8|           8|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  60|          41|          41|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm             |  21|          5|    1|          5|
+    |ap_done_int           |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_2  |   9|          2|    3|          6|
+    |i_fu_48               |   9|          2|    3|          6|
+    |state_address0        |  21|          5|    4|         20|
+    |state_address1        |  21|          5|    4|         20|
+    |state_d0              |  13|          3|    8|         24|
+    |state_d1              |  13|          3|    8|         24|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 | 116|         27|   32|        107|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------+---+----+-----+-----------+
+    |          Name         | FF| LUT| Bits| Const Bits|
+    +-----------------------+---+----+-----+-----------+
+    |ap_CS_fsm              |  4|   0|    4|          0|
+    |ap_done_reg            |  1|   0|    1|          0|
+    |i_2_reg_231            |  3|   0|    3|          0|
+    |i_fu_48                |  3|   0|    3|          0|
+    |state_addr_12_reg_239  |  3|   0|    4|          1|
+    |state_addr_14_reg_249  |  3|   0|    4|          1|
+    |state_addr_15_reg_259  |  3|   0|    4|          1|
+    |state_addr_16_reg_264  |  4|   0|    4|          0|
+    |trunc_ln77_2_reg_279   |  8|   0|    8|          0|
+    |trunc_ln77_reg_284     |  8|   0|    8|          0|
+    |xor_ln77_1_reg_274     |  8|   0|    8|          0|
+    |xor_ln77_2_reg_289     |  8|   0|    8|          0|
+    |xor_ln77_3_reg_294     |  8|   0|    8|          0|
+    |xor_ln77_5_reg_244     |  3|   0|    3|          0|
+    |xor_ln77_reg_269       |  8|   0|    8|          0|
+    +-----------------------+---+----+-----+-----------+
+    |Total                  | 75|   0|   78|          3|
+    +-----------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+--------------------------------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  |             Source Object            |    C Type    |
++----------------+-----+-----+------------+--------------------------------------+--------------+
+|ap_clk          |   in|    1|  ap_ctrl_hs|  AES_Encrypt_Pipeline_VITIS_LOOP_75_1|  return value|
+|ap_rst          |   in|    1|  ap_ctrl_hs|  AES_Encrypt_Pipeline_VITIS_LOOP_75_1|  return value|
+|ap_start        |   in|    1|  ap_ctrl_hs|  AES_Encrypt_Pipeline_VITIS_LOOP_75_1|  return value|
+|ap_done         |  out|    1|  ap_ctrl_hs|  AES_Encrypt_Pipeline_VITIS_LOOP_75_1|  return value|
+|ap_idle         |  out|    1|  ap_ctrl_hs|  AES_Encrypt_Pipeline_VITIS_LOOP_75_1|  return value|
+|ap_ready        |  out|    1|  ap_ctrl_hs|  AES_Encrypt_Pipeline_VITIS_LOOP_75_1|  return value|
+|state_address0  |  out|    4|   ap_memory|                                 state|         array|
+|state_ce0       |  out|    1|   ap_memory|                                 state|         array|
+|state_we0       |  out|    1|   ap_memory|                                 state|         array|
+|state_d0        |  out|    8|   ap_memory|                                 state|         array|
+|state_q0        |   in|    8|   ap_memory|                                 state|         array|
+|state_address1  |  out|    4|   ap_memory|                                 state|         array|
+|state_ce1       |  out|    1|   ap_memory|                                 state|         array|
+|state_we1       |  out|    1|   ap_memory|                                 state|         array|
+|state_d1        |  out|    8|   ap_memory|                                 state|         array|
+|state_q1        |   in|    8|   ap_memory|                                 state|         array|
+|w_address0      |  out|    6|   ap_memory|                                     w|         array|
+|w_ce0           |  out|    1|   ap_memory|                                     w|         array|
+|w_q0            |   in|   32|   ap_memory|                                     w|         array|
++----------------+-----+-----+------------+--------------------------------------+--------------+
+

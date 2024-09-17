@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "neural_network",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "neural_network"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/rrk307/home_hls/python_c_hlsc/Memory_FCNN_UNSW/run_hls.tcl",
+    "sourceLine": 25,
+    "success": true
+  }
+]

@@ -1,0 +1,89 @@
+{
+  "0": {
+    "basicblocks": 15,
+    "calls": "3 1 4 2 3 1 4 3",
+    "file": "aes.cpp",
+    "fileloc": 82,
+    "instructions": 58,
+    "loads": {
+      "L": 1
+    },
+    "name": "AES_Encrypt",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 530
+  },
+  "1": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "aes.cpp",
+    "fileloc": 16,
+    "instructions": 17,
+    "name": "SubBytes",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 17
+  },
+  "2": {
+    "basicblocks": 5,
+    "calls": "5 5 5 5",
+    "file": "aes.cpp",
+    "fileloc": 54,
+    "instructions": 148,
+    "loads": {
+      "L": 20
+    },
+    "name": "MixColumns",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 220
+  },
+  "3": {
+    "basicblocks": 10,
+    "calls": "",
+    "file": "aes.cpp",
+    "fileloc": 74,
+    "instructions": 40,
+    "loads": {
+      "L": 3
+    },
+    "name": "AddRoundKey",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 40
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "aes.cpp",
+    "fileloc": 24,
+    "instructions": 49,
+    "loads": {
+      "L": 12
+    },
+    "name": "ShiftRows",
+    "stores": {
+      "L": 12
+    },
+    "total_instructions": 49
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "aes.cpp",
+    "fileloc": 50,
+    "instructions": 18,
+    "loads": {
+      "L": 2
+    },
+    "name": "xtime",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 18
+  }
+}

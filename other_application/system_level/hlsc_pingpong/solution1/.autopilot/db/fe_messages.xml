@@ -1,0 +1,24 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rrk307/home_hls/python_c_hlsc/other_application/system_level/run_hls.tcl:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="pingpong_game" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=pingpong_game" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pingpong.cpp:57:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pingpong_game" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=input1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pingpong.cpp:58:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pingpong_game" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=input2" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pingpong.cpp:59:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pingpong_game" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=output" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pingpong.cpp:60:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pingpong_game" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="pingpong.cpp:56:0" msg_body="Inlining function 'update_paddle(int&amp;, int, int)' into 'pingpong_game(hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;GameState, 0&gt;&amp;)'">
+        <args Callee="update_paddle(int&amp;, int, int)" Callee-DebugLoc="File pingpong.cpp Line 20 Column 0" Caller="pingpong_game(hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;GameState, 0&gt;&amp;)" Caller-DebugLoc="File pingpong.cpp Line 56 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="pingpong.cpp:56:0" msg_body="Inlining function 'update_ball(GameState&amp;)' into 'pingpong_game(hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;GameState, 0&gt;&amp;)'">
+        <args Callee="update_ball(GameState&amp;)" Callee-DebugLoc="File pingpong.cpp Line 26 Column 0" Caller="pingpong_game(hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;GameState, 0&gt;&amp;)" Caller-DebugLoc="File pingpong.cpp Line 56 Column 0"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

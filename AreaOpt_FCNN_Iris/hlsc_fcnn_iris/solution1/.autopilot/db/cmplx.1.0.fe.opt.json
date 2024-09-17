@@ -1,0 +1,109 @@
+{
+  "0": {
+    "basicblocks": 31,
+    "calls": "3 1",
+    "file": "nn.cpp",
+    "fileloc": 42,
+    "instructions": 147,
+    "loads": {
+      "L": 3
+    },
+    "name": "neural_network",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 54729
+  },
+  "1": {
+    "basicblocks": 21,
+    "calls": "",
+    "file": "nn.cpp",
+    "fileloc": 17,
+    "instructions": 86,
+    "loads": {
+      "L": 3
+    },
+    "name": "softmax",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 53126
+  },
+  "2": {
+    "basicblocks": 316,
+    "calls": "",
+    "file": "hls_exp_apfixed.h",
+    "fileloc": 39,
+    "instructions": 4439,
+    "loads": {
+      "G": 32,
+      "L": 17
+    },
+    "name": "exp<17, 9>",
+    "stores": {
+      "G": 16,
+      "L": 33
+    },
+    "total_instructions": 52414
+  },
+  "3": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "nn.cpp",
+    "fileloc": 12,
+    "instructions": 16,
+    "loads": {
+      "L": 1
+    },
+    "name": "relu",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 140
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.cpp",
+    "fileloc": 16,
+    "instructions": 25,
+    "name": "__cxx_global_var_init.2",
+    "total_instructions": 10105
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.cpp",
+    "fileloc": 22,
+    "instructions": 4,
+    "name": "__cxx_global_var_init.3",
+    "total_instructions": 1264
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.cpp",
+    "fileloc": 14,
+    "instructions": 9,
+    "name": "__cxx_global_var_init.1",
+    "total_instructions": 3369
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.cpp",
+    "fileloc": 3,
+    "instructions": 33,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 13473
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "7 6 4 5",
+    "file": "weights.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 5,
+    "name": "",
+    "total_instructions": 28216
+  }
+}

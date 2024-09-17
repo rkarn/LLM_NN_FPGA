@@ -1,0 +1,71 @@
+<dict>
+  <key>main-file</key>
+  <string>/home/rrk307/home_hls/python_c_hlsc/other_application/cryptography/hlsc_aes/solution1/.autopilot/db/aes.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/home/rrk307/home_hls/python_c_hlsc/other_application/cryptography/run_hls.tcl</string>
+      <key>line</key>
+      <integer>23</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=AES_Encrypt_XLX_SEP_ PragmaOptions=name=AES_Encrypt_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>aes.cpp</string>
+      <key>line</key>
+      <integer>82</integer>
+      <key>column</key>
+      <integer>69</integer>
+      <key>message</key>
+      <string>unused parameter &apos;input&apos;</string>
+      <key>ID</key>
+      <integer>5292</integer>
+      <key>WarningOption</key>
+      <string>unused-parameter</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>aes.cpp</string>
+      <key>line</key>
+      <integer>82</integer>
+      <key>column</key>
+      <integer>102</integer>
+      <key>message</key>
+      <string>unused parameter &apos;key&apos;</string>
+      <key>ID</key>
+      <integer>5292</integer>
+      <key>WarningOption</key>
+      <string>unused-parameter</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>aes.cpp</string>
+      <key>line</key>
+      <integer>117</integer>
+      <key>column</key>
+      <integer>25</integer>
+      <key>message</key>
+      <string>format specifies type &apos;unsigned int&apos; but the argument has type &apos;byte&apos; (aka &apos;ap_uint&lt;8&gt;&apos;)</string>
+      <key>ID</key>
+      <integer>4855</integer>
+      <key>WarningOption</key>
+      <string>format</string>
+    </dict>
+  </array>
+</dict>

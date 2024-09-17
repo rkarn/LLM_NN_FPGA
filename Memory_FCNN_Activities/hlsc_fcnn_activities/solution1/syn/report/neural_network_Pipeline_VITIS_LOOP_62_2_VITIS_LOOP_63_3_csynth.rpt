@@ -1,0 +1,233 @@
+
+
+================================================================
+== Vitis HLS Report for 'neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3'
+================================================================
+* Date:           Sun Sep 15 03:31:49 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        hlsc_fcnn_activities
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.980 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      146|      146|  1.460 us|  1.460 us|  146|  146|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |             Loop Name             |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_62_2_VITIS_LOOP_63_3  |      144|      144|         3|          2|          2|    72|       yes|
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      0|    227|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        -|   -|      -|      -|    -|
+|Memory           |        1|   -|      0|      0|    -|
+|Multiplexer      |        -|   -|      -|     67|    -|
+|Register         |        -|   -|    163|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        1|   0|    163|    294|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      100|  90|  41600|  20800|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        1|   0|     ~0|      1|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |      Memory      |                                      Module                                      | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |layer1_weights_U  |neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3_layer1_weights_ROM_AUbkb  |        1|  0|   0|    0|   360|   12|     1|         4320|
+    +------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total             |                                                                                  |        1|  0|   0|    0|   360|   12|     1|         4320|
+    +------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |add_ln62_1_fu_467_p2     |         +|   0|  0|  13|           5|           5|
+    |add_ln62_2_fu_423_p2     |         +|   0|  0|  14|           7|           1|
+    |add_ln62_fu_435_p2       |         +|   0|  0|  71|          64|           1|
+    |add_ln63_fu_510_p2       |         +|   0|  0|  13|           5|           1|
+    |add_ln65_1_fu_499_p2     |         +|   0|  0|   9|           9|           9|
+    |add_ln65_fu_490_p2       |         +|   0|  0|   9|           9|           9|
+    |icmp_ln62_fu_417_p2      |      icmp|   0|  0|  14|           7|           7|
+    |icmp_ln63_fu_441_p2      |      icmp|   0|  0|  13|           5|           5|
+    |select_ln62_1_fu_455_p3  |    select|   0|  0|  64|           1|          64|
+    |select_ln62_fu_447_p3    |    select|   0|  0|   5|           1|           1|
+    |ap_enable_pp0            |       xor|   0|  0|   2|           1|           2|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |Total                    |          |   0|  0| 227|         114|         105|
+    +-------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  13|          3|    1|          3|
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |i_fu_120                 |   9|          2|   64|        128|
+    |indvar_flatten_fu_124    |   9|          2|    7|         14|
+    |j_fu_116                 |   9|          2|    5|         10|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  67|         15|   80|        161|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |add_ln62_1_reg_592           |   5|   0|    5|          0|
+    |add_ln62_2_reg_558           |   7|   0|    7|          0|
+    |ap_CS_fsm                    |   2|   0|    2|          0|
+    |ap_done_reg                  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |i_fu_120                     |  64|   0|   64|          0|
+    |icmp_ln62_reg_554            |   1|   0|    1|          0|
+    |indvar_flatten_fu_124        |   7|   0|    7|          0|
+    |j_fu_116                     |   5|   0|    5|          0|
+    |select_ln62_1_reg_569        |  64|   0|   64|          0|
+    |select_ln62_reg_563          |   5|   0|    5|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        | 163|   0|  163|          0|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------+-----+-----+------------+---------------------------------------------------------+--------------+
+|            RTL Ports           | Dir | Bits|  Protocol  |                      Source Object                      |    C Type    |
++--------------------------------+-----+-----+------------+---------------------------------------------------------+--------------+
+|ap_clk                          |   in|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3|  return value|
+|ap_rst                          |   in|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3|  return value|
+|ap_start                        |   in|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3|  return value|
+|ap_done                         |  out|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3|  return value|
+|ap_idle                         |  out|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3|  return value|
+|ap_ready                        |  out|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3|  return value|
+|layer1_weight_tile_address0     |  out|    2|   ap_memory|                                       layer1_weight_tile|         array|
+|layer1_weight_tile_ce0          |  out|    1|   ap_memory|                                       layer1_weight_tile|         array|
+|layer1_weight_tile_we0          |  out|    1|   ap_memory|                                       layer1_weight_tile|         array|
+|layer1_weight_tile_d0           |  out|   12|   ap_memory|                                       layer1_weight_tile|         array|
+|tile                            |   in|    5|     ap_none|                                                     tile|        scalar|
+|layer1_weight_tile_17_address0  |  out|    2|   ap_memory|                                    layer1_weight_tile_17|         array|
+|layer1_weight_tile_17_ce0       |  out|    1|   ap_memory|                                    layer1_weight_tile_17|         array|
+|layer1_weight_tile_17_we0       |  out|    1|   ap_memory|                                    layer1_weight_tile_17|         array|
+|layer1_weight_tile_17_d0        |  out|   12|   ap_memory|                                    layer1_weight_tile_17|         array|
+|layer1_weight_tile_16_address0  |  out|    2|   ap_memory|                                    layer1_weight_tile_16|         array|
+|layer1_weight_tile_16_ce0       |  out|    1|   ap_memory|                                    layer1_weight_tile_16|         array|
+|layer1_weight_tile_16_we0       |  out|    1|   ap_memory|                                    layer1_weight_tile_16|         array|
+|layer1_weight_tile_16_d0        |  out|   12|   ap_memory|                                    layer1_weight_tile_16|         array|
+|layer1_weight_tile_15_address0  |  out|    2|   ap_memory|                                    layer1_weight_tile_15|         array|
+|layer1_weight_tile_15_ce0       |  out|    1|   ap_memory|                                    layer1_weight_tile_15|         array|
+|layer1_weight_tile_15_we0       |  out|    1|   ap_memory|                                    layer1_weight_tile_15|         array|
+|layer1_weight_tile_15_d0        |  out|   12|   ap_memory|                                    layer1_weight_tile_15|         array|
+|layer1_weight_tile_14_address0  |  out|    2|   ap_memory|                                    layer1_weight_tile_14|         array|
+|layer1_weight_tile_14_ce0       |  out|    1|   ap_memory|                                    layer1_weight_tile_14|         array|
+|layer1_weight_tile_14_we0       |  out|    1|   ap_memory|                                    layer1_weight_tile_14|         array|
+|layer1_weight_tile_14_d0        |  out|   12|   ap_memory|                                    layer1_weight_tile_14|         array|
+|layer1_weight_tile_13_address0  |  out|    2|   ap_memory|                                    layer1_weight_tile_13|         array|
+|layer1_weight_tile_13_ce0       |  out|    1|   ap_memory|                                    layer1_weight_tile_13|         array|
+|layer1_weight_tile_13_we0       |  out|    1|   ap_memory|                                    layer1_weight_tile_13|         array|
+|layer1_weight_tile_13_d0        |  out|   12|   ap_memory|                                    layer1_weight_tile_13|         array|
+|layer1_weight_tile_12_address0  |  out|    2|   ap_memory|                                    layer1_weight_tile_12|         array|
+|layer1_weight_tile_12_ce0       |  out|    1|   ap_memory|                                    layer1_weight_tile_12|         array|
+|layer1_weight_tile_12_we0       |  out|    1|   ap_memory|                                    layer1_weight_tile_12|         array|
+|layer1_weight_tile_12_d0        |  out|   12|   ap_memory|                                    layer1_weight_tile_12|         array|
+|layer1_weight_tile_11_address0  |  out|    2|   ap_memory|                                    layer1_weight_tile_11|         array|
+|layer1_weight_tile_11_ce0       |  out|    1|   ap_memory|                                    layer1_weight_tile_11|         array|
+|layer1_weight_tile_11_we0       |  out|    1|   ap_memory|                                    layer1_weight_tile_11|         array|
+|layer1_weight_tile_11_d0        |  out|   12|   ap_memory|                                    layer1_weight_tile_11|         array|
+|layer1_weight_tile_10_address0  |  out|    2|   ap_memory|                                    layer1_weight_tile_10|         array|
+|layer1_weight_tile_10_ce0       |  out|    1|   ap_memory|                                    layer1_weight_tile_10|         array|
+|layer1_weight_tile_10_we0       |  out|    1|   ap_memory|                                    layer1_weight_tile_10|         array|
+|layer1_weight_tile_10_d0        |  out|   12|   ap_memory|                                    layer1_weight_tile_10|         array|
+|layer1_weight_tile_9_address0   |  out|    2|   ap_memory|                                     layer1_weight_tile_9|         array|
+|layer1_weight_tile_9_ce0        |  out|    1|   ap_memory|                                     layer1_weight_tile_9|         array|
+|layer1_weight_tile_9_we0        |  out|    1|   ap_memory|                                     layer1_weight_tile_9|         array|
+|layer1_weight_tile_9_d0         |  out|   12|   ap_memory|                                     layer1_weight_tile_9|         array|
+|layer1_weight_tile_8_address0   |  out|    2|   ap_memory|                                     layer1_weight_tile_8|         array|
+|layer1_weight_tile_8_ce0        |  out|    1|   ap_memory|                                     layer1_weight_tile_8|         array|
+|layer1_weight_tile_8_we0        |  out|    1|   ap_memory|                                     layer1_weight_tile_8|         array|
+|layer1_weight_tile_8_d0         |  out|   12|   ap_memory|                                     layer1_weight_tile_8|         array|
+|layer1_weight_tile_7_address0   |  out|    2|   ap_memory|                                     layer1_weight_tile_7|         array|
+|layer1_weight_tile_7_ce0        |  out|    1|   ap_memory|                                     layer1_weight_tile_7|         array|
+|layer1_weight_tile_7_we0        |  out|    1|   ap_memory|                                     layer1_weight_tile_7|         array|
+|layer1_weight_tile_7_d0         |  out|   12|   ap_memory|                                     layer1_weight_tile_7|         array|
+|layer1_weight_tile_6_address0   |  out|    2|   ap_memory|                                     layer1_weight_tile_6|         array|
+|layer1_weight_tile_6_ce0        |  out|    1|   ap_memory|                                     layer1_weight_tile_6|         array|
+|layer1_weight_tile_6_we0        |  out|    1|   ap_memory|                                     layer1_weight_tile_6|         array|
+|layer1_weight_tile_6_d0         |  out|   12|   ap_memory|                                     layer1_weight_tile_6|         array|
+|layer1_weight_tile_5_address0   |  out|    2|   ap_memory|                                     layer1_weight_tile_5|         array|
+|layer1_weight_tile_5_ce0        |  out|    1|   ap_memory|                                     layer1_weight_tile_5|         array|
+|layer1_weight_tile_5_we0        |  out|    1|   ap_memory|                                     layer1_weight_tile_5|         array|
+|layer1_weight_tile_5_d0         |  out|   12|   ap_memory|                                     layer1_weight_tile_5|         array|
+|layer1_weight_tile_4_address0   |  out|    2|   ap_memory|                                     layer1_weight_tile_4|         array|
+|layer1_weight_tile_4_ce0        |  out|    1|   ap_memory|                                     layer1_weight_tile_4|         array|
+|layer1_weight_tile_4_we0        |  out|    1|   ap_memory|                                     layer1_weight_tile_4|         array|
+|layer1_weight_tile_4_d0         |  out|   12|   ap_memory|                                     layer1_weight_tile_4|         array|
+|layer1_weight_tile_3_address0   |  out|    2|   ap_memory|                                     layer1_weight_tile_3|         array|
+|layer1_weight_tile_3_ce0        |  out|    1|   ap_memory|                                     layer1_weight_tile_3|         array|
+|layer1_weight_tile_3_we0        |  out|    1|   ap_memory|                                     layer1_weight_tile_3|         array|
+|layer1_weight_tile_3_d0         |  out|   12|   ap_memory|                                     layer1_weight_tile_3|         array|
+|layer1_weight_tile_2_address0   |  out|    2|   ap_memory|                                     layer1_weight_tile_2|         array|
+|layer1_weight_tile_2_ce0        |  out|    1|   ap_memory|                                     layer1_weight_tile_2|         array|
+|layer1_weight_tile_2_we0        |  out|    1|   ap_memory|                                     layer1_weight_tile_2|         array|
+|layer1_weight_tile_2_d0         |  out|   12|   ap_memory|                                     layer1_weight_tile_2|         array|
+|layer1_weight_tile_1_address0   |  out|    2|   ap_memory|                                     layer1_weight_tile_1|         array|
+|layer1_weight_tile_1_ce0        |  out|    1|   ap_memory|                                     layer1_weight_tile_1|         array|
+|layer1_weight_tile_1_we0        |  out|    1|   ap_memory|                                     layer1_weight_tile_1|         array|
+|layer1_weight_tile_1_d0         |  out|   12|   ap_memory|                                     layer1_weight_tile_1|         array|
++--------------------------------+-----+-----+------------+---------------------------------------------------------+--------------+
+

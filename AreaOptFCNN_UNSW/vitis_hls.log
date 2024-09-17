@@ -1,0 +1,527 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+  **** SW Build 3854077 on May  4 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /eda/xilinx/Vitis_HLS/2023.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/eda/xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'rrk307' on host 'Hansolo.poly.edu' (Linux_x86_64 version 4.18.0-553.16.1.el8_10.x86_64) on Sun Sep 15 03:50:37 EDT 2024
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux release 8.10 (Ootpa)"
+INFO: [HLS 200-10] In directory '/home/rrk307/home_hls/python_c_hlsc/AreaOptFCNN_UNSW'
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-1510] Running: source run_hls.tcl
+INFO: [HLS 200-1510] Running: open_project -reset hlsc_fcnn_unsw 
+INFO: [HLS 200-10] Opening and resetting project '/home/rrk307/home_hls/python_c_hlsc/AreaOptFCNN_UNSW/hlsc_fcnn_unsw'.
+INFO: [HLS 200-1510] Running: add_files nn.cpp 
+INFO: [HLS 200-10] Adding design file 'nn.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files weights.cpp 
+INFO: [HLS 200-10] Adding design file 'weights.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files weights.h 
+INFO: [HLS 200-10] Adding design file 'weights.h' to the project
+INFO: [HLS 200-1510] Running: set_top neural_network 
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Creating and opening solution '/home/rrk307/home_hls/python_c_hlsc/AreaOptFCNN_UNSW/hlsc_fcnn_unsw/solution1'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7a35tcpg236-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.1 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.449 GB.
+INFO: [HLS 200-10] Analyzing design file 'weights.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'nn.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 42.28 seconds. CPU system time: 3.46 seconds. Elapsed time: 46.02 seconds; current allocated memory: 1.455 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 54,729 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/rrk307/home_hls/python_c_hlsc/AreaOptFCNN_UNSW/hlsc_fcnn_unsw/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,942 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /home/rrk307/home_hls/python_c_hlsc/AreaOptFCNN_UNSW/hlsc_fcnn_unsw/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,918 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /home/rrk307/home_hls/python_c_hlsc/AreaOptFCNN_UNSW/hlsc_fcnn_unsw/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,056 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /home/rrk307/home_hls/python_c_hlsc/AreaOptFCNN_UNSW/hlsc_fcnn_unsw/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-131] Inlining function 'relu(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'neural_network(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (nn.cpp:66:28)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_73_4' is marked as complete unroll implied by the pipeline pragma (nn.cpp:73:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_61_2' is marked as complete unroll implied by the pipeline pragma (nn.cpp:61:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_279_11' is marked as complete unroll implied by the pipeline pragma (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:279:36)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_275_10' is marked as complete unroll implied by the pipeline pragma (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:275:36)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_269_9' is marked as complete unroll implied by the pipeline pragma (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:269:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_204_8' is marked as complete unroll implied by the pipeline pragma (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:204:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_196_7' is marked as complete unroll implied by the pipeline pragma (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:196:27)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_73_4' (nn.cpp:73:26) in function 'neural_network' completely with a factor of 64 (nn.cpp:42:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_61_2' (nn.cpp:61:26) in function 'neural_network' completely with a factor of 43 (nn.cpp:42:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_279_11' (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:279:36) in function 'exp_reduce::exp<17, 9>' completely with a factor of 19 (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:40:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_275_10' (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:275:36) in function 'exp_reduce::exp<17, 9>' completely with a factor of 3 (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:40:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_269_9' (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:269:31) in function 'exp_reduce::exp<17, 9>' completely with a factor of 3 (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:40:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_204_8' (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:204:35) in function 'exp_reduce::exp<17, 9>' completely with a factor of 22 (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:40:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_196_7' (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:196:27) in function 'exp_reduce::exp<17, 9>' completely with a factor of 8 (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:40:0)
+INFO: [HLS 214-178] Inlining function 'softmax(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, int)' into 'neural_network(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (nn.cpp:42:0)
+INFO: [HLS 214-248] Applying array_partition to 'layer1_output': Complete partitioning on dimension 1. (nn.cpp:51:13)
+INFO: [HLS 214-248] Applying array_partition to 'layer2_output': Complete partitioning on dimension 1. (nn.cpp:52:16)
+INFO: [HLS 214-248] Applying array_partition to 'input': Complete partitioning on dimension 1. (nn.cpp:42:0)
+INFO: [HLS 214-248] Applying array_partition to 'output': Complete partitioning on dimension 1. (nn.cpp:42:0)
+INFO: [HLS 214-364] Automatically inlining function 'ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> exp_reduce::exp<17, 9>(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>)' to improve effectiveness of pipeline pragma in function 'neural_network(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190:12)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array 'layer1_weights' due to pipeline pragma (nn.cpp:59:9)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array 'layer2_weights' due to pipeline pragma (nn.cpp:71:9)
+INFO: [HLS 214-248] Applying array_partition to 'layer2_weights': Complete partitioning on dimension 2. (weights.cpp:72:0)
+INFO: [HLS 214-248] Applying array_partition to 'layer1_weights': Complete partitioning on dimension 2. (weights.cpp:3:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 10.39 seconds. CPU system time: 1.23 seconds. Elapsed time: 14.62 seconds; current allocated memory: 1.455 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.455 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.460 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.460 GB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (nn.cpp:30:9) to (nn.cpp:31:12) in function 'neural_network'... converting 5 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'neural_network' (nn.cpp:14:22)...8 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.8 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.83 seconds; current allocated memory: 1.493 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.54 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.56 seconds; current allocated memory: 1.538 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'neural_network' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neural_network_Pipeline_VITIS_LOOP_58_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_42) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_41) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_40) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_39) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_38) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_37) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_36) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_34) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_33) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_32) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_31) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_30) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_29) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_28) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_27) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_26) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_24) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_22) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_21) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_20) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_18) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_14) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_58_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 47, loop 'VITIS_LOOP_58_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.77 seconds. CPU system time: 0.09 seconds. Elapsed time: 0.86 seconds; current allocated memory: 1.545 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.76 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.79 seconds; current allocated memory: 1.545 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neural_network_Pipeline_VITIS_LOOP_70_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_56) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_55) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_54) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_53) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_52) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_51) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_50) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_49) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_48) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_47) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_46) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_45) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_44) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_43) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_42) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_41) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_40) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_39) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_38) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_37) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_36) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_34) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_33) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_32) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_31) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_30) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_29) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_28) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_27) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_26) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_24) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_22) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_21) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_20) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_18) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_14) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_70_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 60, loop 'VITIS_LOOP_70_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.89 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.93 seconds; current allocated memory: 1.549 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.92 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.95 seconds; current allocated memory: 1.549 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neural_network_Pipeline_VITIS_LOOP_23_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_23_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_23_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.550 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.550 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neural_network_Pipeline_VITIS_LOOP_29_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_29_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'VITIS_LOOP_29_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.551 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.551 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neural_network_Pipeline_VITIS_LOOP_36_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_36_3'.
+WARNING: [HLS 200-880] The II Violation in module 'neural_network_Pipeline_VITIS_LOOP_36_3' (loop 'VITIS_LOOP_36_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between wire write operation ('output_0_write_ln38', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82) and wire read operation ('output_0_read', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'neural_network_Pipeline_VITIS_LOOP_36_3' (loop 'VITIS_LOOP_36_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between wire write operation ('output_0_write_ln38', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82) and wire read operation ('output_0_read', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'neural_network_Pipeline_VITIS_LOOP_36_3' (loop 'VITIS_LOOP_36_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between wire write operation ('output_0_write_ln38', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82) and wire read operation ('output_0_read', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'neural_network_Pipeline_VITIS_LOOP_36_3' (loop 'VITIS_LOOP_36_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between wire write operation ('output_0_write_ln38', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82) and wire read operation ('output_0_read', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'neural_network_Pipeline_VITIS_LOOP_36_3' (loop 'VITIS_LOOP_36_3'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between wire write operation ('output_0_write_ln38', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82) and wire read operation ('output_0_read', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'neural_network_Pipeline_VITIS_LOOP_36_3' (loop 'VITIS_LOOP_36_3'): Unable to enforce a carried dependence constraint (II = 27, distance = 1, offset = 1) between wire write operation ('output_0_write_ln38', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82) and wire read operation ('output_0_read', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'neural_network_Pipeline_VITIS_LOOP_36_3' (loop 'VITIS_LOOP_36_3'): Unable to enforce a carried dependence constraint (II = 29, distance = 1, offset = 1) between wire write operation ('output_0_write_ln38', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82) and wire read operation ('output_0_read', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 30, Depth = 31, loop 'VITIS_LOOP_36_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.43 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.44 seconds; current allocated memory: 1.552 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.45 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.45 seconds; current allocated memory: 1.552 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neural_network' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.553 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.554 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neural_network_Pipeline_VITIS_LOOP_58_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'neural_network_Pipeline_VITIS_LOOP_58_1' pipeline 'VITIS_LOOP_58_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_10s_16s_24ns_24_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_11s_16s_24ns_24_4_1': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_12s_16s_24ns_24_4_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_13s_16s_24ns_24_4_1': 12 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_14s_16s_24ns_24_4_1': 11 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_15s_16s_24ns_24_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_11s_16s_24_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neural_network_Pipeline_VITIS_LOOP_58_1'.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_3_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_4_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_5_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_6_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_7_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_8_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_9_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_10_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_11_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_12_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_13_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_14_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_15_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_16_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_17_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_18_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_19_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_20_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_21_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_22_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_23_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_24_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_25_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_26_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_27_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_28_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_29_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_30_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_31_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_32_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_33_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_34_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_35_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_36_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_37_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_38_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_39_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_40_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_41_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_42_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_bias_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.67 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.72 seconds; current allocated memory: 1.566 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neural_network_Pipeline_VITIS_LOOP_70_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'neural_network_Pipeline_VITIS_LOOP_70_3' pipeline 'VITIS_LOOP_70_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_10ns_16s_24ns_24_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_10s_16s_24ns_24_4_1': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_11ns_16s_24ns_24_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_11s_16s_24ns_24_4_1': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_12s_16s_24ns_24_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_13s_16s_24ns_24_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_5ns_16s_24s_24_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_5s_16s_24s_24_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_6s_16s_24s_24_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_7ns_16s_24s_24_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_7s_16s_24s_24_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_16s_24ns_24_4_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_9ns_16s_24ns_24_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_9s_16s_24ns_24_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_11s_16s_24_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neural_network_Pipeline_VITIS_LOOP_70_3'.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_3_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_4_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_5_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_6_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_7_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_8_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_9_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_12_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_13_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_14_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_15_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_16_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_18_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_20_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_21_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_22_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_23_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_25_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_26_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_27_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_28_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_29_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_30_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_31_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_32_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_33_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_34_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_35_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_36_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_37_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_38_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_39_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_40_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_41_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_42_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_43_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_44_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_45_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_46_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_48_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_49_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_50_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_51_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_52_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_53_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_54_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_55_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_56_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_57_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_58_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_59_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_61_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_62_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_weights_63_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_70_3_layer2_bias_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.19 seconds. CPU system time: 0.1 seconds. Elapsed time: 1.29 seconds; current allocated memory: 1.584 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neural_network_Pipeline_VITIS_LOOP_23_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_10_4_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neural_network_Pipeline_VITIS_LOOP_23_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.65 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.7 seconds; current allocated memory: 1.594 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neural_network_Pipeline_VITIS_LOOP_29_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'neural_network_Pipeline_VITIS_LOOP_29_2' pipeline 'VITIS_LOOP_29_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_25ns_18ns_43_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_25ns_25ns_50_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_10_4_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neural_network_Pipeline_VITIS_LOOP_29_2'.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_29_2_f_x_lsb_table_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_29_2_exp_x_msb_2_m_1_table_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_29_2_exp_x_msb_1_table_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.595 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neural_network_Pipeline_VITIS_LOOP_36_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'VITIS_LOOP_36_3' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'neural_network_Pipeline_VITIS_LOOP_36_3' pipeline 'VITIS_LOOP_36_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_10_4_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_25s_16s_25_29_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neural_network_Pipeline_VITIS_LOOP_36_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.32 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.34 seconds; current allocated memory: 1.598 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neural_network' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_3' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_4' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_5' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_6' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_7' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_8' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_9' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_10' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_11' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_12' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_13' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_14' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_15' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_16' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_17' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_18' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_19' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_20' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_21' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_22' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_23' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_24' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_25' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_26' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_27' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_28' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_29' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_30' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_31' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_32' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_33' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_34' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_35' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_36' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_37' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_38' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_39' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_40' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_41' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_42' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/output_0' to 's_axilite & ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/output_1' to 's_axilite & ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/output_2' to 's_axilite & ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/output_3' to 's_axilite & ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/output_4' to 's_axilite & ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/output_5' to 's_axilite & ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/output_6' to 's_axilite & ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/output_7' to 's_axilite & ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/output_8' to 's_axilite & ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/output_9' to 's_axilite & ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'neural_network' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port CONTROL.
+INFO: [RTGEN 206-100] Bundling port 'input_0', 'input_1', 'input_2', 'input_3', 'input_4', 'input_5', 'input_6', 'input_7', 'input_8', 'input_9', 'input_10', 'input_11', 'input_12', 'input_13', 'input_14', 'input_15', 'input_16', 'input_17', 'input_18', 'input_19', 'input_20', 'input_21', 'input_22', 'input_23', 'input_24', 'input_25', 'input_26', 'input_27', 'input_28', 'input_29', 'input_30', 'input_31', 'input_32', 'input_33', 'input_34', 'input_35', 'input_36', 'input_37', 'input_38', 'input_39', 'input_40', 'input_41' and 'input_42' to AXI-Lite port INPUT.
+INFO: [RTGEN 206-100] Bundling port 'output_0', 'output_1', 'output_2', 'output_3', 'output_4', 'output_5', 'output_6', 'output_7', 'output_8' and 'output_9' to AXI-Lite port OUTPUT.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neural_network'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.47 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.52 seconds; current allocated memory: 1.603 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2.74 seconds. CPU system time: 0.23 seconds. Elapsed time: 3 seconds; current allocated memory: 1.609 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 5.6 seconds. CPU system time: 0.07 seconds. Elapsed time: 5.7 seconds; current allocated memory: 1.622 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for neural_network.
+INFO: [VLOG 209-307] Generating Verilog RTL for neural_network.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 140.45 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 71.68 seconds. CPU system time: 5.59 seconds. Elapsed time: 80.66 seconds; current allocated memory: 177.660 MB.
+INFO: [HLS 200-1510] Running: export_design -format ip_catalog -rtl verilog -output fcnn_unsw_ip 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2695.652 ; gain = 117.016 ; free physical = 418791 ; free virtual = 443441
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/eda/xilinx/Vivado/2023.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 15 03:52:31 2024...
+INFO: [HLS 200-802] Generated output file fcnn_unsw_ip.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 27.09 seconds. CPU system time: 2 seconds. Elapsed time: 28.17 seconds; current allocated memory: 5.938 MB.
+Total synthesis time: 114296 milliseconds
+INFO: [HLS 200-112] Total CPU user time: 103.74 seconds. Total CPU system time: 9.06 seconds. Total elapsed time: 115.12 seconds; peak allocated memory: 1.628 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Sun Sep 15 03:52:32 2024...

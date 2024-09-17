@@ -1,0 +1,32 @@
+{
+    "0": {
+        "name": "fir_filter",
+        "file": "fir_filter.cpp",
+        "fileloc": "11",
+        "instructions": "33",
+        "total_instructions": "91",
+        "calls": "1",
+        "basicblocks": "1",
+        "loads": {
+            "T": "10"
+        }
+    },
+    "1": {
+        "name": "fir_filter_Pipeline_sample_loop",
+        "file": "fir_filter.cpp",
+        "fileloc": "0",
+        "instructions": "58",
+        "total_instructions": "58",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "9"
+        },
+        "stores": {
+            "G": "9"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

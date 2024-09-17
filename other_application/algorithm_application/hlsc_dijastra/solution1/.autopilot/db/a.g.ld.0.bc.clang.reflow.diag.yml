@@ -1,0 +1,48 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: dijastra_algo.cpp, Line: 7, Column: 0 }
+Function:        _Z8dijkstraPA9_iiPi
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_16_1
+  - String:          ''' ('
+  - LoopLoc:         'dijastra_algo.cpp:16:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dijkstra
+  - String:          ''' completely with a factor of '
+  - Factor:          '9'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: dijastra_algo.cpp, Line: 46, Column: 0 }
+Function:        _Z12hls_dijkstraPA9_iiPi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'dijkstra(int (*) [9], int, int*)'
+    DebugLoc:        { File: dijastra_algo.cpp, Line: 7, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hls_dijkstra(int (*) [9], int, int*)'
+    DebugLoc:        { File: dijastra_algo.cpp, Line: 46, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: dijastra_algo.cpp, Line: 13, Column: 7 }
+Function:        _Z12hls_dijkstraPA9_iiPi
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          sptSet.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

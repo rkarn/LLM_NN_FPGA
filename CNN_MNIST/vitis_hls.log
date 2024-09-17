@@ -1,0 +1,54 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+  **** SW Build 3854077 on May  4 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /eda/xilinx/Vitis_HLS/2023.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/eda/xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'rrk307' on host 'Hansolo.poly.edu' (Linux_x86_64 version 4.18.0-553.16.1.el8_10.x86_64) on Thu Sep 12 03:11:34 EDT 2024
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux release 8.10 (Ootpa)"
+INFO: [HLS 200-10] In directory '/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST'
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-1510] Running: source run_hls.tcl
+INFO: [HLS 200-1510] Running: open_project -reset python_hlsc_cnn 
+INFO: [HLS 200-10] Opening and resetting project '/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn'.
+INFO: [HLS 200-1510] Running: add_files mnist_inference.cpp 
+INFO: [HLS 200-10] Adding design file 'mnist_inference.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files mnist_test.cpp 
+INFO: [HLS 200-10] Adding design file 'mnist_test.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files mnist_params.cpp 
+INFO: [HLS 200-10] Adding design file 'mnist_params.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files mnist_params.h 
+INFO: [HLS 200-10] Adding design file 'mnist_params.h' to the project
+INFO: [HLS 200-1510] Running: set_top main 
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Creating and opening solution '/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7a35tcpg236-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.449 GB.
+INFO: [HLS 200-10] Analyzing design file 'mnist_params.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'mnist_test.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'mnist_inference.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 237.03 seconds. CPU system time: 13.14 seconds. Elapsed time: 253.31 seconds; current allocated memory: 1.451 GB.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 237.78 seconds. CPU system time: 13.29 seconds. Elapsed time: 254.26 seconds; current allocated memory: 1.965 MB.
+Error in llvm-link
+    while executing
+"source run_hls.tcl"
+    invoked from within
+"hls::main run_hls.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 242.64 seconds. Total CPU system time: 14.7 seconds. Total elapsed time: 265.01 seconds; peak allocated memory: 1.451 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Thu Sep 12 03:15:56 2024...

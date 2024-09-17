@@ -1,0 +1,35 @@
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_test.pp.0.cpp:8214:7: warning: Added loop label VITIS_LOOP_1213_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1213_1: 
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_test.pp.0.cpp:8214:7: note: FIX-IT applied suggested code changes
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_test.pp.0.cpp:9188:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_test.pp.0.cpp:9188:5: note: FIX-IT applied suggested code changes
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_test.pp.0.cpp:9202:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_test.pp.0.cpp:9202:5: note: FIX-IT applied suggested code changes
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_test.pp.0.cpp:9216:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_test.pp.0.cpp:9216:5: note: FIX-IT applied suggested code changes
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_test.pp.0.cpp:10815:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_test.pp.0.cpp:10815:7: note: FIX-IT applied suggested code changes
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_test.pp.0.cpp:328068:5: warning: Added loop label VITIS_LOOP_300525_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < 10000; i++) {
+    ^~~
+    VITIS_LOOP_300525_1: 
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_test.pp.0.cpp:328068:5: note: FIX-IT applied suggested code changes
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_test.pp.0.cpp:328073:9: warning: Added loop label VITIS_LOOP_300530_2:   [xilinx-label-all-loops]
+        for (int j = 1; j < 10; j++) {
+        ^~~
+        VITIS_LOOP_300530_2: 
+/home/rrk307/home_hls/python_c_hlsc/CNN_MNIST/python_hlsc_cnn/solution1/.autopilot/db/mnist_test.pp.0.cpp:328073:9: note: FIX-IT applied suggested code changes

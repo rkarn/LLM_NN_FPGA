@@ -1,0 +1,32 @@
+{
+    "0": {
+        "name": "hls_dijkstra",
+        "file": "",
+        "fileloc": "0",
+        "instructions": "37",
+        "total_instructions": "295",
+        "calls": "1",
+        "basicblocks": "1",
+        "stores": {
+            "T": "10"
+        }
+    },
+    "1": {
+        "name": "hls_dijkstra_Pipeline_VITIS_LOOP_24_2",
+        "file": "",
+        "fileloc": "0",
+        "instructions": "258",
+        "total_instructions": "258",
+        "calls": "",
+        "basicblocks": "49",
+        "loads": {
+            "L": "28"
+        },
+        "stores": {
+            "L": "11"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

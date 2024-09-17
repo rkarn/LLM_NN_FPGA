@@ -1,0 +1,249 @@
+
+
+================================================================
+== Vitis HLS Report for 'hls_dijkstra'
+================================================================
+* Date:           Fri Sep 13 03:24:43 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        hlsc_dijastra
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.268 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      321|      321|  3.210 us|  3.210 us|  322|  322|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 13
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.15>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%dist_addr = getelementptr i32 %dist, i64 0, i64 0" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 14 'getelementptr' 'dist_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [2/2] (2.15ns)   --->   "%store_ln18 = store i32 2147483647, i4 %dist_addr" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 15 'store' 'store_ln18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+
+State 2 <SV = 1> <Delay = 2.15>
+ST_2 : Operation 16 [1/2] (2.15ns)   --->   "%store_ln18 = store i32 2147483647, i4 %dist_addr" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 16 'store' 'store_ln18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%dist_addr_1 = getelementptr i32 %dist, i64 0, i64 1" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 17 'getelementptr' 'dist_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [2/2] (2.15ns)   --->   "%store_ln18 = store i32 2147483647, i4 %dist_addr_1" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 18 'store' 'store_ln18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+
+State 3 <SV = 2> <Delay = 2.15>
+ST_3 : Operation 19 [1/2] (2.15ns)   --->   "%store_ln18 = store i32 2147483647, i4 %dist_addr_1" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 19 'store' 'store_ln18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%dist_addr_2 = getelementptr i32 %dist, i64 0, i64 2" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 20 'getelementptr' 'dist_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 21 [2/2] (2.15ns)   --->   "%store_ln18 = store i32 2147483647, i4 %dist_addr_2" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 21 'store' 'store_ln18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+
+State 4 <SV = 3> <Delay = 2.15>
+ST_4 : Operation 22 [1/2] (2.15ns)   --->   "%store_ln18 = store i32 2147483647, i4 %dist_addr_2" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 22 'store' 'store_ln18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "%dist_addr_3 = getelementptr i32 %dist, i64 0, i64 3" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 23 'getelementptr' 'dist_addr_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 24 [2/2] (2.15ns)   --->   "%store_ln18 = store i32 2147483647, i4 %dist_addr_3" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 24 'store' 'store_ln18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+
+State 5 <SV = 4> <Delay = 2.15>
+ST_5 : Operation 25 [1/2] (2.15ns)   --->   "%store_ln18 = store i32 2147483647, i4 %dist_addr_3" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 25 'store' 'store_ln18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_5 : Operation 26 [1/1] (0.00ns)   --->   "%dist_addr_4 = getelementptr i32 %dist, i64 0, i64 4" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 26 'getelementptr' 'dist_addr_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 27 [2/2] (2.15ns)   --->   "%store_ln18 = store i32 2147483647, i4 %dist_addr_4" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 27 'store' 'store_ln18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+
+State 6 <SV = 5> <Delay = 2.15>
+ST_6 : Operation 28 [1/2] (2.15ns)   --->   "%store_ln18 = store i32 2147483647, i4 %dist_addr_4" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 28 'store' 'store_ln18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_6 : Operation 29 [1/1] (0.00ns)   --->   "%dist_addr_5 = getelementptr i32 %dist, i64 0, i64 5" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 29 'getelementptr' 'dist_addr_5' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 30 [2/2] (2.15ns)   --->   "%store_ln18 = store i32 2147483647, i4 %dist_addr_5" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 30 'store' 'store_ln18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+
+State 7 <SV = 6> <Delay = 2.15>
+ST_7 : Operation 31 [1/2] (2.15ns)   --->   "%store_ln18 = store i32 2147483647, i4 %dist_addr_5" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 31 'store' 'store_ln18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_7 : Operation 32 [1/1] (0.00ns)   --->   "%dist_addr_6 = getelementptr i32 %dist, i64 0, i64 6" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 32 'getelementptr' 'dist_addr_6' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 33 [2/2] (2.15ns)   --->   "%store_ln18 = store i32 2147483647, i4 %dist_addr_6" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 33 'store' 'store_ln18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+
+State 8 <SV = 7> <Delay = 2.15>
+ST_8 : Operation 34 [1/2] (2.15ns)   --->   "%store_ln18 = store i32 2147483647, i4 %dist_addr_6" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 34 'store' 'store_ln18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_8 : Operation 35 [1/1] (0.00ns)   --->   "%dist_addr_7 = getelementptr i32 %dist, i64 0, i64 7" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 35 'getelementptr' 'dist_addr_7' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 36 [2/2] (2.15ns)   --->   "%store_ln18 = store i32 2147483647, i4 %dist_addr_7" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 36 'store' 'store_ln18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+
+State 9 <SV = 8> <Delay = 2.15>
+ST_9 : Operation 37 [1/2] (2.15ns)   --->   "%store_ln18 = store i32 2147483647, i4 %dist_addr_7" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 37 'store' 'store_ln18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_9 : Operation 38 [1/1] (0.00ns)   --->   "%dist_addr_8 = getelementptr i32 %dist, i64 0, i64 8" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 38 'getelementptr' 'dist_addr_8' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 39 [2/2] (2.15ns)   --->   "%store_ln18 = store i32 2147483647, i4 %dist_addr_8" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 39 'store' 'store_ln18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+
+State 10 <SV = 9> <Delay = 3.15>
+ST_10 : Operation 40 [1/1] (1.00ns)   --->   "%src_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %src" [dijastra_algo.cpp:46]   --->   Operation 40 'read' 'src_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_10 : Operation 41 [1/2] (2.15ns)   --->   "%store_ln18 = store i32 2147483647, i4 %dist_addr_8" [dijastra_algo.cpp:18->dijastra_algo.cpp:52]   --->   Operation 41 'store' 'store_ln18' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_10 : Operation 42 [1/1] (0.00ns)   --->   "%zext_ln22 = zext i32 %src_read" [dijastra_algo.cpp:22->dijastra_algo.cpp:52]   --->   Operation 42 'zext' 'zext_ln22' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 43 [1/1] (0.00ns)   --->   "%dist_addr_9 = getelementptr i32 %dist, i64 0, i64 %zext_ln22" [dijastra_algo.cpp:22->dijastra_algo.cpp:52]   --->   Operation 43 'getelementptr' 'dist_addr_9' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 44 [2/2] (2.15ns)   --->   "%store_ln22 = store i32 0, i4 %dist_addr_9" [dijastra_algo.cpp:22->dijastra_algo.cpp:52]   --->   Operation 44 'store' 'store_ln22' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+
+State 11 <SV = 10> <Delay = 2.15>
+ST_11 : Operation 45 [1/2] (2.15ns)   --->   "%store_ln22 = store i32 0, i4 %dist_addr_9" [dijastra_algo.cpp:22->dijastra_algo.cpp:52]   --->   Operation 45 'store' 'store_ln22' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 46 [2/2] (0.00ns)   --->   "%call_ln0 = call void @hls_dijkstra_Pipeline_VITIS_LOOP_24_2, i32 %dist, i32 %graph"   --->   Operation 46 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 0.00>
+ST_13 : Operation 47 [1/1] (0.00ns)   --->   "%spectopmodule_ln46 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_7" [dijastra_algo.cpp:46]   --->   Operation 47 'spectopmodule' 'spectopmodule_ln46' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 48 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %graph, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_2, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 48 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 49 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %graph, void @empty_3, i32 0, i32 0, void @empty_0, i32 1, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 49 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 50 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %graph, i64 666, i64 207, i64 1"   --->   Operation 50 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 51 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %graph"   --->   Operation 51 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 52 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %src"   --->   Operation 52 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 53 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %src, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_4, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 53 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 54 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %src, void @empty_5, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 54 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 55 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %dist, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_6, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 55 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %dist, void @empty_3, i32 0, i32 0, void @empty_0, i32 1, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 57 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %dist, i64 666, i64 207, i64 1"   --->   Operation 57 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 58 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %dist"   --->   Operation 58 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 59 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 59 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 60 [1/2] (0.00ns)   --->   "%call_ln0 = call void @hls_dijkstra_Pipeline_VITIS_LOOP_24_2, i32 %dist, i32 %graph"   --->   Operation 60 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 61 [1/1] (0.00ns)   --->   "%ret_ln53 = ret" [dijastra_algo.cpp:53]   --->   Operation 61 'ret' 'ret_ln53' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 2.152ns
+The critical path consists of the following:
+	'getelementptr' operation ('dist_addr', dijastra_algo.cpp:18->dijastra_algo.cpp:52) [18]  (0.000 ns)
+	'store' operation ('store_ln18', dijastra_algo.cpp:18->dijastra_algo.cpp:52) of constant 2147483647 on array 'dist' [19]  (2.152 ns)
+
+ <State 2>: 2.152ns
+The critical path consists of the following:
+	'store' operation ('store_ln18', dijastra_algo.cpp:18->dijastra_algo.cpp:52) of constant 2147483647 on array 'dist' [19]  (2.152 ns)
+
+ <State 3>: 2.152ns
+The critical path consists of the following:
+	'store' operation ('store_ln18', dijastra_algo.cpp:18->dijastra_algo.cpp:52) of constant 2147483647 on array 'dist' [21]  (2.152 ns)
+
+ <State 4>: 2.152ns
+The critical path consists of the following:
+	'store' operation ('store_ln18', dijastra_algo.cpp:18->dijastra_algo.cpp:52) of constant 2147483647 on array 'dist' [23]  (2.152 ns)
+
+ <State 5>: 2.152ns
+The critical path consists of the following:
+	'store' operation ('store_ln18', dijastra_algo.cpp:18->dijastra_algo.cpp:52) of constant 2147483647 on array 'dist' [25]  (2.152 ns)
+
+ <State 6>: 2.152ns
+The critical path consists of the following:
+	'store' operation ('store_ln18', dijastra_algo.cpp:18->dijastra_algo.cpp:52) of constant 2147483647 on array 'dist' [27]  (2.152 ns)
+
+ <State 7>: 2.152ns
+The critical path consists of the following:
+	'store' operation ('store_ln18', dijastra_algo.cpp:18->dijastra_algo.cpp:52) of constant 2147483647 on array 'dist' [29]  (2.152 ns)
+
+ <State 8>: 2.152ns
+The critical path consists of the following:
+	'store' operation ('store_ln18', dijastra_algo.cpp:18->dijastra_algo.cpp:52) of constant 2147483647 on array 'dist' [31]  (2.152 ns)
+
+ <State 9>: 2.152ns
+The critical path consists of the following:
+	'store' operation ('store_ln18', dijastra_algo.cpp:18->dijastra_algo.cpp:52) of constant 2147483647 on array 'dist' [33]  (2.152 ns)
+
+ <State 10>: 3.152ns
+The critical path consists of the following:
+	s_axi read operation ('src_read', dijastra_algo.cpp:46) on port 'src' (dijastra_algo.cpp:46) [17]  (1.000 ns)
+	'getelementptr' operation ('dist_addr_9', dijastra_algo.cpp:22->dijastra_algo.cpp:52) [37]  (0.000 ns)
+	'store' operation ('store_ln22', dijastra_algo.cpp:22->dijastra_algo.cpp:52) of constant 0 on array 'dist' [38]  (2.152 ns)
+
+ <State 11>: 2.152ns
+The critical path consists of the following:
+	'store' operation ('store_ln22', dijastra_algo.cpp:22->dijastra_algo.cpp:52) of constant 0 on array 'dist' [38]  (2.152 ns)
+
+ <State 12>: 0.000ns
+The critical path consists of the following:
+
+ <State 13>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

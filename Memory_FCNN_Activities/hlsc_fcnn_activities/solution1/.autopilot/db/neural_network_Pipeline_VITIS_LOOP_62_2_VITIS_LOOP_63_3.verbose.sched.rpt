@@ -1,0 +1,240 @@
+
+
+================================================================
+== Vitis HLS Report for 'neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3'
+================================================================
+* Date:           Sun Sep 15 03:31:45 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        hlsc_fcnn_activities
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.980 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      146|      146|  1.460 us|  1.460 us|  146|  146|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |             Loop Name             |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_62_2_VITIS_LOOP_63_3  |      144|      144|         3|          2|          2|    72|       yes|
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.61>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%j = alloca i32 1"   --->   Operation 6 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 7 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 8 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%tile_read = read i5 @_ssdm_op_Read.ap_auto.i5, i5 %tile"   --->   Operation 9 'read' 'tile_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (1.61ns)   --->   "%store_ln0 = store i7 0, i7 %indvar_flatten"   --->   Operation 10 'store' 'store_ln0' <Predicate = true> <Delay = 1.61>
+ST_1 : Operation 11 [1/1] (1.61ns)   --->   "%store_ln0 = store i64 0, i64 %i"   --->   Operation 11 'store' 'store_ln0' <Predicate = true> <Delay = 1.61>
+ST_1 : Operation 12 [1/1] (1.61ns)   --->   "%store_ln0 = store i5 0, i5 %j"   --->   Operation 12 'store' 'store_ln0' <Predicate = true> <Delay = 1.61>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 13 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 6.40>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i7 %indvar_flatten" [nn.cpp:62]   --->   Operation 14 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (2.03ns)   --->   "%icmp_ln62 = icmp_eq  i7 %indvar_flatten_load, i7 72" [nn.cpp:62]   --->   Operation 15 'icmp' 'icmp_ln62' <Predicate = true> <Delay = 2.03> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.03> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 72, i64 72, i64 72"   --->   Operation 16 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (2.03ns)   --->   "%add_ln62_2 = add i7 %indvar_flatten_load, i7 1" [nn.cpp:62]   --->   Operation 17 'add' 'add_ln62_2' <Predicate = true> <Delay = 2.03> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.03> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln62 = br i1 %icmp_ln62, void %for.inc52, void %for.cond56.preheader.exitStub" [nn.cpp:62]   --->   Operation 18 'br' 'br_ln62' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%j_load = load i5 %j" [nn.cpp:63]   --->   Operation 19 'load' 'j_load' <Predicate = (!icmp_ln62)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%i_load = load i64 %i" [nn.cpp:62]   --->   Operation 20 'load' 'i_load' <Predicate = (!icmp_ln62)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (3.56ns)   --->   "%add_ln62 = add i64 %i_load, i64 1" [nn.cpp:62]   --->   Operation 21 'add' 'add_ln62' <Predicate = (!icmp_ln62)> <Delay = 3.56> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 22 [1/1] (1.86ns)   --->   "%icmp_ln63 = icmp_eq  i5 %j_load, i5 18" [nn.cpp:63]   --->   Operation 22 'icmp' 'icmp_ln63' <Predicate = (!icmp_ln62)> <Delay = 1.86> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 23 [1/1] (1.21ns)   --->   "%select_ln62 = select i1 %icmp_ln63, i5 0, i5 %j_load" [nn.cpp:62]   --->   Operation 23 'select' 'select_ln62' <Predicate = (!icmp_ln62)> <Delay = 1.21> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 24 [1/1] (0.98ns)   --->   "%select_ln62_1 = select i1 %icmp_ln63, i64 %add_ln62, i64 %i_load" [nn.cpp:62]   --->   Operation 24 'select' 'select_ln62_1' <Predicate = (!icmp_ln62)> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%trunc_ln62 = trunc i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 25 'trunc' 'trunc_ln62' <Predicate = (!icmp_ln62)> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (1.86ns)   --->   "%add_ln62_1 = add i5 %trunc_ln62, i5 %tile_read" [nn.cpp:62]   --->   Operation 26 'add' 'add_ln62_1' <Predicate = (!icmp_ln62)> <Delay = 1.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 27 [1/1] (1.88ns)   --->   "%switch_ln65 = switch i5 %select_ln62, void %arrayidx516.case.17, i5 0, void %arrayidx516.case.0, i5 1, void %arrayidx516.case.1, i5 2, void %arrayidx516.case.2, i5 3, void %arrayidx516.case.3, i5 4, void %arrayidx516.case.4, i5 5, void %arrayidx516.case.5, i5 6, void %arrayidx516.case.6, i5 7, void %arrayidx516.case.7, i5 8, void %arrayidx516.case.8, i5 9, void %arrayidx516.case.9, i5 10, void %arrayidx516.case.10, i5 11, void %arrayidx516.case.11, i5 12, void %arrayidx516.case.12, i5 13, void %arrayidx516.case.13, i5 14, void %arrayidx516.case.14, i5 15, void %arrayidx516.case.15, i5 16, void %arrayidx516.case.16" [nn.cpp:65]   --->   Operation 27 'switch' 'switch_ln65' <Predicate = (!icmp_ln62)> <Delay = 1.88>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln65 = br void %arrayidx516.exit" [nn.cpp:65]   --->   Operation 28 'br' 'br_ln65' <Predicate = (!icmp_ln62 & select_ln62 == 16)> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln65 = br void %arrayidx516.exit" [nn.cpp:65]   --->   Operation 29 'br' 'br_ln65' <Predicate = (!icmp_ln62 & select_ln62 == 15)> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln65 = br void %arrayidx516.exit" [nn.cpp:65]   --->   Operation 30 'br' 'br_ln65' <Predicate = (!icmp_ln62 & select_ln62 == 14)> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln65 = br void %arrayidx516.exit" [nn.cpp:65]   --->   Operation 31 'br' 'br_ln65' <Predicate = (!icmp_ln62 & select_ln62 == 13)> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%br_ln65 = br void %arrayidx516.exit" [nn.cpp:65]   --->   Operation 32 'br' 'br_ln65' <Predicate = (!icmp_ln62 & select_ln62 == 12)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%br_ln65 = br void %arrayidx516.exit" [nn.cpp:65]   --->   Operation 33 'br' 'br_ln65' <Predicate = (!icmp_ln62 & select_ln62 == 11)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%br_ln65 = br void %arrayidx516.exit" [nn.cpp:65]   --->   Operation 34 'br' 'br_ln65' <Predicate = (!icmp_ln62 & select_ln62 == 10)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln65 = br void %arrayidx516.exit" [nn.cpp:65]   --->   Operation 35 'br' 'br_ln65' <Predicate = (!icmp_ln62 & select_ln62 == 9)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%br_ln65 = br void %arrayidx516.exit" [nn.cpp:65]   --->   Operation 36 'br' 'br_ln65' <Predicate = (!icmp_ln62 & select_ln62 == 8)> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%br_ln65 = br void %arrayidx516.exit" [nn.cpp:65]   --->   Operation 37 'br' 'br_ln65' <Predicate = (!icmp_ln62 & select_ln62 == 7)> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln65 = br void %arrayidx516.exit" [nn.cpp:65]   --->   Operation 38 'br' 'br_ln65' <Predicate = (!icmp_ln62 & select_ln62 == 6)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%br_ln65 = br void %arrayidx516.exit" [nn.cpp:65]   --->   Operation 39 'br' 'br_ln65' <Predicate = (!icmp_ln62 & select_ln62 == 5)> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%br_ln65 = br void %arrayidx516.exit" [nn.cpp:65]   --->   Operation 40 'br' 'br_ln65' <Predicate = (!icmp_ln62 & select_ln62 == 4)> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln65 = br void %arrayidx516.exit" [nn.cpp:65]   --->   Operation 41 'br' 'br_ln65' <Predicate = (!icmp_ln62 & select_ln62 == 3)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%br_ln65 = br void %arrayidx516.exit" [nn.cpp:65]   --->   Operation 42 'br' 'br_ln65' <Predicate = (!icmp_ln62 & select_ln62 == 2)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln65 = br void %arrayidx516.exit" [nn.cpp:65]   --->   Operation 43 'br' 'br_ln65' <Predicate = (!icmp_ln62 & select_ln62 == 1)> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln65 = br void %arrayidx516.exit" [nn.cpp:65]   --->   Operation 44 'br' 'br_ln65' <Predicate = (!icmp_ln62 & select_ln62 == 0)> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln65 = br void %arrayidx516.exit" [nn.cpp:65]   --->   Operation 45 'br' 'br_ln65' <Predicate = (!icmp_ln62 & select_ln62 != 0 & select_ln62 != 1 & select_ln62 != 2 & select_ln62 != 3 & select_ln62 != 4 & select_ln62 != 5 & select_ln62 != 6 & select_ln62 != 7 & select_ln62 != 8 & select_ln62 != 9 & select_ln62 != 10 & select_ln62 != 11 & select_ln62 != 12 & select_ln62 != 13 & select_ln62 != 14 & select_ln62 != 15 & select_ln62 != 16)> <Delay = 0.00>
+ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 100 'ret' 'ret_ln0' <Predicate = (icmp_ln62)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 6.97>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_7 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i5.i4, i5 %add_ln62_1, i4 0" [nn.cpp:65]   --->   Operation 46 'bitconcatenate' 'tmp_7' <Predicate = (!icmp_ln62)> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_8 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i5.i1, i5 %add_ln62_1, i1 0" [nn.cpp:65]   --->   Operation 47 'bitconcatenate' 'tmp_8' <Predicate = (!icmp_ln62)> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%zext_ln65 = zext i6 %tmp_8" [nn.cpp:65]   --->   Operation 48 'zext' 'zext_ln65' <Predicate = (!icmp_ln62)> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln65 = add i9 %tmp_7, i9 %zext_ln65" [nn.cpp:65]   --->   Operation 49 'add' 'add_ln65' <Predicate = (!icmp_ln62)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.86> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%zext_ln65_1 = zext i5 %select_ln62" [nn.cpp:65]   --->   Operation 50 'zext' 'zext_ln65_1' <Predicate = (!icmp_ln62)> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (3.72ns) (root node of TernaryAdder)   --->   "%add_ln65_1 = add i9 %add_ln65, i9 %zext_ln65_1" [nn.cpp:65]   --->   Operation 51 'add' 'add_ln65_1' <Predicate = (!icmp_ln62)> <Delay = 3.72> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.86> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%zext_ln65_2 = zext i9 %add_ln65_1" [nn.cpp:65]   --->   Operation 52 'zext' 'zext_ln65_2' <Predicate = (!icmp_ln62)> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%layer1_weights_addr = getelementptr i12 %layer1_weights, i64 0, i64 %zext_ln65_2" [nn.cpp:65]   --->   Operation 53 'getelementptr' 'layer1_weights_addr' <Predicate = (!icmp_ln62)> <Delay = 0.00>
+ST_3 : Operation 54 [2/2] (3.25ns)   --->   "%layer1_weights_load = load i9 %layer1_weights_addr" [nn.cpp:65]   --->   Operation 54 'load' 'layer1_weights_load' <Predicate = (!icmp_ln62)> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 12> <Depth = 360> <ROM>
+ST_3 : Operation 55 [1/1] (1.86ns)   --->   "%add_ln63 = add i5 %select_ln62, i5 1" [nn.cpp:63]   --->   Operation 55 'add' 'add_ln63' <Predicate = (!icmp_ln62)> <Delay = 1.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 56 [1/1] (1.61ns)   --->   "%store_ln63 = store i7 %add_ln62_2, i7 %indvar_flatten" [nn.cpp:63]   --->   Operation 56 'store' 'store_ln63' <Predicate = (!icmp_ln62)> <Delay = 1.61>
+ST_3 : Operation 57 [1/1] (1.61ns)   --->   "%store_ln63 = store i64 %select_ln62_1, i64 %i" [nn.cpp:63]   --->   Operation 57 'store' 'store_ln63' <Predicate = (!icmp_ln62)> <Delay = 1.61>
+ST_3 : Operation 58 [1/1] (1.61ns)   --->   "%store_ln63 = store i5 %add_ln63, i5 %j" [nn.cpp:63]   --->   Operation 58 'store' 'store_ln63' <Predicate = (!icmp_ln62)> <Delay = 1.61>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln63 = br void %for.inc" [nn.cpp:63]   --->   Operation 59 'br' 'br_ln63' <Predicate = (!icmp_ln62)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 5.40>
+ST_4 : Operation 60 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_62_2_VITIS_LOOP_63_3_str"   --->   Operation 60 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "%specpipeline_ln64 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_1" [nn.cpp:64]   --->   Operation 61 'specpipeline' 'specpipeline_ln64' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%specloopname_ln63 = specloopname void @_ssdm_op_SpecLoopName, void @empty_20" [nn.cpp:63]   --->   Operation 62 'specloopname' 'specloopname_ln63' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 63 [1/2] (3.25ns)   --->   "%layer1_weights_load = load i9 %layer1_weights_addr" [nn.cpp:65]   --->   Operation 63 'load' 'layer1_weights_load' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 12> <Depth = 360> <ROM>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%layer1_weight_tile_16_addr = getelementptr i12 %layer1_weight_tile_16, i64 0, i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 64 'getelementptr' 'layer1_weight_tile_16_addr' <Predicate = (select_ln62 == 16)> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (2.15ns)   --->   "%store_ln65 = store i12 %layer1_weights_load, i2 %layer1_weight_tile_16_addr" [nn.cpp:65]   --->   Operation 65 'store' 'store_ln65' <Predicate = (select_ln62 == 16)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 4> <RAM>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%layer1_weight_tile_15_addr = getelementptr i12 %layer1_weight_tile_15, i64 0, i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 66 'getelementptr' 'layer1_weight_tile_15_addr' <Predicate = (select_ln62 == 15)> <Delay = 0.00>
+ST_4 : Operation 67 [1/1] (2.15ns)   --->   "%store_ln65 = store i12 %layer1_weights_load, i2 %layer1_weight_tile_15_addr" [nn.cpp:65]   --->   Operation 67 'store' 'store_ln65' <Predicate = (select_ln62 == 15)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 4> <RAM>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "%layer1_weight_tile_14_addr = getelementptr i12 %layer1_weight_tile_14, i64 0, i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 68 'getelementptr' 'layer1_weight_tile_14_addr' <Predicate = (select_ln62 == 14)> <Delay = 0.00>
+ST_4 : Operation 69 [1/1] (2.15ns)   --->   "%store_ln65 = store i12 %layer1_weights_load, i2 %layer1_weight_tile_14_addr" [nn.cpp:65]   --->   Operation 69 'store' 'store_ln65' <Predicate = (select_ln62 == 14)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 4> <RAM>
+ST_4 : Operation 70 [1/1] (0.00ns)   --->   "%layer1_weight_tile_13_addr = getelementptr i12 %layer1_weight_tile_13, i64 0, i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 70 'getelementptr' 'layer1_weight_tile_13_addr' <Predicate = (select_ln62 == 13)> <Delay = 0.00>
+ST_4 : Operation 71 [1/1] (2.15ns)   --->   "%store_ln65 = store i12 %layer1_weights_load, i2 %layer1_weight_tile_13_addr" [nn.cpp:65]   --->   Operation 71 'store' 'store_ln65' <Predicate = (select_ln62 == 13)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 4> <RAM>
+ST_4 : Operation 72 [1/1] (0.00ns)   --->   "%layer1_weight_tile_12_addr = getelementptr i12 %layer1_weight_tile_12, i64 0, i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 72 'getelementptr' 'layer1_weight_tile_12_addr' <Predicate = (select_ln62 == 12)> <Delay = 0.00>
+ST_4 : Operation 73 [1/1] (2.15ns)   --->   "%store_ln65 = store i12 %layer1_weights_load, i2 %layer1_weight_tile_12_addr" [nn.cpp:65]   --->   Operation 73 'store' 'store_ln65' <Predicate = (select_ln62 == 12)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 4> <RAM>
+ST_4 : Operation 74 [1/1] (0.00ns)   --->   "%layer1_weight_tile_11_addr = getelementptr i12 %layer1_weight_tile_11, i64 0, i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 74 'getelementptr' 'layer1_weight_tile_11_addr' <Predicate = (select_ln62 == 11)> <Delay = 0.00>
+ST_4 : Operation 75 [1/1] (2.15ns)   --->   "%store_ln65 = store i12 %layer1_weights_load, i2 %layer1_weight_tile_11_addr" [nn.cpp:65]   --->   Operation 75 'store' 'store_ln65' <Predicate = (select_ln62 == 11)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 4> <RAM>
+ST_4 : Operation 76 [1/1] (0.00ns)   --->   "%layer1_weight_tile_10_addr = getelementptr i12 %layer1_weight_tile_10, i64 0, i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 76 'getelementptr' 'layer1_weight_tile_10_addr' <Predicate = (select_ln62 == 10)> <Delay = 0.00>
+ST_4 : Operation 77 [1/1] (2.15ns)   --->   "%store_ln65 = store i12 %layer1_weights_load, i2 %layer1_weight_tile_10_addr" [nn.cpp:65]   --->   Operation 77 'store' 'store_ln65' <Predicate = (select_ln62 == 10)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 4> <RAM>
+ST_4 : Operation 78 [1/1] (0.00ns)   --->   "%layer1_weight_tile_9_addr = getelementptr i12 %layer1_weight_tile_9, i64 0, i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 78 'getelementptr' 'layer1_weight_tile_9_addr' <Predicate = (select_ln62 == 9)> <Delay = 0.00>
+ST_4 : Operation 79 [1/1] (2.15ns)   --->   "%store_ln65 = store i12 %layer1_weights_load, i2 %layer1_weight_tile_9_addr" [nn.cpp:65]   --->   Operation 79 'store' 'store_ln65' <Predicate = (select_ln62 == 9)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 4> <RAM>
+ST_4 : Operation 80 [1/1] (0.00ns)   --->   "%layer1_weight_tile_8_addr = getelementptr i12 %layer1_weight_tile_8, i64 0, i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 80 'getelementptr' 'layer1_weight_tile_8_addr' <Predicate = (select_ln62 == 8)> <Delay = 0.00>
+ST_4 : Operation 81 [1/1] (2.15ns)   --->   "%store_ln65 = store i12 %layer1_weights_load, i2 %layer1_weight_tile_8_addr" [nn.cpp:65]   --->   Operation 81 'store' 'store_ln65' <Predicate = (select_ln62 == 8)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 4> <RAM>
+ST_4 : Operation 82 [1/1] (0.00ns)   --->   "%layer1_weight_tile_7_addr = getelementptr i12 %layer1_weight_tile_7, i64 0, i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 82 'getelementptr' 'layer1_weight_tile_7_addr' <Predicate = (select_ln62 == 7)> <Delay = 0.00>
+ST_4 : Operation 83 [1/1] (2.15ns)   --->   "%store_ln65 = store i12 %layer1_weights_load, i2 %layer1_weight_tile_7_addr" [nn.cpp:65]   --->   Operation 83 'store' 'store_ln65' <Predicate = (select_ln62 == 7)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 4> <RAM>
+ST_4 : Operation 84 [1/1] (0.00ns)   --->   "%layer1_weight_tile_6_addr = getelementptr i12 %layer1_weight_tile_6, i64 0, i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 84 'getelementptr' 'layer1_weight_tile_6_addr' <Predicate = (select_ln62 == 6)> <Delay = 0.00>
+ST_4 : Operation 85 [1/1] (2.15ns)   --->   "%store_ln65 = store i12 %layer1_weights_load, i2 %layer1_weight_tile_6_addr" [nn.cpp:65]   --->   Operation 85 'store' 'store_ln65' <Predicate = (select_ln62 == 6)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 4> <RAM>
+ST_4 : Operation 86 [1/1] (0.00ns)   --->   "%layer1_weight_tile_5_addr = getelementptr i12 %layer1_weight_tile_5, i64 0, i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 86 'getelementptr' 'layer1_weight_tile_5_addr' <Predicate = (select_ln62 == 5)> <Delay = 0.00>
+ST_4 : Operation 87 [1/1] (2.15ns)   --->   "%store_ln65 = store i12 %layer1_weights_load, i2 %layer1_weight_tile_5_addr" [nn.cpp:65]   --->   Operation 87 'store' 'store_ln65' <Predicate = (select_ln62 == 5)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 4> <RAM>
+ST_4 : Operation 88 [1/1] (0.00ns)   --->   "%layer1_weight_tile_4_addr = getelementptr i12 %layer1_weight_tile_4, i64 0, i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 88 'getelementptr' 'layer1_weight_tile_4_addr' <Predicate = (select_ln62 == 4)> <Delay = 0.00>
+ST_4 : Operation 89 [1/1] (2.15ns)   --->   "%store_ln65 = store i12 %layer1_weights_load, i2 %layer1_weight_tile_4_addr" [nn.cpp:65]   --->   Operation 89 'store' 'store_ln65' <Predicate = (select_ln62 == 4)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 4> <RAM>
+ST_4 : Operation 90 [1/1] (0.00ns)   --->   "%layer1_weight_tile_3_addr = getelementptr i12 %layer1_weight_tile_3, i64 0, i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 90 'getelementptr' 'layer1_weight_tile_3_addr' <Predicate = (select_ln62 == 3)> <Delay = 0.00>
+ST_4 : Operation 91 [1/1] (2.15ns)   --->   "%store_ln65 = store i12 %layer1_weights_load, i2 %layer1_weight_tile_3_addr" [nn.cpp:65]   --->   Operation 91 'store' 'store_ln65' <Predicate = (select_ln62 == 3)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 4> <RAM>
+ST_4 : Operation 92 [1/1] (0.00ns)   --->   "%layer1_weight_tile_2_addr = getelementptr i12 %layer1_weight_tile_2, i64 0, i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 92 'getelementptr' 'layer1_weight_tile_2_addr' <Predicate = (select_ln62 == 2)> <Delay = 0.00>
+ST_4 : Operation 93 [1/1] (2.15ns)   --->   "%store_ln65 = store i12 %layer1_weights_load, i2 %layer1_weight_tile_2_addr" [nn.cpp:65]   --->   Operation 93 'store' 'store_ln65' <Predicate = (select_ln62 == 2)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 4> <RAM>
+ST_4 : Operation 94 [1/1] (0.00ns)   --->   "%layer1_weight_tile_1_addr = getelementptr i12 %layer1_weight_tile_1, i64 0, i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 94 'getelementptr' 'layer1_weight_tile_1_addr' <Predicate = (select_ln62 == 1)> <Delay = 0.00>
+ST_4 : Operation 95 [1/1] (2.15ns)   --->   "%store_ln65 = store i12 %layer1_weights_load, i2 %layer1_weight_tile_1_addr" [nn.cpp:65]   --->   Operation 95 'store' 'store_ln65' <Predicate = (select_ln62 == 1)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 4> <RAM>
+ST_4 : Operation 96 [1/1] (0.00ns)   --->   "%layer1_weight_tile_addr = getelementptr i12 %layer1_weight_tile, i64 0, i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 96 'getelementptr' 'layer1_weight_tile_addr' <Predicate = (select_ln62 == 0)> <Delay = 0.00>
+ST_4 : Operation 97 [1/1] (2.15ns)   --->   "%store_ln65 = store i12 %layer1_weights_load, i2 %layer1_weight_tile_addr" [nn.cpp:65]   --->   Operation 97 'store' 'store_ln65' <Predicate = (select_ln62 == 0)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 4> <RAM>
+ST_4 : Operation 98 [1/1] (0.00ns)   --->   "%layer1_weight_tile_17_addr = getelementptr i12 %layer1_weight_tile_17, i64 0, i64 %select_ln62_1" [nn.cpp:62]   --->   Operation 98 'getelementptr' 'layer1_weight_tile_17_addr' <Predicate = (select_ln62 == 31) | (select_ln62 == 30) | (select_ln62 == 29) | (select_ln62 == 28) | (select_ln62 == 27) | (select_ln62 == 26) | (select_ln62 == 25) | (select_ln62 == 24) | (select_ln62 == 23) | (select_ln62 == 22) | (select_ln62 == 21) | (select_ln62 == 20) | (select_ln62 == 19) | (select_ln62 == 18) | (select_ln62 == 17)> <Delay = 0.00>
+ST_4 : Operation 99 [1/1] (2.15ns)   --->   "%store_ln65 = store i12 %layer1_weights_load, i2 %layer1_weight_tile_17_addr" [nn.cpp:65]   --->   Operation 99 'store' 'store_ln65' <Predicate = (select_ln62 == 31) | (select_ln62 == 30) | (select_ln62 == 29) | (select_ln62 == 28) | (select_ln62 == 27) | (select_ln62 == 26) | (select_ln62 == 25) | (select_ln62 == 24) | (select_ln62 == 23) | (select_ln62 == 22) | (select_ln62 == 21) | (select_ln62 == 20) | (select_ln62 == 19) | (select_ln62 == 18) | (select_ln62 == 17)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 4> <RAM>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.610ns
+The critical path consists of the following:
+	'alloca' operation ('indvar_flatten') [23]  (0.000 ns)
+	'store' operation ('store_ln0') of constant 0 on local variable 'indvar_flatten' [25]  (1.610 ns)
+
+ <State 2>: 6.409ns
+The critical path consists of the following:
+	'load' operation ('i_load', nn.cpp:62) on local variable 'i' [37]  (0.000 ns)
+	'add' operation ('add_ln62', nn.cpp:62) [38]  (3.560 ns)
+	'select' operation ('select_ln62_1', nn.cpp:62) [42]  (0.987 ns)
+	'add' operation ('add_ln62_1', nn.cpp:62) [44]  (1.861 ns)
+
+ <State 3>: 6.980ns
+The critical path consists of the following:
+	'add' operation ('add_ln65', nn.cpp:65) [48]  (0.000 ns)
+	'add' operation ('add_ln65_1', nn.cpp:65) [50]  (3.723 ns)
+	'getelementptr' operation ('layer1_weights_addr', nn.cpp:65) [52]  (0.000 ns)
+	'load' operation ('layer1_weights_load', nn.cpp:65) on array 'layer1_weights' [55]  (3.257 ns)
+
+ <State 4>: 5.409ns
+The critical path consists of the following:
+	'load' operation ('layer1_weights_load', nn.cpp:65) on array 'layer1_weights' [55]  (3.257 ns)
+	'store' operation ('store_ln65', nn.cpp:65) of variable 'layer1_weights_load', nn.cpp:65 on array 'layer1_weight_tile_16' [59]  (2.152 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

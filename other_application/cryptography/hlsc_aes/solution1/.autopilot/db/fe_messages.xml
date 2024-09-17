@@ -1,0 +1,30 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-4855" msg_severity="WARNING" msg_loc="aes.cpp:117:25" msg_body="format specifies type 'unsigned int' but the argument has type 'byte' (aka 'ap_uint&lt;8&gt;')">
+        <args ClangWarningOption="format"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="aes.cpp:82:69" msg_body="unused parameter 'input'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="aes.cpp:82:102" msg_body="unused parameter 'key'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rrk307/home_hls/python_c_hlsc/other_application/cryptography/run_hls.tcl:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="AES_Encrypt" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=AES_Encrypt" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="aes.cpp:54:0" msg_body="Inlining function 'xtime(ap_uint&lt;8&gt;)' into 'MixColumns(ap_uint&lt;8&gt; (*) [4])'">
+        <args Callee="xtime(ap_uint&lt;8&gt;)" Callee-DebugLoc="File aes.cpp Line 50 Column 0" Caller="MixColumns(ap_uint&lt;8&gt; (*) [4])" Caller-DebugLoc="File aes.cpp Line 54 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="aes.cpp:82:0" msg_body="Inlining function 'AddRoundKey(ap_uint&lt;8&gt; (*) [4], ap_uint&lt;32&gt;*, int)' into 'AES_Encrypt(ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*, ap_uint&lt;32&gt;*)'">
+        <args Callee="AddRoundKey(ap_uint&lt;8&gt; (*) [4], ap_uint&lt;32&gt;*, int)" Callee-DebugLoc="File aes.cpp Line 74 Column 0" Caller="AES_Encrypt(ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*, ap_uint&lt;32&gt;*)" Caller-DebugLoc="File aes.cpp Line 82 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="aes.cpp:82:0" msg_body="Inlining function 'SubBytes(ap_uint&lt;8&gt; (*) [4])' into 'AES_Encrypt(ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*, ap_uint&lt;32&gt;*)'">
+        <args Callee="SubBytes(ap_uint&lt;8&gt; (*) [4])" Callee-DebugLoc="File aes.cpp Line 16 Column 0" Caller="AES_Encrypt(ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*, ap_uint&lt;32&gt;*)" Caller-DebugLoc="File aes.cpp Line 82 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="aes.cpp:82:0" msg_body="Inlining function 'ShiftRows(ap_uint&lt;8&gt; (*) [4])' into 'AES_Encrypt(ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*, ap_uint&lt;32&gt;*)'">
+        <args Callee="ShiftRows(ap_uint&lt;8&gt; (*) [4])" Callee-DebugLoc="File aes.cpp Line 24 Column 0" Caller="AES_Encrypt(ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*, ap_uint&lt;32&gt;*)" Caller-DebugLoc="File aes.cpp Line 82 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="aes.cpp:82:0" msg_body="Inlining function 'MixColumns(ap_uint&lt;8&gt; (*) [4])' into 'AES_Encrypt(ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*, ap_uint&lt;32&gt;*)'">
+        <args Callee="MixColumns(ap_uint&lt;8&gt; (*) [4])" Callee-DebugLoc="File aes.cpp Line 54 Column 0" Caller="AES_Encrypt(ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*, ap_uint&lt;32&gt;*)" Caller-DebugLoc="File aes.cpp Line 82 Column 0"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

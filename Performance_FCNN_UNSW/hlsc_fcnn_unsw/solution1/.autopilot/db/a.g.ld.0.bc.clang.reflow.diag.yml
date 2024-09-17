@@ -1,0 +1,1619 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: nn.cpp, Line: 92, Column: 5 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'softmax(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, int)'
+    DebugLoc:        { File: nn.cpp, Line: 18, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'neural_network(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: nn.cpp, Line: 75, Column: 28 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'relu(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: nn.cpp, Line: 12, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'neural_network(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: nn.cpp, Line: 39, Column: 22 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_39_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: nn.cpp, Line: 31, Column: 22 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_31_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: nn.cpp, Line: 24, Column: 22 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_24_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: nn.cpp, Line: 80, Column: 19 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_80_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: nn.cpp, Line: 83, Column: 26 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_83_4
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: nn.cpp, Line: 67, Column: 19 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_67_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: nn.cpp, Line: 70, Column: 26 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h, 
+                   Line: 279, Column: 36 }
+Function:        _ZN10exp_reduce3expILi17ELi9EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_279_11
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h, 
+                   Line: 275, Column: 36 }
+Function:        _ZN10exp_reduce3expILi17ELi9EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_275_10
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h, 
+                   Line: 269, Column: 31 }
+Function:        _ZN10exp_reduce3expILi17ELi9EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_269_9
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h, 
+                   Line: 204, Column: 35 }
+Function:        _ZN10exp_reduce3expILi17ELi9EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_204_8
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h, 
+                   Line: 196, Column: 27 }
+Function:        _ZN10exp_reduce3expILi17ELi9EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_196_7
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_39_3
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:39:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PipelineRemovedByUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Pipeline directive for loop '''
+  - LoopName:        VITIS_LOOP_39_3
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:39:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' has been removed because the loop is unrolled completely'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_31_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:31:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PipelineRemovedByUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Pipeline directive for loop '''
+  - LoopName:        VITIS_LOOP_31_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:31:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' has been removed because the loop is unrolled completely'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_24_1
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:24:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '9'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PipelineRemovedByUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Pipeline directive for loop '''
+  - LoopName:        VITIS_LOOP_24_1
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:24:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' has been removed because the loop is unrolled completely'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_80_3
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:80:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_83_4
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:83:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_83_4
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:83:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_83_4
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:83:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_83_4
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:83:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_83_4
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:83:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_83_4
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:83:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_83_4
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:83:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_83_4
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:83:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_83_4
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:83:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_83_4
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:83:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_67_1
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:67:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         'nn.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          neural_network
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h, 
+                   Line: 40, Column: 0 }
+Function:        _ZN10exp_reduce3expILi17ELi9EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_279_11
+  - String:          ''' ('
+  - LoopLoc:         '/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:279:36'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'exp_reduce::exp<17, 9>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '19'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h, 
+                   Line: 40, Column: 0 }
+Function:        _ZN10exp_reduce3expILi17ELi9EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_275_10
+  - String:          ''' ('
+  - LoopLoc:         '/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:275:36'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'exp_reduce::exp<17, 9>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h, 
+                   Line: 40, Column: 0 }
+Function:        _ZN10exp_reduce3expILi17ELi9EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_269_9
+  - String:          ''' ('
+  - LoopLoc:         '/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:269:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'exp_reduce::exp<17, 9>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h, 
+                   Line: 40, Column: 0 }
+Function:        _ZN10exp_reduce3expILi17ELi9EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_204_8
+  - String:          ''' ('
+  - LoopLoc:         '/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:204:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'exp_reduce::exp<17, 9>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '22'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h, 
+                   Line: 40, Column: 0 }
+Function:        _ZN10exp_reduce3expILi17ELi9EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_196_7
+  - String:          ''' ('
+  - LoopLoc:         '/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:196:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'exp_reduce::exp<17, 9>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: nn.cpp, Line: 59, Column: 13 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          layer1_output
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: nn.cpp, Line: 60, Column: 16 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          layer2_output
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: nn.cpp, Line: 46, Column: 0 }
+Function:        _Z14neural_networkP8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          output
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

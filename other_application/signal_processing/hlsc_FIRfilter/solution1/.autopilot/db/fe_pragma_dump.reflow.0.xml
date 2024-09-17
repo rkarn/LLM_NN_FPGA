@@ -1,0 +1,14 @@
+<pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="fir_filter.cpp" line="22" pragmaType="pipeline" parentfunction="fir_filter" off="0" ii="1" rewind="0" style=""/>
+<pragma file="fir_filter.cpp" line="29" pragmaType="unroll" parentfunction="fir_filter" factor="-1" skip_exit_check="0"/>
+<pragma file="fir_filter.cpp" line="36" pragmaType="unroll" parentfunction="fir_filter" factor="-1" skip_exit_check="0"/>
+<pragma file="fir_filter.cpp" line="12" pragmaType="interface" parentfunction="fir_filter" mode="axis" port="input" register="0" register_mode="both" name="" depth="-1"/>
+<pragma file="fir_filter.cpp" line="13" pragmaType="interface" parentfunction="fir_filter" mode="axis" port="output" register="0" register_mode="both" name="" depth="-1"/>
+<pragma file="fir_filter.cpp" line="14" pragmaType="interface" parentfunction="fir_filter" mode="s_axilite" port="coeffs" bundle="CONTROL_BUS" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="fir_filter.cpp" line="15" pragmaType="interface" parentfunction="fir_filter" mode="s_axilite" port="" bundle="CONTROL_BUS" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="fir_filter.cpp" line="18" pragmaType="array_partition" parentfunction="fir_filter" dim="1" factor="0" mode="complete" dynamic="0" variable="_ZZ10fir_filterRN3hls6streamIiLi0EEES2_PiE9shift_reg"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+</pragmas>

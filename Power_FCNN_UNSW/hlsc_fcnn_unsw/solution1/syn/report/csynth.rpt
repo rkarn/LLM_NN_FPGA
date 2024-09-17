@@ -1,0 +1,461 @@
+
+
+================================================================
+== Synthesis Summary Report of 'neural_network'
+================================================================
++ General Information: 
+    * Date:           Sun Sep 15 04:03:34 2024
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        hlsc_fcnn_unsw
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a35t-cpg236-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------------+------------+------------+------------+-----+
+    |                   Modules                  | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |            |            |            |            |     |
+    |                   & Loops                  | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|    BRAM    |     DSP    |     FF     |     LUT    | URAM|
+    +--------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------------+------------+------------+------------+-----+
+    |+ neural_network                            |     -|  0.10|      342|  3.420e+03|         -|      343|     -|        no|  102 (102%)|  103 (114%)|  6550 (15%)|  3551 (17%)|    -|
+    | + neural_network_Pipeline_VITIS_LOOP_56_1  |     -|  1.73|      111|  1.110e+03|         -|      111|     -|        no|    44 (44%)|    43 (47%)|   1261 (3%)|   188 (~0%)|    -|
+    |  o VITIS_LOOP_56_1                         |     -|  7.30|      109|  1.090e+03|        47|        1|    64|       yes|           -|           -|           -|           -|    -|
+    | + neural_network_Pipeline_VITIS_LOOP_68_3  |     -|  0.90|       70|    700.000|         -|       70|     -|        no|    58 (58%)|    57 (63%)|   1084 (2%)|   125 (~0%)|    -|
+    |  o VITIS_LOOP_68_3                         |     -|  7.30|       68|    680.000|        60|        1|    10|       yes|           -|           -|           -|           -|    -|
+    | + neural_network_Pipeline_VITIS_LOOP_22_1  |     -|  0.10|       11|    110.000|         -|       11|     -|        no|           -|           -|    23 (~0%)|   112 (~0%)|    -|
+    |  o VITIS_LOOP_22_1                         |     -|  7.30|        9|     90.000|         2|        1|     9|       yes|           -|           -|           -|           -|    -|
+    | + neural_network_Pipeline_VITIS_LOOP_28_2  |     -|  0.53|       18|    180.000|         -|       18|     -|        no|           -|      3 (3%)|    677 (1%)|    606 (2%)|    -|
+    |  o VITIS_LOOP_28_2                         |     -|  7.30|       16|    160.000|         8|        1|    10|       yes|           -|           -|           -|           -|    -|
+    | + neural_network_Pipeline_VITIS_LOOP_35_3  |     -|  1.24|       49|    490.000|         -|       49|     -|        no|           -|           -|   1555 (3%)|   1198 (5%)|    -|
+    |  o VITIS_LOOP_35_3                         |    II|  7.30|       47|    470.000|        30|        2|    10|       yes|           -|           -|           -|           -|    -|
+    +--------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------------+------------+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_CONTROL | 32         | 4             |        |          |
+| s_axi_INPUT   | 32         | 8             | 128    | 0        |
+| s_axi_OUTPUT  | 32         | 6             | 32     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_CONTROL | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_CONTROL | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_CONTROL | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_CONTROL | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------------------------------+
+| Argument | Direction | Datatype                             |
++----------+-----------+--------------------------------------+
+| input    | in        | ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>* |
+| output   | inout     | ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>* |
++----------+-----------+--------------------------------------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| input    | s_axi_INPUT  | interface |
+| output   | s_axi_OUTPUT | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------------+-----+--------+---------------------+-----+--------+---------+
+| Name                                       | DSP | Pragma | Variable            | Op  | Impl   | Latency |
++--------------------------------------------+-----+--------+---------------------+-----+--------+---------+
+| + neural_network                           | 103 |        |                     |     |        |         |
+|  + neural_network_Pipeline_VITIS_LOOP_56_1 | 43  |        |                     |     |        |         |
+|    add_ln56_fu_1263_p2                     | -   |        | add_ln56            | add | fabric | 0       |
+|    mul_11s_16s_24_1_1_U1                   | 1   |        | mul_ln61            | mul | auto   | 0       |
+|    mac_muladd_11s_16s_24ns_24_4_1_U2       | 1   |        | mul_ln61_1          | mul | dsp48  | 3       |
+|    mac_muladd_11s_16s_24ns_24_4_1_U2       | 1   |        | add_ln61            | add | dsp48  | 3       |
+|    mac_muladd_10s_16s_24ns_24_4_1_U3       | 1   |        | mul_ln61_2          | mul | dsp48  | 3       |
+|    mac_muladd_10s_16s_24ns_24_4_1_U3       | 1   |        | add_ln61_1          | add | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U4       | 1   |        | mul_ln61_3          | mul | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U4       | 1   |        | add_ln61_2          | add | dsp48  | 3       |
+|    mac_muladd_11s_16s_24ns_24_4_1_U5       | 1   |        | mul_ln61_4          | mul | dsp48  | 3       |
+|    mac_muladd_11s_16s_24ns_24_4_1_U5       | 1   |        | add_ln61_3          | add | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U6       | 1   |        | mul_ln61_5          | mul | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U6       | 1   |        | add_ln61_4          | add | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U7       | 1   |        | mul_ln61_6          | mul | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U7       | 1   |        | add_ln61_5          | add | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U8       | 1   |        | mul_ln61_7          | mul | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U8       | 1   |        | add_ln61_6          | add | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U9       | 1   |        | mul_ln61_8          | mul | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U9       | 1   |        | add_ln61_7          | add | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U10      | 1   |        | mul_ln61_9          | mul | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U10      | 1   |        | add_ln61_8          | add | dsp48  | 3       |
+|    mac_muladd_11s_16s_24ns_24_4_1_U11      | 1   |        | mul_ln61_10         | mul | dsp48  | 3       |
+|    mac_muladd_11s_16s_24ns_24_4_1_U11      | 1   |        | add_ln61_9          | add | dsp48  | 3       |
+|    mac_muladd_11s_16s_24ns_24_4_1_U12      | 1   |        | mul_ln61_11         | mul | dsp48  | 3       |
+|    mac_muladd_11s_16s_24ns_24_4_1_U12      | 1   |        | add_ln61_10         | add | dsp48  | 3       |
+|    mac_muladd_12s_16s_24ns_24_4_1_U13      | 1   |        | mul_ln61_12         | mul | dsp48  | 3       |
+|    mac_muladd_12s_16s_24ns_24_4_1_U13      | 1   |        | add_ln61_11         | add | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U14      | 1   |        | mul_ln61_13         | mul | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U14      | 1   |        | add_ln61_12         | add | dsp48  | 3       |
+|    mac_muladd_15s_16s_24ns_24_4_1_U15      | 1   |        | mul_ln61_14         | mul | dsp48  | 3       |
+|    mac_muladd_15s_16s_24ns_24_4_1_U15      | 1   |        | add_ln61_13         | add | dsp48  | 3       |
+|    mac_muladd_15s_16s_24ns_24_4_1_U16      | 1   |        | mul_ln61_15         | mul | dsp48  | 3       |
+|    mac_muladd_15s_16s_24ns_24_4_1_U16      | 1   |        | add_ln61_14         | add | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U17      | 1   |        | mul_ln61_16         | mul | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U17      | 1   |        | add_ln61_15         | add | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U18      | 1   |        | mul_ln61_17         | mul | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U18      | 1   |        | add_ln61_16         | add | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U19      | 1   |        | mul_ln61_18         | mul | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U19      | 1   |        | add_ln61_17         | add | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U20      | 1   |        | mul_ln61_19         | mul | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U20      | 1   |        | add_ln61_18         | add | dsp48  | 3       |
+|    mac_muladd_11s_16s_24ns_24_4_1_U21      | 1   |        | mul_ln61_20         | mul | dsp48  | 3       |
+|    mac_muladd_11s_16s_24ns_24_4_1_U21      | 1   |        | add_ln61_19         | add | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U22      | 1   |        | mul_ln61_21         | mul | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U22      | 1   |        | add_ln61_20         | add | dsp48  | 3       |
+|    mac_muladd_10s_16s_24ns_24_4_1_U23      | 1   |        | mul_ln61_22         | mul | dsp48  | 3       |
+|    mac_muladd_10s_16s_24ns_24_4_1_U23      | 1   |        | add_ln61_21         | add | dsp48  | 3       |
+|    mac_muladd_10s_16s_24ns_24_4_1_U24      | 1   |        | mul_ln61_23         | mul | dsp48  | 3       |
+|    mac_muladd_10s_16s_24ns_24_4_1_U24      | 1   |        | add_ln61_22         | add | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U25      | 1   |        | mul_ln61_24         | mul | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U25      | 1   |        | add_ln61_23         | add | dsp48  | 3       |
+|    mac_muladd_12s_16s_24ns_24_4_1_U26      | 1   |        | mul_ln61_25         | mul | dsp48  | 3       |
+|    mac_muladd_12s_16s_24ns_24_4_1_U26      | 1   |        | add_ln61_24         | add | dsp48  | 3       |
+|    mac_muladd_11s_16s_24ns_24_4_1_U27      | 1   |        | mul_ln61_26         | mul | dsp48  | 3       |
+|    mac_muladd_11s_16s_24ns_24_4_1_U27      | 1   |        | add_ln61_25         | add | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U28      | 1   |        | mul_ln61_27         | mul | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U28      | 1   |        | add_ln61_26         | add | dsp48  | 3       |
+|    mac_muladd_12s_16s_24ns_24_4_1_U29      | 1   |        | mul_ln61_28         | mul | dsp48  | 3       |
+|    mac_muladd_12s_16s_24ns_24_4_1_U29      | 1   |        | add_ln61_27         | add | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U30      | 1   |        | mul_ln61_29         | mul | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U30      | 1   |        | add_ln61_28         | add | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U31      | 1   |        | mul_ln61_30         | mul | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U31      | 1   |        | add_ln61_29         | add | dsp48  | 3       |
+|    mac_muladd_12s_16s_24ns_24_4_1_U32      | 1   |        | mul_ln61_31         | mul | dsp48  | 3       |
+|    mac_muladd_12s_16s_24ns_24_4_1_U32      | 1   |        | add_ln61_30         | add | dsp48  | 3       |
+|    mac_muladd_11s_16s_24ns_24_4_1_U33      | 1   |        | mul_ln61_32         | mul | dsp48  | 3       |
+|    mac_muladd_11s_16s_24ns_24_4_1_U33      | 1   |        | add_ln61_31         | add | dsp48  | 3       |
+|    mac_muladd_10s_16s_24ns_24_4_1_U34      | 1   |        | mul_ln61_33         | mul | dsp48  | 3       |
+|    mac_muladd_10s_16s_24ns_24_4_1_U34      | 1   |        | add_ln61_32         | add | dsp48  | 3       |
+|    mac_muladd_12s_16s_24ns_24_4_1_U35      | 1   |        | mul_ln61_34         | mul | dsp48  | 3       |
+|    mac_muladd_12s_16s_24ns_24_4_1_U35      | 1   |        | add_ln61_33         | add | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U36      | 1   |        | mul_ln61_35         | mul | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U36      | 1   |        | add_ln61_34         | add | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U37      | 1   |        | mul_ln61_36         | mul | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U37      | 1   |        | add_ln61_35         | add | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U38      | 1   |        | mul_ln61_37         | mul | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U38      | 1   |        | add_ln61_36         | add | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U39      | 1   |        | mul_ln61_38         | mul | dsp48  | 3       |
+|    mac_muladd_14s_16s_24ns_24_4_1_U39      | 1   |        | add_ln61_37         | add | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U40      | 1   |        | mul_ln61_39         | mul | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U40      | 1   |        | add_ln61_38         | add | dsp48  | 3       |
+|    mac_muladd_12s_16s_24ns_24_4_1_U41      | 1   |        | mul_ln61_40         | mul | dsp48  | 3       |
+|    mac_muladd_12s_16s_24ns_24_4_1_U41      | 1   |        | add_ln61_39         | add | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U42      | 1   |        | mul_ln61_41         | mul | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U42      | 1   |        | add_ln61_40         | add | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U43      | 1   |        | mul_ln61_42         | mul | dsp48  | 3       |
+|    mac_muladd_13s_16s_24ns_24_4_1_U43      | 1   |        | add_ln61_41         | add | dsp48  | 3       |
+|    sum_3_fu_2196_p2                        | -   |        | sum_3               | add | fabric | 0       |
+|    add_ln58_fu_2202_p2                     | -   |        | add_ln58            | add | fabric | 0       |
+|  + neural_network_Pipeline_VITIS_LOOP_68_3 | 57  |        |                     |     |        |         |
+|    add_ln68_fu_1633_p2                     | -   |        | add_ln68            | add | fabric | 0       |
+|    mul_11s_15ns_24_1_1_U139                | 1   |        | mul_ln73            | mul | auto   | 0       |
+|    mac_muladd_7s_15ns_24s_24_4_1_U140      | 1   |        | mul_ln73_1          | mul | dsp48  | 3       |
+|    mac_muladd_7s_15ns_24s_24_4_1_U140      | 1   |        | add_ln73            | add | dsp48  | 3       |
+|    mac_muladd_10s_15ns_24ns_24_4_1_U141    | 1   |        | mul_ln73_2          | mul | dsp48  | 3       |
+|    mac_muladd_10s_15ns_24ns_24_4_1_U141    | 1   |        | add_ln73_1          | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U142    | 1   |        | mul_ln73_3          | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U142    | 1   |        | add_ln73_2          | add | dsp48  | 3       |
+|    mac_muladd_10s_15ns_24ns_24_4_1_U143    | 1   |        | mul_ln73_4          | mul | dsp48  | 3       |
+|    mac_muladd_10s_15ns_24ns_24_4_1_U143    | 1   |        | add_ln73_3          | add | dsp48  | 3       |
+|    mac_muladd_8s_15ns_24s_24_4_1_U144      | 1   |        | mul_ln73_5          | mul | dsp48  | 3       |
+|    mac_muladd_8s_15ns_24s_24_4_1_U144      | 1   |        | add_ln73_4          | add | dsp48  | 3       |
+|    mac_muladd_9s_15ns_24ns_24_4_1_U145     | 1   |        | mul_ln73_6          | mul | dsp48  | 3       |
+|    mac_muladd_9s_15ns_24ns_24_4_1_U145     | 1   |        | add_ln73_5          | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U146    | 1   |        | mul_ln73_7          | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U146    | 1   |        | add_ln73_6          | add | dsp48  | 3       |
+|    mac_muladd_11ns_15ns_24ns_24_4_1_U147   | 1   |        | mul_ln73_8          | mul | dsp48  | 3       |
+|    mac_muladd_11ns_15ns_24ns_24_4_1_U147   | 1   |        | add_ln73_7          | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U148    | 1   |        | mul_ln73_9          | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U148    | 1   |        | add_ln73_8          | add | dsp48  | 3       |
+|    mac_muladd_12s_15ns_24ns_24_4_1_U149    | 1   |        | mul_ln73_10         | mul | dsp48  | 3       |
+|    mac_muladd_12s_15ns_24ns_24_4_1_U149    | 1   |        | add_ln73_9          | add | dsp48  | 3       |
+|    mac_muladd_10s_15ns_24ns_24_4_1_U150    | 1   |        | mul_ln73_11         | mul | dsp48  | 3       |
+|    mac_muladd_10s_15ns_24ns_24_4_1_U150    | 1   |        | add_ln73_10         | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U151    | 1   |        | mul_ln73_12         | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U151    | 1   |        | add_ln73_11         | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U152    | 1   |        | mul_ln73_13         | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U152    | 1   |        | add_ln73_12         | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U153    | 1   |        | mul_ln73_14         | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U153    | 1   |        | add_ln73_13         | add | dsp48  | 3       |
+|    mac_muladd_12s_15ns_24ns_24_4_1_U154    | 1   |        | mul_ln73_15         | mul | dsp48  | 3       |
+|    mac_muladd_12s_15ns_24ns_24_4_1_U154    | 1   |        | add_ln73_14         | add | dsp48  | 3       |
+|    mac_muladd_10s_15ns_24ns_24_4_1_U155    | 1   |        | mul_ln73_16         | mul | dsp48  | 3       |
+|    mac_muladd_10s_15ns_24ns_24_4_1_U155    | 1   |        | add_ln73_15         | add | dsp48  | 3       |
+|    mac_muladd_10ns_15ns_24ns_24_4_1_U156   | 1   |        | mul_ln73_17         | mul | dsp48  | 3       |
+|    mac_muladd_10ns_15ns_24ns_24_4_1_U156   | 1   |        | add_ln73_16         | add | dsp48  | 3       |
+|    mac_muladd_6s_15ns_24s_24_4_1_U157      | 1   |        | mul_ln73_18         | mul | dsp48  | 3       |
+|    mac_muladd_6s_15ns_24s_24_4_1_U157      | 1   |        | add_ln73_17         | add | dsp48  | 3       |
+|    mac_muladd_11ns_15ns_24ns_24_4_1_U158   | 1   |        | mul_ln73_19         | mul | dsp48  | 3       |
+|    mac_muladd_11ns_15ns_24ns_24_4_1_U158   | 1   |        | add_ln73_18         | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U159    | 1   |        | mul_ln73_20         | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U159    | 1   |        | add_ln73_19         | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U160    | 1   |        | mul_ln73_21         | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U160    | 1   |        | add_ln73_20         | add | dsp48  | 3       |
+|    mac_muladd_8s_15ns_24s_24_4_1_U161      | 1   |        | mul_ln73_22         | mul | dsp48  | 3       |
+|    mac_muladd_8s_15ns_24s_24_4_1_U161      | 1   |        | add_ln73_21         | add | dsp48  | 3       |
+|    mac_muladd_7s_15ns_24s_24_4_1_U162      | 1   |        | mul_ln73_23         | mul | dsp48  | 3       |
+|    mac_muladd_7s_15ns_24s_24_4_1_U162      | 1   |        | add_ln73_22         | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U163    | 1   |        | mul_ln73_24         | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U163    | 1   |        | add_ln73_23         | add | dsp48  | 3       |
+|    mac_muladd_12s_15ns_24ns_24_4_1_U164    | 1   |        | mul_ln73_25         | mul | dsp48  | 3       |
+|    mac_muladd_12s_15ns_24ns_24_4_1_U164    | 1   |        | add_ln73_24         | add | dsp48  | 3       |
+|    mac_muladd_8s_15ns_24s_24_4_1_U165      | 1   |        | mul_ln73_26         | mul | dsp48  | 3       |
+|    mac_muladd_8s_15ns_24s_24_4_1_U165      | 1   |        | add_ln73_25         | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U166    | 1   |        | mul_ln73_27         | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U166    | 1   |        | add_ln73_26         | add | dsp48  | 3       |
+|    mac_muladd_12s_15ns_24ns_24_4_1_U167    | 1   |        | mul_ln73_28         | mul | dsp48  | 3       |
+|    mac_muladd_12s_15ns_24ns_24_4_1_U167    | 1   |        | add_ln73_27         | add | dsp48  | 3       |
+|    mac_muladd_10s_15ns_24ns_24_4_1_U168    | 1   |        | mul_ln73_29         | mul | dsp48  | 3       |
+|    mac_muladd_10s_15ns_24ns_24_4_1_U168    | 1   |        | add_ln73_28         | add | dsp48  | 3       |
+|    mac_muladd_10ns_15ns_24ns_24_4_1_U169   | 1   |        | mul_ln73_30         | mul | dsp48  | 3       |
+|    mac_muladd_10ns_15ns_24ns_24_4_1_U169   | 1   |        | add_ln73_29         | add | dsp48  | 3       |
+|    mac_muladd_12s_15ns_24ns_24_4_1_U170    | 1   |        | mul_ln73_31         | mul | dsp48  | 3       |
+|    mac_muladd_12s_15ns_24ns_24_4_1_U170    | 1   |        | add_ln73_30         | add | dsp48  | 3       |
+|    mac_muladd_13s_15ns_24ns_24_4_1_U171    | 1   |        | mul_ln73_32         | mul | dsp48  | 3       |
+|    mac_muladd_13s_15ns_24ns_24_4_1_U171    | 1   |        | add_ln73_31         | add | dsp48  | 3       |
+|    mac_muladd_5s_15ns_24s_24_4_1_U172      | 1   |        | mul_ln73_33         | mul | dsp48  | 3       |
+|    mac_muladd_5s_15ns_24s_24_4_1_U172      | 1   |        | add_ln73_32         | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U173    | 1   |        | mul_ln73_34         | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U173    | 1   |        | add_ln73_33         | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U174    | 1   |        | mul_ln73_35         | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U174    | 1   |        | add_ln73_34         | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U175    | 1   |        | mul_ln73_36         | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U175    | 1   |        | add_ln73_35         | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U176    | 1   |        | mul_ln73_37         | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U176    | 1   |        | add_ln73_36         | add | dsp48  | 3       |
+|    mac_muladd_12s_15ns_24ns_24_4_1_U177    | 1   |        | mul_ln73_38         | mul | dsp48  | 3       |
+|    mac_muladd_12s_15ns_24ns_24_4_1_U177    | 1   |        | add_ln73_37         | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U178    | 1   |        | mul_ln73_39         | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U178    | 1   |        | add_ln73_38         | add | dsp48  | 3       |
+|    mac_muladd_12s_15ns_24ns_24_4_1_U179    | 1   |        | mul_ln73_40         | mul | dsp48  | 3       |
+|    mac_muladd_12s_15ns_24ns_24_4_1_U179    | 1   |        | add_ln73_39         | add | dsp48  | 3       |
+|    mac_muladd_9ns_15ns_24ns_24_4_1_U180    | 1   |        | mul_ln73_41         | mul | dsp48  | 3       |
+|    mac_muladd_9ns_15ns_24ns_24_4_1_U180    | 1   |        | add_ln73_40         | add | dsp48  | 3       |
+|    mac_muladd_9ns_15ns_24ns_24_4_1_U181    | 1   |        | mul_ln73_42         | mul | dsp48  | 3       |
+|    mac_muladd_9ns_15ns_24ns_24_4_1_U181    | 1   |        | add_ln73_41         | add | dsp48  | 3       |
+|    mac_muladd_8s_15ns_24s_24_4_1_U182      | 1   |        | mul_ln73_43         | mul | dsp48  | 3       |
+|    mac_muladd_8s_15ns_24s_24_4_1_U182      | 1   |        | add_ln73_42         | add | dsp48  | 3       |
+|    mac_muladd_7ns_15ns_24ns_24_4_1_U183    | 1   |        | mul_ln73_44         | mul | dsp48  | 3       |
+|    mac_muladd_7ns_15ns_24ns_24_4_1_U183    | 1   |        | add_ln73_43         | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U184    | 1   |        | mul_ln73_45         | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U184    | 1   |        | add_ln73_44         | add | dsp48  | 3       |
+|    mac_muladd_10s_15ns_24ns_24_4_1_U185    | 1   |        | mul_ln73_46         | mul | dsp48  | 3       |
+|    mac_muladd_10s_15ns_24ns_24_4_1_U185    | 1   |        | add_ln73_45         | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U186    | 1   |        | mul_ln73_47         | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U186    | 1   |        | add_ln73_46         | add | dsp48  | 3       |
+|    mac_muladd_8s_15ns_24s_24_4_1_U187      | 1   |        | mul_ln73_48         | mul | dsp48  | 3       |
+|    mac_muladd_8s_15ns_24s_24_4_1_U187      | 1   |        | add_ln73_47         | add | dsp48  | 3       |
+|    mac_muladd_7ns_15ns_24ns_24_4_1_U188    | 1   |        | mul_ln73_49         | mul | dsp48  | 3       |
+|    mac_muladd_7ns_15ns_24ns_24_4_1_U188    | 1   |        | add_ln73_48         | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U189    | 1   |        | mul_ln73_50         | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U189    | 1   |        | add_ln73_49         | add | dsp48  | 3       |
+|    mac_muladd_12s_15ns_24ns_24_4_1_U190    | 1   |        | mul_ln73_51         | mul | dsp48  | 3       |
+|    mac_muladd_12s_15ns_24ns_24_4_1_U190    | 1   |        | add_ln73_50         | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U191    | 1   |        | mul_ln73_52         | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U191    | 1   |        | add_ln73_51         | add | dsp48  | 3       |
+|    mac_muladd_5ns_15ns_24ns_24_4_1_U192    | 1   |        | mul_ln73_53         | mul | dsp48  | 3       |
+|    mac_muladd_5ns_15ns_24ns_24_4_1_U192    | 1   |        | add_ln73_52         | add | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U193    | 1   |        | mul_ln73_54         | mul | dsp48  | 3       |
+|    mac_muladd_11s_15ns_24ns_24_4_1_U193    | 1   |        | add_ln73_53         | add | dsp48  | 3       |
+|    mac_muladd_5ns_15ns_24ns_24_4_1_U194    | 1   |        | mul_ln73_55         | mul | dsp48  | 3       |
+|    mac_muladd_5ns_15ns_24ns_24_4_1_U194    | 1   |        | add_ln73_54         | add | dsp48  | 3       |
+|    mac_muladd_10s_15ns_24ns_24_4_1_U195    | 1   |        | mul_ln73_56         | mul | dsp48  | 3       |
+|    mac_muladd_10s_15ns_24ns_24_4_1_U195    | 1   |        | add_ln73_55         | add | dsp48  | 3       |
+|    layer2_output_d0                        | -   |        | sum_1               | add | fabric | 0       |
+|  + neural_network_Pipeline_VITIS_LOOP_22_1 | 0   |        |                     |     |        |         |
+|    add_ln22_fu_90_p2                       | -   |        | add_ln22            | add | fabric | 0       |
+|  + neural_network_Pipeline_VITIS_LOOP_28_2 | 3   |        |                     |     |        |         |
+|    add_ln28_fu_259_p2                      | -   |        | add_ln28            | add | fabric | 0       |
+|    x_fu_279_p2                             | -   |        | x                   | sub | fabric | 0       |
+|    mul_25ns_18ns_43_1_1_U331               | 1   |        | f_x_msb_2_lsb       | mul | auto   | 0       |
+|    add_ln249_fu_528_p2                     | -   |        | add_ln249           | add | fabric | 0       |
+|    exp_x_msb_2_lsb_m_1_fu_538_p2           | -   |        | exp_x_msb_2_lsb_m_1 | add | fabric | 0       |
+|    mul_25ns_25ns_50_1_1_U330               | 2   |        | y_lo                | mul | auto   | 0       |
+|    y_l_fu_574_p2                           | -   |        | y_l                 | add | fabric | 0       |
+|    sum_4_fu_646_p2                         | -   |        | sum_4               | add | fabric | 0       |
+|  + neural_network_Pipeline_VITIS_LOOP_35_3 | 0   |        |                     |     |        |         |
+|    add_ln35_fu_89_p2                       | -   |        | add_ln35            | add | fabric | 0       |
++--------------------------------------------+-----+--------+---------------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++--------------------------------------------+------+------+--------+-----------------------+---------+------+---------+
+| Name                                       | BRAM | URAM | Pragma | Variable              | Storage | Impl | Latency |
++--------------------------------------------+------+------+--------+-----------------------+---------+------+---------+
+| + neural_network                           | 102  | 0    |        |                       |         |      |         |
+|   layer1_output_U                          | -    | -    |        | layer1_output         | ram_s2p | auto | 1       |
+|   layer2_output_U                          | -    | -    |        | layer2_output         | ram_1p  | auto | 1       |
+|  + neural_network_Pipeline_VITIS_LOOP_56_1 | 44   | 0    |        |                       |         |      |         |
+|    layer1_weights_0_U                      | 1    | -    | pragma | layer1_weights_0      | ram_2p  | bram | 1       |
+|    layer1_weights_1_U                      | 1    | -    | pragma | layer1_weights_1      | ram_2p  | bram | 1       |
+|    layer1_weights_2_U                      | 1    | -    | pragma | layer1_weights_2      | ram_2p  | bram | 1       |
+|    layer1_weights_3_U                      | 1    | -    | pragma | layer1_weights_3      | ram_2p  | bram | 1       |
+|    layer1_weights_4_U                      | 1    | -    | pragma | layer1_weights_4      | ram_2p  | bram | 1       |
+|    layer1_weights_5_U                      | 1    | -    | pragma | layer1_weights_5      | ram_2p  | bram | 1       |
+|    layer1_weights_6_U                      | 1    | -    | pragma | layer1_weights_6      | ram_2p  | bram | 1       |
+|    layer1_weights_7_U                      | 1    | -    | pragma | layer1_weights_7      | ram_2p  | bram | 1       |
+|    layer1_weights_8_U                      | 1    | -    | pragma | layer1_weights_8      | ram_2p  | bram | 1       |
+|    layer1_weights_9_U                      | 1    | -    | pragma | layer1_weights_9      | ram_2p  | bram | 1       |
+|    layer1_weights_10_U                     | 1    | -    | pragma | layer1_weights_10     | ram_2p  | bram | 1       |
+|    layer1_weights_11_U                     | 1    | -    | pragma | layer1_weights_11     | ram_2p  | bram | 1       |
+|    layer1_weights_12_U                     | 1    | -    | pragma | layer1_weights_12     | ram_2p  | bram | 1       |
+|    layer1_weights_13_U                     | 1    | -    | pragma | layer1_weights_13     | ram_2p  | bram | 1       |
+|    layer1_weights_14_U                     | 1    | -    | pragma | layer1_weights_14     | ram_2p  | bram | 1       |
+|    layer1_weights_15_U                     | 1    | -    | pragma | layer1_weights_15     | ram_2p  | bram | 1       |
+|    layer1_weights_16_U                     | 1    | -    | pragma | layer1_weights_16     | ram_2p  | bram | 1       |
+|    layer1_weights_17_U                     | 1    | -    | pragma | layer1_weights_17     | ram_2p  | bram | 1       |
+|    layer1_weights_18_U                     | 1    | -    | pragma | layer1_weights_18     | ram_2p  | bram | 1       |
+|    layer1_weights_19_U                     | 1    | -    | pragma | layer1_weights_19     | ram_2p  | bram | 1       |
+|    layer1_weights_20_U                     | 1    | -    | pragma | layer1_weights_20     | ram_2p  | bram | 1       |
+|    layer1_weights_21_U                     | 1    | -    | pragma | layer1_weights_21     | ram_2p  | bram | 1       |
+|    layer1_weights_22_U                     | 1    | -    | pragma | layer1_weights_22     | ram_2p  | bram | 1       |
+|    layer1_weights_23_U                     | 1    | -    | pragma | layer1_weights_23     | ram_2p  | bram | 1       |
+|    layer1_weights_24_U                     | 1    | -    | pragma | layer1_weights_24     | ram_2p  | bram | 1       |
+|    layer1_weights_25_U                     | 1    | -    | pragma | layer1_weights_25     | ram_2p  | bram | 1       |
+|    layer1_weights_26_U                     | 1    | -    | pragma | layer1_weights_26     | ram_2p  | bram | 1       |
+|    layer1_weights_27_U                     | 1    | -    | pragma | layer1_weights_27     | ram_2p  | bram | 1       |
+|    layer1_weights_28_U                     | 1    | -    | pragma | layer1_weights_28     | ram_2p  | bram | 1       |
+|    layer1_weights_29_U                     | 1    | -    | pragma | layer1_weights_29     | ram_2p  | bram | 1       |
+|    layer1_weights_30_U                     | 1    | -    | pragma | layer1_weights_30     | ram_2p  | bram | 1       |
+|    layer1_weights_31_U                     | 1    | -    | pragma | layer1_weights_31     | ram_2p  | bram | 1       |
+|    layer1_weights_32_U                     | 1    | -    | pragma | layer1_weights_32     | ram_2p  | bram | 1       |
+|    layer1_weights_33_U                     | 1    | -    | pragma | layer1_weights_33     | ram_2p  | bram | 1       |
+|    layer1_weights_34_U                     | 1    | -    | pragma | layer1_weights_34     | ram_2p  | bram | 1       |
+|    layer1_weights_35_U                     | 1    | -    | pragma | layer1_weights_35     | ram_2p  | bram | 1       |
+|    layer1_weights_36_U                     | 1    | -    | pragma | layer1_weights_36     | ram_2p  | bram | 1       |
+|    layer1_weights_37_U                     | 1    | -    | pragma | layer1_weights_37     | ram_2p  | bram | 1       |
+|    layer1_weights_38_U                     | 1    | -    | pragma | layer1_weights_38     | ram_2p  | bram | 1       |
+|    layer1_weights_39_U                     | 1    | -    | pragma | layer1_weights_39     | ram_2p  | bram | 1       |
+|    layer1_weights_40_U                     | 1    | -    | pragma | layer1_weights_40     | ram_2p  | bram | 1       |
+|    layer1_weights_41_U                     | 1    | -    | pragma | layer1_weights_41     | ram_2p  | bram | 1       |
+|    layer1_weights_42_U                     | 1    | -    | pragma | layer1_weights_42     | ram_2p  | bram | 1       |
+|    layer1_bias_U                           | 1    | -    | pragma | layer1_bias           | ram_1p  | bram | 1       |
+|  + neural_network_Pipeline_VITIS_LOOP_68_3 | 58   | 0    |        |                       |         |      |         |
+|    layer2_weights_0_U                      | 1    | -    | pragma | layer2_weights_0      | ram_2p  | bram | 1       |
+|    layer2_weights_1_U                      | 1    | -    | pragma | layer2_weights_1      | ram_2p  | bram | 1       |
+|    layer2_weights_2_U                      | 1    | -    | pragma | layer2_weights_2      | ram_2p  | bram | 1       |
+|    layer2_weights_3_U                      | 1    | -    | pragma | layer2_weights_3      | ram_2p  | bram | 1       |
+|    layer2_weights_4_U                      | 1    | -    | pragma | layer2_weights_4      | ram_2p  | bram | 1       |
+|    layer2_weights_5_U                      | 1    | -    | pragma | layer2_weights_5      | ram_2p  | bram | 1       |
+|    layer2_weights_6_U                      | 1    | -    | pragma | layer2_weights_6      | ram_2p  | bram | 1       |
+|    layer2_weights_7_U                      | 1    | -    | pragma | layer2_weights_7      | ram_2p  | bram | 1       |
+|    layer2_weights_8_U                      | 1    | -    | pragma | layer2_weights_8      | ram_2p  | bram | 1       |
+|    layer2_weights_9_U                      | 1    | -    | pragma | layer2_weights_9      | ram_2p  | bram | 1       |
+|    layer2_weights_12_U                     | 1    | -    | pragma | layer2_weights_12     | ram_2p  | bram | 1       |
+|    layer2_weights_13_U                     | 1    | -    | pragma | layer2_weights_13     | ram_2p  | bram | 1       |
+|    layer2_weights_14_U                     | 1    | -    | pragma | layer2_weights_14     | ram_2p  | bram | 1       |
+|    layer2_weights_15_U                     | 1    | -    | pragma | layer2_weights_15     | ram_2p  | bram | 1       |
+|    layer2_weights_16_U                     | 1    | -    | pragma | layer2_weights_16     | ram_2p  | bram | 1       |
+|    layer2_weights_18_U                     | 1    | -    | pragma | layer2_weights_18     | ram_2p  | bram | 1       |
+|    layer2_weights_20_U                     | 1    | -    | pragma | layer2_weights_20     | ram_2p  | bram | 1       |
+|    layer2_weights_21_U                     | 1    | -    | pragma | layer2_weights_21     | ram_2p  | bram | 1       |
+|    layer2_weights_22_U                     | 1    | -    | pragma | layer2_weights_22     | ram_2p  | bram | 1       |
+|    layer2_weights_23_U                     | 1    | -    | pragma | layer2_weights_23     | ram_2p  | bram | 1       |
+|    layer2_weights_25_U                     | 1    | -    | pragma | layer2_weights_25     | ram_2p  | bram | 1       |
+|    layer2_weights_26_U                     | 1    | -    | pragma | layer2_weights_26     | ram_2p  | bram | 1       |
+|    layer2_weights_27_U                     | 1    | -    | pragma | layer2_weights_27     | ram_2p  | bram | 1       |
+|    layer2_weights_28_U                     | 1    | -    | pragma | layer2_weights_28     | ram_2p  | bram | 1       |
+|    layer2_weights_29_U                     | 1    | -    | pragma | layer2_weights_29     | ram_2p  | bram | 1       |
+|    layer2_weights_30_U                     | 1    | -    | pragma | layer2_weights_30     | ram_2p  | bram | 1       |
+|    layer2_weights_31_U                     | 1    | -    | pragma | layer2_weights_31     | ram_2p  | bram | 1       |
+|    layer2_weights_32_U                     | 1    | -    | pragma | layer2_weights_32     | ram_2p  | bram | 1       |
+|    layer2_weights_33_U                     | 1    | -    | pragma | layer2_weights_33     | ram_2p  | bram | 1       |
+|    layer2_weights_34_U                     | 1    | -    | pragma | layer2_weights_34     | ram_2p  | bram | 1       |
+|    layer2_weights_35_U                     | 1    | -    | pragma | layer2_weights_35     | ram_2p  | bram | 1       |
+|    layer2_weights_36_U                     | 1    | -    | pragma | layer2_weights_36     | ram_2p  | bram | 1       |
+|    layer2_weights_37_U                     | 1    | -    | pragma | layer2_weights_37     | ram_2p  | bram | 1       |
+|    layer2_weights_38_U                     | 1    | -    | pragma | layer2_weights_38     | ram_2p  | bram | 1       |
+|    layer2_weights_39_U                     | 1    | -    | pragma | layer2_weights_39     | ram_2p  | bram | 1       |
+|    layer2_weights_40_U                     | 1    | -    | pragma | layer2_weights_40     | ram_2p  | bram | 1       |
+|    layer2_weights_41_U                     | 1    | -    | pragma | layer2_weights_41     | ram_2p  | bram | 1       |
+|    layer2_weights_42_U                     | 1    | -    | pragma | layer2_weights_42     | ram_2p  | bram | 1       |
+|    layer2_weights_43_U                     | 1    | -    | pragma | layer2_weights_43     | ram_2p  | bram | 1       |
+|    layer2_weights_44_U                     | 1    | -    | pragma | layer2_weights_44     | ram_2p  | bram | 1       |
+|    layer2_weights_45_U                     | 1    | -    | pragma | layer2_weights_45     | ram_2p  | bram | 1       |
+|    layer2_weights_46_U                     | 1    | -    | pragma | layer2_weights_46     | ram_2p  | bram | 1       |
+|    layer2_weights_48_U                     | 1    | -    | pragma | layer2_weights_48     | ram_2p  | bram | 1       |
+|    layer2_weights_49_U                     | 1    | -    | pragma | layer2_weights_49     | ram_2p  | bram | 1       |
+|    layer2_weights_50_U                     | 1    | -    | pragma | layer2_weights_50     | ram_2p  | bram | 1       |
+|    layer2_weights_51_U                     | 1    | -    | pragma | layer2_weights_51     | ram_2p  | bram | 1       |
+|    layer2_weights_52_U                     | 1    | -    | pragma | layer2_weights_52     | ram_2p  | bram | 1       |
+|    layer2_weights_53_U                     | 1    | -    | pragma | layer2_weights_53     | ram_2p  | bram | 1       |
+|    layer2_weights_54_U                     | 1    | -    | pragma | layer2_weights_54     | ram_2p  | bram | 1       |
+|    layer2_weights_55_U                     | 1    | -    | pragma | layer2_weights_55     | ram_2p  | bram | 1       |
+|    layer2_weights_56_U                     | 1    | -    | pragma | layer2_weights_56     | ram_2p  | bram | 1       |
+|    layer2_weights_57_U                     | 1    | -    | pragma | layer2_weights_57     | ram_2p  | bram | 1       |
+|    layer2_weights_58_U                     | 1    | -    | pragma | layer2_weights_58     | ram_2p  | bram | 1       |
+|    layer2_weights_59_U                     | 1    | -    | pragma | layer2_weights_59     | ram_2p  | bram | 1       |
+|    layer2_weights_61_U                     | 1    | -    | pragma | layer2_weights_61     | ram_2p  | bram | 1       |
+|    layer2_weights_62_U                     | 1    | -    | pragma | layer2_weights_62     | ram_2p  | bram | 1       |
+|    layer2_weights_63_U                     | 1    | -    | pragma | layer2_weights_63     | ram_2p  | bram | 1       |
+|    layer2_bias_U                           | 1    | -    | pragma | layer2_bias           | ram_1p  | bram | 1       |
+|  + neural_network_Pipeline_VITIS_LOOP_28_2 | 0    | 0    |        |                       |         |      |         |
+|    f_x_lsb_table_U                         | -    | -    |        | f_x_lsb_table         | rom_1p  | auto | 1       |
+|    exp_x_msb_2_m_1_table_U                 | -    | -    |        | exp_x_msb_2_m_1_table | rom_1p  | auto | 1       |
+|    exp_x_msb_1_table_U                     | -    | -    |        | exp_x_msb_1_table     | rom_1p  | auto | 1       |
++--------------------------------------------+------+------+--------+-----------------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++--------------+-----------------------------------------------+---------------------------------------------+
+| Type         | Options                                       | Location                                    |
++--------------+-----------------------------------------------+---------------------------------------------+
+| inline       |                                               | nn.cpp:13 in relu                           |
+| pipeline     | II=1                                          | nn.cpp:23 in softmax                        |
+| pipeline     | II=1                                          | nn.cpp:29 in softmax                        |
+| pipeline     | II=1                                          | nn.cpp:36 in softmax                        |
+| interface    | s_axilite port=input bundle=INPUT             | nn.cpp:42 in neural_network, input          |
+| interface    | s_axilite port=output bundle=OUTPUT           | nn.cpp:43 in neural_network, output         |
+| interface    | s_axilite port=return bundle=CONTROL          | nn.cpp:44 in neural_network, return         |
+| bind_storage | variable=layer1_weights type=RAM_2P impl=BRAM | nn.cpp:47 in neural_network, layer1_weights |
+| bind_storage | variable=layer2_weights type=RAM_2P impl=BRAM | nn.cpp:48 in neural_network, layer2_weights |
+| bind_storage | variable=layer1_bias type=RAM_1P impl=BRAM    | nn.cpp:49 in neural_network, layer1_bias    |
+| bind_storage | variable=layer2_bias type=RAM_1P impl=BRAM    | nn.cpp:50 in neural_network, layer2_bias    |
+| pipeline     | II=1                                          | nn.cpp:57 in neural_network                 |
+| unroll       | factor=2                                      | nn.cpp:60 in neural_network                 |
+| pipeline     | II=1                                          | nn.cpp:69 in neural_network                 |
+| unroll       | factor=2                                      | nn.cpp:72 in neural_network                 |
++--------------+-----------------------------------------------+---------------------------------------------+
+
+

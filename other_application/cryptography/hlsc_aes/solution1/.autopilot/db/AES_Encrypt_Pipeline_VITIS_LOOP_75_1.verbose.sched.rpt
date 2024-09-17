@@ -1,0 +1,189 @@
+
+
+================================================================
+== Vitis HLS Report for 'AES_Encrypt_Pipeline_VITIS_LOOP_75_1'
+================================================================
+* Date:           Fri Sep 13 04:05:08 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        hlsc_aes
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.232 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       18|       18|  0.180 us|  0.180 us|   18|   18|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_75_1  |       16|       16|         4|          4|          1|     4|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 4, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 4, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.29>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 7 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (1.61ns)   --->   "%store_ln0 = store i3 0, i3 %i"   --->   Operation 8 'store' 'store_ln0' <Predicate = true> <Delay = 1.61>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%br_ln0 = br void %VITIS_LOOP_76_2.i"   --->   Operation 9 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%i_2 = load i3 %i" [aes.cpp:75->aes.cpp:88]   --->   Operation 10 'load' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 11 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (1.68ns)   --->   "%icmp_ln75 = icmp_eq  i3 %i_2, i3 4" [aes.cpp:75->aes.cpp:88]   --->   Operation 12 'icmp' 'icmp_ln75' <Predicate = true> <Delay = 1.68> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.68> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (1.68ns)   --->   "%add_ln75 = add i3 %i_2, i3 1" [aes.cpp:75->aes.cpp:88]   --->   Operation 13 'add' 'add_ln75' <Predicate = true> <Delay = 1.68> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.68> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln75 = br i1 %icmp_ln75, void %VITIS_LOOP_76_2.i.split, void %for.inc.preheader.exitStub" [aes.cpp:75->aes.cpp:88]   --->   Operation 14 'br' 'br_ln75' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%i_cast = zext i3 %i_2" [aes.cpp:75->aes.cpp:88]   --->   Operation 15 'zext' 'i_cast' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%state_addr_12 = getelementptr i8 %state, i64 0, i64 %i_cast" [aes.cpp:77->aes.cpp:88]   --->   Operation 16 'getelementptr' 'state_addr_12' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.99ns)   --->   "%xor_ln77_5 = xor i3 %i_2, i3 4" [aes.cpp:77->aes.cpp:88]   --->   Operation 17 'xor' 'xor_ln77_5' <Predicate = (!icmp_ln75)> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%zext_ln77 = zext i3 %xor_ln77_5" [aes.cpp:77->aes.cpp:88]   --->   Operation 18 'zext' 'zext_ln77' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%state_addr_14 = getelementptr i8 %state, i64 0, i64 %zext_ln77" [aes.cpp:77->aes.cpp:88]   --->   Operation 19 'getelementptr' 'state_addr_14' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%w_addr = getelementptr i32 %w, i64 0, i64 %i_cast" [aes.cpp:75->aes.cpp:88]   --->   Operation 20 'getelementptr' 'w_addr' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 21 [2/2] (3.25ns)   --->   "%w_load = load i6 %w_addr" [aes.cpp:75->aes.cpp:88]   --->   Operation 21 'load' 'w_load' <Predicate = (!icmp_ln75)> <Delay = 3.25> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 44> <RAM>
+ST_1 : Operation 22 [2/2] (2.15ns)   --->   "%state_load = load i4 %state_addr_12" [aes.cpp:77->aes.cpp:88]   --->   Operation 22 'load' 'state_load' <Predicate = (!icmp_ln75)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_1 : Operation 23 [2/2] (2.15ns)   --->   "%state_load_4 = load i4 %state_addr_14" [aes.cpp:77->aes.cpp:88]   --->   Operation 23 'load' 'state_load_4' <Predicate = (!icmp_ln75)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_1 : Operation 24 [1/1] (1.61ns)   --->   "%store_ln75 = store i3 %add_ln75, i3 %i" [aes.cpp:75->aes.cpp:88]   --->   Operation 24 'store' 'store_ln75' <Predicate = (!icmp_ln75)> <Delay = 1.61>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 53 'ret' 'ret_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 4.23>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_cast = bitconcatenate i4 @_ssdm_op_BitConcatenate.i4.i1.i3, i1 1, i3 %i_2" [aes.cpp:77->aes.cpp:88]   --->   Operation 25 'bitconcatenate' 'tmp_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%zext_ln77_3 = zext i4 %tmp_cast" [aes.cpp:77->aes.cpp:88]   --->   Operation 26 'zext' 'zext_ln77_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%state_addr_15 = getelementptr i8 %state, i64 0, i64 %zext_ln77_3" [aes.cpp:77->aes.cpp:88]   --->   Operation 27 'getelementptr' 'state_addr_15' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%sext_ln77 = sext i3 %xor_ln77_5" [aes.cpp:77->aes.cpp:88]   --->   Operation 28 'sext' 'sext_ln77' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%zext_ln77_4 = zext i4 %sext_ln77" [aes.cpp:77->aes.cpp:88]   --->   Operation 29 'zext' 'zext_ln77_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%state_addr_16 = getelementptr i8 %state, i64 0, i64 %zext_ln77_4" [aes.cpp:77->aes.cpp:88]   --->   Operation 30 'getelementptr' 'state_addr_16' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/2] (3.25ns)   --->   "%w_load = load i6 %w_addr" [aes.cpp:75->aes.cpp:88]   --->   Operation 31 'load' 'w_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 44> <RAM>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %w_load, i32 24, i32 31" [aes.cpp:77->aes.cpp:88]   --->   Operation 32 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/2] (2.15ns)   --->   "%state_load = load i4 %state_addr_12" [aes.cpp:77->aes.cpp:88]   --->   Operation 33 'load' 'state_load' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 34 [1/1] (0.97ns)   --->   "%xor_ln77 = xor i8 %state_load, i8 %trunc_ln" [aes.cpp:77->aes.cpp:88]   --->   Operation 34 'xor' 'xor_ln77' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%trunc_ln77_1 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %w_load, i32 16, i32 23" [aes.cpp:77->aes.cpp:88]   --->   Operation 35 'partselect' 'trunc_ln77_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/2] (2.15ns)   --->   "%state_load_4 = load i4 %state_addr_14" [aes.cpp:77->aes.cpp:88]   --->   Operation 36 'load' 'state_load_4' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 37 [1/1] (0.97ns)   --->   "%xor_ln77_1 = xor i8 %state_load_4, i8 %trunc_ln77_1" [aes.cpp:77->aes.cpp:88]   --->   Operation 37 'xor' 'xor_ln77_1' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%trunc_ln77_2 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %w_load, i32 8, i32 15" [aes.cpp:77->aes.cpp:88]   --->   Operation 38 'partselect' 'trunc_ln77_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [2/2] (2.15ns)   --->   "%state_load_5 = load i4 %state_addr_15" [aes.cpp:77->aes.cpp:88]   --->   Operation 39 'load' 'state_load_5' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%trunc_ln77 = trunc i32 %w_load" [aes.cpp:77->aes.cpp:88]   --->   Operation 40 'trunc' 'trunc_ln77' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [2/2] (2.15ns)   --->   "%state_load_6 = load i4 %state_addr_16" [aes.cpp:77->aes.cpp:88]   --->   Operation 41 'load' 'state_load_6' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 3 <SV = 2> <Delay = 3.12>
+ST_3 : Operation 42 [1/1] (2.15ns)   --->   "%store_ln77 = store i8 %xor_ln77, i4 %state_addr_12" [aes.cpp:77->aes.cpp:88]   --->   Operation 42 'store' 'store_ln77' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 43 [1/1] (2.15ns)   --->   "%store_ln77 = store i8 %xor_ln77_1, i4 %state_addr_14" [aes.cpp:77->aes.cpp:88]   --->   Operation 43 'store' 'store_ln77' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 44 [1/2] (2.15ns)   --->   "%state_load_5 = load i4 %state_addr_15" [aes.cpp:77->aes.cpp:88]   --->   Operation 44 'load' 'state_load_5' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 45 [1/1] (0.97ns)   --->   "%xor_ln77_2 = xor i8 %state_load_5, i8 %trunc_ln77_2" [aes.cpp:77->aes.cpp:88]   --->   Operation 45 'xor' 'xor_ln77_2' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 46 [1/2] (2.15ns)   --->   "%state_load_6 = load i4 %state_addr_16" [aes.cpp:77->aes.cpp:88]   --->   Operation 46 'load' 'state_load_6' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 47 [1/1] (0.97ns)   --->   "%xor_ln77_3 = xor i8 %state_load_6, i8 %trunc_ln77" [aes.cpp:77->aes.cpp:88]   --->   Operation 47 'xor' 'xor_ln77_3' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 2.15>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%speclooptripcount_ln75 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4" [aes.cpp:75->aes.cpp:88]   --->   Operation 48 'speclooptripcount' 'speclooptripcount_ln75' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%specloopname_ln75 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [aes.cpp:75->aes.cpp:88]   --->   Operation 49 'specloopname' 'specloopname_ln75' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 50 [1/1] (2.15ns)   --->   "%store_ln77 = store i8 %xor_ln77_2, i4 %state_addr_15" [aes.cpp:77->aes.cpp:88]   --->   Operation 50 'store' 'store_ln77' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 51 [1/1] (2.15ns)   --->   "%store_ln77 = store i8 %xor_ln77_3, i4 %state_addr_16" [aes.cpp:77->aes.cpp:88]   --->   Operation 51 'store' 'store_ln77' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln75 = br void %VITIS_LOOP_76_2.i" [aes.cpp:75->aes.cpp:88]   --->   Operation 52 'br' 'br_ln75' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 3.290ns
+The critical path consists of the following:
+	'alloca' operation ('i') [3]  (0.000 ns)
+	'load' operation ('i', aes.cpp:75->aes.cpp:88) on local variable 'i' [7]  (0.000 ns)
+	'add' operation ('add_ln75', aes.cpp:75->aes.cpp:88) [10]  (1.680 ns)
+	'store' operation ('store_ln75', aes.cpp:75->aes.cpp:88) of variable 'add_ln75', aes.cpp:75->aes.cpp:88 on local variable 'i' [44]  (1.610 ns)
+
+ <State 2>: 4.232ns
+The critical path consists of the following:
+	'load' operation ('w_load', aes.cpp:75->aes.cpp:88) on array 'w' [27]  (3.257 ns)
+	'xor' operation ('xor_ln77', aes.cpp:77->aes.cpp:88) [30]  (0.975 ns)
+
+ <State 3>: 3.127ns
+The critical path consists of the following:
+	'load' operation ('state_load_5', aes.cpp:77->aes.cpp:88) on array 'state' [37]  (2.152 ns)
+	'xor' operation ('xor_ln77_2', aes.cpp:77->aes.cpp:88) [38]  (0.975 ns)
+
+ <State 4>: 2.152ns
+The critical path consists of the following:
+	'store' operation ('store_ln77', aes.cpp:77->aes.cpp:88) of variable 'xor_ln77_2', aes.cpp:77->aes.cpp:88 on array 'state' [39]  (2.152 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

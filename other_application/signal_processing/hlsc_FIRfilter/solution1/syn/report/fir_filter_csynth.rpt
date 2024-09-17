@@ -1,0 +1,167 @@
+
+
+================================================================
+== Vitis HLS Report for 'fir_filter'
+================================================================
+* Date:           Fri Sep 13 03:47:42 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        hlsc_FIRfilter
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.860 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------+---------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                            |                                 |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                  Instance                  |              Module             |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +--------------------------------------------+---------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_fir_filter_Pipeline_sample_loop_fu_177  |fir_filter_Pipeline_sample_loop  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +--------------------------------------------+---------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      0|      2|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        0|  30|   2575|    954|    -|
+|Memory           |        -|   -|      -|      -|    -|
+|Multiplexer      |        -|   -|      -|    115|    -|
+|Register         |        -|   -|    335|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        0|  30|   2910|   1071|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      100|  90|  41600|  20800|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        0|  33|      6|      5|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------+---------------------------------+---------+----+------+-----+-----+
+    |                  Instance                  |              Module             | BRAM_18K| DSP|  FF  | LUT | URAM|
+    +--------------------------------------------+---------------------------------+---------+----+------+-----+-----+
+    |CONTROL_BUS_s_axi_U                         |CONTROL_BUS_s_axi                |        0|   0|   116|  115|    0|
+    |grp_fir_filter_Pipeline_sample_loop_fu_177  |fir_filter_Pipeline_sample_loop  |        0|  30|  2459|  839|    0|
+    +--------------------------------------------+---------------------------------+---------+----+------+-----+-----+
+    |Total                                       |                                 |        0|  30|  2575|  954|    0|
+    +--------------------------------------------+---------------------------------+---------+----+------+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                        Variable Name                       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |grp_fir_filter_Pipeline_sample_loop_fu_177_output_r_TREADY  |       and|   0|  0|   2|           1|           1|
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                       |          |   0|  0|   2|           1|           1|
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                    |  61|         15|    1|         15|
+    |coeffs_address0              |  45|         11|    4|         44|
+    |input_r_TREADY_int_regslice  |   9|          2|    1|          2|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        | 115|         28|    6|         61|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------+----+----+-----+-----------+
+    |                           Name                          | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                |  14|   0|   14|          0|
+    |coeffs_load_1_reg_228                                    |  32|   0|   32|          0|
+    |coeffs_load_2_reg_238                                    |  32|   0|   32|          0|
+    |coeffs_load_3_reg_248                                    |  32|   0|   32|          0|
+    |coeffs_load_4_reg_258                                    |  32|   0|   32|          0|
+    |coeffs_load_5_reg_268                                    |  32|   0|   32|          0|
+    |coeffs_load_6_reg_278                                    |  32|   0|   32|          0|
+    |coeffs_load_7_reg_288                                    |  32|   0|   32|          0|
+    |coeffs_load_8_reg_298                                    |  32|   0|   32|          0|
+    |coeffs_load_9_reg_308                                    |  32|   0|   32|          0|
+    |coeffs_load_reg_218                                      |  32|   0|   32|          0|
+    |grp_fir_filter_Pipeline_sample_loop_fu_177_ap_start_reg  |   1|   0|    1|          0|
+    +---------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                    | 335|   0|  335|          0|
+    +---------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+--------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  | Source Object|    C Type    |
++---------------------------+-----+-----+------------+--------------+--------------+
+|s_axi_CONTROL_BUS_AWVALID  |   in|    1|       s_axi|   CONTROL_BUS|         array|
+|s_axi_CONTROL_BUS_AWREADY  |  out|    1|       s_axi|   CONTROL_BUS|         array|
+|s_axi_CONTROL_BUS_AWADDR   |   in|    7|       s_axi|   CONTROL_BUS|         array|
+|s_axi_CONTROL_BUS_WVALID   |   in|    1|       s_axi|   CONTROL_BUS|         array|
+|s_axi_CONTROL_BUS_WREADY   |  out|    1|       s_axi|   CONTROL_BUS|         array|
+|s_axi_CONTROL_BUS_WDATA    |   in|   32|       s_axi|   CONTROL_BUS|         array|
+|s_axi_CONTROL_BUS_WSTRB    |   in|    4|       s_axi|   CONTROL_BUS|         array|
+|s_axi_CONTROL_BUS_ARVALID  |   in|    1|       s_axi|   CONTROL_BUS|         array|
+|s_axi_CONTROL_BUS_ARREADY  |  out|    1|       s_axi|   CONTROL_BUS|         array|
+|s_axi_CONTROL_BUS_ARADDR   |   in|    7|       s_axi|   CONTROL_BUS|         array|
+|s_axi_CONTROL_BUS_RVALID   |  out|    1|       s_axi|   CONTROL_BUS|         array|
+|s_axi_CONTROL_BUS_RREADY   |   in|    1|       s_axi|   CONTROL_BUS|         array|
+|s_axi_CONTROL_BUS_RDATA    |  out|   32|       s_axi|   CONTROL_BUS|         array|
+|s_axi_CONTROL_BUS_RRESP    |  out|    2|       s_axi|   CONTROL_BUS|         array|
+|s_axi_CONTROL_BUS_BVALID   |  out|    1|       s_axi|   CONTROL_BUS|         array|
+|s_axi_CONTROL_BUS_BREADY   |   in|    1|       s_axi|   CONTROL_BUS|         array|
+|s_axi_CONTROL_BUS_BRESP    |  out|    2|       s_axi|   CONTROL_BUS|         array|
+|ap_clk                     |   in|    1|  ap_ctrl_hs|    fir_filter|  return value|
+|ap_rst_n                   |   in|    1|  ap_ctrl_hs|    fir_filter|  return value|
+|interrupt                  |  out|    1|  ap_ctrl_hs|    fir_filter|  return value|
+|input_r_TDATA              |   in|   32|        axis|       input_r|       pointer|
+|input_r_TVALID             |   in|    1|        axis|       input_r|       pointer|
+|input_r_TREADY             |  out|    1|        axis|       input_r|       pointer|
+|output_r_TDATA             |  out|   32|        axis|      output_r|       pointer|
+|output_r_TVALID            |  out|    1|        axis|      output_r|       pointer|
+|output_r_TREADY            |   in|    1|        axis|      output_r|       pointer|
++---------------------------+-----+-----+------------+--------------+--------------+
+

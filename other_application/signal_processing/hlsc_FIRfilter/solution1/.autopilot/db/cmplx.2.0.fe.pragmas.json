@@ -1,0 +1,18 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "fir_filter.cpp",
+    "fileloc": 11,
+    "instructions": 82,
+    "loads": {
+      "G": 19,
+      "T": 10
+    },
+    "name": "fir_filter",
+    "stores": {
+      "G": 10
+    },
+    "total_instructions": 82
+  }
+}

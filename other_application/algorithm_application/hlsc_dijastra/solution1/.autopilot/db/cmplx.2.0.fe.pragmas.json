@@ -1,0 +1,26 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1",
+    "file": "dijastra_algo.cpp",
+    "fileloc": 46,
+    "instructions": 6,
+    "name": "hls_dijkstra",
+    "total_instructions": 128
+  },
+  "1": {
+    "basicblocks": 20,
+    "calls": "",
+    "file": "dijastra_algo.cpp",
+    "fileloc": 7,
+    "instructions": 122,
+    "loads": {
+      "L": 11
+    },
+    "name": "dijkstra",
+    "stores": {
+      "L": 21
+    },
+    "total_instructions": 122
+  }
+}

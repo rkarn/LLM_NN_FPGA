@@ -1,0 +1,220 @@
+
+
+================================================================
+== Vitis HLS Report for 'neural_network_Pipeline_VITIS_LOOP_68_3'
+================================================================
+* Date:           Sun Sep 15 03:13:54 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        hlsc_fcnn_iris
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.580 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       14|       14|  0.140 us|  0.140 us|   14|   14|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_68_3  |       12|       12|        11|          1|          1|     3|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   7|      -|      -|    -|
+|Expression       |        -|   -|      0|     45|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        -|   1|      0|      6|    -|
+|Memory           |        9|   -|      0|      0|    -|
+|Multiplexer      |        -|   -|      -|     36|    -|
+|Register         |        -|   -|    430|     96|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        9|   8|    430|    183|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      100|  90|  41600|  20800|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        9|   8|      1|     ~0|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+---------------------+---------+----+---+----+-----+
+    |         Instance        |        Module       | BRAM_18K| DSP| FF| LUT| URAM|
+    +-------------------------+---------------------+---------+----+---+----+-----+
+    |mul_10s_15ns_24_1_1_U17  |mul_10s_15ns_24_1_1  |        0|   1|  0|   6|    0|
+    +-------------------------+---------------------+---------+----+---+----+-----+
+    |Total                    |                     |        0|   1|  0|   6|    0|
+    +-------------------------+---------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    +-------------------------------------+---------------------------------+--------------+
+    |               Instance              |              Module             |  Expression  |
+    +-------------------------------------+---------------------------------+--------------+
+    |mac_muladd_10s_15ns_24ns_24_4_1_U24  |mac_muladd_10s_15ns_24ns_24_4_1  |  i0 + i1 * i2|
+    |mac_muladd_9s_15ns_24ns_24_4_1_U18   |mac_muladd_9s_15ns_24ns_24_4_1   |  i0 + i1 * i2|
+    |mac_muladd_9s_15ns_24ns_24_4_1_U19   |mac_muladd_9s_15ns_24ns_24_4_1   |  i0 + i1 * i2|
+    |mac_muladd_9s_15ns_24ns_24_4_1_U20   |mac_muladd_9s_15ns_24ns_24_4_1   |  i0 + i1 * i2|
+    |mac_muladd_9s_15ns_24ns_24_4_1_U21   |mac_muladd_9s_15ns_24ns_24_4_1   |  i0 + i1 * i2|
+    |mac_muladd_9s_15ns_24ns_24_4_1_U22   |mac_muladd_9s_15ns_24ns_24_4_1   |  i0 + i1 * i2|
+    |mac_muladd_9s_15ns_24ns_24_4_1_U23   |mac_muladd_9s_15ns_24ns_24_4_1   |  i0 + i1 * i2|
+    +-------------------------------------+---------------------------------+--------------+
+
+    * Memory: 
+    +--------------------+---------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |       Memory       |                                   Module                                  | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +--------------------+---------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |layer2_bias_U       |neural_network_Pipeline_VITIS_LOOP_68_3_layer2_bias_RAM_1P_BRAM_1R1W       |        1|  0|   0|    0|     3|    6|     1|           18|
+    |layer2_weights_0_U  |neural_network_Pipeline_VITIS_LOOP_68_3_layer2_weights_0_RAM_2P_BRAM_1R1W  |        1|  0|   0|    0|     3|   10|     1|           30|
+    |layer2_weights_1_U  |neural_network_Pipeline_VITIS_LOOP_68_3_layer2_weights_1_RAM_2P_BRAM_1R1W  |        1|  0|   0|    0|     3|    9|     1|           27|
+    |layer2_weights_2_U  |neural_network_Pipeline_VITIS_LOOP_68_3_layer2_weights_2_RAM_2P_BRAM_1R1W  |        1|  0|   0|    0|     3|    9|     1|           27|
+    |layer2_weights_3_U  |neural_network_Pipeline_VITIS_LOOP_68_3_layer2_weights_3_RAM_2P_BRAM_1R1W  |        1|  0|   0|    0|     3|    9|     1|           27|
+    |layer2_weights_4_U  |neural_network_Pipeline_VITIS_LOOP_68_3_layer2_weights_4_RAM_2P_BRAM_1R1W  |        1|  0|   0|    0|     3|    9|     1|           27|
+    |layer2_weights_5_U  |neural_network_Pipeline_VITIS_LOOP_68_3_layer2_weights_5_RAM_2P_BRAM_1R1W  |        1|  0|   0|    0|     3|    9|     1|           27|
+    |layer2_weights_6_U  |neural_network_Pipeline_VITIS_LOOP_68_3_layer2_weights_6_RAM_2P_BRAM_1R1W  |        1|  0|   0|    0|     3|    9|     1|           27|
+    |layer2_weights_7_U  |neural_network_Pipeline_VITIS_LOOP_68_3_layer2_weights_7_RAM_2P_BRAM_1R1W  |        1|  0|   0|    0|     3|   10|     1|           30|
+    +--------------------+---------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total               |                                                                           |        9|  0|   0|    0|    27|   80|     9|          240|
+    +--------------------+---------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------+----------+----+---+----+------------+------------+
+    |        Variable Name        | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------+----------+----+---+----+------------+------------+
+    |add_ln68_fu_349_p2           |         +|   0|  0|  10|           2|           1|
+    |layer2_output_1_4_fu_534_p2  |         +|   0|  0|  23|          16|          16|
+    |icmp_ln68_fu_343_p2          |      icmp|   0|  0|  10|           2|           2|
+    |ap_enable_pp0                |       xor|   0|  0|   2|           1|           2|
+    +-----------------------------+----------+----+---+----+------------+------------+
+    |Total                        |          |   0|  0|  45|          21|          21|
+    +-----------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_1     |   9|          2|    2|          4|
+    |i_fu_90                  |   9|          2|    2|          4|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  36|          8|    6|         12|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                         |   1|   0|    1|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter10          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter8           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter9           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter4_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter5_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter6_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter7_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter8_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter9_reg  |   1|   0|    1|          0|
+    |conv_i86_1_cast_cast_reg_693      |  15|   0|   24|          9|
+    |conv_i86_2_cast_cast_reg_688      |  15|   0|   24|          9|
+    |conv_i86_3_cast_cast_reg_683      |  15|   0|   24|          9|
+    |conv_i86_4_cast_cast_reg_678      |  15|   0|   24|          9|
+    |conv_i86_5_cast_cast_reg_673      |  15|   0|   24|          9|
+    |conv_i86_6_cast_cast_reg_668      |  15|   0|   24|          9|
+    |i_1_reg_703                       |   2|   0|    2|          0|
+    |i_fu_90                           |   2|   0|    2|          0|
+    |icmp_ln68_reg_707                 |   1|   0|    1|          0|
+    |layer2_output_1_1_fu_102          |  16|   0|   16|          0|
+    |layer2_output_1_2_fu_106          |  16|   0|   16|          0|
+    |layer2_output_1_fu_98             |  16|   0|   16|          0|
+    |layer2_weights_0_load_reg_732     |  10|   0|   10|          0|
+    |max_val_fu_94                     |  16|   0|   16|          0|
+    |tmp_7_reg_747                     |  16|   0|   16|          0|
+    |zext_ln18_reg_711                 |   2|   0|   64|         62|
+    |zext_ln73_1_cast_reg_663          |  15|   0|   24|          9|
+    |zext_ln73_cast_reg_698            |  15|   0|   24|          9|
+    |i_1_reg_703                       |  64|  32|    2|          0|
+    |icmp_ln68_reg_707                 |  64|  32|    1|          0|
+    |zext_ln18_reg_711                 |  64|  32|   64|         62|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 430|  96|  439|        196|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |              Source Object              |    C Type    |
++-------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+|ap_clk                         |   in|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_68_3|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_68_3|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_68_3|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_68_3|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_68_3|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|  neural_network_Pipeline_VITIS_LOOP_68_3|  return value|
+|zext_ln73                      |   in|   15|     ap_none|                                zext_ln73|        scalar|
+|conv_i86_1_cast                |   in|   15|     ap_none|                          conv_i86_1_cast|        scalar|
+|conv_i86_2_cast                |   in|   15|     ap_none|                          conv_i86_2_cast|        scalar|
+|conv_i86_3_cast                |   in|   15|     ap_none|                          conv_i86_3_cast|        scalar|
+|conv_i86_4_cast                |   in|   15|     ap_none|                          conv_i86_4_cast|        scalar|
+|conv_i86_5_cast                |   in|   15|     ap_none|                          conv_i86_5_cast|        scalar|
+|conv_i86_6_cast                |   in|   15|     ap_none|                          conv_i86_6_cast|        scalar|
+|zext_ln73_1                    |   in|   15|     ap_none|                              zext_ln73_1|        scalar|
+|layer2_output_2_03_out         |  out|   16|      ap_vld|                   layer2_output_2_03_out|       pointer|
+|layer2_output_2_03_out_ap_vld  |  out|    1|      ap_vld|                   layer2_output_2_03_out|       pointer|
+|layer2_output_1_02_out         |  out|   16|      ap_vld|                   layer2_output_1_02_out|       pointer|
+|layer2_output_1_02_out_ap_vld  |  out|    1|      ap_vld|                   layer2_output_1_02_out|       pointer|
+|layer2_output_0_01_out         |  out|   16|      ap_vld|                   layer2_output_0_01_out|       pointer|
+|layer2_output_0_01_out_ap_vld  |  out|    1|      ap_vld|                   layer2_output_0_01_out|       pointer|
+|max_val_out                    |  out|   16|      ap_vld|                              max_val_out|       pointer|
+|max_val_out_ap_vld             |  out|    1|      ap_vld|                              max_val_out|       pointer|
++-------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+

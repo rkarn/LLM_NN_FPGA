@@ -1,0 +1,3 @@
+27 errors generated.
+Error while processing /home/rrk307/home_hls/python_c_hlsc/AreaOptFCNN_MNIST/python_hlsc_fcnn/solution1/.autopilot/db/fcnn.pp.0.cpp.
+clang-tidy applied 136 of 136 suggested fixes.

@@ -1,0 +1,255 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a35tcpg236-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.11 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.449 GB.
+INFO: [HLS 200-10] Analyzing design file 'weights.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'nn.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 41.25 seconds. CPU system time: 3.72 seconds. Elapsed time: 45.22 seconds; current allocated memory: 1.455 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 54,729 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/rrk307/home_hls/python_c_hlsc/AreaOpt_FCNN_Iris/hlsc_fcnn_iris/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,142 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /home/rrk307/home_hls/python_c_hlsc/AreaOpt_FCNN_Iris/hlsc_fcnn_iris/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 441 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /home/rrk307/home_hls/python_c_hlsc/AreaOpt_FCNN_Iris/hlsc_fcnn_iris/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 487 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /home/rrk307/home_hls/python_c_hlsc/AreaOpt_FCNN_Iris/hlsc_fcnn_iris/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-131] Inlining function 'relu(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'neural_network(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (nn.cpp:66:28)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_73_4' is marked as complete unroll implied by the pipeline pragma (nn.cpp:73:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_61_2' is marked as complete unroll implied by the pipeline pragma (nn.cpp:61:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_279_11' is marked as complete unroll implied by the pipeline pragma (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:279:36)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_275_10' is marked as complete unroll implied by the pipeline pragma (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:275:36)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_269_9' is marked as complete unroll implied by the pipeline pragma (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:269:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_204_8' is marked as complete unroll implied by the pipeline pragma (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:204:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_196_7' is marked as complete unroll implied by the pipeline pragma (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:196:27)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_73_4' (nn.cpp:73:26) in function 'neural_network' completely with a factor of 8 (nn.cpp:42:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_61_2' (nn.cpp:61:26) in function 'neural_network' completely with a factor of 4 (nn.cpp:42:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_279_11' (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:279:36) in function 'exp_reduce::exp<17, 9>' completely with a factor of 19 (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:40:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_275_10' (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:275:36) in function 'exp_reduce::exp<17, 9>' completely with a factor of 3 (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:40:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_269_9' (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:269:31) in function 'exp_reduce::exp<17, 9>' completely with a factor of 3 (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:40:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_204_8' (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:204:35) in function 'exp_reduce::exp<17, 9>' completely with a factor of 22 (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:40:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_196_7' (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:196:27) in function 'exp_reduce::exp<17, 9>' completely with a factor of 8 (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_exp_apfixed.h:40:0)
+INFO: [HLS 214-178] Inlining function 'softmax(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, int)' into 'neural_network(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (nn.cpp:42:0)
+INFO: [HLS 214-248] Applying array_partition to 'layer1_output': Complete partitioning on dimension 1. (nn.cpp:51:13)
+INFO: [HLS 214-248] Applying array_partition to 'layer2_output': Complete partitioning on dimension 1. (nn.cpp:52:16)
+INFO: [HLS 214-248] Applying array_partition to 'input': Complete partitioning on dimension 1. (nn.cpp:42:0)
+INFO: [HLS 214-248] Applying array_partition to 'output': Complete partitioning on dimension 1. (nn.cpp:42:0)
+INFO: [HLS 214-364] Automatically inlining function 'ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0> exp_reduce::exp<17, 9>(ap_fixed<17, 9, (ap_q_mode)5, (ap_o_mode)3, 0>)' to improve effectiveness of pipeline pragma in function 'neural_network(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (/eda/xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_math.h:1190:12)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array 'layer1_weights' due to pipeline pragma (nn.cpp:59:9)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array 'layer2_weights' due to pipeline pragma (nn.cpp:71:9)
+INFO: [HLS 214-248] Applying array_partition to 'layer2_weights': Complete partitioning on dimension 2. (weights.cpp:16:0)
+INFO: [HLS 214-248] Applying array_partition to 'layer1_weights': Complete partitioning on dimension 2. (weights.cpp:3:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 8.29 seconds. CPU system time: 1.13 seconds. Elapsed time: 14.45 seconds; current allocated memory: 1.455 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0 seconds; current allocated memory: 1.455 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.456 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.456 GB.
+INFO: [XFORM 203-102] Automatically partitioning small array 'layer2_bias' completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'layer2_bias' in dimension 1 completely.
+INFO: [XFORM 203-102] Automatically partitioning small array 'layer2_weights_7' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'layer2_weights_6' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'layer2_weights_5' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'layer2_weights_4' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'layer2_weights_3' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'layer2_weights_2' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'layer2_weights_1' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'layer2_weights_0' completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'layer2_weights_7' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer2_weights_6' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer2_weights_5' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer2_weights_4' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer2_weights_3' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer2_weights_2' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer2_weights_1' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer2_weights_0' in dimension 1 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (nn.cpp:30:9) to (nn.cpp:31:12) in function 'neural_network'... converting 5 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'neural_network' (nn.cpp:14:22)...8 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.480 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.519 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'neural_network' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neural_network_Pipeline_VITIS_LOOP_58_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln63_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_58_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'VITIS_LOOP_58_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.521 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.521 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neural_network_Pipeline_VITIS_LOOP_70_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_70_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 10, loop 'VITIS_LOOP_70_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.522 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.522 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neural_network_Pipeline_VITIS_LOOP_23_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_23_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_23_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.522 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.522 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neural_network_Pipeline_VITIS_LOOP_29_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_29_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'VITIS_LOOP_29_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.523 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.523 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neural_network_Pipeline_VITIS_LOOP_36_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_36_3'.
+WARNING: [HLS 200-880] The II Violation in module 'neural_network_Pipeline_VITIS_LOOP_36_3' (loop 'VITIS_LOOP_36_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between wire write operation ('output_0_write_ln38', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82) and wire read operation ('output_0_read', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82).
+WARNING: [HLS 200-880] The II Violation in module 'neural_network_Pipeline_VITIS_LOOP_36_3' (loop 'VITIS_LOOP_36_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between wire write operation ('output_0_write_ln38', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82) and wire read operation ('output_0_read', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82).
+WARNING: [HLS 200-880] The II Violation in module 'neural_network_Pipeline_VITIS_LOOP_36_3' (loop 'VITIS_LOOP_36_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between wire write operation ('output_0_write_ln38', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82) and wire read operation ('output_0_read', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82).
+WARNING: [HLS 200-880] The II Violation in module 'neural_network_Pipeline_VITIS_LOOP_36_3' (loop 'VITIS_LOOP_36_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between wire write operation ('output_0_write_ln38', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82) and wire read operation ('output_0_read', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82).
+WARNING: [HLS 200-880] The II Violation in module 'neural_network_Pipeline_VITIS_LOOP_36_3' (loop 'VITIS_LOOP_36_3'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between wire write operation ('output_0_write_ln38', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82) and wire read operation ('output_0_read', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82).
+WARNING: [HLS 200-880] The II Violation in module 'neural_network_Pipeline_VITIS_LOOP_36_3' (loop 'VITIS_LOOP_36_3'): Unable to enforce a carried dependence constraint (II = 27, distance = 1, offset = 1) between wire write operation ('output_0_write_ln38', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82) and wire read operation ('output_0_read', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82).
+WARNING: [HLS 200-880] The II Violation in module 'neural_network_Pipeline_VITIS_LOOP_36_3' (loop 'VITIS_LOOP_36_3'): Unable to enforce a carried dependence constraint (II = 29, distance = 1, offset = 1) between wire write operation ('output_0_write_ln38', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82) and wire read operation ('output_0_read', nn.cpp:38->nn.cpp:82) on port 'output_0' (nn.cpp:38->nn.cpp:82).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 30, Depth = 30, loop 'VITIS_LOOP_36_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.36 seconds. CPU system time: 0 seconds. Elapsed time: 0.37 seconds; current allocated memory: 1.524 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.43 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.43 seconds; current allocated memory: 1.524 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neural_network' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.524 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.524 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neural_network_Pipeline_VITIS_LOOP_58_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'neural_network_Pipeline_VITIS_LOOP_58_1' pipeline 'VITIS_LOOP_58_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_9s_16s_24ns_24_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_9s_16s_24_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neural_network_Pipeline_VITIS_LOOP_58_1'.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_weights_3_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_58_1_layer1_bias_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.525 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neural_network_Pipeline_VITIS_LOOP_70_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'neural_network_Pipeline_VITIS_LOOP_70_3' pipeline 'VITIS_LOOP_70_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_10s_16s_24ns_24_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_9s_16s_24ns_24_4_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_10s_16s_24_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_3_2_10_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_3_2_6_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_3_2_9_1_1': 6 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neural_network_Pipeline_VITIS_LOOP_70_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.24 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.527 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neural_network_Pipeline_VITIS_LOOP_23_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_3_2_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neural_network_Pipeline_VITIS_LOOP_23_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.529 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neural_network_Pipeline_VITIS_LOOP_29_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'neural_network_Pipeline_VITIS_LOOP_29_2' pipeline 'VITIS_LOOP_29_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_25ns_18ns_43_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_25ns_25ns_50_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_3_2_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neural_network_Pipeline_VITIS_LOOP_29_2'.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_29_2_f_x_lsb_table_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_29_2_exp_x_msb_2_m_1_table_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'neural_network_neural_network_Pipeline_VITIS_LOOP_29_2_exp_x_msb_1_table_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.530 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neural_network_Pipeline_VITIS_LOOP_36_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'VITIS_LOOP_36_3' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [RTGEN 206-100] Generating core module 'mux_3_2_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_25s_16s_25_29_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neural_network_Pipeline_VITIS_LOOP_36_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.533 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neural_network' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/input_3' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/output_0' to 's_axilite & ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/output_1' to 's_axilite & ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_network/output_2' to 's_axilite & ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'neural_network' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port CONTROL.
+INFO: [RTGEN 206-100] Bundling port 'input_0', 'input_1', 'input_2' and 'input_3' to AXI-Lite port INPUT.
+INFO: [RTGEN 206-100] Bundling port 'output_0', 'output_1' and 'output_2' to AXI-Lite port OUTPUT.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neural_network'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.535 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.25 seconds. CPU system time: 0.07 seconds. Elapsed time: 1.33 seconds; current allocated memory: 1.538 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.79 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.84 seconds; current allocated memory: 1.544 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for neural_network.
+INFO: [VLOG 209-307] Generating Verilog RTL for neural_network.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 138.65 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 55.41 seconds. CPU system time: 5.23 seconds. Elapsed time: 65.96 seconds; current allocated memory: 98.227 MB.
+INFO: [HLS 200-1510] Running: export_design -format ip_catalog -rtl verilog -output fcnn_iris_ip 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file fcnn_iris_ip.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 20.85 seconds. CPU system time: 1.82 seconds. Elapsed time: 21.7 seconds; current allocated memory: 5.633 MB.

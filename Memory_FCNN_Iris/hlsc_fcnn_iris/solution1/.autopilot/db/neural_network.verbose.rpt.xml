@@ -1,0 +1,255 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'neural_network'" level="0">
+<item name = "Date">Sun Sep 15 02:59:39 2024
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">hlsc_fcnn_iris</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a35t-cpg236-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.893 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">313, 313, 3.130 us, 3.130 us, 314, 314, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3_fu_202">neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3, 34, 34, 0.340 us, 0.340 us, 34, 34, no</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_70_4_fu_213">neural_network_Pipeline_VITIS_LOOP_70_4, 15, 15, 0.150 us, 0.150 us, 15, 15, no</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_84_7_VITIS_LOOP_85_8_fu_232">neural_network_Pipeline_VITIS_LOOP_84_7_VITIS_LOOP_85_8, 26, 26, 0.260 us, 0.260 us, 26, 26, no</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_21_1_fu_243">neural_network_Pipeline_VITIS_LOOP_21_1, 4, 4, 40.000 ns, 40.000 ns, 4, 4, no</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_92_9_fu_251">neural_network_Pipeline_VITIS_LOOP_92_9, 17, 17, 0.170 us, 0.170 us, 17, 17, no</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_26_2_fu_270">neural_network_Pipeline_VITIS_LOOP_26_2, 10, 10, 0.100 us, 0.100 us, 10, 10, no</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_32_3_fu_291">neural_network_Pipeline_VITIS_LOOP_32_3, 92, 92, 0.920 us, 0.920 us, 92, 92, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_60_1">106, 106, 53, -, -, 2, no</column>
+<column name="- VITIS_LOOP_82_6">94, 94, 47, -, -, 2, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 39, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">0, 11, 3235, 3703, -</column>
+<column name="Memory">0, -, 136, 12, 0</column>
+<column name="Multiplexer">-, -, -, 577, -</column>
+<column name="Register">-, -, 180, -, -</column>
+<specialColumn name="Available">100, 90, 41600, 20800, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 12, 8, 20, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="CONTROL_s_axi_U">CONTROL_s_axi, 0, 0, 36, 40, 0</column>
+<column name="INPUT_s_axi_U">INPUT_s_axi, 0, 0, 118, 168, 0</column>
+<column name="OUTPUT_s_axi_U">OUTPUT_s_axi, 0, 0, 162, 232, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_21_1_fu_243">neural_network_Pipeline_VITIS_LOOP_21_1, 0, 0, 20, 117, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_26_2_fu_270">neural_network_Pipeline_VITIS_LOOP_26_2, 0, 3, 634, 613, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_32_3_fu_291">neural_network_Pipeline_VITIS_LOOP_32_3, 0, 0, 1562, 1416, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3_fu_202">neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3, 0, 0, 158, 287, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_70_4_fu_213">neural_network_Pipeline_VITIS_LOOP_70_4, 0, 4, 250, 217, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_84_7_VITIS_LOOP_85_8_fu_232">neural_network_Pipeline_VITIS_LOOP_84_7_VITIS_LOOP_85_8, 0, 0, 158, 331, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_92_9_fu_251">neural_network_Pipeline_VITIS_LOOP_92_9, 0, 4, 137, 282, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="layer1_output_U">layer1_output_RAM_AUTO_1R1W, 0, 15, 1, 0, 2, 15, 1, 30</column>
+<column name="layer1_output_1_U">layer1_output_RAM_AUTO_1R1W, 0, 15, 1, 0, 2, 15, 1, 30</column>
+<column name="layer1_output_2_U">layer1_output_RAM_AUTO_1R1W, 0, 15, 1, 0, 2, 15, 1, 30</column>
+<column name="layer1_output_3_U">layer1_output_RAM_AUTO_1R1W, 0, 15, 1, 0, 2, 15, 1, 30</column>
+<column name="layer1_weight_tile_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 9, 1, 0, 4, 9, 1, 36</column>
+<column name="layer1_weight_tile_1_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 9, 1, 0, 4, 9, 1, 36</column>
+<column name="layer1_weight_tile_2_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 9, 1, 0, 4, 9, 1, 36</column>
+<column name="layer1_weight_tile_3_U">layer1_weight_tile_RAM_AUTO_1R1W, 0, 9, 1, 0, 4, 9, 1, 36</column>
+<column name="layer2_weight_tile_U">layer2_weight_tile_RAM_AUTO_1R1W, 0, 10, 1, 0, 3, 10, 1, 30</column>
+<column name="layer2_weight_tile_1_U">layer2_weight_tile_RAM_AUTO_1R1W, 0, 10, 1, 0, 3, 10, 1, 30</column>
+<column name="layer2_weight_tile_2_U">layer2_weight_tile_RAM_AUTO_1R1W, 0, 10, 1, 0, 3, 10, 1, 30</column>
+<column name="layer2_weight_tile_3_U">layer2_weight_tile_RAM_AUTO_1R1W, 0, 10, 1, 0, 3, 10, 1, 30</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln60_fu_334_p2">+, 0, 0, 13, 4, 3</column>
+<column name="add_ln82_fu_372_p2">+, 0, 0, 13, 4, 3</column>
+<column name="cmp131_fu_366_p2">icmp, 0, 0, 13, 4, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">61, 15, 1, 15</column>
+<column name="layer1_output_1_address0">13, 3, 1, 3</column>
+<column name="layer1_output_1_ce0">13, 3, 1, 3</column>
+<column name="layer1_output_1_we0">9, 2, 1, 2</column>
+<column name="layer1_output_2_address0">13, 3, 1, 3</column>
+<column name="layer1_output_2_ce0">13, 3, 1, 3</column>
+<column name="layer1_output_2_we0">9, 2, 1, 2</column>
+<column name="layer1_output_3_address0">13, 3, 1, 3</column>
+<column name="layer1_output_3_ce0">13, 3, 1, 3</column>
+<column name="layer1_output_3_we0">9, 2, 1, 2</column>
+<column name="layer1_output_address0">13, 3, 1, 3</column>
+<column name="layer1_output_ce0">13, 3, 1, 3</column>
+<column name="layer1_output_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_1_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_1_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_1_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_2_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_2_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_2_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_3_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_3_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_3_we0">9, 2, 1, 2</column>
+<column name="layer1_weight_tile_address0">13, 3, 2, 6</column>
+<column name="layer1_weight_tile_ce0">13, 3, 1, 3</column>
+<column name="layer1_weight_tile_we0">9, 2, 1, 2</column>
+<column name="layer2_weight_tile_1_address0">13, 3, 2, 6</column>
+<column name="layer2_weight_tile_1_ce0">13, 3, 1, 3</column>
+<column name="layer2_weight_tile_1_we0">9, 2, 1, 2</column>
+<column name="layer2_weight_tile_2_address0">13, 3, 2, 6</column>
+<column name="layer2_weight_tile_2_ce0">13, 3, 1, 3</column>
+<column name="layer2_weight_tile_2_we0">9, 2, 1, 2</column>
+<column name="layer2_weight_tile_3_address0">13, 3, 2, 6</column>
+<column name="layer2_weight_tile_3_ce0">13, 3, 1, 3</column>
+<column name="layer2_weight_tile_3_we0">9, 2, 1, 2</column>
+<column name="layer2_weight_tile_address0">13, 3, 2, 6</column>
+<column name="layer2_weight_tile_ce0">13, 3, 1, 3</column>
+<column name="layer2_weight_tile_we0">9, 2, 1, 2</column>
+<column name="output_0_o">13, 3, 16, 48</column>
+<column name="output_0_o_ap_vld">13, 3, 1, 3</column>
+<column name="output_1_o">13, 3, 16, 48</column>
+<column name="output_1_o_ap_vld">13, 3, 1, 3</column>
+<column name="output_2_o">13, 3, 16, 48</column>
+<column name="output_2_o_ap_vld">13, 3, 1, 3</column>
+<column name="tile_1_fu_158">9, 2, 4, 8</column>
+<column name="tile_fu_98">9, 2, 4, 8</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">14, 0, 14, 0</column>
+<column name="cmp131_reg_491">1, 0, 1, 0</column>
+<column name="conv_i_i_le10_lcssa17_fu_170">16, 0, 16, 0</column>
+<column name="conv_i_i_le12_lcssa19_fu_174">16, 0, 16, 0</column>
+<column name="conv_i_i_le8_lcssa15_fu_166">16, 0, 16, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_21_1_fu_243_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_26_2_fu_270_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_32_3_fu_291_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_62_2_VITIS_LOOP_63_3_fu_202_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_70_4_fu_213_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_84_7_VITIS_LOOP_85_8_fu_232_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_neural_network_Pipeline_VITIS_LOOP_92_9_fu_251_ap_start_reg">1, 0, 1, 0</column>
+<column name="input_0_read_reg_422">16, 0, 16, 0</column>
+<column name="input_1_read_reg_427">16, 0, 16, 0</column>
+<column name="input_2_read_reg_432">16, 0, 16, 0</column>
+<column name="input_3_read_reg_437">16, 0, 16, 0</column>
+<column name="p_0_0_0114_i1_fu_162">16, 0, 16, 0</column>
+<column name="reg_307">16, 0, 16, 0</column>
+<column name="tile_1_fu_158">4, 0, 4, 0</column>
+<column name="tile_fu_98">4, 0, 4, 0</column>
+<column name="trunc_ln60_reg_445">3, 0, 3, 0</column>
+<column name="trunc_ln82_reg_482">3, 0, 3, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_CONTROL_AWVALID">in, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_AWREADY">out, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_AWADDR">in, 4, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_WVALID">in, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_WREADY">out, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_WDATA">in, 32, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_WSTRB">in, 4, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_ARVALID">in, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_ARREADY">out, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_ARADDR">in, 4, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_RVALID">out, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_RREADY">in, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_RDATA">out, 32, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_RRESP">out, 2, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_BVALID">out, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_BREADY">in, 1, s_axi, CONTROL, return void</column>
+<column name="s_axi_CONTROL_BRESP">out, 2, s_axi, CONTROL, return void</column>
+<column name="s_axi_INPUT_AWVALID">in, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_AWREADY">out, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_AWADDR">in, 6, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_WVALID">in, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_WREADY">out, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_WDATA">in, 32, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_WSTRB">in, 4, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_ARVALID">in, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_ARREADY">out, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_ARADDR">in, 6, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_RVALID">out, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_RREADY">in, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_RDATA">out, 32, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_RRESP">out, 2, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_BVALID">out, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_BREADY">in, 1, s_axi, INPUT, pointer</column>
+<column name="s_axi_INPUT_BRESP">out, 2, s_axi, INPUT, pointer</column>
+<column name="s_axi_OUTPUT_AWVALID">in, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_AWREADY">out, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_AWADDR">in, 6, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_WVALID">in, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_WREADY">out, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_WDATA">in, 32, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_WSTRB">in, 4, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_ARVALID">in, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_ARREADY">out, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_ARADDR">in, 6, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_RVALID">out, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_RREADY">in, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_RDATA">out, 32, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_RRESP">out, 2, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_BVALID">out, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_BREADY">in, 1, s_axi, OUTPUT, pointer</column>
+<column name="s_axi_OUTPUT_BRESP">out, 2, s_axi, OUTPUT, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, neural_network, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, neural_network, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, neural_network, return value</column>
+</table>
+</item>
+</section>
+</profile>

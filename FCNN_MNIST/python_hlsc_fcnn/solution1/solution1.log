@@ -1,0 +1,71 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a35tcpg236-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.1 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.449 GB.
+INFO: [HLS 200-10] Analyzing design file 'fcnn.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 27.18 seconds. CPU system time: 2.29 seconds. Elapsed time: 30.15 seconds; current allocated memory: 1.454 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 77 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/rrk307/home_hls/python_c_hlsc/python_hlsc_fcnn/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 31,461 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /home/rrk307/home_hls/python_c_hlsc/python_hlsc_fcnn/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 17,291 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /home/rrk307/home_hls/python_c_hlsc/python_hlsc_fcnn/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18,088 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /home/rrk307/home_hls/python_c_hlsc/python_hlsc_fcnn/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_31_4' (fcnn.cpp:31:22) in function 'mnist_inference' completely with a factor of 10 (fcnn.cpp:9:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_22_2' (fcnn.cpp:22:22) in function 'mnist_inference' completely with a factor of 10 (fcnn.cpp:9:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_24_3' (fcnn.cpp:24:19) in function 'mnist_inference' completely with a factor of 784 (fcnn.cpp:9:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_16_1' (fcnn.cpp:16:22) in function 'mnist_inference' completely with a factor of 10 (fcnn.cpp:9:0)
+WARNING: [HLS 214-414] Cannot apply interface mode 'ap_none' on function argument 'input' since this interface mode only supports scalar types (fcnn.cpp:9:0)
+WARNING: [HLS 214-414] Cannot apply interface mode 'ap_none' on function argument 'output' since this interface mode only supports scalar types (fcnn.cpp:9:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 39.16 seconds. CPU system time: 0.9 seconds. Elapsed time: 43.1 seconds; current allocated memory: 1.455 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0 seconds; current allocated memory: 1.455 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.82 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.86 seconds; current allocated memory: 1.495 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.45 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.46 seconds; current allocated memory: 1.495 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2.97 seconds. CPU system time: 0.06 seconds. Elapsed time: 3.04 seconds; current allocated memory: 1.575 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1.77 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.82 seconds; current allocated memory: 1.622 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mnist_inference' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mnist_inference' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1240.45 seconds. CPU system time: 1.27 seconds. Elapsed time: 1247.38 seconds; current allocated memory: 1.870 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 201.04 seconds. CPU system time: 1 seconds. Elapsed time: 203 seconds; current allocated memory: 2.607 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mnist_inference' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'mnist_inference/input_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mnist_inference/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'mnist_inference' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-104] Estimated max fanout for 'mnist_inference' is 5501 from HDL expression: ap_rst
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_7_full_dsp_1': 10 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 10 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mnist_inference'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 87.14 seconds. CPU system time: 0.55 seconds. Elapsed time: 88.16 seconds; current allocated memory: 2.607 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 36.52 seconds. CPU system time: 1.31 seconds. Elapsed time: 38.06 seconds; current allocated memory: 2.895 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 6.67 seconds. CPU system time: 0.21 seconds. Elapsed time: 6.91 seconds; current allocated memory: 3.143 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for mnist_inference.
+INFO: [VLOG 209-307] Generating Verilog RTL for mnist_inference.
+INFO: [HLS 200-789] **** Estimated Fmax: 121.41 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1644.37 seconds. CPU system time: 7.69 seconds. Elapsed time: 1663.15 seconds; current allocated memory: 1.695 GB.
+INFO: [HLS 200-1510] Running: export_design -format ip_catalog -rtl verilog -output fcnn_ip 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file fcnn_ip.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 167.24 seconds. CPU system time: 2.48 seconds. Elapsed time: 171.33 seconds; current allocated memory: 18.109 MB.

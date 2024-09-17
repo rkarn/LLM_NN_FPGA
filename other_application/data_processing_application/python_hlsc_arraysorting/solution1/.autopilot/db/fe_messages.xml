@@ -1,0 +1,54 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="array_sorting.cpp:8:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="swap" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="array_sorting.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="partition" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="array_sorting.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="partition" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="array_sorting.cpp:38:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="quickSort" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="array_sorting.cpp:46:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="quickSort" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rrk307/home_hls/python_c_hlsc/other_application/data_processing_application/run_hls.tcl:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="hls_quickSort" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=hls_quickSort" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="array_sorting.cpp:65:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_quickSort" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=return bundle=CONTROL_BUS" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="array_sorting.cpp:66:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_quickSort" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=arr bundle=CONTROL_BUS" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="array_sorting.cpp:67:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_quickSort" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=arr complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="array_sorting.cpp:30:13" msg_body="Inlining function 'swap(int&amp;, int&amp;)' into 'partition(int*, int, int)'">
+        <args Callee="swap(int&amp;, int&amp;)" Callee-DebugLoc="File array_sorting.cpp Line 7 Column 0" Caller="partition(int*, int, int)" Caller-DebugLoc="File array_sorting.cpp Line 14 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="array_sorting.cpp:33:5" msg_body="Inlining function 'swap(int&amp;, int&amp;)' into 'partition(int*, int, int)'">
+        <args Callee="swap(int&amp;, int&amp;)" Callee-DebugLoc="File array_sorting.cpp Line 7 Column 0" Caller="partition(int*, int, int)" Caller-DebugLoc="File array_sorting.cpp Line 14 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="array_sorting.cpp:50:17" msg_body="Inlining function 'partition(int*, int, int)' into 'quickSort(int*, int, int)'">
+        <args Callee="partition(int*, int, int)" Callee-DebugLoc="File array_sorting.cpp Line 14 Column 0" Caller="quickSort(int*, int, int)" Caller-DebugLoc="File array_sorting.cpp Line 37 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="array_sorting.cpp:69:2" msg_body="Inlining function 'quickSort(int*, int, int)' into 'hls_quickSort(int*)'">
+        <args Callee="quickSort(int*, int, int)" Callee-DebugLoc="File array_sorting.cpp Line 37 Column 0" Caller="hls_quickSort(int*)" Caller-DebugLoc="File array_sorting.cpp Line 64 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="array_sorting.cpp:20:22" msg_body="Loop 'VITIS_LOOP_20_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_20_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="array_sorting.cpp:22:19" msg_body="Loop 'VITIS_LOOP_22_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_22_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="array_sorting.cpp:26:26" msg_body="Loop 'VITIS_LOOP_26_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_26_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="array_sorting.cpp:64:0" msg_body="Applying array_partition to 'arr': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="arr"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

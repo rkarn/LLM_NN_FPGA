@@ -1,0 +1,23 @@
+<dict>
+  <key>main-file</key>
+  <string>/home/rrk307/home_hls/python_c_hlsc/other_application/cryptography/hlsc_aes/solution1/.autopilot/db/aes.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>aes.cpp</string>
+      <key>line</key>
+      <integer>117</integer>
+      <key>column</key>
+      <integer>25</integer>
+      <key>message</key>
+      <string>format specifies type &apos;unsigned int&apos; but the argument has type &apos;byte&apos; (aka &apos;ap_uint&lt;8&gt;&apos;)</string>
+      <key>ID</key>
+      <integer>4855</integer>
+      <key>WarningOption</key>
+      <string>format</string>
+    </dict>
+  </array>
+</dict>
