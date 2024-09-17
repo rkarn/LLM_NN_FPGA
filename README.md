@@ -8,7 +8,7 @@ This repository contains the code base for the article “LLM-Driven FPGA Code G
      - The HLS baseline implementations showing different FCNNs for each dataset are in the `Baseline Implementation` folder.
      - The HLS optimizations for performance, power, memory, and area for each dataset, showing optimized FCNN implementations, are in their respective folders.
      - The HLS implementations for other applications are in the `other_application` folder.
-     - The training of each FCNN model and its conversion to C is shown in `Python to C verification` folder. It also contains the accuracy calculation for the trained model in `Python` and `C`.
+     - The training of each FCNN model and its conversion to C is shown in `Python to C verification` folder. It also contains the accuracy calculation for the trained model in `Python` and `C`. The `C` code for inferencing the FCNN model corresponding to Python code is also available in this folder.
      - In `Python to C Verification/rapidgpt_Optimization_prompt_log`, the prompt and the outcome of `RapidGPT` is shown while making the optimized HLS code generation. 
 
 - Dependency:
