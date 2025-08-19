@@ -4,6 +4,9 @@
   
 This repository contains the code base for the article “LLM-Driven FPGA Code Generation of Neural Networks: From Python to HLS”. The paper explores the use of Large Language Models (LLMs) to generate hardware designs for neural networks (NNs) on Field-Programmable Gate Arrays (FPGAs). It addresses the unique challenges and opportunities presented by LLMs in this context and demonstrates how they can be leveraged to optimize hardware design.
 
+#### The supplementary materials for this paper are available in `LLM_Neural_Network_ICCD.pdf`. It contains preliminary sections, algorithmic blocks demonstrating various optimization strategies, several prompts, experiemnts analysis discussion, and a detailed prior‑arts comparison, provided separately due to space limits in the main paper.
+
+
 - Code details:
      - The HLS baseline implementations showing different FCNNs for each dataset are in the `Baseline Implementation` folder.
      - The HLS optimizations for performance, power, memory, and area for each dataset, showing optimized FCNN implementations, are in their respective folders.
